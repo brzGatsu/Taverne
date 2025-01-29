@@ -1,3 +1,9 @@
+# Application icon
+
+Creator: Faithtoken
+Website: https://game-icons.net/1x1/faithtoken/dragon-head.html
+License: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+
 # Python
 
 Website: https://www.python.org/
