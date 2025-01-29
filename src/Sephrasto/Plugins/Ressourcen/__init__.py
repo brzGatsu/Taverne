@@ -14,8 +14,6 @@ class Plugin:
         EventBus.addAction("charakter_instanziiert", self.charakterInstanziiertHook)
         EventBus.addAction("charakter_serialisiert", self.charakterSerialisiertHook)
         EventBus.addAction("charakter_deserialisiert", self.charakterDeserialisiertHook)
-        EventBus.addFilter("class_beschreibung_wrapper", self.classBeschreibungWrapperFilter)
-        EventBus.addFilter("class_info_wrapper", self.classInfoWrapperFilter)
         EventBus.addFilter("pdf_export", self.pdfExportFilter)
         self.ressourcenTab = None
 
@@ -83,24 +81,6 @@ class Plugin:
             ser.end() #ressourcen
 
         char.finanzenAnzeigen = False
-
-    def classBeschreibungWrapperFilter(self, beschreibungWrapperClass, params):
-        class RessourcenPluginBeschreibungWrapper(beschreibungWrapperClass):
-            def __init__(self):
-                super().__init__()
-                self.ui.labelStatus.hide()
-                self.ui.comboStatus.hide()
-
-        return RessourcenPluginBeschreibungWrapper
-
-    def classInfoWrapperFilter(self, infoWrapperClass, params):
-        class RessourcenPluginInfoWrapper(infoWrapperClass):
-            def __init__(self):
-                super().__init__()
-                self.ui.labelFinanzen.hide()
-                self.ui.checkFinanzen.hide()
-
-        return RessourcenPluginInfoWrapper
 
     def pdfExportFilter(self, fields, params):
         wertNamen = ["0", "W4", "W6", "W8", "W10", "W12"]

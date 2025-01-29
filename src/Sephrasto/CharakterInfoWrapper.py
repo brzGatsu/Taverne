@@ -45,7 +45,6 @@ class InfoWrapper(QtCore.QObject):
         self.ui.labelReload.setVisible(False)
 
         self.ui.comboHausregeln.addItems(EinstellungenWrapper.getDatenbanken(Wolke.Settings["Pfad-Regeln"]))
-        self.ui.checkFinanzen.stateChanged.connect(self.einstellungenChanged)
         self.ui.checkUeberPDF.stateChanged.connect(self.einstellungenChanged)
         self.ui.checkRegeln.stateChanged.connect(self.einstellungenChanged)
         self.ui.comboHausregeln.currentIndexChanged.connect(self.einstellungenChanged)
@@ -96,7 +95,6 @@ class InfoWrapper(QtCore.QObject):
     def einstellungenChanged(self):
         if self.currentlyLoading:
             return
-        Wolke.Char.finanzenAnzeigen = self.ui.checkFinanzen.isChecked()
         Wolke.Char.ueberPDFAnzeigen = self.ui.checkUeberPDF.isChecked()
         Wolke.Char.regelnAnhaengen = self.ui.checkRegeln.isChecked()
         Wolke.Char.detailsAnzeigen = self.ui.checkDetails.isChecked()
@@ -126,7 +124,6 @@ class InfoWrapper(QtCore.QObject):
         self.ui.teNotiz.setPlainText(Wolke.Char.notiz)
 
         self.ui.checkReq.setChecked(Wolke.Char.voraussetzungenPruefen)
-        self.ui.checkFinanzen.setChecked(Wolke.Char.finanzenAnzeigen)
         self.ui.checkUeberPDF.setChecked(Wolke.Char.ueberPDFAnzeigen)
         self.ui.checkRegeln.setChecked(Wolke.Char.regelnAnhaengen)
         self.ui.checkDetails.setChecked(Wolke.Char.detailsAnzeigen)

@@ -165,27 +165,26 @@
             <property name="bottomMargin">
              <number>20</number>
             </property>
-            <item row="2" column="1">
-             <widget class="QCheckBox" name="checkDetails">
+            <item row="14" column="0" colspan="2">
+             <widget class="QLabel" name="labelReload">
+              <property name="text">
+               <string>Der Charakter muss gespeichert und neu geladen werden, damit die neuen Hausregeln übernommen werden können!</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="warning" stdset="0">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QComboBox" name="comboHausregeln">
               <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn diese Option aktiviert ist, wird ein weiterer Tab &amp;quot;Hintergrund&amp;quot; angezeigt, in welchem du eine ausführliche Beschreibung des Charakters vornehmen kannst. Dafür wird in Beschreibungs-Tab die Kurzbeschreibung nicht mehr angezeigt.&lt;/p&gt;&lt;p&gt;Allerdings hat beispielsweise der Standard-Charakterbogen keine Formularfelder für diese Daten - deshalb ist diese Option standardmäßig deaktiviert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="0">
-             <widget class="QLabel" name="labelHausregeln">
-              <property name="text">
-               <string>Hausregeln</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="labelDetails">
-              <property name="text">
-               <string>Hintergrundangaben</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hier erscheinen alle Hausregeldatenbanken in deinem Regel-Pfad.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -202,19 +201,10 @@
               </property>
              </widget>
             </item>
-            <item row="15" column="0" colspan="2">
-             <widget class="QLabel" name="labelReload">
+            <item row="1" column="0">
+             <widget class="QLabel" name="labelDetails">
               <property name="text">
-               <string>Der Charakter muss gespeichert und neu geladen werden, damit die neuen Hausregeln übernommen werden können!</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-              </property>
-              <property name="wordWrap">
-               <bool>true</bool>
-              </property>
-              <property name="warning" stdset="0">
-               <bool>true</bool>
+               <string>Hintergrundangaben</string>
               </property>
              </widget>
             </item>
@@ -225,30 +215,20 @@
               </property>
              </widget>
             </item>
-            <item row="6" column="1">
-             <widget class="QComboBox" name="comboHausregeln">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hier erscheinen alle Hausregeldatenbanken in deinem Regel-Pfad.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <item row="5" column="0">
+             <widget class="QLabel" name="labelHausregeln">
+              <property name="text">
+               <string>Hausregeln</string>
               </property>
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QCheckBox" name="checkFinanzen">
+             <widget class="QCheckBox" name="checkDetails">
               <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Die Finanzen spielen nur bei einem neuen Charakter eine Rolle und können nach dem ersten Abenteuer ausgeblendet werden. Auch die aktuellen Schicksalspunkte werden dann nicht mehr ausgegeben, da diese ab dem ersten Abenteuer händisch verwaltet werden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn diese Option aktiviert ist, wird ein weiterer Tab &amp;quot;Hintergrund&amp;quot; angezeigt, in welchem du eine ausführliche Beschreibung des Charakters vornehmen kannst. Dafür wird in Beschreibungs-Tab die Kurzbeschreibung nicht mehr angezeigt.&lt;/p&gt;&lt;p&gt;Allerdings hat beispielsweise der Standard-Charakterbogen keine Formularfelder für diese Daten - deshalb ist diese Option standardmäßig deaktiviert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="text">
                <string/>
-              </property>
-              <property name="checked">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="labelFinanzen">
-              <property name="text">
-               <string>Vor dem ersten Abenteuer</string>
               </property>
              </widget>
             </item>

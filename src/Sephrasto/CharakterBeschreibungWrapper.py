@@ -34,17 +34,8 @@ class BeschrWrapper(QtCore.QObject):
             editEig = getattr(self.ui, "editEig" + str(i+1))
             editEig.editingFinished.connect(self.update)
 
-        finanzen = Wolke.DB.einstellungen["Finanzen"].wert
-        self.ui.comboFinanzen.addItems(Wolke.DB.einstellungen["Finanzen"].wert)
-        if "Normal" in finanzen:
-            self.ui.comboFinanzen.setCurrentText("Normal")
-        self.ui.comboFinanzen.activated.connect(self.update)
-        self.ui.comboStatus.addItems(Wolke.DB.einstellungen["Statusse"].wert)
-        self.ui.comboStatus.activated.connect(self.update)
         self.ui.comboHeimat.activated.connect(self.update)
 
-        self.ui.comboStatus.setToolTip(Hilfsmethoden.fixHtml(Wolke.DB.einstellungen["Statusse: Beschreibung"].wert))
-        self.ui.comboFinanzen.setToolTip(Hilfsmethoden.fixHtml(Wolke.DB.einstellungen["Finanzen: Beschreibung"].wert))
         self.ui.comboHeimat.setToolTip(Hilfsmethoden.fixHtml(Wolke.DB.einstellungen["Heimaten: Beschreibung"].wert))
 
         self.characterImage = None
@@ -66,14 +57,6 @@ class BeschrWrapper(QtCore.QObject):
 
         if Wolke.Char.spezies != self.ui.editSpezies.text():
             Wolke.Char.spezies = self.ui.editSpezies.text()
-            changed = True
-
-        if Wolke.Char.status != self.ui.comboStatus.currentIndex():
-            Wolke.Char.status = self.ui.comboStatus.currentIndex()
-            changed = True
-
-        if Wolke.Char.finanzen != self.ui.comboFinanzen.currentIndex():
-            Wolke.Char.finanzen = self.ui.comboFinanzen.currentIndex()
             changed = True
 
         if Wolke.Char.heimat != self.ui.comboHeimat.currentText():
@@ -107,18 +90,9 @@ class BeschrWrapper(QtCore.QObject):
     def load(self):
         self.currentlyLoading = True
 
-        self.ui.labelFinanzen.setVisible(Wolke.Char.finanzenAnzeigen)
-        self.ui.comboFinanzen.setVisible(Wolke.Char.finanzenAnzeigen)
-
         ''' Load values from Char object '''
         self.ui.editName.setText(Wolke.Char.name)
         self.ui.editSpezies.setText(Wolke.Char.spezies)
-        statusse = Wolke.DB.einstellungen["Statusse"].wert
-        if Wolke.Char.status < len(statusse):
-            self.ui.comboStatus.setCurrentIndex(Wolke.Char.status)
-        finanzen = Wolke.DB.einstellungen["Finanzen"].wert
-        if Wolke.Char.finanzen < len(finanzen):
-            self.ui.comboFinanzen.setCurrentIndex(Wolke.Char.finanzen)
         self.ui.editKurzbeschreibung.setText(Wolke.Char.kurzbeschreibung)
         arr = ["", "", "", "", "", "", "", ""]
         count = 0

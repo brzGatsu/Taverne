@@ -89,20 +89,18 @@ class Ui_Form(object):
         self.gridLayout_5 = QGridLayout(self.groupBox_3)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
         self.gridLayout_5.setContentsMargins(20, 20, 20, 20)
-        self.checkDetails = QCheckBox(self.groupBox_3)
-        self.checkDetails.setObjectName(u"checkDetails")
+        self.labelReload = QLabel(self.groupBox_3)
+        self.labelReload.setObjectName(u"labelReload")
+        self.labelReload.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelReload.setWordWrap(True)
+        self.labelReload.setProperty(u"warning", True)
 
-        self.gridLayout_5.addWidget(self.checkDetails, 2, 1, 1, 1)
+        self.gridLayout_5.addWidget(self.labelReload, 14, 0, 1, 2)
 
-        self.labelHausregeln = QLabel(self.groupBox_3)
-        self.labelHausregeln.setObjectName(u"labelHausregeln")
+        self.comboHausregeln = QComboBox(self.groupBox_3)
+        self.comboHausregeln.setObjectName(u"comboHausregeln")
 
-        self.gridLayout_5.addWidget(self.labelHausregeln, 6, 0, 1, 1)
-
-        self.labelDetails = QLabel(self.groupBox_3)
-        self.labelDetails.setObjectName(u"labelDetails")
-
-        self.gridLayout_5.addWidget(self.labelDetails, 2, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.comboHausregeln, 5, 1, 1, 1)
 
         self.checkReq = QCheckBox(self.groupBox_3)
         self.checkReq.setObjectName(u"checkReq")
@@ -110,34 +108,25 @@ class Ui_Form(object):
 
         self.gridLayout_5.addWidget(self.checkReq, 0, 1, 1, 1)
 
-        self.labelReload = QLabel(self.groupBox_3)
-        self.labelReload.setObjectName(u"labelReload")
-        self.labelReload.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelReload.setWordWrap(True)
-        self.labelReload.setProperty(u"warning", True)
+        self.labelDetails = QLabel(self.groupBox_3)
+        self.labelDetails.setObjectName(u"labelDetails")
 
-        self.gridLayout_5.addWidget(self.labelReload, 15, 0, 1, 2)
+        self.gridLayout_5.addWidget(self.labelDetails, 1, 0, 1, 1)
 
         self.labelReq = QLabel(self.groupBox_3)
         self.labelReq.setObjectName(u"labelReq")
 
         self.gridLayout_5.addWidget(self.labelReq, 0, 0, 1, 1)
 
-        self.comboHausregeln = QComboBox(self.groupBox_3)
-        self.comboHausregeln.setObjectName(u"comboHausregeln")
+        self.labelHausregeln = QLabel(self.groupBox_3)
+        self.labelHausregeln.setObjectName(u"labelHausregeln")
 
-        self.gridLayout_5.addWidget(self.comboHausregeln, 6, 1, 1, 1)
+        self.gridLayout_5.addWidget(self.labelHausregeln, 5, 0, 1, 1)
 
-        self.checkFinanzen = QCheckBox(self.groupBox_3)
-        self.checkFinanzen.setObjectName(u"checkFinanzen")
-        self.checkFinanzen.setChecked(True)
+        self.checkDetails = QCheckBox(self.groupBox_3)
+        self.checkDetails.setObjectName(u"checkDetails")
 
-        self.gridLayout_5.addWidget(self.checkFinanzen, 1, 1, 1, 1)
-
-        self.labelFinanzen = QLabel(self.groupBox_3)
-        self.labelFinanzen.setObjectName(u"labelFinanzen")
-
-        self.gridLayout_5.addWidget(self.labelFinanzen, 1, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.checkDetails, 1, 1, 1, 1)
 
 
         self.verticalLayout_4.addWidget(self.groupBox_3)
@@ -535,26 +524,21 @@ class Ui_Form(object):
         self.labelEinstellungen.setText(QCoreApplication.translate("Form", u"Charakter-Einstellungen", None))
         self.labelEinstellungen.setProperty(u"class", QCoreApplication.translate("Form", u"h2", None))
         self.groupBox_3.setTitle("")
-#if QT_CONFIG(tooltip)
-        self.checkDetails.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p>Wenn diese Option aktiviert ist, wird ein weiterer Tab &quot;Hintergrund&quot; angezeigt, in welchem du eine ausf\u00fchrliche Beschreibung des Charakters vornehmen kannst. Daf\u00fcr wird in Beschreibungs-Tab die Kurzbeschreibung nicht mehr angezeigt.</p><p>Allerdings hat beispielsweise der Standard-Charakterbogen keine Formularfelder f\u00fcr diese Daten - deshalb ist diese Option standardm\u00e4\u00dfig deaktiviert.</p></body></html>", None))
-#endif // QT_CONFIG(tooltip)
-        self.checkDetails.setText("")
-        self.labelHausregeln.setText(QCoreApplication.translate("Form", u"Hausregeln", None))
-        self.labelDetails.setText(QCoreApplication.translate("Form", u"Hintergrundangaben", None))
-#if QT_CONFIG(tooltip)
-        self.checkReq.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p>Falls abgew\u00e4hlt, werden s\u00e4mtliche Voraussetzungspr\u00fcfungen f\u00fcr Vorteile, \u00fcbernat\u00fcrliche Fertigkeiten usw. deaktiviert. S\u00e4mtliche w\u00e4hrenddessen get\u00e4tigte K\u00e4ufe bleiben bestehen, selbst wenn du die Voraussetzungspr\u00fcfungen wieder aktivierst.</p></body></html>", None))
-#endif // QT_CONFIG(tooltip)
-        self.checkReq.setText("")
         self.labelReload.setText(QCoreApplication.translate("Form", u"Der Charakter muss gespeichert und neu geladen werden, damit die neuen Hausregeln \u00fcbernommen werden k\u00f6nnen!", None))
-        self.labelReq.setText(QCoreApplication.translate("Form", u"Voraussetzungen \u00fcberpr\u00fcfen", None))
 #if QT_CONFIG(tooltip)
         self.comboHausregeln.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p>Hier erscheinen alle Hausregeldatenbanken in deinem Regel-Pfad.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(tooltip)
-        self.checkFinanzen.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p>Die Finanzen spielen nur bei einem neuen Charakter eine Rolle und k\u00f6nnen nach dem ersten Abenteuer ausgeblendet werden. Auch die aktuellen Schicksalspunkte werden dann nicht mehr ausgegeben, da diese ab dem ersten Abenteuer h\u00e4ndisch verwaltet werden.</p></body></html>", None))
+        self.checkReq.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p>Falls abgew\u00e4hlt, werden s\u00e4mtliche Voraussetzungspr\u00fcfungen f\u00fcr Vorteile, \u00fcbernat\u00fcrliche Fertigkeiten usw. deaktiviert. S\u00e4mtliche w\u00e4hrenddessen get\u00e4tigte K\u00e4ufe bleiben bestehen, selbst wenn du die Voraussetzungspr\u00fcfungen wieder aktivierst.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.checkFinanzen.setText("")
-        self.labelFinanzen.setText(QCoreApplication.translate("Form", u"Vor dem ersten Abenteuer", None))
+        self.checkReq.setText("")
+        self.labelDetails.setText(QCoreApplication.translate("Form", u"Hintergrundangaben", None))
+        self.labelReq.setText(QCoreApplication.translate("Form", u"Voraussetzungen \u00fcberpr\u00fcfen", None))
+        self.labelHausregeln.setText(QCoreApplication.translate("Form", u"Hausregeln", None))
+#if QT_CONFIG(tooltip)
+        self.checkDetails.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p>Wenn diese Option aktiviert ist, wird ein weiterer Tab &quot;Hintergrund&quot; angezeigt, in welchem du eine ausf\u00fchrliche Beschreibung des Charakters vornehmen kannst. Daf\u00fcr wird in Beschreibungs-Tab die Kurzbeschreibung nicht mehr angezeigt.</p><p>Allerdings hat beispielsweise der Standard-Charakterbogen keine Formularfelder f\u00fcr diese Daten - deshalb ist diese Option standardm\u00e4\u00dfig deaktiviert.</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.checkDetails.setText("")
         self.label_16.setText(QCoreApplication.translate("Form", u"Export-Einstellungen", None))
         self.label_16.setProperty(u"class", QCoreApplication.translate("Form", u"h2", None))
         self.groupBox_4.setTitle("")
