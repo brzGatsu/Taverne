@@ -272,6 +272,20 @@ class MainWindowWrapper(object):
         buttons = [self.ui.buttonRules]
         self._plugins = []
 
+        for pluginData in PluginLoader.getPlugins("Plugins"):
+            if not pluginData.loadable:
+                self._plugins.append(pluginData)
+                continue
+
+            if pluginData.load():
+                self._plugins.append(pluginData)
+                logging.critical("Internal Plugin: loaded " + pluginData.name)
+                if hasattr(pluginData.plugin, "createMainWindowButtons"):
+                    for button in pluginData.plugin.createMainWindowButtons():
+                        button.setParent(self.form)
+                        self.ui.horizontalLayout.insertWidget(0, button)
+                        buttons.append(button)
+
         if not Wolke.CmdArgs.noplugins:
             for pluginData in PluginLoader.getPlugins(Wolke.Settings['Pfad-Plugins']):
                 if not pluginData.loadable:

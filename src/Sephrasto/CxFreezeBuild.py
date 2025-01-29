@@ -15,6 +15,7 @@ build_path = os.path.join(build_path_root, "Taverne")
 doc_path = os.path.join(build_path, "Doc")
 bin_path = os.path.join(build_path, "Bin")
 data_path = os.path.join(build_path, "Data")
+plugins_path = os.path.join(build_path, "Plugins")
 
 env_python_path = os.path.dirname(sys.executable)
 env_translations_path = os.path.join(env_python_path, "..", "Lib", "site-packages", "PySide6", "translations")
@@ -48,7 +49,7 @@ build_exe_options = {
     "zip_exclude_packages" : [],
     "include_msvcr" : True,
     "silent" : True,
-    "include_files" : ["Data", "Doc", "icon_large.png", "icon_multi.ico", ["Bin/" + system, "Bin/" + system],
+    "include_files" : ["Data", "Doc", "Plugins", "icon_large.png", "icon_multi.ico", ["Bin/" + system, "Bin/" + system],
                        [os.path.join(env_translations_path, "qtbase_de.qm"), os.path.join("lib/Pyside6/translations", "qtbase_de.qm")]]
 }
 
@@ -61,7 +62,7 @@ setup(  name = 'Taverne',
         version = str(Version._sephrasto_version_major) + "." + str(Version._sephrasto_version_minor) + "." + str(Version._sephrasto_version_build),
         options = {"build_exe" : build_exe_options },
         py_modules = [],
-        executables = [Executable("Sephrasto.py", base=base, icon="icon_multi.ico")])
+        executables = [Executable("Sephrasto.py", base=base, icon="icon_multi.ico", target_name="Taverne")])
         
 # Remove unneeded files
 print("Removing unneeded files")
@@ -85,7 +86,7 @@ removeFiles = [
     "lib/PySide6/plugins/generic",
     "lib/PySide6/d3dcompiler_47.dll",
     "lib/D3DCOMPILER_47.dll",
-    "Doc/assets/external/unpkg.com/mermaid@11"
+    "Doc/assets/external/unpkg.com/mermaid@11",
 ]
 
 for filename in removeFiles:
@@ -96,6 +97,16 @@ for filename in removeFiles:
             shutil.rmtree(filepath)
         except OSError:
             os.remove(filepath)
+
+# Remove UI and pycache folders from included plugins
+for plugin in os.listdir(plugins_path):
+    for path in [os.path.join(plugins_path, plugin, "UI"), os.path.join(plugins_path, plugin, "__pycache__")]:
+        if not os.path.isdir(path):
+            continue
+        try:
+            shutil.rmtree(path)
+        except OSError:
+            os.remove(path)
              
 # Zip the build
 archiveName = "Taverne_v" + str(Version._sephrasto_version_major) + "." + str(Version._sephrasto_version_minor) + "." + str(Version._sephrasto_version_build)
