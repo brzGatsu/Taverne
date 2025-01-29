@@ -124,7 +124,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Taverne zum Drachentöter</string>
+      <string>Die Taverne</string>
      </property>
      <property name="scaledContents">
       <bool>false</bool>
@@ -152,7 +152,7 @@
       </size>
      </property>
      <property name="text">
-      <string>Der Charaktergenerator für Drachentöter</string>
+      <string>zum Drachentöter</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>

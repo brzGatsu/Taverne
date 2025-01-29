@@ -85,8 +85,19 @@ class Plugin:
     def pdfExportFilter(self, fields, params):
         wertNamen = ["0", "W4", "W6", "W8", "W10", "W12"]
 
-        for i in range(0, len(Wolke.Char.ressourcen)):
-            ressource = Wolke.Char.ressourcen[i]
+        filtered = []
+        for ressource in Wolke.Char.ressourcen:
+            # hacky until we have a new charsheet
+            if ressource.name == "Ansehen":
+                fields["Ansehen"] = f"{wertNamen[ressource.wert]} ({ressource.kommentar})"
+            elif ressource.name == "Stand":
+                fields["Status"] = f"{wertNamen[ressource.wert]} ({ressource.kommentar})"
+            else:
+                filtered.append(ressource)
+            
+
+        for i in range(0, len(filtered)):
+            ressource = filtered[i]
             fields[f"Ressource{i+1}Name"] = ressource.name
             fields[f"Ressource{i+1}Wert"] = wertNamen[ressource.wert]
             fields[f"Ressource{i+1}Kommentar"] = ressource.kommentar
