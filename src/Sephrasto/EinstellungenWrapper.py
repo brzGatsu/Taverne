@@ -793,7 +793,7 @@ class EinstellungenWrapper():
         self.ui.editCharakterboegen.setText(p)
 
     def resetFonts(self):
-        self.ui.comboTheme.setCurrentText("Ilaris")
+        self.ui.comboTheme.setCurrentText("Drachentöter")
         self.ui.comboFont.setCurrentText(Wolke.DefaultOSFont)
         self.ui.spinAppFontSize.setValue(Wolke.DefaultOSFontSize)
         self.ui.comboFontHeading.setCurrentText("Aniron")

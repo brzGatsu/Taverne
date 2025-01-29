@@ -33,7 +33,7 @@ class Wolke:
         'PDF-Open': True,
         'UpdateCheck_Disable' : False,
         'UpdateCheck_DisableFor' : '',
-        'Theme' : "Ilaris",
+        'Theme' : "Drachentöter",
         'Font' : "", # we default this to os font after start
         'FontSize' : 0, # we default this to os font size after start
         'FontHeading' : "Aniron",
