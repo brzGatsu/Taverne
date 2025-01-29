@@ -21,7 +21,7 @@ class UpdateChecker:
         def onTextDownloaded(text):
             UpdateChecker._page.deleteLater()
             UpdateChecker._page = None
-            res = re.findall("Taverne(\S*).zip", text)
+            res = re.findall("Taverne_(\S*).zip", text)
             if len(res) == 0:
                 return
             version = Version.fromString(res[0])
