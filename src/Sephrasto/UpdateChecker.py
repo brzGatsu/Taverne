@@ -7,8 +7,8 @@ import webbrowser
 
 class UpdateChecker:
 
-    _apiLink = "https://api.github.com/repos/Aeolitus/Sephrasto/releases/latest"
-    _downloadLink = "https://github.com/Aeolitus/Sephrasto/releases/latest"
+    _apiLink = "https://api.github.com/repos/brzGatsu/Taverne/releases/latest"
+    _downloadLink = "https://github.com/brzGatsu/Taverne/releases/latest"
     _page = None
 
     @staticmethod
@@ -21,7 +21,7 @@ class UpdateChecker:
         def onTextDownloaded(text):
             UpdateChecker._page.deleteLater()
             UpdateChecker._page = None
-            res = re.findall("Sephrasto_(\S*).zip", text)
+            res = re.findall("Taverne(\S*).zip", text)
             if len(res) == 0:
                 return
             version = Version.fromString(res[0])
@@ -48,8 +48,8 @@ class UpdateChecker:
 
         messageBox = QtWidgets.QMessageBox()
         messageBox.setIcon(QtWidgets.QMessageBox.Information)
-        messageBox.setWindowTitle("Neue Sephrasto-Version")
-        messageBox.setText(f"Eine neue Version von Sephrasto ist verfügbar! Clicke auf Download, um zur Sephrasto-Seite auf github.com zu gelangen.\n\nInstallierte Version: {Version.clientToString()}\nNeue Version: {version}")
+        messageBox.setWindowTitle("Neue Taverne-Version")
+        messageBox.setText(f"Eine neue Version von Taverne ist verfügbar! Clicke auf Download, um zur Taverne-Seite auf github.com zu gelangen.\n\nInstallierte Version: {Version.clientToString()}\nNeue Version: {version}")
         downloadButton = messageBox.addButton("Download", QtWidgets.QMessageBox.AcceptRole)
         laterButton = messageBox.addButton("Später", QtWidgets.QMessageBox.AcceptRole)
         messageBox.setEscapeButton(QtWidgets.QMessageBox.Close)  

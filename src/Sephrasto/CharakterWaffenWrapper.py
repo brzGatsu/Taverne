@@ -121,7 +121,7 @@ class CharakterWaffenWrapper(QtCore.QObject):
             labelBasis = getattr(self.ui, "labelW" + str(i+1) + "Basis")
             labelBasis.setToolTip(f"""<p style='white-space:pre'><span style='{Wolke.FontAwesomeCSS}'>\uf02d</span>  Basiswaffe
 
-Sephrasto leitet von der Basiswaffe das verwendete Talent, die erlaubten Kampfstile und von dir vorgenommene Anpassungen der Waffenwerte ab.
+Taverne leitet von der Basiswaffe das verwendete Talent, die erlaubten Kampfstile und von dir vorgenommene Anpassungen der Waffenwerte ab.
 Du kannst deiner Waffe jederzeit einen eigenen Namen geben, die Basiswaffe ändert sich dadurch nicht.</p>""")
             self.labelBasis.append(labelBasis)
             labelWerte = getattr(self.ui, "labelW" + str(i+1) + "Werte")

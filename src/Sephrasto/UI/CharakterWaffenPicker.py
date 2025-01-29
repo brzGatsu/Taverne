@@ -103,7 +103,7 @@ class Ui_Dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 348, 460))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 327, 470))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -117,6 +117,7 @@ class Ui_Dialog(object):
         self.labelTyp = QLabel(self.scrollAreaWidgetContents)
         self.labelTyp.setObjectName(u"labelTyp")
         font3 = QFont()
+        font3.setBold(False)
         font3.setItalic(True)
         self.labelTyp.setFont(font3)
         self.labelTyp.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
@@ -249,7 +250,7 @@ class Ui_Dialog(object):
     # setupUi
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Sephrasto - Waffe w\u00e4hlen...", None))
+        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Taverne - Waffe w\u00e4hlen...", None))
         self.buttonExpandToggle.setText(QCoreApplication.translate("Dialog", u"Expand Toggle", None))
         self.buttonExpandToggle.setProperty(u"class", QCoreApplication.translate("Dialog", u"icon", None))
         self.nameFilterEdit.setPlaceholderText(QCoreApplication.translate("Dialog", u"Suchen...", None))

@@ -798,7 +798,7 @@ class DatenbankEditor(object):
             infoBox.setIcon(QtWidgets.QMessageBox.Information)
             infoBox.setText("Überschreiben der zentralen Datenbank verhindert!")
             infoBox.setInformativeText("Bitte schreibe deine eigenen Regeln nicht mit in die zentrale datenbank.xml - \
-diese wird bei vielen Updates von Sephrasto verändert, wodurch du deine Regeln \
+diese wird bei vielen Updates von Taverne verändert, wodurch du deine Regeln \
 verlieren würdest. Stattdessen kannst du sie als separate Datei abspeichern und in den Einstellungen selektieren. \
 Sie wird dann automatisch beim Programmstart mit geladen. Änderungen darin überschreiben \
 die datenbank.xml, aber bleiben bei Updates erhalten!")
@@ -846,7 +846,7 @@ die datenbank.xml, aber bleiben bei Updates erhalten!")
             infoBox.setIcon(QtWidgets.QMessageBox.Information)
             infoBox.setText("Überschreiben der zentralen Datenbank verhindert!")
             infoBox.setInformativeText("Bitte schreibe deine eigenen Regeln nicht mit in die zentrale datenbank.xml - \
-diese wird bei vielen Updates von Sephrasto verändert, wodurch du deine Regeln \
+diese wird bei vielen Updates von Taverne verändert, wodurch du deine Regeln \
 verlieren würdest. Stattdessen kannst du sie als separate Datei abspeichern und in den Einstellungen selektieren. \
 Sie wird dann automatisch beim Programmstart mit geladen. Änderungen darin überschreiben \
 die datenbank.xml, aber bleiben bei Updates erhalten!")
@@ -896,7 +896,7 @@ die datenbank.xml, aber bleiben bei Updates erhalten!")
             infoBox.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)
             infoBox.setIcon(QtWidgets.QMessageBox.Warning)
             infoBox.setText("Es sind bereits Hausregeln geladen. Wenn du zusätzlich noch andere Hausregeln lädst, werden beide zusammengefasst!\n" +
-                            "Wenn in beiden Hausregeln die gleichen Datenbank-Elemente geändert wurden, wirst du dich zwischen einer Version entscheiden müssen - Sephrasto wird dir dabei helfen. " +
+                            "Wenn in beiden Hausregeln die gleichen Datenbank-Elemente geändert wurden, wirst du dich zwischen einer Version entscheiden müssen - Taverne wird dir dabei helfen. " +
                             "Du kannst dies ohne Risiko ausprobieren: Die zusammengefassten Hausregeln werden erst gespeichert, wenn du den Speichern-Button drückst.\n" +
                             "In jedem Fall solltest du hinterher aber überprüfen, ob alle geänderten Elemente noch intakt sind. " +
                             "Beispielsweise könnten die zusätzlichen Hausregeln einen Vorteil gelöscht haben, der in den aktuellen Hausregeln irgendwo als Voraussetzung gelistet ist.")
@@ -917,7 +917,7 @@ die datenbank.xml, aber bleiben bei Updates erhalten!")
         if spath == databaseFile:
             infoBox = QtWidgets.QMessageBox()
             infoBox.setIcon(QtWidgets.QMessageBox.Warning)
-            infoBox.setText("Diese Funktion dient dem Laden einer Hausregel-Datenbank. Die zentrale Sephrasto-Datenbank 'database.xml' wird sowieso immer geladen!")
+            infoBox.setText("Diese Funktion dient dem Laden einer Hausregel-Datenbank. Die zentrale Datenbank 'database.xml' wird sowieso immer geladen!")
             infoBox.setWindowTitle("Ungültige Datei!")
             infoBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
             infoBox.setEscapeButton(QtWidgets.QMessageBox.Close)  

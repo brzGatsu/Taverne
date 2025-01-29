@@ -260,7 +260,7 @@ class Ui_formBeschreibung(object):
         self.labelHeimat.setText(QCoreApplication.translate("formBeschreibung", u"Heimatgebiet", None))
         self.labelHeimat.setProperty(u"class", QCoreApplication.translate("formBeschreibung", u"h4", None))
 #if QT_CONFIG(tooltip)
-        self.labelImage.setToolTip(QCoreApplication.translate("formBeschreibung", u"<html><head/><body><p>Das Bild wird im Sephrasto-Hauptfenster f\u00fcr die Schnellade-Funktion verwendet und im Charakterbogen ausgegeben. Hinweis: Der Standard Charakterbogen hat keinen Platz f\u00fcr ein Bild. Wechsle im Info-Tab auf den \"Standardbogen mit Bild statt SchiP\" oder einen der anderen B\u00f6gen.</p></body></html>", None))
+        self.labelImage.setToolTip(QCoreApplication.translate("formBeschreibung", u"<html><head/><body><p>Das Bild wird im Taverne-Hauptfenster f\u00fcr die Schnellade-Funktion verwendet und im Charakterbogen ausgegeben. Hinweis: Der Standard Charakterbogen hat keinen Platz f\u00fcr ein Bild. Wechsle im Info-Tab auf den &quot;Standardbogen mit Bild statt SchiP&quot; oder einen der anderen B\u00f6gen.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.labelImage.setText(QCoreApplication.translate("formBeschreibung", u"Bild-Aufl\u00f6sung: 260x340 px\n"
 "(wird automatisch angepasst)", None))

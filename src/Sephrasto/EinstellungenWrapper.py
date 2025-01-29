@@ -279,8 +279,8 @@ class EinstellungenWrapper():
             if self.needRestart:
                 messageBox = QtWidgets.QMessageBox()
                 messageBox.setIcon(QtWidgets.QMessageBox.Information)
-                messageBox.setWindowTitle("Sephrasto neustarten?")
-                messageBox.setText("Sephrasto muss bei Änderungen an Plugin- oder Theme-Einstellungen neugestartet werden.")
+                messageBox.setWindowTitle("Taverne neustarten?")
+                messageBox.setText("Taverne muss bei Änderungen an Plugin- oder Theme-Einstellungen neugestartet werden.")
                 restartButton = messageBox.addButton("Neustarten", QtWidgets.QMessageBox.YesRole)
                 laterButton = messageBox.addButton("Später", QtWidgets.QMessageBox.RejectRole)
                 messageBox.setEscapeButton(QtWidgets.QMessageBox.Close)  
@@ -430,7 +430,7 @@ class EinstellungenWrapper():
             self.ui.buttonSettings.setToolTip("")
             self.ui.buttonSettings.setEnabled(True)
         else:
-            self.ui.buttonSettings.setToolTip("Starte Sephrasto neu, um Einstellungen vornehmen zu können")
+            self.ui.buttonSettings.setToolTip("Starte Taverne neu, um Einstellungen vornehmen zu können")
             self.ui.buttonSettings.setEnabled(False)
 
         self.ui.buttonInstall.setVisible(pdui.installable)
@@ -509,14 +509,14 @@ class EinstellungenWrapper():
                 warnIcon = "&nbsp;&nbsp;<span style='" + Wolke.FontAwesomeCSS + "'>\uf071</span>"
                 anzeigeversion += warnIcon
                 sephrastoVersion = ".".join([str(v) for v in pdui.sephrastoVersion[:3]])
-                label.setToolTip("Das Plugin wurde für eine neuere Sephrasto-Version entwickelt.\n"\
+                label.setToolTip("Das Plugin wurde für eine neuere Taverne-Version entwickelt.\n"\
                     "Vielleicht macht das nichts, aber es kann auch sein, dass es nicht richtig funktionieren wird.\n"\
-                    f"Es steht eine ältere Version für Sephrasto {sephrastoVersion} zur Verfügung, ein Downgrade wird empfohlen.")
+                    f"Es steht eine ältere Version für Taverne {sephrastoVersion} zur Verfügung, ein Downgrade wird empfohlen.")
             elif Version.isClientHigher([pdui.sephrastoVersion[0], pdui.sephrastoVersion[1], Version._sephrasto_version_build, 0]): # ignore build version
                 warnIcon = "&nbsp;&nbsp;<span style='" + Wolke.FontAwesomeCSS + "'>\uf071</span>"
                 anzeigeversion += warnIcon
                 sephrastoVersion = ".".join([str(v) for v in pdui.sephrastoVersion[:3]])
-                label.setToolTip(f"Das Plugin wurde für das ältere Sephrasto {sephrastoVersion} entwickelt.\n"\
+                label.setToolTip(f"Das Plugin wurde für das ältere Taverne {sephrastoVersion} entwickelt.\n"\
                     "Vielleicht macht das nichts, aber es kann auch sein, dass es nicht richtig funktionieren wird.")
 
             label.setText(anzeigeversion)
@@ -547,7 +547,7 @@ class EinstellungenWrapper():
     @staticmethod
     def restartSephrasto():
         os.chdir(EinstellungenWrapper.oldWorkingDir)
-        if os.path.splitext(sys.executable)[0].endswith("Sephrasto"):
+        if os.path.splitext(sys.executable)[0].endswith("Taverne"):
             os.execl(sys.executable, *sys.argv)
         else:
             os.execl(sys.executable, sys.argv[0], *sys.argv)
@@ -559,7 +559,7 @@ class EinstellungenWrapper():
             if not PathHelper.createFolder(res):
                 messagebox = QtWidgets.QMessageBox()
                 messagebox.setWindowTitle("Fehler!")
-                messagebox.setText("Konnte den Sephrasto Ordner in deinem lokalen Einstellungsverzeichnis nicht erstellen (" + res + "). Bitte stelle sicher, dass Sephrasto die nötigen Schreibrechte hat und dein Antivirus Programm den Zugriff nicht blockiert. Sephrasto wird sonst nicht richtig funktionieren.")
+                messagebox.setText("Konnte den Taverne Ordner in deinem lokalen Einstellungsverzeichnis nicht erstellen (" + res + "). Bitte stelle sicher, dass Taverne die nötigen Schreibrechte hat und dein Antivirus Programm den Zugriff nicht blockiert. Taverne wird sonst nicht richtig funktionieren.")
                 messagebox.setIcon(QtWidgets.QMessageBox.Critical)
                 messagebox.setStandardButtons(QtWidgets.QMessageBox.Ok)
                 messagebox.exec()
@@ -572,7 +572,7 @@ class EinstellungenWrapper():
         if not PathHelper.createFolder(basePath):
             messagebox = QtWidgets.QMessageBox()
             messagebox.setWindowTitle("Fehler!")
-            messagebox.setText("Konnte den Sephrasto Ordner in deinem Nutzerverzeichnis nicht erstellen (" + basePath + "). Bitte stelle sicher, dass Sephrasto die nötigen Schreibrechte hat und dein Antivirus Programm den Zugriff nicht blockiert. Sephrasto wird sonst nicht richtig funktionieren.")
+            messagebox.setText("Konnte den Taverne Ordner in deinem Nutzerverzeichnis nicht erstellen (" + basePath + "). Bitte stelle sicher, dass Taverne die nötigen Schreibrechte hat und dein Antivirus Programm den Zugriff nicht blockiert. Taverne wird sonst nicht richtig funktionieren.")
             messagebox.setIcon(QtWidgets.QMessageBox.Critical)
             messagebox.setStandardButtons(QtWidgets.QMessageBox.Ok)
             messagebox.exec_()
@@ -585,7 +585,7 @@ class EinstellungenWrapper():
         settingsPath = Wolke.CmdArgs.settingsfile
         if settingsPath is None:
             settingsFolder = PathHelper.getSettingsFolder()
-            settingsPath = os.path.join(settingsFolder, 'Sephrasto.ini')
+            settingsPath = os.path.join(settingsFolder, 'Taverne.ini')
         if not os.path.isfile(settingsPath):
             return
         with open(settingsPath,'r') as infile:
@@ -642,7 +642,7 @@ class EinstellungenWrapper():
             messageBox.setInformativeText(", ".join(missingFolders))
             messageBox.setIcon(QtWidgets.QMessageBox.Warning)
             revertButton = messageBox.addButton("Zurücksetzen", QtWidgets.QMessageBox.YesRole)
-            quitButton = messageBox.addButton("Sephrasto beenden", QtWidgets.QMessageBox.RejectRole)
+            quitButton = messageBox.addButton("Taverne beenden", QtWidgets.QMessageBox.RejectRole)
             messageBox.exec()
             if messageBox.clickedButton() == quitButton:
                 sys.exit()
@@ -669,7 +669,7 @@ class EinstellungenWrapper():
         settingsPath = Wolke.CmdArgs.settingsfile
         if settingsPath is None:
             settingsFolder = EinstellungenWrapper.createSettingsFolder()
-            settingsPath = os.path.join(settingsFolder, 'Sephrasto.ini')
+            settingsPath = os.path.join(settingsFolder, 'Taverne.ini')
         with open(settingsPath, 'w') as outfile:
             yaml.dump(Wolke.Settings, outfile)
 

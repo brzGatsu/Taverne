@@ -1,8 +1,8 @@
 # Eigene Plugins schreiben
-Durch die Plugin-Unterstützung kannst du tiefgehende Veränderungen an Sephrasto vornehmen, z.B. den Charaktereditor anpassen oder Berechnungen verändern. Plugins haben vollen Zugriff auf alle Sephrasto-Dateien und können Objekt-Zustände auslesen oder verändern. Für Nutzer-Interaktion können dem Hauptfenster Buttons und dem Charaktereditor Tabs hinzugefügt werden, die mittels Qt eigene UIs darstellen können. Um über künftige Sephrasto-Versionen hinweg und mit anderen Plugins kompatibel zu bleiben, sollten Plugins nach Möglichkeit nur über soganannte Actions und Filter mit Sephrasto interagieren und sonst nur lesend auf die Sephrasto-Objekte zugreifen.
+Durch die Plugin-Unterstützung kannst du tiefgehende Veränderungen an Taverne vornehmen, z.B. den Charaktereditor anpassen oder Berechnungen verändern. Plugins haben vollen Zugriff auf alle Taverne-Dateien und können Objekt-Zustände auslesen oder verändern. Für Nutzer-Interaktion können dem Hauptfenster Buttons und dem Charaktereditor Tabs hinzugefügt werden, die mittels Qt eigene UIs darstellen können. Um über künftige Taverne-Versionen hinweg und mit anderen Plugins kompatibel zu bleiben, sollten Plugins nach Möglichkeit nur über soganannte Actions und Filter mit Taverne interagieren und sonst nur lesend auf die Taverne-Objekte zugreifen.
 
 ## Vorbereitung
-Theoretisch brauchst du nicht mehr als Notepad um loslegen zu können. Kleine Dinge wie die EP-Kosten für AsP oder die Anzahl der kostenlosen freien Fertigkeiten anzupassen geht so ohne Probleme. Sobald du aber etwas aufwändigere Dinge tun möchtest, insbesondere eigene Tabs/Fenster einbauen, solltest du Qt Creator, Python und eine Entwicklungsumgebung installieren und das Sephrasto-Repository klonen, siehe hier: <a href="https://github.com/Aeolitus/Sephrasto/blob/master/README.md">https://github.com/Aeolitus/Sephrasto/blob/master/README.md</a>
+Theoretisch brauchst du nicht mehr als Notepad um loslegen zu können. Kleine Dinge wie die EP-Kosten für AsP oder die Anzahl der kostenlosen freien Fertigkeiten anzupassen geht so ohne Probleme. Sobald du aber etwas aufwändigere Dinge tun möchtest, insbesondere eigene Tabs/Fenster einbauen, solltest du Qt Creator, Python und eine Entwicklungsumgebung installieren und das Taverne-Repository klonen, siehe hier: <a href="https://github.com/Aeolitus/Taverne/blob/master/README.md">https://github.com/Aeolitus/Taverne/blob/master/README.md</a>
 
 ## Actions und Filter
 Actions und Filter können verwendet werden auf Vorgänge zu reagieren oder Daten zu manipulieren. Das System funktioniert über die statische EventBus-Klasse. Actions und Filter haben beide als ersten Parameter immer den Namen, der natürlich einzigartig sein sollte. Um Actions oder Filter zu "abonnieren" muss neben dem Namen als zweiter Parameter immer ein Handler/Callback mitgereicht werden.
@@ -37,7 +37,7 @@ def talentKostenFilter(self, val, params):
         return val + 10
 ```
 
-Im Folgenden werden alle nutzbaren Actions und Filter erläutert. Sie sind kategorisiert nach Charakter, Charaktereditor, PDF Export, Datenbank, Datenbankeditor und Verschiedenes. Zuletzt gibt es noch ein paar Actions, die Sephrasto selbst abonniert.
+Im Folgenden werden alle nutzbaren Actions und Filter erläutert. Sie sind kategorisiert nach Charakter, Charaktereditor, PDF Export, Datenbank, Datenbankeditor und Verschiedenes. Zuletzt gibt es noch ein paar Actions, die Taverne selbst abonniert.
 
 ### Charakter
 Wichtig: Alle Actions/Filter, die den Charakter betreffen, übergeben den Charakter als Parameter. Auf den Charakter sollte nur über diesen Parameter zugegriffen werden, nicht über Wolke.Char.
@@ -46,10 +46,10 @@ Wichtig: Alle Actions/Filter, die den Charakter betreffen, übergeben den Charak
 |---|---|---|---|
 |**Load/Save**|
 |charakter_instanziiert|Action|{ "charakter" : Char }|Charakter modifizieren, nachdem er instanziiert, aber bevor er geladen und aktualisiert wurde.|
-|charakter_serialisieren|Filter|Serialization.?Serializer // { "charakter" : Char }|Dem Serialisierer Daten hinzufügen, bevor Sephrasto den Charakter hineinschreibt.|
-|charakter_serialisiert|Action|{ "charakter" : Char, "serializer" : Serialization.?Serializer }|Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Sephrasto den Charakter hineingeschrieben hat.|
-|charakter_deserialisieren|Filter|Serialization.?Deserializer // {"charakter" : Char }|Aus dem Deserialisierer Daten laden oder modifizieren, bevor Sephrasto den Charakter daraus lädt.|
-|charakter_deserialisiert|Action|{ "charakter" : Char, "deserializer" : ?Deserializer }|Aus dem Deserialisierer Daten laden, nachdem Sephrasto den Charakter daraus geladen hat.|
+|charakter_serialisieren|Filter|Serialization.?Serializer // { "charakter" : Char }|Dem Serialisierer Daten hinzufügen, bevor Taverne den Charakter hineinschreibt.|
+|charakter_serialisiert|Action|{ "charakter" : Char, "serializer" : Serialization.?Serializer }|Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Taverne den Charakter hineingeschrieben hat.|
+|charakter_deserialisieren|Filter|Serialization.?Deserializer // {"charakter" : Char }|Aus dem Deserialisierer Daten laden oder modifizieren, bevor Taverne den Charakter daraus lädt.|
+|charakter_deserialisiert|Action|{ "charakter" : Char, "deserializer" : ?Deserializer }|Aus dem Deserialisierer Daten laden, nachdem Taverne den Charakter daraus geladen hat.|
 |charakter_geschrieben|Action|{ "charakter" : Char, "serializer" : ?Serializer, "filepath" : str }|Die Charakterdatei modifizieren oder weitere Dateien erstellen|
 |**Update**|
 |pre_charakter_aktualisieren|Action|{ "charakter" : Char }|Beliebige Aktion durchführen, nachdem die Charakterwerte in irgendeiner Form modifiziert wurden, aber bevor die Veränderungen berechnet werden.|
@@ -98,7 +98,7 @@ Die folgenden Actions haben alle eine Gemeinsamkeit: Sie werden aufgerufen, wenn
 |ruestung_be|Filter|be: int // { "name" : str }|Die BE einer Rüstung des Rüstungauswahlfensters anpassen. Achtung: Da Rüstungen ergänzt werden können und die Namen dann konkateniert werden, sollte der name via "in" abgefragt werden (bspw. if "Leichte Platte" in name).|
 |regelanhang_reihenfolge_name|Filter|name : str // {}|Wenn der Datenbank-Einstellung "Regelanhang: Reihenfolge" neue Kürzel hinzugefügt werden, kann mit diesem Filter der volle Name für das Kürzel angegeben werden, damit es im Info-Tab bei den Regelanhangkategorien verständlich dargestellt wird. Der anfängliche Filterwert entspricht dem Kürzel.|
 
-Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Sephrasto-UI anzupassen.
+Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Taverne-UI anzupassen.
 
 | Name | Typ | Filter // Parameter | 
 |---|---|---|
@@ -125,18 +125,18 @@ Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wra
 |---|---|---|---|
 |pdf_geschrieben|Action|{ "filepath" : str }|Aktion durchführen, nachdem die Charakter-PDF geschrieben wurde, z.B. eine weitere PDF schreiben. Der Parameter enthält den Dateinamen der Charakter-PDF mit absolutem Pfad.
 |regelanhang_anfuegen|Action|{ "reihenfolge" : str, "appendCallback" : Python-Funktion }| Dem Regelanhang weiteren Text hinzufügen. Dies geschieht über den Parameter "appendCallback", einer Pythonfunktion die den Kategorienamen und den Text als Funktionsparameter hat. Der Kategoriename kann auch auf einen leeren str gesetzt werden. Die Action wird mehrmals aufgerufen, der "reihenfolge" Parameter sollte genutzt werden, um den Text an der richtigen Stelle einzufügen. Er entspricht einem Eintrag in der Datenbank-Einstellung "Regelanhang: Reihenfolge".|
-|pdf_concat|Filter|filePaths : [str] // {}|Sephrasto fügt zum Schluss alle generierten Einzelseiten zusammen. Diese Liste von Einzelseiten kann hiermit manipuliert werden, z.B. um weitere Seiten einzufügen.|
-|pdf_export|Filter|pdfFields : {str : str} // {}|Von Sephrasto generierte PDF-Felder vor dem Exportieren der PDF modifizieren|
-|pdf_export_extrapage|Filter|pdfFields : {str : str} // {}|Von Sephrasto generierte PDF-Felder vor dem Exportieren der PDF modifizieren. Wird nur für Extraseiten aufgerufen, wenn diese nötig sind. Sie enthalten nur die Felder für übernatürliche Fertigkeiten, Talente und Vorteile.|
-|set_charakterbogen|Filter|filePath : str // {}|Den vom Nutzer gewählten Charakterbogen modifizieren, z.B. den Pfad der Datei anpassen um einen Charakterbogen aus dem Plugin zu verwenden. Achtung: Im Ordner des Charakterbogens muss sich eine gleichnamige Datei mit der Endung ".ini" befinden. Siehe Sephrasto/Data/Charakterbögen/Standard Charakterbogen.ini als Beispiel für deren Inhalt.|
+|pdf_concat|Filter|filePaths : [str] // {}|Taverne fügt zum Schluss alle generierten Einzelseiten zusammen. Diese Liste von Einzelseiten kann hiermit manipuliert werden, z.B. um weitere Seiten einzufügen.|
+|pdf_export|Filter|pdfFields : {str : str} // {}|Von Taverne generierte PDF-Felder vor dem Exportieren der PDF modifizieren|
+|pdf_export_extrapage|Filter|pdfFields : {str : str} // {}|Von Taverne generierte PDF-Felder vor dem Exportieren der PDF modifizieren. Wird nur für Extraseiten aufgerufen, wenn diese nötig sind. Sie enthalten nur die Felder für übernatürliche Fertigkeiten, Talente und Vorteile.|
+|set_charakterbogen|Filter|filePath : str // {}|Den vom Nutzer gewählten Charakterbogen modifizieren, z.B. den Pfad der Datei anpassen um einen Charakterbogen aus dem Plugin zu verwenden. Achtung: Im Ordner des Charakterbogens muss sich eine gleichnamige Datei mit der Endung ".ini" befinden. Siehe Taverne/Data/Charakterbögen/Standard Charakterbogen.ini als Beispiel für deren Inhalt.|
 
 ### Datenbank
 | Name | Typ | Filter // Parameter | Zweck |
 |---|---|---|---|
-|datenbank_serialisieren|Filter|Serialization.?Serializer // { "datenbank" : Datenbank, "merge" : bool }|Dem Serialisierer Daten hinzufügen, bevor Sephrasto die Datenbank hineinschreibt. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.|
-|datenbank_serialisiert|Action|{ "datenbank" : Datenbank, "serializer" : Serialization.?Serializer, "merge" : bool }|Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Sephrasto die Datenbank hineingeschrieben hat. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.|
-|datenbank_deserialisieren|Filter|Serialization.?Deserializer // {"datenbank" : Datenbank, "basisdatenbank" : bool, "conflictCallback" : Python-Funktion }|Aus dem Deserialisierer Daten laden oder modifizieren, bevor Sephrasto die Datenbank daraus lädt. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.|
-|datenbank_deserialisiert|Action|{ "datenbank" : Datenbank, "deserializer" : ?Deserializer, "basisdatenbank" : bool, "conflictCallback" : Python-Funktion }|Aus dem Deserialisierer Daten laden, nachdem Sephrasto die Datenbank daraus geladen hat. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.|
+|datenbank_serialisieren|Filter|Serialization.?Serializer // { "datenbank" : Datenbank, "merge" : bool }|Dem Serialisierer Daten hinzufügen, bevor Taverne die Datenbank hineinschreibt. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.|
+|datenbank_serialisiert|Action|{ "datenbank" : Datenbank, "serializer" : Serialization.?Serializer, "merge" : bool }|Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Taverne die Datenbank hineingeschrieben hat. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.|
+|datenbank_deserialisieren|Filter|Serialization.?Deserializer // {"datenbank" : Datenbank, "basisdatenbank" : bool, "conflictCallback" : Python-Funktion }|Aus dem Deserialisierer Daten laden oder modifizieren, bevor Taverne die Datenbank daraus lädt. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.|
+|datenbank_deserialisiert|Action|{ "datenbank" : Datenbank, "deserializer" : ?Deserializer, "basisdatenbank" : bool, "conflictCallback" : Python-Funktion }|Aus dem Deserialisierer Daten laden, nachdem Taverne die Datenbank daraus geladen hat. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.|
 |basisdatenbank_datei|Filter|filepath: str // {}|Dateipfad für die Basisdatenbank ändern.|
 |basisdatenbank_geladen|Action|{"datenbank" : Datenbank, "isCharakterEditor" : bool }|Elemente der Basisdatenbank anpassen/hinzufügen/löschen, bevor die Hausregel-Datenbank geladen wird. Ein übliches Beispiel ist das Hinzufügen von DatenbankEinstellung-Elementen, mit welchen das Plugin konfiguriert werden kann.|
 |datenbank_geladen|Action|{ "datenbank" : Datenbank, "isCharakterEditor" : bool }|Aktion durchführen, nachdem die Datenbank inkl. Hausregeldatenbank komplett geladen wurde. Eine Referenz auf das Datenbank-Objekt erhalten.|
@@ -179,7 +179,7 @@ Die folgenden Actions haben alle eine Gemeinsamkeit: Sie werden aufgerufen, wenn
 |dbe_menuitems_erstellen|Action|{ "addMenuItemCB" : Python-Funktion }|Dem Datenbankeditor-Menu Einträge hinzufügen. Rufe dazu den addMenuItemCB auf. Er benötigt zwei Parameter: Der erste ist der Name des Menus, der zweite eine QAction.|
 |datenbank_editor_typen|Filter| databaseTypes : { Class : DatenbankTypWrapper } // {}|Dem Datenbankeditor weitere Datentypen hinzufügen. Zusätzlich muss via datenbank_geladen in datenbank.tablesByType die Datenbankelement-Tabelle eingetragenwerden.|
 
-Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Sephrasto-UI anzupassen.
+Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Taverne-UI anzupassen.
 
 | Name | Typ | Filter // Parameter |
 |---|---|---|
@@ -215,8 +215,8 @@ Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wra
 |plugins_geladen|Action|{ "plugins" : [str] }|Nach dieser Action sind alle Plugins initialisiert. Kann verwendet werden um mit anderen Plugins über eigene Actions und Filter zu kommunizieren. Der Parameter enthält eine Liste mit den Namen aller aktivierten Plugins.|
 |scripts_available|Filter|scripts : Scripts // { "context" : int }|Die verfügbaren Getter- oder Setter-Scripts im Scripteditor anpassen.|
 
-### Von Sephrasto abonnierte Actions
-Diese Actions können von Plugins abgesendet werden, um Sephrasto anweisungen zu geben.
+### Von Taverne abonnierte Actions
+Diese Actions können von Plugins abgesendet werden, um Taverne anweisungen zu geben.
 
 | Name | Typ | Filter // Parameter | Zweck |
 |---|---|---|---|
@@ -224,7 +224,7 @@ Diese Actions können von Plugins abgesendet werden, um Sephrasto anweisungen zu
 |charaktereditor_modified|Action|{}|Aktualisiert den Charakter und die EP und beim Schließen des Charaktereditors wird ein Popup angezeigt, das über ungespeicherte Änderungen mitteilt|
 
 ## Neues Plugin erstellen
-- Gehe in deinen `Dokumente/Sephrasto/Plugins` Ordner
+- Gehe in deinen `Dokumente/Taverne/Plugins` Ordner
 - Lege einen neuen Ordner mit deinem Pluginnamen an (keine Leerzeichen)
 - Erstelle in diesem Ordner eine Datei mit dem Namen `manifest.json` mit folgendem Inhalt:
 ```json
@@ -242,7 +242,7 @@ Diese Actions können von Plugins abgesendet werden, um Sephrasto anweisungen zu
   ]
 }
 ```
-- Manifest Zusatzinfo: Das Feld "version" muss dem Format X.X.X.X folgen, wobei die letzten drei Stellen optional sind. Das Feld "dependencies" ist optional und kann genutzt werden, um ein oder mehrere Plugins anzugeben, von denen dieses Plugin abhängt - sie werden dann von Sephrasto automatisch mitinstalliert.
+- Manifest Zusatzinfo: Das Feld "version" muss dem Format X.X.X.X folgen, wobei die letzten drei Stellen optional sind. Das Feld "dependencies" ist optional und kann genutzt werden, um ein oder mehrere Plugins anzugeben, von denen dieses Plugin abhängt - sie werden dann von Taverne automatisch mitinstalliert.
 - Erstelle in diesem Ordner eine Datei mit dem Namen `__init__.py`
 - Erstelle in dieser Datei eine Klasse mit dem Namen `Plugin` und importiere den `EventBus`
 - Falls du Action oder Filter Handler registrieren möchtest, stelle sicher, dass sie über die gesamte Programm-Dauer bestehen bleiben. Vermeide es also beispielsweise Handler in einem UI Wrapper zu registrieren, den du jedes mal neu erstellst, wenn ein neuer Charakter geladen wird oder ein Hauptfenster-Button geclickt wird. Stattdessen kannst du den Handler in deiner `__init__.py` registrieren und dann eine Funktion auf dem aktuellen Wrapper aufrufen.
@@ -266,8 +266,8 @@ class Plugin:
 ## Charaktereditor Tab hinzufügen
 Implementiere in deiner Plugin-Klasse eine Funktion mit dem Namen `createCharakterTabs` und returne eine Liste von Tabs. Importiere hierzu die Tab-Klasse aus dem Charaktereditor.
 
-- Der erste Konstruktor-Parameter der Tabklasse legt die relative Reihenfolge fest, in welcher der Tab eingefügt wird - die Sephrasto Tabs haben Reihenfolge-Werte in 10er-Schritten, beginnend bei 10.
-- Der zweite Parameter ist deine UI-Wrapper-Klasse, die optional ein `modified` Signal definieren kann. Mit dem Signal kann Sephrasto darüber in Kenntnis gesetzt werden, dass sich etwas am Charakter verändert hat, um bei Bedarf das Warn-Popup zu öffnen, wenn der Charakter geschlossen wird oder um das EP-Widget zu aktualisieren. Zudem kann sie optional die Funktionen load und update implementieren. Beide werden von Sephrasto zu passenden Zeitpunkten aufgerufen und sollten genutzt werden, um die UI Widgets zu befüllen (load) oder den Charakter mit den UI Widget-Werten zu aktualisieren (update).
+- Der erste Konstruktor-Parameter der Tabklasse legt die relative Reihenfolge fest, in welcher der Tab eingefügt wird - die Taverne Tabs haben Reihenfolge-Werte in 10er-Schritten, beginnend bei 10.
+- Der zweite Parameter ist deine UI-Wrapper-Klasse, die optional ein `modified` Signal definieren kann. Mit dem Signal kann Taverne darüber in Kenntnis gesetzt werden, dass sich etwas am Charakter verändert hat, um bei Bedarf das Warn-Popup zu öffnen, wenn der Charakter geschlossen wird oder um das EP-Widget zu aktualisieren. Zudem kann sie optional die Funktionen load und update implementieren. Beide werden von Taverne zu passenden Zeitpunkten aufgerufen und sollten genutzt werden, um die UI Widgets zu befüllen (load) oder den Charakter mit den UI Widget-Werten zu aktualisieren (update).
 - Der dritte Parameter ist die vom QtCreator generierte UI Form.
 - Der vierte Parameter ist der Titel des Tabs.
 
@@ -368,8 +368,8 @@ class Plugin:
         [...]
 ```
 
-## Dem Plugin in den Sephrasto-Einstellungen einen eigenen Einstellungsdialog hinzufügen
-Füge die Funktion showSettings ein und zeige ein beliebiges Fenster oder nutze Sephrastos SimpleSettingsDialog. Dieser kümmert sich automatisch um das Darstellen, Laden und Speichern der Einstellungen in der Sephrasto.ini über die `addSetting` Funktion.
+## Dem Plugin in den Taverne-Einstellungen einen eigenen Einstellungsdialog hinzufügen
+Füge die Funktion showSettings ein und zeige ein beliebiges Fenster oder nutze Tavernes SimpleSettingsDialog. Dieser kümmert sich automatisch um das Darstellen, Laden und Speichern der Einstellungen in der Taverne.ini über die `addSetting` Funktion.
 
 ```python
 from PySide6 import QtWidgets

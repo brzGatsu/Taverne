@@ -41,7 +41,7 @@ class Migrationen():
             hausregelnVersion = int(versionXml.text)
 
         if hausregelnVersion > Migrationen.datenbankCodeVersion:
-            logging.error("Veraltetes Sephrasto: Du hast die Hausregeln mit einer neueren Sephrasto-Version erstellt, diese Version kann sie nicht öffnen")
+            logging.error("Taverne veraltet: Du hast die Hausregeln mit einer neueren Taverne-Version erstellt, diese Version kann sie nicht öffnen")
             return False
 
         migrationen = [

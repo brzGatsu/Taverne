@@ -11,7 +11,7 @@ print("Cleaning build folder")
 dir_path = os.path.dirname(os.path.realpath(__file__))
 project_path = os.path.join(dir_path, "..", "..")
 build_path_root = os.path.join(project_path,  "build")
-build_path = os.path.join(build_path_root, "Sephrasto")
+build_path = os.path.join(build_path_root, "Taverne")
 doc_path = os.path.join(build_path, "Doc")
 bin_path = os.path.join(build_path, "Bin")
 data_path = os.path.join(build_path, "Data")
@@ -56,8 +56,8 @@ base = None
 if system == "Windows":
     base = "Win32GUI"
 
-setup(  name = 'Sephrasto',
-        description = 'Sephrasto',
+setup(  name = 'Taverne',
+        description = 'Taverne',
         version = str(Version._sephrasto_version_major) + "." + str(Version._sephrasto_version_minor) + "." + str(Version._sephrasto_version_build),
         options = {"build_exe" : build_exe_options },
         py_modules = [],
@@ -98,7 +98,7 @@ for filename in removeFiles:
             os.remove(filepath)
              
 # Zip the build
-archiveName = "Sephrasto_v" + str(Version._sephrasto_version_major) + "." + str(Version._sephrasto_version_minor) + "." + str(Version._sephrasto_version_build)
+archiveName = "Taverne_v" + str(Version._sephrasto_version_major) + "." + str(Version._sephrasto_version_minor) + "." + str(Version._sephrasto_version_build)
 print("Creating archive " + archiveName + ".zip")
 
 

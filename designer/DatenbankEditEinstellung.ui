@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Einstellung bearbeiten...</string>
+   <string>Taverne - Einstellung bearbeiten...</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>548</width>
-        <height>387</height>
+        <width>552</width>
+        <height>391</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
@@ -85,7 +85,7 @@
          <item>
           <widget class="QSpinBox" name="spinText">
            <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
+            <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
            </property>
            <property name="minimum">
             <number>-99999</number>
@@ -98,7 +98,7 @@
          <item>
           <widget class="QDoubleSpinBox" name="dspinText">
            <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
+            <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
            </property>
            <property name="minimum">
             <double>-99999.000000000000000</double>
@@ -114,7 +114,7 @@
          <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>

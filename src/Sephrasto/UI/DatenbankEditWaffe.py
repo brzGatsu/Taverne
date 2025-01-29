@@ -32,7 +32,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 399, 406))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 403, 410))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -76,8 +76,8 @@ class Ui_dialog(object):
         self.spinWuerfel = QSpinBox(self.scrollAreaWidgetContents)
         self.spinWuerfel.setObjectName(u"spinWuerfel")
         self.spinWuerfel.setMinimumSize(QSize(50, 0))
-        self.spinWuerfel.setAlignment(Qt.AlignCenter)
-        self.spinWuerfel.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinWuerfel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinWuerfel.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinWuerfel.setMinimum(0)
         self.spinWuerfel.setMaximum(99)
         self.spinWuerfel.setValue(2)
@@ -99,8 +99,8 @@ class Ui_dialog(object):
         self.spinPlus = QSpinBox(self.scrollAreaWidgetContents)
         self.spinPlus.setObjectName(u"spinPlus")
         self.spinPlus.setMinimumSize(QSize(50, 0))
-        self.spinPlus.setAlignment(Qt.AlignCenter)
-        self.spinPlus.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinPlus.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinPlus.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinPlus.setMinimum(-99)
         self.spinPlus.setValue(2)
 
@@ -124,8 +124,8 @@ class Ui_dialog(object):
         self.spinRW = QSpinBox(self.scrollAreaWidgetContents)
         self.spinRW.setObjectName(u"spinRW")
         self.spinRW.setMinimumSize(QSize(50, 0))
-        self.spinRW.setAlignment(Qt.AlignCenter)
-        self.spinRW.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinRW.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinRW.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinRW.setMaximum(999)
         self.spinRW.setValue(1)
 
@@ -148,8 +148,8 @@ class Ui_dialog(object):
         self.spinWM = QSpinBox(self.scrollAreaWidgetContents)
         self.spinWM.setObjectName(u"spinWM")
         self.spinWM.setMinimumSize(QSize(50, 0))
-        self.spinWM.setAlignment(Qt.AlignCenter)
-        self.spinWM.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinWM.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinWM.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinWM.setMinimum(-99)
         self.spinWM.setMaximum(99)
 
@@ -172,8 +172,8 @@ class Ui_dialog(object):
         self.spinLZ = QSpinBox(self.scrollAreaWidgetContents)
         self.spinLZ.setObjectName(u"spinLZ")
         self.spinLZ.setMinimumSize(QSize(50, 0))
-        self.spinLZ.setAlignment(Qt.AlignCenter)
-        self.spinLZ.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinLZ.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinLZ.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
 
         self.layoutLZ.addWidget(self.spinLZ)
 
@@ -194,8 +194,8 @@ class Ui_dialog(object):
         self.spinHaerte = QSpinBox(self.scrollAreaWidgetContents)
         self.spinHaerte.setObjectName(u"spinHaerte")
         self.spinHaerte.setMinimumSize(QSize(50, 0))
-        self.spinHaerte.setAlignment(Qt.AlignCenter)
-        self.spinHaerte.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinHaerte.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinHaerte.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinHaerte.setMinimum(0)
         self.spinHaerte.setMaximum(99)
         self.spinHaerte.setValue(7)
@@ -272,7 +272,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Waffe bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Waffe bearbeiten...", None))
         self.labelName.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelTyp.setText(QCoreApplication.translate("dialog", u"Typ", None))
         self.comboTyp.setItemText(0, QCoreApplication.translate("dialog", u"Nahkampfwaffe", None))

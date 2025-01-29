@@ -359,7 +359,7 @@
           </size>
          </property>
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Das Bild wird im Sephrasto-Hauptfenster für die Schnellade-Funktion verwendet und im Charakterbogen ausgegeben. Hinweis: Der Standard Charakterbogen hat keinen Platz für ein Bild. Wechsle im Info-Tab auf den &quot;Standardbogen mit Bild statt SchiP&quot; oder einen der anderen Bögen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Das Bild wird im Taverne-Hauptfenster für die Schnellade-Funktion verwendet und im Charakterbogen ausgegeben. Hinweis: Der Standard Charakterbogen hat keinen Platz für ein Bild. Wechsle im Info-Tab auf den &amp;quot;Standardbogen mit Bild statt SchiP&amp;quot; oder einen der anderen Bögen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
           <string>Bild-Auflösung: 260x340 px

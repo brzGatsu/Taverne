@@ -1,11 +1,11 @@
 # Ein eigenes Theme erstellen
-Du kannst das Aussehen von Sephrasto ohne Programmierkenntnisse nach deinen Wünschen anpassen, indem du ein eigenes Theme kreierst. Dazu musst du eine Text-Datei namens "Mein Theme.ini" in deinem Sephrasto-Konfigurationsordner erstellen. Diesen findest du hier:
+Du kannst das Aussehen von Taverne ohne Programmierkenntnisse nach deinen Wünschen anpassen, indem du ein eigenes Theme kreierst. Dazu musst du eine Text-Datei namens "Mein Theme.ini" in deinem Taverne-Konfigurationsordner erstellen. Diesen findest du hier:
 
-- Windows: "User/Dokumente/Sephrasto"
-- macOS: "User/Library/Preferences/Sephrasto"
-- Linux: "home/user/.config/Sephrasto".
+- Windows: "User/Dokumente/Taverne"
+- macOS: "User/Library/Preferences/Taverne"
+- Linux: "home/user/.config/Taverne".
 
-Am einfachsten ist es, wenn du erstmal eines der bestehenden Themes dorthin kopierst und entsprechend umbenennst. Diese findest du in deinem Sephrasto-Installationsordner im Unterordner Data/Themes. Nun kannst du beispielsweise ein paar der dort festgelegten Farben anpassen. Danach kannst du das Theme in den Einstellungen von Sephrasto aktivieren.
+Am einfachsten ist es, wenn du erstmal eines der bestehenden Themes dorthin kopierst und entsprechend umbenennst. Diese findest du in deinem Taverne-Installationsordner im Unterordner Data/Themes. Nun kannst du beispielsweise ein paar der dort festgelegten Farben anpassen. Danach kannst du das Theme in den Einstellungen von Taverne aktivieren.
 
 ## Theme-Konfiguration
 Alle der folgenden Einstellungsmöglichkeiten sind optional, bis auf die Einstellung Style.

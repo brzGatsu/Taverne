@@ -33,7 +33,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 418, 563))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 422, 567))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -66,7 +66,7 @@ class Ui_dialog(object):
 
         self.checkVerbilligt = QCheckBox(self.scrollAreaWidgetContents)
         self.checkVerbilligt.setObjectName(u"checkVerbilligt")
-        self.checkVerbilligt.setLayoutDirection(Qt.RightToLeft)
+        self.checkVerbilligt.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
 
         self.horizontalLayout.addWidget(self.checkVerbilligt)
 
@@ -78,8 +78,8 @@ class Ui_dialog(object):
         sizePolicy.setHeightForWidth(self.spinKosten.sizePolicy().hasHeightForWidth())
         self.spinKosten.setSizePolicy(sizePolicy)
         self.spinKosten.setMinimumSize(QSize(60, 0))
-        self.spinKosten.setAlignment(Qt.AlignCenter)
-        self.spinKosten.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinKosten.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinKosten.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinKosten.setMinimum(0)
         self.spinKosten.setMaximum(9999)
         self.spinKosten.setSingleStep(20)
@@ -119,7 +119,7 @@ class Ui_dialog(object):
 
         self.checkCheatsheet = QCheckBox(self.scrollAreaWidgetContents)
         self.checkCheatsheet.setObjectName(u"checkCheatsheet")
-        self.checkCheatsheet.setLayoutDirection(Qt.LeftToRight)
+        self.checkCheatsheet.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.checkCheatsheet.setChecked(True)
 
         self.formLayout.setWidget(4, QFormLayout.FieldRole, self.checkCheatsheet)
@@ -226,7 +226,7 @@ class Ui_dialog(object):
 
         self.spinSeite = QSpinBox(self.scrollAreaWidgetContents)
         self.spinSeite.setObjectName(u"spinSeite")
-        self.spinSeite.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinSeite.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinSeite.setMaximum(999)
 
         self.horizontalLayout_3.addWidget(self.spinSeite)
@@ -252,7 +252,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Talent bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Talent bearbeiten...", None))
         self.labelName.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelKategorie.setText(QCoreApplication.translate("dialog", u"Kategorie und Kosten", None))
 #if QT_CONFIG(tooltip)
@@ -272,7 +272,7 @@ class Ui_dialog(object):
         self.labelFertigkeiten.setText(QCoreApplication.translate("dialog", u"Fertigkeiten", None))
         self.labelVoraussetzungen.setText(QCoreApplication.translate("dialog", u"Voraussetzungen", None))
 #if QT_CONFIG(tooltip)
-        self.teVoraussetzungen.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Siehe \"Datenbank Editor -> Einstellungsm\u00f6glichkeiten -> Voraussetzungen\" in der Sephrasto-Hilfe f\u00fcr eine Anleitung.</p></body></html>", None))
+        self.teVoraussetzungen.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Siehe &quot;Datenbank Editor -&gt; Einstellungsm\u00f6glichkeiten -&gt; Voraussetzungen&quot; in der Taverne-Hilfe f\u00fcr eine Anleitung.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.labelBeschreibung.setText(QCoreApplication.translate("dialog", u"Beschreibung", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("dialog", u"HTML", None))

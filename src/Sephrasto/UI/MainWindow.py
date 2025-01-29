@@ -96,7 +96,7 @@ class Ui_Form(object):
         self.scrollArea.setWidgetResizable(True)
         self.recents = QWidget()
         self.recents.setObjectName(u"recents")
-        self.recents.setGeometry(QRect(0, 0, 114, 212))
+        self.recents.setGeometry(QRect(0, 0, 116, 231))
         self.verticalLayout = QVBoxLayout(self.recents)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(20, 20, 20, 20)
@@ -132,7 +132,7 @@ class Ui_Form(object):
     # setupUi
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Sephrasto", None))
+        Form.setWindowTitle(QCoreApplication.translate("Form", u"Taverne", None))
 #if QT_CONFIG(tooltip)
         self.buttonRules.setToolTip(QCoreApplication.translate("Form", u"Regelbasis bearbeiten", None))
 #endif // QT_CONFIG(tooltip)
@@ -148,9 +148,9 @@ class Ui_Form(object):
 #endif // QT_CONFIG(tooltip)
         self.buttonSettings.setText(QCoreApplication.translate("Form", u"Einst", None))
         self.buttonSettings.setProperty(u"class", QCoreApplication.translate("Form", u"icon", None))
-        self.label.setText(QCoreApplication.translate("Form", u"Sephrasto", None))
+        self.label.setText(QCoreApplication.translate("Form", u"Taverne zum Drachent\u00f6ter", None))
         self.label.setProperty(u"class", QCoreApplication.translate("Form", u"title", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"Der Charaktergenerator f\u00fcr Ilaris", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"Der Charaktergenerator f\u00fcr Drachent\u00f6ter", None))
         self.label_2.setProperty(u"class", QCoreApplication.translate("Form", u"subtitle", None))
         self.scrollArea.setProperty(u"class", QCoreApplication.translate("Form", u"charListScrollArea", None))
         self.recents.setProperty(u"class", QCoreApplication.translate("Form", u"recentCharsScrollArea", None))

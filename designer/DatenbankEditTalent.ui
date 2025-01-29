@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Talent bearbeiten...</string>
+   <string>Taverne - Talent bearbeiten...</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>418</width>
-        <height>563</height>
+        <width>422</width>
+        <height>567</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
@@ -60,7 +60,7 @@
            <item>
             <spacer name="horizontalSpacer_3">
              <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+              <enum>Qt::Orientation::Horizontal</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -76,7 +76,7 @@
               <string>Verbilligte Talente kosten nur die Hälfte</string>
              </property>
              <property name="layoutDirection">
-              <enum>Qt::RightToLeft</enum>
+              <enum>Qt::LayoutDirection::RightToLeft</enum>
              </property>
              <property name="text">
               <string>verbilligt</string>
@@ -98,10 +98,10 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
              <property name="buttonSymbols">
-              <enum>QAbstractSpinBox::PlusMinus</enum>
+              <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
              </property>
              <property name="suffix">
               <string> EP</string>
@@ -159,7 +159,7 @@
        <item row="4" column="1">
         <widget class="QCheckBox" name="checkCheatsheet">
          <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
          </property>
          <property name="text">
           <string>Auflisten</string>
@@ -201,7 +201,7 @@
           </size>
          </property>
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siehe &quot;Datenbank Editor -&gt; Einstellungsmöglichkeiten -&gt; Voraussetzungen&quot; in der Sephrasto-Hilfe für eine Anleitung.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siehe &amp;quot;Datenbank Editor -&amp;gt; Einstellungsmöglichkeiten -&amp;gt; Voraussetzungen&amp;quot; in der Taverne-Hilfe für eine Anleitung.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -330,7 +330,7 @@
          <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -346,7 +346,7 @@
          <item>
           <widget class="QSpinBox" name="spinSeite">
            <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
+            <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
            </property>
            <property name="maximum">
             <number>999</number>

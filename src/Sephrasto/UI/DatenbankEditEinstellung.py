@@ -32,7 +32,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 548, 387))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 552, 391))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName_2 = QLabel(self.scrollAreaWidgetContents)
@@ -71,7 +71,7 @@ class Ui_dialog(object):
 
         self.spinText = QSpinBox(self.scrollAreaWidgetContents)
         self.spinText.setObjectName(u"spinText")
-        self.spinText.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinText.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinText.setMinimum(-99999)
         self.spinText.setMaximum(99999)
 
@@ -79,7 +79,7 @@ class Ui_dialog(object):
 
         self.dspinText = QDoubleSpinBox(self.scrollAreaWidgetContents)
         self.dspinText.setObjectName(u"dspinText")
-        self.dspinText.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.dspinText.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.dspinText.setMinimum(-99999.000000000000000)
         self.dspinText.setMaximum(99999.000000000000000)
 
@@ -108,7 +108,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Einstellung bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Einstellung bearbeiten...", None))
         self.labelName_2.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelName.setText("")
         self.labelLabelBeschreibung.setText(QCoreApplication.translate("dialog", u"Beschreibung", None))

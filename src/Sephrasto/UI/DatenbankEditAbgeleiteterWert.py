@@ -33,7 +33,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 485, 617))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 506, 597))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -206,7 +206,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Abgeleiteten Wert bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Abgeleiteten Wert bearbeiten...", None))
         self.labelName.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelAnzeigeName.setText(QCoreApplication.translate("dialog", u"Voller Name", None))
         self.labelShow.setText(QCoreApplication.translate("dialog", u"Anzeigen", None))

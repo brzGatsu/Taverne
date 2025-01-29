@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Freie Fertigkeit wählen...</string>
+   <string>Taverne - Freie Fertigkeit wählen...</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">

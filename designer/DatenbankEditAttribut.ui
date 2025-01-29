@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Attribut bearbeiten...</string>
+   <string>Taverne - Attribut bearbeiten...</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>546</width>
-        <height>524</height>
+        <width>550</width>
+        <height>528</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
@@ -61,7 +61,7 @@
          <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -80,7 +80,7 @@
             </size>
            </property>
            <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
+            <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
            </property>
            <property name="minimum">
             <number>1</number>
@@ -107,7 +107,7 @@
          <item>
           <spacer name="horizontalSpacer_2">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -129,7 +129,7 @@
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Die Reihenfolge, in der der Wert im Charaktereditor aufgeführt werden soll.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
+            <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
            </property>
            <property name="minimum">
             <number>-999</number>

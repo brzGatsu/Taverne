@@ -8,10 +8,10 @@ def getSettingsFolder():
         return getDefaultUserFolder()
     elif system == 'Darwin':
         path = os.path.expanduser('~/Library/Preferences/')
-        return os.path.join(path, "Sephrasto")
+        return os.path.join(path, "Taverne")
     else:
         path = os.getenv('XDG_CONFIG_HOME', os.path.expanduser("~/.config"))
-        return os.path.join(path, "Sephrasto")
+        return os.path.join(path, "Taverne")
     return path
 
 def getDefaultUserFolder():
@@ -24,16 +24,16 @@ def getDefaultUserFolder():
         buf= ctypes.create_unicode_buffer(ctypes.wintypes.MAX_PATH)
         ctypes.windll.shell32.SHGetFolderPathW(None, CSIDL_PERSONAL, None, SHGFP_TYPE_CURRENT, buf)
         userFolder = buf.value or userFolder
-        return os.path.join(userFolder,'Sephrasto')
+        return os.path.join(userFolder,'Taverne')
     elif system == 'Linux':
-        if os.path.isdir(os.path.join(userFolder,'.sephrasto')):
-            return os.path.join(userFolder,'.sephrasto') # allow users to rename the folder to a hidden folder
+        if os.path.isdir(os.path.join(userFolder,'.taverne')):
+            return os.path.join(userFolder,'.taverne') # allow users to rename the folder to a hidden folder
         else:
-            return os.path.join(userFolder,'sephrasto')
+            return os.path.join(userFolder,'taverne')
     elif system == 'Darwin':
-        return os.path.join(userFolder, 'Documents', 'Sephrasto') # the documents folder is language-independent on macos
+        return os.path.join(userFolder, 'Documents', 'Taverne') # the documents folder is language-independent on macos
     else:
-        return os.path.join(userFolder,'Sephrasto')
+        return os.path.join(userFolder,'Taverne')
 
 def createFolder(basePath):
     if not os.path.isdir(basePath):

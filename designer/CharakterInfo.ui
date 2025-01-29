@@ -337,7 +337,7 @@
             <item row="8" column="1">
              <widget class="QCheckBox" name="checkUeberPDF">
               <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sephrasto übernimmt automatisch alle übernatürlichen Fertigkeiten in den Charakterbogen, deren FW mindestens 1 beträgt und für welche du mindestens ein Talent aktiviert hast. Wenn du diese Option aktivierst, zeigt Sephrasto eine PDF-Spalte bei den übernatürlichen Fertigkeiten an. Mit dieser kannst du selbst entscheiden, welche Fertigkeiten in den Charakterbogen übernommen werden sollen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Taverne übernimmt automatisch alle übernatürlichen Fertigkeiten in den Charakterbogen, deren FW mindestens 1 beträgt und für welche du mindestens ein Talent aktiviert hast. Wenn du diese Option aktivierst, zeigt Taverne eine PDF-Spalte bei den übernatürlichen Fertigkeiten an. Mit dieser kannst du selbst entscheiden, welche Fertigkeiten in den Charakterbogen übernommen werden sollen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="text">
                <string/>
@@ -366,7 +366,7 @@
               <item>
                <widget class="QCheckBox" name="checkRegeln">
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sephrasto kann automatisch alle Regeln, die für deinen Charakter relevant sind, zusammentragen und deiner PDF hinten anfügen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Taverne kann automatisch alle Regeln, die für deinen Charakter relevant sind, zusammentragen und deiner PDF hinten anfügen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -461,7 +461,7 @@
             <item row="0" column="1">
              <widget class="QComboBox" name="comboCharsheet">
               <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hier erscheinen alle Charakterbögen, die mit Sephrasto geliefert werden sowie alle aus deinem Charakterbogen-Pfad.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hier erscheinen alle Charakterbögen, die mit Taverne geliefert werden sowie alle aus deinem Charakterbogen-Pfad.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>

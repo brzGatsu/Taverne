@@ -475,7 +475,7 @@ class CharakterVorteileWrapper(QtCore.QObject):
                 text = f"<i>Bedingungen</i>: {vorteil.bedingungen}\n\n" + text
 
             if vorteil.info:
-                text += f"\n\n<b>Sephrasto</b>: {vorteil.info}"
+                text += f"\n\n<b>Taverne</b>: {vorteil.info}"
             self.ui.plainText.setText(Hilfsmethoden.fixHtml(text))
 
             kosten = self.kosten(vorteil)

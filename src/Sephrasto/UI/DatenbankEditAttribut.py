@@ -32,7 +32,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 546, 524))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 550, 528))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -69,7 +69,7 @@ class Ui_dialog(object):
         self.spinSF = QSpinBox(self.scrollAreaWidgetContents)
         self.spinSF.setObjectName(u"spinSF")
         self.spinSF.setMinimumSize(QSize(52, 0))
-        self.spinSF.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinSF.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinSF.setMinimum(1)
         self.spinSF.setMaximum(999)
         self.spinSF.setValue(16)
@@ -93,7 +93,7 @@ class Ui_dialog(object):
         self.spinSortOrder = QSpinBox(self.scrollAreaWidgetContents)
         self.spinSortOrder.setObjectName(u"spinSortOrder")
         self.spinSortOrder.setMinimumSize(QSize(52, 0))
-        self.spinSortOrder.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinSortOrder.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinSortOrder.setMinimum(-999)
         self.spinSortOrder.setMaximum(999)
 
@@ -155,7 +155,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Attribut bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Attribut bearbeiten...", None))
         self.labelName.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelAnzeigeName.setText(QCoreApplication.translate("dialog", u"Voller Name", None))
         self.labelSF.setText(QCoreApplication.translate("dialog", u"Steigerungsfaktor", None))

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Abgeleiteten Wert bearbeiten...</string>
+   <string>Taverne - Abgeleiteten Wert bearbeiten...</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>485</width>
-        <height>617</height>
+        <width>506</width>
+        <height>597</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">

@@ -11,7 +11,7 @@ class DatenbankCompareDialogWrapper():
             QtCore.Qt.WindowCloseButtonHint |
             QtCore.Qt.WindowMaximizeButtonHint)
 
-        self.form.setWindowTitle("Sephrasto - " + databaseType.dataType.displayName + " vergleichen")
+        self.form.setWindowTitle("Taverne - " + databaseType.dataType.displayName + " vergleichen")
         
         rootLayout = QtWidgets.QVBoxLayout()
         rootLayout.setSpacing(10)

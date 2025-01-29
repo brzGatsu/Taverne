@@ -30,7 +30,7 @@ class Ui_Dialog(object):
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.splitter = QSplitter(Dialog)
         self.splitter.setObjectName(u"splitter")
-        self.splitter.setOrientation(Qt.Horizontal)
+        self.splitter.setOrientation(Qt.Orientation.Horizontal)
         self.treeWidget = QTreeWidget(self.splitter)
         __qtreewidgetitem = QTreeWidgetItem()
         __qtreewidgetitem.setTextAlignment(0, Qt.AlignLeading|Qt.AlignVCenter);
@@ -42,7 +42,7 @@ class Ui_Dialog(object):
         sizePolicy.setHeightForWidth(self.treeWidget.sizePolicy().hasHeightForWidth())
         self.treeWidget.setSizePolicy(sizePolicy)
         self.treeWidget.setMinimumSize(QSize(0, 0))
-        self.treeWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.treeWidget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.treeWidget.setTabKeyNavigation(True)
         self.treeWidget.setProperty(u"showDropIndicator", False)
         self.treeWidget.setAlternatingRowColors(True)
@@ -65,13 +65,13 @@ class Ui_Dialog(object):
         self.scrollArea.setObjectName(u"scrollArea")
         self.scrollArea.setMinimumSize(QSize(0, 0))
         self.scrollArea.setMaximumSize(QSize(16777215, 16777215))
-        self.scrollArea.setFrameShape(QFrame.StyledPanel)
+        self.scrollArea.setFrameShape(QFrame.Shape.StyledPanel)
         self.scrollArea.setMidLineWidth(0)
         self.scrollArea.setWidgetResizable(True)
-        self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.scrollArea.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 465, 497))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 465, 506))
         self.gridLayout = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout.setObjectName(u"gridLayout")
         self.label = QLabel(self.scrollAreaWidgetContents)
@@ -85,7 +85,7 @@ class Ui_Dialog(object):
         font = QFont()
         font.setItalic(True)
         self.labelTyp.setFont(font)
-        self.labelTyp.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.labelTyp.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.gridLayout.addWidget(self.labelTyp, 1, 0, 1, 1)
 
@@ -97,7 +97,7 @@ class Ui_Dialog(object):
         self.labelNachkauf = QLabel(self.scrollAreaWidgetContents)
         self.labelNachkauf.setObjectName(u"labelNachkauf")
         self.labelNachkauf.setMinimumSize(QSize(0, 18))
-        self.labelNachkauf.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.labelNachkauf.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.gridLayout.addWidget(self.labelNachkauf, 3, 1, 1, 1)
 
@@ -112,15 +112,15 @@ class Ui_Dialog(object):
 
         self.plainText = QTextBrowser(self.scrollAreaWidgetContents)
         self.plainText.setObjectName(u"plainText")
-        self.plainText.setFrameShape(QFrame.StyledPanel)
-        self.plainText.setFrameShadow(QFrame.Sunken)
+        self.plainText.setFrameShape(QFrame.Shape.StyledPanel)
+        self.plainText.setFrameShadow(QFrame.Shadow.Sunken)
         self.plainText.setLineWidth(1)
 
         self.gridLayout.addWidget(self.plainText, 4, 0, 1, 2)
 
         self.labelKosten = QLabel(self.scrollAreaWidgetContents)
         self.labelKosten.setObjectName(u"labelKosten")
-        self.labelKosten.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.labelKosten.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.gridLayout.addWidget(self.labelKosten, 2, 1, 1, 1)
 
@@ -134,8 +134,8 @@ class Ui_Dialog(object):
 
         self.buttonBox = QDialogButtonBox(self.layoutWidget)
         self.buttonBox.setObjectName(u"buttonBox")
-        self.buttonBox.setOrientation(Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
+        self.buttonBox.setOrientation(Qt.Orientation.Horizontal)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.StandardButton.Cancel|QDialogButtonBox.StandardButton.Ok)
         self.buttonBox.setCenterButtons(True)
 
         self.verticalLayout.addWidget(self.buttonBox)
@@ -155,7 +155,7 @@ class Ui_Dialog(object):
     # setupUi
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Sephrasto - Minderpakt-Vorteil w\u00e4hlen", None))
+        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Taverne - Minderpakt-Vorteil w\u00e4hlen", None))
         ___qtreewidgetitem = self.treeWidget.headerItem()
         ___qtreewidgetitem.setText(1, QCoreApplication.translate("Dialog", u"Kosten", None));
         ___qtreewidgetitem.setText(0, QCoreApplication.translate("Dialog", u"Vorteil", None));

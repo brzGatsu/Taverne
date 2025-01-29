@@ -2,11 +2,11 @@
 Vom Startfenster aus gibt es drei Möglichkeiten in den Charaktereditor zu gelangen: 
 
 - Neuen Charakter erstellen: Mit einem Klick auf **Neuer Charakter** öffnet sich ein neues Fenster mit dem Charaktereditor. Dieser besteht größtenteils aus einer Fläche mit verschiedenen Reitern, die Zugriff auf die unterschiedlichen Aspekte eines Charakters geben. Die einzelnen Reiter werden im Weiteren erläutert. Zusätzlich ist im unteren Teil des Fensters eine Steuerungsleiste zu sehen. Diese wird am Ende dieses Abschnitts erläutert.
-- Vorhandenen Charakter laden: Mit einem Klick auf **Charakter laden** kannst du einen bereits abgespeicherten Charakter aus seiner XML-Datei einlesen. Sephrasto öffnet dann den oben erläuterten Charakter-Editor und befüllt automatisch alle Felder so, wie du sie ausgefüllt hattest. So kannst du Charaktere über viele Sitzungen hinweg in Sephrasto bearbeiten.
+- Vorhandenen Charakter laden: Mit einem Klick auf **Charakter laden** kannst du einen bereits abgespeicherten Charakter aus seiner XML-Datei einlesen. Taverne öffnet dann den oben erläuterten Charakter-Editor und befüllt automatisch alle Felder so, wie du sie ausgefüllt hattest. So kannst du Charaktere über viele Sitzungen hinweg in Taverne bearbeiten.
 - Vorhandenen Charakter schnelladen: Wann immer du einen Charakter bearbeitest, erhält er im Startfenster einen eigenen Button. Über diesen kannst du den Charakter sofort laden, ohne seine XML-Datei auswählen zu müssen.
 
 ## Beschreibung
-Die Beschreibung eines Charakters stellt das grundlegende Charakterkonzept dar. Für die allermeisten Charaktere wird sie ausgefüllt, bevor über irgendwelche Werte nachgedacht wird. Es handelt sich dabei um ausfüllbare Textfelder und Drop-Down-Menüs, deren Inhalt direkt auf den Charakterbogen übertragen wird. Die gewählten Finanzen beeinflussen dabei die eingetragenen SchiP\*, und die als Heimatgebiet gewählte Region macht das entsprechende Gebräuche-Talent kostenlos. Ansonsten haben die Eingaben in diesem Bereich innerhalb von Sephrasto keine weitere Wirkung.
+Die Beschreibung eines Charakters stellt das grundlegende Charakterkonzept dar. Für die allermeisten Charaktere wird sie ausgefüllt, bevor über irgendwelche Werte nachgedacht wird. Es handelt sich dabei um ausfüllbare Textfelder und Drop-Down-Menüs, deren Inhalt direkt auf den Charakterbogen übertragen wird. Die gewählten Finanzen beeinflussen dabei die eingetragenen SchiP\*, und die als Heimatgebiet gewählte Region macht das entsprechende Gebräuche-Talent kostenlos. Ansonsten haben die Eingaben in diesem Bereich innerhalb von Taverne keine weitere Wirkung.
 
 ![Beschreibung](assets/images/Beschreibung.jpg)
 
@@ -45,14 +45,14 @@ Klickst du auf das Plus in der Tabelle oder über der Liste von Talenten, gelang
 
 ![Talente](assets/images/Talente.jpg)
 
-Sephrasto sorgt dafür, dass Talente, die zu mehreren Fertigkeiten passen, auch bei allen auftauchen. Weiterhin sorgt das Tool dafür, dass du keine Fertigkeit über ihren Maximalwert hinaus steigerst. Erwirbst du das Gebräuche-Talent der Region, die du im Beschreibungs-Reiter als deine Heimatregion angegeben hast, stellt dir Sephrasto dafür übrigens keine EP in Rechnung!
+Taverne sorgt dafür, dass Talente, die zu mehreren Fertigkeiten passen, auch bei allen auftauchen. Weiterhin sorgt das Tool dafür, dass du keine Fertigkeit über ihren Maximalwert hinaus steigerst. Erwirbst du das Gebräuche-Talent der Region, die du im Beschreibungs-Reiter als deine Heimatregion angegeben hast, stellt dir Taverne dafür übrigens keine EP in Rechnung!
 
 ## Freie Fertigkeiten
 Hier kannst du all die Freien Fertigkeiten deines Charakters eintragen. Der erste Platz ganz oben links ist dabei für deine kostenlose Muttersprache reserviert – die du immer meisterlich beherrschst. Die anderen kannst du ganz nach Belieben füllen. Freigelassene Felder kosten dabei natürlich keine EP.
 
 ![FreieFertigkeiten](assets/images/FreieFertigkeiten.jpg)
 
-Der **+** -Knopf öffnet ein neues Fenster, in welchem du eine der in Regelbasis hinterlegten Freien Fertigkeiten auswählen kannst, um sie in die jeweilige Zeile einzutragen. In diesem Auswahlmenü findest du eine Liste aller DSA Sprachen und Schriften. Da das Ilaris-Regelwerk allerdings keine vollständige Liste definiert ist diese Liste inoffiziell. Die Sprachen Neckergesang, Drachisch und Koboldisch werden nur angezeigt, wenn der Charakter den Vorteil **Zauberer I** beherrscht.
+Der **+** -Knopf öffnet ein neues Fenster, in welchem du eine der in Regelbasis hinterlegten Freien Fertigkeiten auswählen kannst, um sie in die jeweilige Zeile einzutragen. In diesem Auswahlmenü findest du eine Liste aller DSA Sprachen und Schriften. Da das Drachentöter-Regelwerk allerdings keine vollständige Liste definiert ist diese Liste inoffiziell. Die Sprachen Neckergesang, Drachisch und Koboldisch werden nur angezeigt, wenn der Charakter den Vorteil **Zauberer I** beherrscht.
 
 ![RuestungAuswahl](assets/images/FreieFertigkeitenAuswahl.jpg)
 
@@ -82,7 +82,7 @@ Du kannst du bis zu acht Waffen eingeben, die auf den Charakterbogen sollen.
 - Im zweiten Textfeld kannst du die **Waffeneigenschaften** eintragen. Wenn du dir den Tooltip zu diesem Feld anzeigen lässt erhältst du den Regeltext zu allen Eigenschaften.
 - Mit dem Dropdown-Menu zur **Rüstung** kannst du angeben, welche der bis zu drei hinterlegten Rüstungen für die Berechnung des BE-Abzugs verwendet werden soll.
 - Das Dropdown-Menü zum **Kampfstil** bietet dir alle Kampfstile an, für die du den entsprechenden Vorteil erworben hast und welche mit der Waffe verwendbar sind.
-- Unterhalb des Waffennamens siehst du die **Basiswaffe**, auf deren Werten deine Waffe basiert. Hierüber bezieht Sephrasto beispielsweise die Information, ob es eine Nah- oder Fernkampfwaffe ist, unter welchem Talent sie geführt wird und welche Kampfstile verfügbar sind. Daneben siehst du die endgültigen AT\*, VT\* und TP\*, wie sie im Charakterbogen erscheinen werden. Hier werden Probenwert, Schadensbonus (inkl. Kopflastig), der gewählte Kampfstil und die BE zusammengerechnet. Falls du die Waffe außerdem z. B. durch Handwerk verbessert hast, erscheinen an dritter Stelle die vorgenommenen Modifikationen, relativ zur Basiswaffe.
+- Unterhalb des Waffennamens siehst du die **Basiswaffe**, auf deren Werten deine Waffe basiert. Hierüber bezieht Taverne beispielsweise die Information, ob es eine Nah- oder Fernkampfwaffe ist, unter welchem Talent sie geführt wird und welche Kampfstile verfügbar sind. Daneben siehst du die endgültigen AT\*, VT\* und TP\*, wie sie im Charakterbogen erscheinen werden. Hier werden Probenwert, Schadensbonus (inkl. Kopflastig), der gewählte Kampfstil und die BE zusammengerechnet. Falls du die Waffe außerdem z. B. durch Handwerk verbessert hast, erscheinen an dritter Stelle die vorgenommenen Modifikationen, relativ zur Basiswaffe.
 
 ### Waffenauswahl
 ![WaffenAuswahl](assets/images/WaffenAuswahl.jpg)
@@ -102,7 +102,7 @@ Die Auswahlbox in der unteren rechten Ecke des Rüstungsteils ermöglicht es dir
 
 Der **+** -Knopf bei den Rüstungen öffnet ein neues Fenster, in welchem du eine der in Regelbasis hinterlegten Rüstungen auswählen kannst, um sie in die aktuelle Zeile einzutragen. In diesem Rüstungsauswahlmenü findest du eine vollständige Liste aller im Regelwerk aufgeführten Rüstungen. Diese sind nach Rüstungstyp sortiert.
 
-Unterhalb der Rüstungen stehen dir 20 Textfelder zur Verfügung, in die du Gegenstände eintragen kannst. Sie haben innerhalb von Sephrasto keinen Einfluss, aber werden ebenfalls mit auf den Charakterbogen übertragen.
+Unterhalb der Rüstungen stehen dir 20 Textfelder zur Verfügung, in die du Gegenstände eintragen kannst. Sie haben innerhalb von Taverne keinen Einfluss, aber werden ebenfalls mit auf den Charakterbogen übertragen.
 
 ### Rüstungsauswahl
 ![RuestungAuswahl](assets/images/RuestungAuswahl.jpg)
@@ -117,27 +117,27 @@ Auf der linken Seite kannst du Notizen eintragen. Normalerweise erscheinen sie n
 
 Einstellungsmöglichkeiten:
 
-- Voraussetzungen überprüfen: Wählst du den Haken ab, prüft Sephrasto nicht mehr automatisch, ob du die Voraussetzungen für deine Vorteile, Talente und Fertigkeiten erfüllst. Das kann praktisch sein, wenn du dir nur einen Überblick verschaffen möchtest, oder wenn du einen nicht regelkonformen Charakter erstellen willst, der zum Beispiel über einen Pakt an sonst nicht verfügbare Vorteile gekommen ist. Aber Achtung! Wählst du das Kästchen wieder an, werden die Voraussetzungen geprüft und alle so ausgewählten Vorteile, Fertigkeiten und Talente werden wieder entfernt.
+- Voraussetzungen überprüfen: Wählst du den Haken ab, prüft Taverne nicht mehr automatisch, ob du die Voraussetzungen für deine Vorteile, Talente und Fertigkeiten erfüllst. Das kann praktisch sein, wenn du dir nur einen Überblick verschaffen möchtest, oder wenn du einen nicht regelkonformen Charakter erstellen willst, der zum Beispiel über einen Pakt an sonst nicht verfügbare Vorteile gekommen ist. Aber Achtung! Wählst du das Kästchen wieder an, werden die Voraussetzungen geprüft und alle so ausgewählten Vorteile, Fertigkeiten und Talente werden wieder entfernt.
 - Vor dem ersten Abenteuer: Nach dem ersten Abenteuer kannst du den Haken abwählen. Es werden dann die nicht mehr relevanten Finanzen ausgeblendet und die aktuellen Schicksalspunkte werden nicht mehr ausgegeben, da diese dann händisch verwaltet werden.
 - Hintergrundangaben: Wenn du hier einen Haken setzt, erscheint ein zusätzlicher Reiter "Hintergrundangaben", bei dem du beispielsweise das Aussehen und Details zum Hintergrund des Charakters angeben kannst. Da der Standard-Charakterbogen für diese Angaben keine Felder hat, ist die Option standardmäßig deaktiviert. Wenn du den langen Charakterbogen verwendest, solltest du die Option aktivieren.
 - Hausregeln: Hier kannst du auswählen, ob und welche Hausregeldatei verwendet werden soll. Nach einer Änderung musst du den Charakter neu laden (unbedingt eine Sicherheitskopie erstellen!).
 - Charakterbogen: Für die meisten Spieler ist der Standard-Charakterbogen ausreichend. Falls du aber mehr als 2 Fertigkeiten hinzufügen möchtest, solltest du den langen Bogen verwenden. Er benötigt eine zusätzliche Seite, bietet aber neben der Möglichkeit ein Bild, das Aussehen und den Hintergrund des Charakters einzutragen, zusätzliche Felder für Freie Fertigkeiten und profane Fertigkeiten - damit ist er interessant für Gruppen mit größeren Hausregelsammlungen. Der kurze Charakterbogen benötigt nur eine A5 Seite und ist insbesondere für Begleiter interessant. Der NSC Charakterbogen bietet sich für Spielleiter an.
 - Relevante Regeln anhängen: Neben allgemeinen Regeln u.a. zu Rededuellen und Kampfaktionen werden dir die Regeln zu allen dem Charakter verfügbaren Vorteilen, Waffeneigenschaften, spontanen Modifikationen und übernatürlichen Talenten ausgegeben. Über den Regelkategorien-Button kannst du einzelne dieser Bereiche deaktivieren.
 - Formularfelder editierbar: Wenn du den Haken entfernst, wird der resultierende Charakterbogen keine Formularfelder mehr haben. Dies sorgt für etwas kleinere Dateigrößen. Hauptsächlich ist es aber für Nutzer von unüblichen PDF-Readern gedacht, die mit Formularfeldern Probleme haben können.
-- Export-Option bei übernatürlichen Fertigkeiten: Sephrasto gibt standardmäßig nur übernatürliche Fertigkeiten aus, die einen FW > 0 haben und für die mindestens ein Talent erworben wurde. Setze hier einen Haken, wenn du lieber selbst einstellen möchtest, welche ausgegeben werden. Dadurch erscheint im Übernatürliches-Reiter eine PDF-Spalte
+- Export-Option bei übernatürlichen Fertigkeiten: Taverne gibt standardmäßig nur übernatürliche Fertigkeiten aus, die einen FW > 0 haben und für die mindestens ein Talent erworben wurde. Setze hier einen Haken, wenn du lieber selbst einstellen möchtest, welche ausgegeben werden. Dadurch erscheint im Übernatürliches-Reiter eine PDF-Spalte
 
 ## Die Fußzeile
 In der Fußzeile, die in allen Reitern verfügbar ist, findest du die grundlegendsten Parameter deiner Charaktererstellung.
 
-Zunächst findest du einen Zähler, an dem du die Menge an EP einstellen kannst, über welche dein Charakter verfügt. Sephrasto berechnet stets automatisch die EP-Kosten des Charakters, welchen du gerade erstellst, und passt die Werte für die Ausgegebenen und Verbleibenden EP entsprechend an. Hast du mehr EP ausgegeben, als du zur Verfügung hast, ist der Zähler für die verbleibenden EP rot hinterlegt.
+Zunächst findest du einen Zähler, an dem du die Menge an EP einstellen kannst, über welche dein Charakter verfügt. Taverne berechnet stets automatisch die EP-Kosten des Charakters, welchen du gerade erstellst, und passt die Werte für die Ausgegebenen und Verbleibenden EP entsprechend an. Hast du mehr EP ausgegeben, als du zur Verfügung hast, ist der Zähler für die verbleibenden EP rot hinterlegt.
 
 Schließlich findest du in der unteren rechten Ecke drei Knöpfe. Klickst du auf **Speichern/Speichern unter**, hast du die Möglichkeit, den aktuellen Charakter als XML-Datei auf deinem Computer abzuspeichern und später weiterzumachen.
 
-Wenn du auf **PDF erstellen** klickst, kannst du einen Speicherort und Namen wählen. Sephrasto erstellt dann für dich einen Charakterbogen, der alle Werte beinhaltet, welche du eingetragen hast.<br>
-Dabei befüllt Sephrasto die Felder sinnvoll sortiert. So werden profane Vorteile auf der ersten Seite, Kampfvorteile auf der Zweiten und Übernatürliche Vorteile auf der dritten Seite eingetragen. Ist dafür nicht genug Platz, werden die übrigen Vorteile in den vorhanden Feldern kombiniert. Wenn auch damit der Platz ausgeht, werden Vorteile in freie Felder auf den anderen Blättern eingetragen. Ist für eine profane Fertigkeit kein Platz mehr, lässt Sephrasto sie weg.
+Wenn du auf **PDF erstellen** klickst, kannst du einen Speicherort und Namen wählen. Taverne erstellt dann für dich einen Charakterbogen, der alle Werte beinhaltet, welche du eingetragen hast.<br>
+Dabei befüllt Taverne die Felder sinnvoll sortiert. So werden profane Vorteile auf der ersten Seite, Kampfvorteile auf der Zweiten und Übernatürliche Vorteile auf der dritten Seite eingetragen. Ist dafür nicht genug Platz, werden die übrigen Vorteile in den vorhanden Feldern kombiniert. Wenn auch damit der Platz ausgeht, werden Vorteile in freie Felder auf den anderen Blättern eingetragen. Ist für eine profane Fertigkeit kein Platz mehr, lässt Taverne sie weg.
 
 ## Sonderfälle
-In seltenen Fällen geht Sephrasto einen Sonderweg. Diese sind hier beschrieben:
+In seltenen Fällen geht Taverne einen Sonderweg. Diese sind hier beschrieben:
 
-- Die große Tiertabelle, die für Blutgeister, Tiergeister und Schutzgeister verwendet wird, wurde in Sephrasto in Form von kostenlosen Vorteilen integriert. Diese schalten entsprechende Zauber frei und geben im Regelanhang die Werte des gewählten Tieres mit aus.
+- Die große Tiertabelle, die für Blutgeister, Tiergeister und Schutzgeister verwendet wird, wurde in Taverne in Form von kostenlosen Vorteilen integriert. Diese schalten entsprechende Zauber frei und geben im Regelanhang die Werte des gewählten Tieres mit aus.
 - Die Zauber Brenne toter Stoff, Hartes Schmelze und Weiches Erstarre stehen Gildenmagiern, Scharlatanen und Geoden nicht unter Dämonisch zur Verfügung. Zur Umsetzung dieser Vorgabe wurden die Zauber dupliziert - eine Variante mit Zugriff auf alle Fertigkeiten und eine ohne Dämonisch. Die genannten Traditionen sehen nur die Variante ohne Dämonisch. Falls aber eine Zweittradition gekauft wird, die Zugriff auf die andere Variante hat, werden beide sichtbar. In diesem Fall sollte die Variante ohne Dämonisch abgewählt und die mit Dämonisch ausgewählt werden.

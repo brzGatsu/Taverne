@@ -32,7 +32,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 451, 569))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 455, 573))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -105,7 +105,7 @@ class Ui_dialog(object):
         self.spinBeine.setObjectName(u"spinBeine")
         self.spinBeine.setMinimumSize(QSize(50, 0))
         self.spinBeine.setMaximumSize(QSize(16777215, 16777215))
-        self.spinBeine.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinBeine.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinBeine.setMaximum(8)
 
         self.horizontalLayout_6.addWidget(self.spinBeine)
@@ -129,7 +129,7 @@ class Ui_dialog(object):
         self.spinSchild.setObjectName(u"spinSchild")
         self.spinSchild.setMinimumSize(QSize(50, 0))
         self.spinSchild.setMaximumSize(QSize(16777215, 16777215))
-        self.spinSchild.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinSchild.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinSchild.setMaximum(8)
 
         self.horizontalLayout_5.addWidget(self.spinSchild)
@@ -153,7 +153,7 @@ class Ui_dialog(object):
         self.spinSchwert.setObjectName(u"spinSchwert")
         self.spinSchwert.setMinimumSize(QSize(50, 0))
         self.spinSchwert.setMaximumSize(QSize(16777215, 16777215))
-        self.spinSchwert.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinSchwert.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinSchwert.setMaximum(8)
 
         self.horizontalLayout_4.addWidget(self.spinSchwert)
@@ -177,7 +177,7 @@ class Ui_dialog(object):
         self.spinBauch.setObjectName(u"spinBauch")
         self.spinBauch.setMinimumSize(QSize(50, 0))
         self.spinBauch.setMaximumSize(QSize(16777215, 16777215))
-        self.spinBauch.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinBauch.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinBauch.setMaximum(8)
 
         self.horizontalLayout_3.addWidget(self.spinBauch)
@@ -201,7 +201,7 @@ class Ui_dialog(object):
         self.spinBrust.setObjectName(u"spinBrust")
         self.spinBrust.setMinimumSize(QSize(50, 0))
         self.spinBrust.setMaximumSize(QSize(16777215, 16777215))
-        self.spinBrust.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinBrust.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinBrust.setMaximum(8)
 
         self.horizontalLayout_2.addWidget(self.spinBrust)
@@ -225,7 +225,7 @@ class Ui_dialog(object):
         self.spinKopf.setObjectName(u"spinKopf")
         self.spinKopf.setMinimumSize(QSize(50, 0))
         self.spinKopf.setMaximumSize(QSize(16777215, 16777215))
-        self.spinKopf.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinKopf.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinKopf.setMaximum(8)
 
         self.horizontalLayout.addWidget(self.spinKopf)
@@ -282,7 +282,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - R\u00fcstung bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - R\u00fcstung bearbeiten...", None))
         self.labelName.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelKategorie.setText(QCoreApplication.translate("dialog", u"Kategorie", None))
         self.labelSystem.setText(QCoreApplication.translate("dialog", u"Verf\u00fcgbarkeit", None))

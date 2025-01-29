@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Charakter erstellen</string>
+   <string>Taverne - Charakter erstellen</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">

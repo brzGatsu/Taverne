@@ -2,7 +2,7 @@
 Abgeleitete Werte, Vorteile und Waffeneigenschaften haben im Regelbasis-Editor ein Feld für benutzerdefinierte Skripte. Diese werden verwendet, um Auswirkungen auf die Charakterwerte umzusetzen. Skripte werden in Python geschrieben.
 
 ## API
-Sephrasto bietet eine Reihe von Funktionen an, anhand derer die meisten Skripte mit ein paar wenigen Zeichen umzusetzen sind. Prinzipiell können in Scripten lokale Variablen, mathematische Operatoren wie ```+-/*```, ```while```- und ```for```-Loop, ```if```-Statements, ```list``` bzw. ```[]``` und ```dict``` bzw. ```{}``` verwendet werden.
+Taverne bietet eine Reihe von Funktionen an, anhand derer die meisten Skripte mit ein paar wenigen Zeichen umzusetzen sind. Prinzipiell können in Scripten lokale Variablen, mathematische Operatoren wie ```+-/*```, ```while```- und ```for```-Loop, ```if```-Statements, ```list``` bzw. ```[]``` und ```dict``` bzw. ```{}``` verwendet werden.
 
 ### Arithmetik
 | Script | Rückgabetyp | Parameter | Zweck |
@@ -42,7 +42,7 @@ Sephrasto bietet eine Reihe von Funktionen an, anhand derer die meisten Skripte 
 |getKO|int|-|KO-Wert erhalten|
 |...||||
 
-**Hinweis:** Sephrasto stellt die API für alle Attribute nach obigem Muster automatisch bereit, also auch für in den Hausregeln neu hinzugefügte Attribute. In der Standarddatenbank sind dies GE, KO, KK, FF, MU, IN, KL und CH.
+**Hinweis:** Taverne stellt die API für alle Attribute nach obigem Muster automatisch bereit, also auch für in den Hausregeln neu hinzugefügte Attribute. In der Standarddatenbank sind dies GE, KO, KK, FF, MU, IN, KL und CH.
 
 ### Energien
 | Script | Rückgabetyp | Parameter | Zweck |
@@ -59,7 +59,7 @@ Sephrasto bietet eine Reihe von Funktionen an, anhand derer die meisten Skripte 
 |getKaPBasis|int|-|KaP-Basiswert erhalten. Wird in der Regel von Vorteilen verwendet, welche den Grundvorrat der Energie bereitstellen. Der Wert kann je nach Scriptpriorität vom endgültigen Wert abweichen.|
 |...||||
 
-**Hinweis:** Sephrasto stellt die API für alle Energien nach obigem Muster automatisch bereit, also auch für in den Hausregeln neu hinzugefügte Energien. In der Standarddatenbank sind dies AsP, KaP und GuP.
+**Hinweis:** Taverne stellt die API für alle Energien nach obigem Muster automatisch bereit, also auch für in den Hausregeln neu hinzugefügte Energien. In der Standarddatenbank sind dies AsP, KaP und GuP.
 
 ### Abgeleitete Werte
 | Script | Rückgabetyp | Parameter | Zweck |
@@ -72,7 +72,7 @@ Sephrasto bietet eine Reihe von Funktionen an, anhand derer die meisten Skripte 
 |getMRBasis|int|-|MR-Basiswert erhalten. Wird durch das Script von MR berechnet.|
 |...||||
 
-**Hinweis:** Sephrasto stellt die API für alle Abgeleiteten Werte nach obigem Muster automatisch bereit, also auch für in den Hausregeln neu hinzugefügte Abgeleitete Werte. In der Standarddatenbank sind dies WS, MR, GS, DH, SB, INI, RS, BE und SchiP. Der finale Wert (zum Beispiel mit der BE abgezogen) kann nicht abgefragt werden, seine Berechnung findet erst nach allen Scripts statt. 
+**Hinweis:** Taverne stellt die API für alle Abgeleiteten Werte nach obigem Muster automatisch bereit, also auch für in den Hausregeln neu hinzugefügte Abgeleitete Werte. In der Standarddatenbank sind dies WS, MR, GS, DH, SB, INI, RS, BE und SchiP. Der finale Wert (zum Beispiel mit der BE abgezogen) kann nicht abgefragt werden, seine Berechnung findet erst nach allen Scripts statt. 
 
 ### Fertigkeiten
 | Script | Rückgabetyp | Parameter | Zweck |

@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Rüstung wählen...</string>
+   <string>Taverne - Rüstung wählen...</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
@@ -160,8 +160,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>405</width>
-            <height>460</height>
+            <width>452</width>
+            <height>470</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">

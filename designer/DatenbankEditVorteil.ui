@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Vorteil bearbeiten...</string>
+   <string>Taverne - Vorteil bearbeiten...</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_8">
    <item>
@@ -23,9 +23,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-37</y>
-        <width>620</width>
-        <height>1213</height>
+        <y>0</y>
+        <width>641</width>
+        <height>1180</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
@@ -238,7 +238,7 @@
           </size>
          </property>
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siehe &amp;quot;Datenbank Editor -&amp;gt; Einstellungsmöglichkeiten -&amp;gt; Voraussetzungen&amp;quot; in der Sephrasto-Hilfe für eine Anleitung.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siehe &amp;quot;Datenbank Editor -&amp;gt; Einstellungsmöglichkeiten -&amp;gt; Voraussetzungen&amp;quot; in der Taverne-Hilfe für eine Anleitung.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -316,7 +316,7 @@
          </widget>
          <widget class="QWidget" name="tab_2">
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Eine alternative Beschreibung für den Regelanhang. Falls das Textfeld leer ist, wird im Regelanhang die reguläre Beschreibung verwendet. Du hast hier die Möglichkeit das Makro $kommentar$ zu verwenden - Sephrasto wird dann dann Nutzerkommentar an entsprechender Stelle einfügen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Eine alternative Beschreibung für den Regelanhang. Falls das Textfeld leer ist, wird im Regelanhang die reguläre Beschreibung verwendet. Du hast hier die Möglichkeit das Makro $kommentar$ zu verwenden - Taverne wird dann dann Nutzerkommentar an entsprechender Stelle einfügen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <attribute name="title">
            <string>Regelanhang</string>

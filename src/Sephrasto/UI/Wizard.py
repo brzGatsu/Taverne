@@ -23,7 +23,7 @@ class Ui_formMain(object):
     def setupUi(self, formMain):
         if not formMain.objectName():
             formMain.setObjectName(u"formMain")
-        formMain.setWindowModality(Qt.ApplicationModal)
+        formMain.setWindowModality(Qt.WindowModality.ApplicationModal)
         formMain.resize(623, 376)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -128,8 +128,8 @@ class Ui_formMain(object):
         font1 = QFont()
         font1.setPointSize(6)
         self.label.setFont(font1)
-        self.label.setInputMethodHints(Qt.ImhNone)
-        self.label.setTextFormat(Qt.RichText)
+        self.label.setInputMethodHints(Qt.InputMethodHint.ImhNone)
+        self.label.setTextFormat(Qt.TextFormat.RichText)
         self.label.setWordWrap(True)
         self.label.setOpenExternalLinks(True)
 
@@ -238,7 +238,7 @@ class Ui_formMain(object):
         self.btnAccept.setText(QCoreApplication.translate("formMain", u"\u00dcbernehmen", None))
         self.lblRegeln.setText(QCoreApplication.translate("formMain", u"Baukasten", None))
         self.lblRegeln.setProperty(u"class", QCoreApplication.translate("formMain", u"h4", None))
-        self.label.setText(QCoreApplication.translate("formMain", u"<html><head/><body><p>Der Charakterassistent lebt von Communitybeitr\u00e4gen. Wie du eigene Spezies/Kulturen/Professionen/Archetypen erstellen kannst, erf\u00e4hrst du in der Sephrasto-Hilfe.</p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("formMain", u"<html><head/><body><p>Der Charakterassistent lebt von Communitybeitr\u00e4gen. Wie du eigene Spezies/Kulturen/Professionen/Archetypen erstellen kannst, erf\u00e4hrst du in der Taverne-Hilfe.</p></body></html>", None))
         self.label.setProperty(u"class", QCoreApplication.translate("formMain", u"smallText", None))
         self.lblGeschlecht.setText(QCoreApplication.translate("formMain", u"Geschlecht", None))
         self.lblGeschlecht.setProperty(u"class", QCoreApplication.translate("formMain", u"h4", None))

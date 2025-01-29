@@ -104,7 +104,7 @@ class CharakterMinderpaktWrapper():
 
         text = vorteil.text
         if vorteil.info:
-            text += f"\n\n<b>Sephrasto</b>: {vorteil.info}"
+            text += f"\n\n<b>Taverne</b>: {vorteil.info}"
         self.ui.plainText.setText(Hilfsmethoden.fixHtml(text))
         if vorteil.variableKosten:
             self.ui.labelKosten.setText("20 EP")

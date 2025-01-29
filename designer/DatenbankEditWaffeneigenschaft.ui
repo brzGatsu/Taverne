@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sephrasto - Waffeneigenschaft bearbeiten...</string>
+   <string>Taverne - Waffeneigenschaft bearbeiten...</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>416</width>
-        <height>412</height>
+        <width>420</width>
+        <height>416</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">

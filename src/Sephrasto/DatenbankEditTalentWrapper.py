@@ -212,7 +212,7 @@ class DatenbankEditTalentWrapper(DatenbankElementEditorBase):
             messageBox = QtWidgets.QMessageBox()
             messageBox.setIcon(QtWidgets.QMessageBox.Warning)
             messageBox.setWindowTitle("Formatierung der Beschreibung anpassen?")
-            messageBox.setText("Die Beschreibung enthält Schlüsselwörter (z. B. " + example + "), die nicht wie üblich formatiert sind. Soll Sephrasto den Text automatisch anpassen?")
+            messageBox.setText("Die Beschreibung enthält Schlüsselwörter (z. B. " + example + "), die nicht wie üblich formatiert sind. Soll Taverne den Text automatisch anpassen?")
             messageBox.setStandardButtons(QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
             messageBox.setEscapeButton(QtWidgets.QMessageBox.Close)  
             result = messageBox.exec()

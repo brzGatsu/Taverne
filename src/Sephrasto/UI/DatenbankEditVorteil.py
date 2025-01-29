@@ -34,7 +34,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -37, 620, 1213))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 641, 1180))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -452,7 +452,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Vorteil bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Vorteil bearbeiten...", None))
         self.labelName.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelKategorie.setText(QCoreApplication.translate("dialog", u"Kategorie", None))
         self.labelNachkauf.setText(QCoreApplication.translate("dialog", u"Nachkauf", None))
@@ -474,7 +474,7 @@ class Ui_dialog(object):
         self.checkCheatsheet.setText(QCoreApplication.translate("dialog", u"Auflisten", None))
         self.labelVoraussetzungen.setText(QCoreApplication.translate("dialog", u"Voraussetzungen", None))
 #if QT_CONFIG(tooltip)
-        self.teVoraussetzungen.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Siehe &quot;Datenbank Editor -&gt; Einstellungsm\u00f6glichkeiten -&gt; Voraussetzungen&quot; in der Sephrasto-Hilfe f\u00fcr eine Anleitung.</p></body></html>", None))
+        self.teVoraussetzungen.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Siehe &quot;Datenbank Editor -&gt; Einstellungsm\u00f6glichkeiten -&gt; Voraussetzungen&quot; in der Taverne-Hilfe f\u00fcr eine Anleitung.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.labelBeschreibung.setText(QCoreApplication.translate("dialog", u"Beschreibung", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("dialog", u"HTML", None))
@@ -483,7 +483,7 @@ class Ui_dialog(object):
 #endif // QT_CONFIG(tooltip)
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), QCoreApplication.translate("dialog", u"Bedingungen", None))
 #if QT_CONFIG(tooltip)
-        self.tab_2.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Eine alternative Beschreibung f\u00fcr den Regelanhang. Falls das Textfeld leer ist, wird im Regelanhang die regul\u00e4re Beschreibung verwendet. Du hast hier die M\u00f6glichkeit das Makro $kommentar$ zu verwenden - Sephrasto wird dann dann Nutzerkommentar an entsprechender Stelle einf\u00fcgen</p></body></html>", None))
+        self.tab_2.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Eine alternative Beschreibung f\u00fcr den Regelanhang. Falls das Textfeld leer ist, wird im Regelanhang die regul\u00e4re Beschreibung verwendet. Du hast hier die M\u00f6glichkeit das Makro $kommentar$ zu verwenden - Taverne wird dann dann Nutzerkommentar an entsprechender Stelle einf\u00fcgen</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("dialog", u"Regelanhang", None))
 #if QT_CONFIG(tooltip)

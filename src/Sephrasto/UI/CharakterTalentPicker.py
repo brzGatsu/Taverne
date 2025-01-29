@@ -52,7 +52,7 @@ class Ui_Dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 380, 433))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 379, 448))
         self.gridLayout_2 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.labelKommentar = QLabel(self.scrollAreaWidgetContents)
@@ -160,7 +160,7 @@ class Ui_Dialog(object):
     # setupUi
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Sephrasto - Talente w\u00e4hlen...", None))
+        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Taverne - Talente w\u00e4hlen...", None))
         self.labelKommentar.setText(QCoreApplication.translate("Dialog", u"Kommentar:", None))
         self.labelName.setText(QCoreApplication.translate("Dialog", u"Talentname", None))
         self.labelName.setProperty(u"class", QCoreApplication.translate("Dialog", u"h4", None))

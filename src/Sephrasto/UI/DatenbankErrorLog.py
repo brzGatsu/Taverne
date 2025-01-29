@@ -64,7 +64,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Datenbankfehler", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Datenbankfehler", None))
 #if QT_CONFIG(tooltip)
         self.buttonRefresh.setToolTip(QCoreApplication.translate("dialog", u"Aktualisieren", None))
 #endif // QT_CONFIG(tooltip)

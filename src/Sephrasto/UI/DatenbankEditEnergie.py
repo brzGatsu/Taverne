@@ -32,7 +32,7 @@ class Ui_dialog(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 416, 471))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 420, 475))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.labelName = QLabel(self.scrollAreaWidgetContents)
@@ -69,7 +69,7 @@ class Ui_dialog(object):
         self.spinSF = QSpinBox(self.scrollAreaWidgetContents)
         self.spinSF.setObjectName(u"spinSF")
         self.spinSF.setMinimumSize(QSize(52, 0))
-        self.spinSF.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinSF.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinSF.setMinimum(1)
         self.spinSF.setMaximum(999)
 
@@ -92,7 +92,7 @@ class Ui_dialog(object):
         self.spinSortOrder = QSpinBox(self.scrollAreaWidgetContents)
         self.spinSortOrder.setObjectName(u"spinSortOrder")
         self.spinSortOrder.setMinimumSize(QSize(52, 0))
-        self.spinSortOrder.setButtonSymbols(QAbstractSpinBox.PlusMinus)
+        self.spinSortOrder.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
         self.spinSortOrder.setMinimum(-999)
         self.spinSortOrder.setMaximum(999)
 
@@ -171,7 +171,7 @@ class Ui_dialog(object):
     # setupUi
 
     def retranslateUi(self, dialog):
-        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Sephrasto - Energie bearbeiten...", None))
+        dialog.setWindowTitle(QCoreApplication.translate("dialog", u"Taverne - Energie bearbeiten...", None))
         self.labelName.setText(QCoreApplication.translate("dialog", u"Name", None))
         self.labelAnzeigeName.setText(QCoreApplication.translate("dialog", u"Voller Name", None))
         self.labelSF.setText(QCoreApplication.translate("dialog", u"Steigerungsfaktor", None))
@@ -181,7 +181,7 @@ class Ui_dialog(object):
 #endif // QT_CONFIG(tooltip)
         self.labelVoraussetzungen.setText(QCoreApplication.translate("dialog", u"Voraussetzungen", None))
 #if QT_CONFIG(tooltip)
-        self.teVoraussetzungen.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Siehe \"Datenbank Editor -> Einstellungsm\u00f6glichkeiten -> Voraussetzungen\" in der Sephrasto-Hilfe f\u00fcr eine Anleitung.</p></body></html>", None))
+        self.teVoraussetzungen.setToolTip(QCoreApplication.translate("dialog", u"<html><head/><body><p>Siehe &quot;Datenbank Editor -&gt; Einstellungsm\u00f6glichkeiten -&gt; Voraussetzungen&quot; in der Taverne-Hilfe f\u00fcr eine Anleitung.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.labelBeschreibung.setText(QCoreApplication.translate("dialog", u"Beschreibung", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("dialog", u"HTML", None))

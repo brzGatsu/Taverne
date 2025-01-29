@@ -191,5 +191,5 @@ class TalentPicker(object):
 
         text = talent.text
         if talent.info:
-            text += f"\n<b>Sephrasto</b>: {talent.info}"
+            text += f"\n<b>Taverne</b>: {talent.info}"
         self.ui.plainText.setText(Hilfsmethoden.fixHtml(text))

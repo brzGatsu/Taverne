@@ -485,14 +485,14 @@ Versuchs doch bitte nochmal mit einer anderen Zieldatei.")
             messagebox = QtWidgets.QMessageBox()
             messagebox.setTextFormat(QtCore.Qt.RichText)
             messagebox.setWindowTitle("PDFtk ist nicht installiert!")
-            message = "Sephrasto benötigt PDFtk Server für den PDF-Export.<br>"
+            message = "Taverne benötigt PDFtk Server für den PDF-Export.<br>"
 
             if platform.system() == 'Windows':
                 message += "Hier kannst du es kostenlos herunterladen:<br><br><a href='https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-win-setup.exe'>Setupdatei von www.pdflabs.com</a>"
             elif platform.system() == 'Darwin':
                 message += "Hier kannst du es kostenlos herunterladen:<br><br><a href='https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg'>Setupdatei von www.pdflabs.com</a><br><br>Bitte exakt diese Version, neuere Versionen sind fehlerhaft!"
             else:
-                message += "Bitte installiere es gemäß der Anleitung auf <a href='https://github.com/Aeolitus/Sephrasto'>GitHub</a>"
+                message += "Bitte installiere es gemäß der Anleitung auf <a href='https://github.com/brzGatsu/Taverne'>GitHub</a>"
             messagebox.setText(message)
             messagebox.setIcon(QtWidgets.QMessageBox.Critical)
             messagebox.setStandardButtons(QtWidgets.QMessageBox.Ok)

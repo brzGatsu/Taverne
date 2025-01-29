@@ -1,5 +1,5 @@
 # Eigene Charakterbögen erstellen
-Du kannst Sephrasto weitere Charakterbögen hinzufügen. Kopiere deinen Bogen hierzu einfach in den Charakterbögen-Ordner, der in den Einstellungen von Sephrasto konfiguriert ist. Du musst Sephrasto allerdings noch ein paar Informationen zu deinem Bogen geben - in Form einer Konfigurationsdatei. Diese ist eine Textdatei mit dem gleichen Namen wie die PDF-Datei, aber mit der Endung ".ini". Am einfachsten ist es, wenn du erstmal eine der bestehenden Konfigurationsdateien dorthin kopierst und entsprechend umbenennst. Diese findest du in deinem Sephrasto-Installationsordner im Unterordner Data/Charakterbögen. Alle Konfigurationsmöglichkeiten sind optional.
+Du kannst Taverne weitere Charakterbögen hinzufügen. Kopiere deinen Bogen hierzu einfach in den Charakterbögen-Ordner, der in den Einstellungen von Taverne konfiguriert ist. Du musst Taverne allerdings noch ein paar Informationen zu deinem Bogen geben - in Form einer Konfigurationsdatei. Diese ist eine Textdatei mit dem gleichen Namen wie die PDF-Datei, aber mit der Endung ".ini". Am einfachsten ist es, wenn du erstmal eine der bestehenden Konfigurationsdateien dorthin kopierst und entsprechend umbenennst. Diese findest du in deinem Taverne-Installationsordner im Unterordner Data/Charakterbögen. Alle Konfigurationsmöglichkeiten sind optional.
 
 ## Charakterbogen-Konfiguration
 ```yml
@@ -37,7 +37,7 @@ Die Anzahl an Formularfeldern für Vorteile.
 ```yml
 MaxVorteileProFeld: 3
 ```
-Wenn mehr Vorteile als MaxVorteile vorhanden sind, trägt Sephrasto bis zu MaxVorteileProFeld in jedes Feld ein.
+Wenn mehr Vorteile als MaxVorteile vorhanden sind, trägt Taverne bis zu MaxVorteileProFeld in jedes Feld ein.
 
 ```yml
 MaxKampfVorteile: 16
@@ -47,7 +47,7 @@ Die Anzahl an Formularfeldern für Kampfvorteile.
 ```yml
 MaxKampfVorteileProFeld: 3
 ```
-Wenn mehr Kampfvorteile als MaxKampfVorteile vorhanden sind, trägt Sephrasto bis zu MaxKampfVorteileProFeld in jedes Feld ein.
+Wenn mehr Kampfvorteile als MaxKampfVorteile vorhanden sind, trägt Taverne bis zu MaxKampfVorteileProFeld in jedes Feld ein.
 
 ```yml
 MaxÜbernatürlicheVorteile: 12
@@ -57,7 +57,7 @@ Die Anzahl an Formularfeldern für Übernatürliche Vorteile.
 ```yml
 MaxÜberVorteileProFeld: 3
 ```
-Wenn mehr übernatürliche Vorteile als MaxÜbernatürlicheVorteile vorhanden sind, trägt Sephrasto bis zu MaxÜberVorteileProFeld in jedes Feld ein.
+Wenn mehr übernatürliche Vorteile als MaxÜbernatürlicheVorteile vorhanden sind, trägt Taverne bis zu MaxÜberVorteileProFeld in jedes Feld ein.
 
 ```yml
 MaxFreieFertigkeiten: 28
@@ -67,7 +67,7 @@ Die Anzahl an Formularfeldern für Freie Fertigkeiten.
 ```yml
 MaxFreieProFeld: 3
 ```
-Wenn mehr Freie Fertigkeiten als MaxFreieFertigkeiten vorhanden sind, trägt Sephrasto bis zu MaxFreieProFeld in jedes Feld ein.
+Wenn mehr Freie Fertigkeiten als MaxFreieFertigkeiten vorhanden sind, trägt Taverne bis zu MaxFreieProFeld in jedes Feld ein.
 
 ```yml
 MaxFertigkeiten: 28
@@ -87,7 +87,7 @@ Die Anzahl an Formularfeldern für übernatürliche Talente.
 ```yml
 ÜberSeite: 3
 ```
-Die Seitenzahl der Seite für übernatürliche Fertigkeiten und Vorteile, falls vorhanden. Seiten die darüber hinausgehen werden bei profanen Charakteren abgeschnitten - Sephrasto geht also davon aus, dass übernatürliches zum Schluss kommt.
+Die Seitenzahl der Seite für übernatürliche Fertigkeiten und Vorteile, falls vorhanden. Seiten die darüber hinausgehen werden bei profanen Charakteren abgeschnitten - Taverne geht also davon aus, dass übernatürliches zum Schluss kommt.
 
 ```yml
 ÜberFertigkeitenZuProfan: False
@@ -110,7 +110,7 @@ Bild:
   - []
   - [1.5, 130.8, 74.0]       
 ```
-Mit diesem Eintrag kannst du das Charakterbild auf einer oder mehreren Seiten an unterschiedlichen Stellen einfügen. Die Seitenzahl entspricht dem Listen-Index +1. Die einzelnen Elemente enthalten einen Array mit 3 Werten: Größenmultiplikator, X-Offset und Y-Offset (jeweils von der Ecke oben-links des Dokuments). Füge einen leeren Array ein, um eine Seite zu überspringen (im Beispiel wird ein Bild auf den Seiten 1 und 3 eingefügt). Es kann ein paar Export-Versuche benötigen, bis du gute Größen- und Offsetwerte für deinen Charakterbogen gefunden hast - nutze zum Testen idealerweise ein einfarbiges Bild mit einer Auflösung von 260 x 340. Nach Änderungen musst du Sephrasto neustarten.
+Mit diesem Eintrag kannst du das Charakterbild auf einer oder mehreren Seiten an unterschiedlichen Stellen einfügen. Die Seitenzahl entspricht dem Listen-Index +1. Die einzelnen Elemente enthalten einen Array mit 3 Werten: Größenmultiplikator, X-Offset und Y-Offset (jeweils von der Ecke oben-links des Dokuments). Füge einen leeren Array ein, um eine Seite zu überspringen (im Beispiel wird ein Bild auf den Seiten 1 und 3 eingefügt). Es kann ein paar Export-Versuche benötigen, bis du gute Größen- und Offsetwerte für deinen Charakterbogen gefunden hast - nutze zum Testen idealerweise ein einfarbiges Bild mit einer Auflösung von 260 x 340. Nach Änderungen musst du Taverne neustarten.
 
 ```yml
 RegelanhangSeitengrösse: A4
@@ -142,11 +142,11 @@ FormularMappings:
   Status: Statu
   WS: Wundschwelle 
 ```
-Falls die Formularfelder im Charakterbogen nicht so benannt sind, wie Sephrasto das erwartet, können mit dieser Einstellung die Namen angepasst werden. Links vom Doppelpunkt steht der von Sephrasto erwartete Name, rechts der Name des Formularfelds im Charakterbogen.
+Falls die Formularfelder im Charakterbogen nicht so benannt sind, wie Taverne das erwartet, können mit dieser Einstellung die Namen angepasst werden. Links vom Doppelpunkt steht der von Taverne erwartete Name, rechts der Name des Formularfelds im Charakterbogen.
 
 
 ## Formularfelder
-Sephrasto befüllt die folgenden Formularfelder. In Eckigen Klammern befindet sich ggf. die Anzahl der Felder - "Eigen[1-8]" heißt beispielsweise, dass die Felder "Eigen1", "Eigen2" bis "Eigen8" befüllt werden. Ein "x" bedeutet hier, dass soviele Felder ausgegeben werden wie dein Charakterbogen unterstützt. Ein kleines "m" am Ende der Feldnamen ist mit einem "\*" gleichzusetzen, es handelt sich also um den durch BE modifizierten Wert. Falls der Feldname nicht eindeutig ist befindet sich in Klammern noch eine kurze Beschreibung; checkbox bedeutet hier, dass ein Checkbox-Formularfeld statt eines Textfelds erwartet wird. Alle Felder sind optional.
+Taverne befüllt die folgenden Formularfelder. In Eckigen Klammern befindet sich ggf. die Anzahl der Felder - "Eigen[1-8]" heißt beispielsweise, dass die Felder "Eigen1", "Eigen2" bis "Eigen8" befüllt werden. Ein "x" bedeutet hier, dass soviele Felder ausgegeben werden wie dein Charakterbogen unterstützt. Ein kleines "m" am Ende der Feldnamen ist mit einem "\*" gleichzusetzen, es handelt sich also um den durch BE modifizierten Wert. Falls der Feldname nicht eindeutig ist befindet sich in Klammern noch eine kurze Beschreibung; checkbox bedeutet hier, dass ein Checkbox-Formularfeld statt eines Textfelds erwartet wird. Alle Felder sind optional.
 
 - Name
 - Spezies
@@ -235,5 +235,5 @@ Sephrasto befüllt die folgenden Formularfelder. In Eckigen Klammern befindet si
 
 
 ## Regelanhang anpassen
-Alle Charakterbögen verwenden für den Regelanhang standardmäßig die Dateien Data/Charakterbögen/Regelanhang.html und Data/Charakterbögen/Hintergrund.pdf. Die HTML-Datei wird anhand der Regelanhang-Einstellungen (s. o.) zu einer PDF umgewandelt. Hierbei werden \{rules_content\} und \{rules_font_size\} durch den Regelanhang-Text bzw. die in Sephrasto eingestellte Schriftgröße ersetzt. In der HTML-Datei angegebene Pfade haben immer den Ordner der HTML-Datei als Ausgangsbasis. Der Hintergrund ist separat, um geringere Dateigrößen zu ermöglichen.<br>
+Alle Charakterbögen verwenden für den Regelanhang standardmäßig die Dateien Data/Charakterbögen/Regelanhang.html und Data/Charakterbögen/Hintergrund.pdf. Die HTML-Datei wird anhand der Regelanhang-Einstellungen (s. o.) zu einer PDF umgewandelt. Hierbei werden \{rules_content\} und \{rules_font_size\} durch den Regelanhang-Text bzw. die in Taverne eingestellte Schriftgröße ersetzt. In der HTML-Datei angegebene Pfade haben immer den Ordner der HTML-Datei als Ausgangsbasis. Der Hintergrund ist separat, um geringere Dateigrößen zu ermöglichen.<br>
 Wenn dein Charakterbogen auch andere Dokumente verwenden soll, dann benenne sie \[Charakterbogen-Dateiname\]_Regelanhang.html und \[Charakterbogen-Dateiname\]_Hintergrund.pdf und lege sie ebenso in deinen in den Einstellungen festgelegten Charakterbögen-Ordner. Wenn du die Hintergrund-PDF weglässt, wird der Regelanhang entsprechend ohne Hintergrund ausgegeben.

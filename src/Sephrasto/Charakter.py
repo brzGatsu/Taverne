@@ -996,7 +996,7 @@ class Char():
         options = { "useCache" : False }
         deserializer = Serialization.getDeserializer(fileExtension, options)
         if not deserializer.readFile(filename):
-            result = [Char.LoadResultCritical, "Veraltetes Sephrasto", "Du hast den Charakter mit einer neueren Sephrasto-Version erstellt, diese Version kann ihn nicht öffnen"]
+            result = [Char.LoadResultCritical, "Taverne veraltet", "Du hast den Charakter mit einer neueren Taverne-Version erstellt, diese Version kann ihn nicht öffnen"]
             return False, result
 
         success, loadResult = self.deserialize(deserializer)

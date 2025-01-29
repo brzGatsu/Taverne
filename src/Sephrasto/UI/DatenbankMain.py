@@ -165,7 +165,7 @@ class Ui_Form(object):
         Form.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(Form)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 853, 25))
+        self.menubar.setGeometry(QRect(0, 0, 853, 21))
         self.menuDatei = QMenu(self.menubar)
         self.menuDatei.setObjectName(u"menuDatei")
         self.menuAnalysieren = QMenu(self.menubar)
@@ -210,7 +210,7 @@ class Ui_Form(object):
     # setupUi
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Sephrasto - Datenbank-Editor", None))
+        Form.setWindowTitle(QCoreApplication.translate("Form", u"Taverne - Datenbank-Editor", None))
         self.actionSpeichern.setText(QCoreApplication.translate("Form", u"Speichern", None))
         self.actionSpeichern_unter.setText(QCoreApplication.translate("Form", u"Speichern unter...", None))
         self.actionZur_cksetzen.setText(QCoreApplication.translate("Form", u"Zur\u00fccksetzen", None))

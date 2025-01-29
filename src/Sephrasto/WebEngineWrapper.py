@@ -48,7 +48,7 @@ class WebEngineWrapper(QtCore.QObject):
         Wolke.Settings[self.sizeSettingKey] = [self.form.size().width(), self.form.size().height()]
 
     def setTitle(self, text):
-        self.form.setWindowTitle("Sephrasto - " + text)
+        self.form.setWindowTitle("Taverne - " + text)
 
     def setHtml(self, html):
         self.webengineView.setHtml(html)

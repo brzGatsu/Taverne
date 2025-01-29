@@ -58,11 +58,11 @@ def sephrasto_excepthook(exc_type, exc_value, tb):
     logging.critical(exception + "\n".join(traceback))
 
     #Try to show message box, hopefully its not a crash in Qt
-    text = exception + "\n\nBei Fragen zum diesem Fehler bitte sephrasto.log aus dem Installationsordner mitsenden."
+    text = exception + "\n\nBei Fragen zum diesem Fehler bitte taverne.log aus dem Installationsordner mitsenden."
     if Wolke.Settings['Pfad-Plugins'] in filename:
         splitPath = os.path.split(os.path.relpath(filename, Wolke.Settings['Pfad-Plugins']))
         if len(splitPath) > 0:
-            text = f"Das Plugin {splitPath[0]} hat einen Fehler verursacht:\n{exception}.\n\nEs ist vermutlich nicht mit dieser Sephrastoversion kompatibel, bitte wende dich an den Plugin-Autor."    
+            text = f"Das Plugin {splitPath[0]} hat einen Fehler verursacht:\n{exception}.\n\nEs ist vermutlich nicht mit dieser Taverne-Version kompatibel, bitte wende dich an den Plugin-Autor."    
 
     messagebox = QtWidgets.QMessageBox()
     messagebox.setWindowTitle("Fehler!")
@@ -124,25 +124,25 @@ class MainWindowWrapper(object):
             os.chdir(os.path.dirname(sys.argv[0]) or ".")
 
         # Setup logger (after chdir so file is created in the correct location)
-        logging.basicConfig(filename="sephrasto.log", \
+        logging.basicConfig(filename="taverne.log", \
             level=loglevels[Wolke.Settings['Logging']], \
             format="%(asctime)s | %(levelname)s | %(filename)s::%(funcName)s(%(lineno)d) | %(message)s")
 
         # Log and check version
-        logging.critical("Starte Sephrasto " + Version.clientToString() + " auf " + platform.system()) #critical so it's always printed, independent of the debug level setting
+        logging.critical("Starte Taverne " + Version.clientToString() + " auf " + platform.system()) #critical so it's always printed, independent of the debug level setting
         logging.critical(f"Python {platform.python_version()}, Qt {QtCore.qVersion()}, PySide {PySide6.__version__} (compiled with Qt {QtCore.__version__})") #for people that start from source
 
         pythonMinVersion = "3.9.0"
         if Version.isLower(Version.fromString(pythonMinVersion), Version.fromString(platform.python_version())):
-            print("Fehler: Sephrasto benötigt mindestens Python " + pythonMinVersion)
-            logging.critical("Sephrasto benötigt mindestens Python " + pythonMinVersion)
+            print("Fehler: Taverne benötigt mindestens Python " + pythonMinVersion)
+            logging.critical("Taverne benötigt mindestens Python " + pythonMinVersion)
             sys.exit(1)
             return
 
         pysideMinVersion = "6.7.0"
         if Version.isLower(Version.fromString(pysideMinVersion), Version.fromString(PySide6.__version__)):
-            print("Fehler: Sephrasto benötigt mindestens PySide " + pysideMinVersion)
-            logging.critical("Sephrasto benötigt mindestens PySide " + pysideMinVersion)
+            print("Fehler: Taverne benötigt mindestens PySide " + pysideMinVersion)
+            logging.critical("Taverne benötigt mindestens PySide " + pysideMinVersion)
             sys.exit(1)
             return
 
@@ -163,7 +163,7 @@ class MainWindowWrapper(object):
             sys.__stderr__ = DummyStream()
             sys.__stdin__ = DummyStream()
 
-        parser = argparse.ArgumentParser(prog='Sephrasto', description='Der Charaktergenerator für Ilaris')
+        parser = argparse.ArgumentParser(prog='Taverne', description='Der Charaktergenerator für Drachentöter')
         parser.add_argument('--settingsfile', required = False, help='Requires a path to an .ini file. If it doesnt exist it will be created. Overrides the default location of the settings file')
         parser.add_argument('--noplugins', required = False, action='store_true', help='With this option no plugins are loaded, even if they are enabled in the settings')
         parser.add_argument('--debug', required = False, action='store_true', help='This option will forward log messages to the console and enable further debug features')
@@ -289,7 +289,7 @@ class MainWindowWrapper(object):
                 else:
                     messagebox = QtWidgets.QMessageBox()
                     messagebox.setWindowTitle("Fehler!")
-                    messagebox.setText(f"Das Laden des Plugins {pluginData.name} ist fehlgeschlagen.\nEs ist vermutlich nicht mit dieser Sephrastoversion kompatibel, bitte wende dich an den Plugin-Autor.")
+                    messagebox.setText(f"Das Laden des Plugins {pluginData.name} ist fehlgeschlagen.\nEs ist vermutlich nicht mit dieser Taverne-Version kompatibel, bitte wende dich an den Plugin-Autor.")
                     messagebox.setIcon(QtWidgets.QMessageBox.Critical)
                     messagebox.setStandardButtons(QtWidgets.QMessageBox.Ok)
                     messagebox.exec()
@@ -505,7 +505,7 @@ class MainWindowWrapper(object):
         rules = ""
         if Wolke.DB.hausregelDatei:
            rules = " (" + os.path.splitext(os.path.basename(Wolke.DB.hausregelDatei))[0] + ")"
-        self.ed.form.setWindowTitle("Sephrasto" + file + rules)
+        self.ed.form.setWindowTitle("Taverne" + file + rules)
 
     def updateAppearance(self):
         # Load fonts
