@@ -55,7 +55,7 @@ class Wolke:
         'WindowSize-Regelanhang' : _DefaultSettings.WindowSizeDefault1Col,
         'WindowSize-ScriptPicker' : _DefaultSettings.WindowSizeDefault2Col,
         'Letzte-Chars' : [],
-        'Plugin-Repos' : [{"name" : "default", "url" : "https://api.github.com/repos/brzGatsu/SephrastoPlugins/releases"}]
+        'Plugin-Repos' : [{"name" : "default", "url" : "https://api.github.com/repos/brzGatsu/TavernePlugins/releases"}]
     }
     FontHeadingSizeL1 = 0
     FontHeadingSizeL3 = 0
