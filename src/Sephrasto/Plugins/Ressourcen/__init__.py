@@ -5,6 +5,7 @@ from CharakterEditor import Tab
 from Ressourcen import CharakterRessourcenWrapper
 from Ressourcen.Ressource import Ressource
 from Core.DatenbankEinstellung import DatenbankEinstellung
+from Scripts import ScriptContext, Script, ScriptParameter
 
 class Plugin:
     def __init__(self):
@@ -12,9 +13,11 @@ class Plugin:
         EventBus.addAction("charakter_epgesamt_geändert", self.charakterEpgesamtGeändertHook)
         EventBus.addAction("basisdatenbank_geladen", self.basisDatenbankGeladenHook)
         EventBus.addAction("charakter_instanziiert", self.charakterInstanziiertHook)
+        EventBus.addAction("pre_charakter_aktualisieren", self.preCharakterAktualisierenHook)
         EventBus.addAction("charakter_serialisiert", self.charakterSerialisiertHook)
         EventBus.addAction("charakter_deserialisiert", self.charakterDeserialisiertHook)
         EventBus.addFilter("pdf_export", self.pdfExportFilter)
+        EventBus.addFilter("scripts_available", self.scriptsAvailableHook)
         self.ressourcenTab = None
 
     def changesCharacter(self):
@@ -33,7 +36,7 @@ class Plugin:
             self.ressourcenTab.updateInfoLabel()
 
     def basisDatenbankGeladenHook(self, params):
-        db = params["datenbank"]
+        self.db = params["datenbank"]
 
         e = DatenbankEinstellung()
         e.name = "Ressourcen Plugin: Standardressourcen"
@@ -50,12 +53,23 @@ class Plugin:
         e.typ = "JsonDict"
         e.separator = "\n"
         e.strip = False
-        db.loadElement(e)
+        self.db.loadElement(e)
 
     def charakterInstanziiertHook(self, params):
         char = params["charakter"]
         char.ressourcen = []
         char.finanzenAnzeigen = False
+
+        for ressource in self.db.einstellungen["Ressourcen Plugin: Standardressourcen"].wert.keys():
+            setattr(char, ressource + "Mod", 0)
+            char.charakterScriptAPI[f'get{ressource}Mod'] = lambda ressource=ressource: getattr(char, ressource + "Mod")
+            char.charakterScriptAPI[f'set{ressource}Mod'] = lambda mod, ressource=ressource: setattr(char, ressource + "Mod", mod)
+            char.charakterScriptAPI[f'modify{ressource}'] = lambda mod, ressource=ressource: setattr(char, ressource + "Mod", getattr(char, ressource + "Mod") + mod)
+
+    def preCharakterAktualisierenHook(self, params):
+        char = params["charakter"]
+        for ressource in self.db.einstellungen["Ressourcen Plugin: Standardressourcen"].wert.keys():
+            setattr(char, ressource + "Mod", 0)
 
     def charakterSerialisiertHook(self, params):
         ser = params["serializer"]
@@ -104,3 +118,23 @@ class Plugin:
             fields[f"Ressource{i+1}"] = f"{ressource.name}: {wertNamen[ressource.wert]} ({ressource.kommentar})"
 
         return fields
+
+    def scriptsAvailableHook(self, scripts, params):
+        context = params["context"]
+        if context != ScriptContext.Charakter:
+            return scripts
+
+        for ressource in self.db.einstellungen["Ressourcen Plugin: Standardressourcen"].wert.keys():
+            script = Script(f"{ressource} Modifikator", f"get{ressource}Mod", "Ressourcen")
+            scripts.numberGetter[script.name] = script
+
+            script = Script(f"{ressource} Modifikator setzen", f"set{ressource}Mod", "Ressourcen")
+            script.beschreibung = "Der Modifikator der Ressource wird auf den neuen Wert gesetzt. Achtung: Modifikatoren werden damit je nach Scriptpriorität ignoriert."
+            script.parameter.append(ScriptParameter("Modifikator", int))
+            scripts.setters[script.name] = script
+
+            script = Script(f"{ressource} Modifikator modifizieren", f"modify{ressource}", "Ressourcen")
+            script.beschreibung = "Der Modifikator der Ressource wird um den angebenen Wert modifiziert."
+            script.parameter.append(ScriptParameter("Modifikator", int))
+            scripts.setters[script.name] = script
+        return scripts

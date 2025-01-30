@@ -163,4 +163,15 @@ class CharakterRessourcenWrapper(QtCore.QObject):
         for cbWert in self.cbWertList:
             pointsSpent += cbWert.currentIndex()
 
-        self.ui.labelInfo.setText(f"{pointsSpent} Punkte ausgegeben. Verfügbar: {pointsAvailable - pointsSpent} Punkte (gemäß Fausregel 2 + 1 je 400 EP). ")
+        mods = []
+        for ressource in Wolke.DB.einstellungen["Ressourcen Plugin: Standardressourcen"].wert.keys():
+            mod = getattr(Wolke.Char, ressource + "Mod", 0)
+            if mod != 0:
+                mods.append(ressource + " " + ("+" if mod >= 0 else "") + str(mod))
+                pointsAvailable += mod
+
+        text = f"{pointsSpent} Punkte ausgegeben. Verfügbar: {pointsAvailable - pointsSpent} Punkte (gemäß Fausregel 2 + 1 je 400 EP)."
+        if len(mods) > 0:
+            text += " Enthaltene Punkte durch Vorteile: " + ", ".join(mods) + "."
+
+        self.ui.labelInfo.setText(text)
