@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.d7758b05.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -191,6 +191,7 @@
   
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -211,6 +212,7 @@
   
   <span class="md-ellipsis">
     Charaktereditor
+    
   </span>
   
 
@@ -231,6 +233,7 @@
   
   <span class="md-ellipsis">
     Datenbankeditor
+    
   </span>
   
 
@@ -251,6 +254,7 @@
   
   <span class="md-ellipsis">
     Script API
+    
   </span>
   
 
@@ -280,6 +284,7 @@
   
   <span class="md-ellipsis">
     Eigene Plugins schreiben
+    
   </span>
   
 
@@ -291,6 +296,7 @@
   
   <span class="md-ellipsis">
     Eigene Plugins schreiben
+    
   </span>
   
 
@@ -385,9 +391,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#von-sephrasto-abonnierte-actions" class="md-nav__link">
+  <a href="#von-taverne-abonnierte-actions" class="md-nav__link">
     <span class="md-ellipsis">
-      Von Sephrasto abonnierte Actions
+      Von Taverne abonnierte Actions
     </span>
   </a>
   
@@ -435,9 +441,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dem-plugin-in-den-sephrasto-einstellungen-einen-eigenen-einstellungsdialog-hinzufugen" class="md-nav__link">
+  <a href="#dem-plugin-in-den-taverne-einstellungen-einen-eigenen-einstellungsdialog-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
-      Dem Plugin in den Sephrasto-Einstellungen einen eigenen Einstellungsdialog hinzufügen
+      Dem Plugin in den Taverne-Einstellungen einen eigenen Einstellungsdialog hinzufügen
     </span>
   </a>
   
@@ -472,6 +478,7 @@
   
   <span class="md-ellipsis">
     Charakter Assistent
+    
   </span>
   
 
@@ -492,6 +499,7 @@
   
   <span class="md-ellipsis">
     Eigene Charakterbögen erstellen
+    
   </span>
   
 
@@ -512,6 +520,7 @@
   
   <span class="md-ellipsis">
     Ein eigenes Theme erstellen
+    
   </span>
   
 
@@ -532,6 +541,7 @@
   
   <span class="md-ellipsis">
     Drittanbieter-Lizenzen
+    
   </span>
   
 
@@ -640,9 +650,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#von-sephrasto-abonnierte-actions" class="md-nav__link">
+  <a href="#von-taverne-abonnierte-actions" class="md-nav__link">
     <span class="md-ellipsis">
-      Von Sephrasto abonnierte Actions
+      Von Taverne abonnierte Actions
     </span>
   </a>
   
@@ -690,9 +700,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dem-plugin-in-den-sephrasto-einstellungen-einen-eigenen-einstellungsdialog-hinzufugen" class="md-nav__link">
+  <a href="#dem-plugin-in-den-taverne-einstellungen-einen-eigenen-einstellungsdialog-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
-      Dem Plugin in den Sephrasto-Einstellungen einen eigenen Einstellungsdialog hinzufügen
+      Dem Plugin in den Taverne-Einstellungen einen eigenen Einstellungsdialog hinzufügen
     </span>
   </a>
   
@@ -722,10 +732,11 @@
                   
 
 
+
 <h1 id="eigene-plugins-schreiben">Eigene Plugins schreiben</h1>
-<p>Durch die Plugin-Unterstützung kannst du tiefgehende Veränderungen an Sephrasto vornehmen, z.B. den Charaktereditor anpassen oder Berechnungen verändern. Plugins haben vollen Zugriff auf alle Sephrasto-Dateien und können Objekt-Zustände auslesen oder verändern. Für Nutzer-Interaktion können dem Hauptfenster Buttons und dem Charaktereditor Tabs hinzugefügt werden, die mittels Qt eigene UIs darstellen können. Um über künftige Sephrasto-Versionen hinweg und mit anderen Plugins kompatibel zu bleiben, sollten Plugins nach Möglichkeit nur über soganannte Actions und Filter mit Sephrasto interagieren und sonst nur lesend auf die Sephrasto-Objekte zugreifen.</p>
+<p>Durch die Plugin-Unterstützung kannst du tiefgehende Veränderungen an Taverne vornehmen, z.B. den Charaktereditor anpassen oder Berechnungen verändern. Plugins haben vollen Zugriff auf alle Taverne-Dateien und können Objekt-Zustände auslesen oder verändern. Für Nutzer-Interaktion können dem Hauptfenster Buttons und dem Charaktereditor Tabs hinzugefügt werden, die mittels Qt eigene UIs darstellen können. Um über künftige Taverne-Versionen hinweg und mit anderen Plugins kompatibel zu bleiben, sollten Plugins nach Möglichkeit nur über soganannte Actions und Filter mit Taverne interagieren und sonst nur lesend auf die Taverne-Objekte zugreifen.</p>
 <h2 id="vorbereitung">Vorbereitung</h2>
-<p>Theoretisch brauchst du nicht mehr als Notepad um loslegen zu können. Kleine Dinge wie die EP-Kosten für AsP oder die Anzahl der kostenlosen freien Fertigkeiten anzupassen geht so ohne Probleme. Sobald du aber etwas aufwändigere Dinge tun möchtest, insbesondere eigene Tabs/Fenster einbauen, solltest du Qt Creator, Python und eine Entwicklungsumgebung installieren und das Sephrasto-Repository klonen, siehe hier: <a href="https://github.com/Aeolitus/Sephrasto/blob/master/README.md">https://github.com/Aeolitus/Sephrasto/blob/master/README.md</a></p>
+<p>Theoretisch brauchst du nicht mehr als Notepad um loslegen zu können. Kleine Dinge wie die EP-Kosten für AsP oder die Anzahl der kostenlosen freien Fertigkeiten anzupassen geht so ohne Probleme. Sobald du aber etwas aufwändigere Dinge tun möchtest, insbesondere eigene Tabs/Fenster einbauen, solltest du Qt Creator, Python und eine Entwicklungsumgebung installieren und das Taverne-Repository klonen, siehe hier: <a href="https://github.com/Aeolitus/Taverne/blob/master/README.md">https://github.com/Aeolitus/Taverne/blob/master/README.md</a></p>
 <h2 id="actions-und-filter">Actions und Filter</h2>
 <p>Actions und Filter können verwendet werden auf Vorgänge zu reagieren oder Daten zu manipulieren. Das System funktioniert über die statische EventBus-Klasse. Actions und Filter haben beide als ersten Parameter immer den Namen, der natürlich einzigartig sein sollte. Um Actions oder Filter zu "abonnieren" muss neben dem Namen als zweiter Parameter immer ein Handler/Callback mitgereicht werden.</p>
 <p><strong>Actions</strong> sind einfache Nachrichten, die optional mit einem Parameter-Dictionary versendet werden können.</p>
@@ -734,7 +745,7 @@
 </span></code></pre></div>
 <strong>Action abonnieren:</strong>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">EventBus</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;charaktereditor_oeffnet&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">charakterEditorOeffnet</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">charakterEditorOeffnet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span> <span class="nf">charakterEditorOeffnet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">meinTab</span> <span class="o">=</span> <span class="n">MeinTabWrapper</span><span class="o">.</span><span class="n">MeinTabWrapper</span><span class="p">()</span>
 </span></code></pre></div></p>
 <p><strong>Filter</strong> haben beim Absender als zweiten Parameter immer einen Wert, der durch den Handler modifiziert werden kann und returned werden muss. Optional kann als dritter Parameter ein Parameter-Dictionary mitgesendet werden. Da der zu filternde Wert durch mehrere Handler laufen kann, spielt die Reihenfolge der Filter eine Rolle. Daher kann beim Abonnieren zusätzlich eine Priorität hinzugefügt werden - je niedriger die Zahl, desto früher wird der Filter aufgerufen (default: 0).</p>
@@ -743,11 +754,11 @@
 </span></code></pre></div>
 <strong>Filter abonnieren:</strong>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">EventBus</span><span class="o">.</span><span class="n">addFilter</span><span class="p">(</span><span class="s2">&quot;talent_kosten&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">talentKostenFilter</span><span class="p">)</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">talentKostenFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">def</span> <span class="nf">talentKostenFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;talent&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Schmieden&quot;</span><span class="p">:</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="k">return</span> <span class="n">val</span> <span class="o">+</span> <span class="mi">10</span>
 </span></code></pre></div></p>
-<p>Im Folgenden werden alle nutzbaren Actions und Filter erläutert. Sie sind kategorisiert nach Charakter, Charaktereditor, PDF Export, Datenbank, Datenbankeditor und Verschiedenes. Zuletzt gibt es noch ein paar Actions, die Sephrasto selbst abonniert.</p>
+<p>Im Folgenden werden alle nutzbaren Actions und Filter erläutert. Sie sind kategorisiert nach Charakter, Charaktereditor, PDF Export, Datenbank, Datenbankeditor und Verschiedenes. Zuletzt gibt es noch ein paar Actions, die Taverne selbst abonniert.</p>
 <h3 id="charakter">Charakter</h3>
 <p>Wichtig: Alle Actions/Filter, die den Charakter betreffen, übergeben den Charakter als Parameter. Auf den Charakter sollte nur über diesen Parameter zugegriffen werden, nicht über Wolke.Char.</p>
 <table>
@@ -776,25 +787,25 @@
 <td>charakter_serialisieren</td>
 <td>Filter</td>
 <td>Serialization.?Serializer // { "charakter" : Char }</td>
-<td>Dem Serialisierer Daten hinzufügen, bevor Sephrasto den Charakter hineinschreibt.</td>
+<td>Dem Serialisierer Daten hinzufügen, bevor Taverne den Charakter hineinschreibt.</td>
 </tr>
 <tr>
 <td>charakter_serialisiert</td>
 <td>Action</td>
 <td>{ "charakter" : Char, "serializer" : Serialization.?Serializer }</td>
-<td>Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Sephrasto den Charakter hineingeschrieben hat.</td>
+<td>Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Taverne den Charakter hineingeschrieben hat.</td>
 </tr>
 <tr>
 <td>charakter_deserialisieren</td>
 <td>Filter</td>
 <td>Serialization.?Deserializer // {"charakter" : Char }</td>
-<td>Aus dem Deserialisierer Daten laden oder modifizieren, bevor Sephrasto den Charakter daraus lädt.</td>
+<td>Aus dem Deserialisierer Daten laden oder modifizieren, bevor Taverne den Charakter daraus lädt.</td>
 </tr>
 <tr>
 <td>charakter_deserialisiert</td>
 <td>Action</td>
 <td>{ "charakter" : Char, "deserializer" : ?Deserializer }</td>
-<td>Aus dem Deserialisierer Daten laden, nachdem Sephrasto den Charakter daraus geladen hat.</td>
+<td>Aus dem Deserialisierer Daten laden, nachdem Taverne den Charakter daraus geladen hat.</td>
 </tr>
 <tr>
 <td>charakter_geschrieben</td>
@@ -1035,7 +1046,7 @@
 </tr>
 </tbody>
 </table>
-<p>Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Sephrasto-UI anzupassen.</p>
+<p>Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Taverne-UI anzupassen.</p>
 <table>
 <thead>
 <tr>
@@ -1159,25 +1170,25 @@
 <td>pdf_concat</td>
 <td>Filter</td>
 <td>filePaths : [str] // {}</td>
-<td>Sephrasto fügt zum Schluss alle generierten Einzelseiten zusammen. Diese Liste von Einzelseiten kann hiermit manipuliert werden, z.B. um weitere Seiten einzufügen.</td>
+<td>Taverne fügt zum Schluss alle generierten Einzelseiten zusammen. Diese Liste von Einzelseiten kann hiermit manipuliert werden, z.B. um weitere Seiten einzufügen.</td>
 </tr>
 <tr>
 <td>pdf_export</td>
 <td>Filter</td>
 <td>pdfFields : {str : str} // {}</td>
-<td>Von Sephrasto generierte PDF-Felder vor dem Exportieren der PDF modifizieren</td>
+<td>Von Taverne generierte PDF-Felder vor dem Exportieren der PDF modifizieren</td>
 </tr>
 <tr>
 <td>pdf_export_extrapage</td>
 <td>Filter</td>
 <td>pdfFields : {str : str} // {}</td>
-<td>Von Sephrasto generierte PDF-Felder vor dem Exportieren der PDF modifizieren. Wird nur für Extraseiten aufgerufen, wenn diese nötig sind. Sie enthalten nur die Felder für übernatürliche Fertigkeiten, Talente und Vorteile.</td>
+<td>Von Taverne generierte PDF-Felder vor dem Exportieren der PDF modifizieren. Wird nur für Extraseiten aufgerufen, wenn diese nötig sind. Sie enthalten nur die Felder für übernatürliche Fertigkeiten, Talente und Vorteile.</td>
 </tr>
 <tr>
 <td>set_charakterbogen</td>
 <td>Filter</td>
 <td>filePath : str // {}</td>
-<td>Den vom Nutzer gewählten Charakterbogen modifizieren, z.B. den Pfad der Datei anpassen um einen Charakterbogen aus dem Plugin zu verwenden. Achtung: Im Ordner des Charakterbogens muss sich eine gleichnamige Datei mit der Endung ".ini" befinden. Siehe Sephrasto/Data/Charakterbögen/Standard Charakterbogen.ini als Beispiel für deren Inhalt.</td>
+<td>Den vom Nutzer gewählten Charakterbogen modifizieren, z.B. den Pfad der Datei anpassen um einen Charakterbogen aus dem Plugin zu verwenden. Achtung: Im Ordner des Charakterbogens muss sich eine gleichnamige Datei mit der Endung ".ini" befinden. Siehe Taverne/Data/Charakterbögen/Standard Charakterbogen.ini als Beispiel für deren Inhalt.</td>
 </tr>
 </tbody>
 </table>
@@ -1196,25 +1207,25 @@
 <td>datenbank_serialisieren</td>
 <td>Filter</td>
 <td>Serialization.?Serializer // { "datenbank" : Datenbank, "merge" : bool }</td>
-<td>Dem Serialisierer Daten hinzufügen, bevor Sephrasto die Datenbank hineinschreibt. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.</td>
+<td>Dem Serialisierer Daten hinzufügen, bevor Taverne die Datenbank hineinschreibt. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.</td>
 </tr>
 <tr>
 <td>datenbank_serialisiert</td>
 <td>Action</td>
 <td>{ "datenbank" : Datenbank, "serializer" : Serialization.?Serializer, "merge" : bool }</td>
-<td>Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Sephrasto die Datenbank hineingeschrieben hat. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.</td>
+<td>Dem Serialisierer Daten hinzufügen oder modifizieren, nachdem Taverne die Datenbank hineingeschrieben hat. Der Parameter merge beschreibt, ob die Basisdatenbank mit den Hausregeln zusammengeführt werden soll.</td>
 </tr>
 <tr>
 <td>datenbank_deserialisieren</td>
 <td>Filter</td>
 <td>Serialization.?Deserializer // {"datenbank" : Datenbank, "basisdatenbank" : bool, "conflictCallback" : Python-Funktion }</td>
-<td>Aus dem Deserialisierer Daten laden oder modifizieren, bevor Sephrasto die Datenbank daraus lädt. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.</td>
+<td>Aus dem Deserialisierer Daten laden oder modifizieren, bevor Taverne die Datenbank daraus lädt. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.</td>
 </tr>
 <tr>
 <td>datenbank_deserialisiert</td>
 <td>Action</td>
 <td>{ "datenbank" : Datenbank, "deserializer" : ?Deserializer, "basisdatenbank" : bool, "conflictCallback" : Python-Funktion }</td>
-<td>Aus dem Deserialisierer Daten laden, nachdem Sephrasto die Datenbank daraus geladen hat. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.</td>
+<td>Aus dem Deserialisierer Daten laden, nachdem Taverne die Datenbank daraus geladen hat. Der "basisdatenbank"-Parameter enthält die Information, ob es sich um die Basisdatenbank- oder eine Hausregeldatenbank-Datei handelt. Der "conflictCallback"-Parameter ist nur gesetzt wenn basisdatenbank=false und kann ausgeführt werden, um beim Laden mehrerer Hausregeldatenbanken Konflikte eigener Datenbanktypen aufzulösen. Hierzu werden dem Callback der Name des Datenbanktyps, die alte sowie die neue Version des Elements als parameter übergeben, siehe Datenbank.py.</td>
 </tr>
 <tr>
 <td>basisdatenbank_datei</td>
@@ -1227,6 +1238,12 @@
 <td>Action</td>
 <td>{"datenbank" : Datenbank, "isCharakterEditor" : bool }</td>
 <td>Elemente der Basisdatenbank anpassen/hinzufügen/löschen, bevor die Hausregel-Datenbank geladen wird. Ein übliches Beispiel ist das Hinzufügen von DatenbankEinstellung-Elementen, mit welchen das Plugin konfiguriert werden kann.</td>
+</tr>
+<tr>
+<td>datenbank_laden</td>
+<td>Action</td>
+<td>{ "datenbank" : Datenbank, "isCharakterEditor" : bool }</td>
+<td>Aktion durchführen, bevor die Datenbank geladen wird. Eine Referenz auf das Datenbank-Objekt erhalten.</td>
 </tr>
 <tr>
 <td>datenbank_geladen</td>
@@ -1409,7 +1426,7 @@
 </tr>
 </tbody>
 </table>
-<p>Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Sephrasto-UI anzupassen.</p>
+<p>Die folgenden Filter haben alle eine Gemeinsamkeit:  Der Filterwert ist eine Wrapperklasse eines der UI-Tabs oder Auswahlfenster. Im Filter kann der Wrapper komplett ersetzt oder beerbt werden, um die Taverne-UI anzupassen.</p>
 <table>
 <thead>
 <tr>
@@ -1571,8 +1588,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="von-sephrasto-abonnierte-actions">Von Sephrasto abonnierte Actions</h3>
-<p>Diese Actions können von Plugins abgesendet werden, um Sephrasto anweisungen zu geben.</p>
+<h3 id="von-taverne-abonnierte-actions">Von Taverne abonnierte Actions</h3>
+<p>Diese Actions können von Plugins abgesendet werden, um Taverne anweisungen zu geben.</p>
 <table>
 <thead>
 <tr>
@@ -1599,7 +1616,7 @@
 </table>
 <h2 id="neues-plugin-erstellen">Neues Plugin erstellen</h2>
 <ul>
-<li>Gehe in deinen <code>Dokumente/Sephrasto/Plugins</code> Ordner</li>
+<li>Gehe in deinen <code>Dokumente/Taverne/Plugins</code> Ordner</li>
 <li>Lege einen neuen Ordner mit deinem Pluginnamen an (keine Leerzeichen)</li>
 <li>Erstelle in diesem Ordner eine Datei mit dem Namen <code>manifest.json</code> mit folgendem Inhalt:
 <div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
@@ -1616,100 +1633,100 @@
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">}</span>
 </span></code></pre></div></li>
-<li>Manifest Zusatzinfo: Das Feld "version" muss dem Format X.X.X.X folgen, wobei die letzten drei Stellen optional sind. Das Feld "dependencies" ist optional und kann genutzt werden, um ein oder mehrere Plugins anzugeben, von denen dieses Plugin abhängt - sie werden dann von Sephrasto automatisch mitinstalliert.</li>
+<li>Manifest Zusatzinfo: Das Feld "version" muss dem Format X.X.X.X folgen, wobei die letzten drei Stellen optional sind. Das Feld "dependencies" ist optional und kann genutzt werden, um ein oder mehrere Plugins anzugeben, von denen dieses Plugin abhängt - sie werden dann von Taverne automatisch mitinstalliert.</li>
 <li>Erstelle in diesem Ordner eine Datei mit dem Namen <code>__init__.py</code></li>
 <li>Erstelle in dieser Datei eine Klasse mit dem Namen <code>Plugin</code> und importiere den <code>EventBus</code></li>
 <li>Falls du Action oder Filter Handler registrieren möchtest, stelle sicher, dass sie über die gesamte Programm-Dauer bestehen bleiben. Vermeide es also beispielsweise Handler in einem UI Wrapper zu registrieren, den du jedes mal neu erstellst, wenn ein neuer Charakter geladen wird oder ein Hauptfenster-Button geclickt wird. Stattdessen kannst du den Handler in deiner <code>__init__.py</code> registrieren und dann eine Funktion auf dem aktuellen Wrapper aufrufen.</li>
 <li>Optional: Füge die Funktion changesCharacter ein und gib True zurück, falls dein Plugin die Charakterdaten ändert. Falls ein Charakter mit diesem Plugin erstellt wurde und dann ohne Plugin geöffnet wird, erscheint dann ein Warndialog.</li>
 <li>Optional: Füge die Funktion changesDatabase ein und gib True zurück, falls dein Plugin die Datenbank ändert. Falls Hausregeln mit diesem Plugin erstellt wurden und dann ohne Plugin geöffnet werden, erscheint dann ein Warndialog.</li>
 </ul>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">EventBus</span><span class="w"> </span><span class="kn">import</span> <span class="n">EventBus</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">EventBus</span> <span class="kn">import</span> <span class="n">EventBus</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">:</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">class</span> <span class="nc">Plugin</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="n">EventBus</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="o">...</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">changesCharacter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">def</span> <span class="nf">changesCharacter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="k">return</span> <span class="kc">True</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">changesDatabase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="k">def</span> <span class="nf">changesDatabase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="k">return</span> <span class="kc">True</span>
 </span></code></pre></div>
 <h2 id="charaktereditor-tab-hinzufugen">Charaktereditor Tab hinzufügen</h2>
 <p>Implementiere in deiner Plugin-Klasse eine Funktion mit dem Namen <code>createCharakterTabs</code> und returne eine Liste von Tabs. Importiere hierzu die Tab-Klasse aus dem Charaktereditor.</p>
 <ul>
-<li>Der erste Konstruktor-Parameter der Tabklasse legt die relative Reihenfolge fest, in welcher der Tab eingefügt wird - die Sephrasto Tabs haben Reihenfolge-Werte in 10er-Schritten, beginnend bei 10.</li>
-<li>Der zweite Parameter ist deine UI-Wrapper-Klasse, die optional ein <code>modified</code> Signal definieren kann. Mit dem Signal kann Sephrasto darüber in Kenntnis gesetzt werden, dass sich etwas am Charakter verändert hat, um bei Bedarf das Warn-Popup zu öffnen, wenn der Charakter geschlossen wird oder um das EP-Widget zu aktualisieren. Zudem kann sie optional die Funktionen load und update implementieren. Beide werden von Sephrasto zu passenden Zeitpunkten aufgerufen und sollten genutzt werden, um die UI Widgets zu befüllen (load) oder den Charakter mit den UI Widget-Werten zu aktualisieren (update).</li>
+<li>Der erste Konstruktor-Parameter der Tabklasse legt die relative Reihenfolge fest, in welcher der Tab eingefügt wird - die Taverne Tabs haben Reihenfolge-Werte in 10er-Schritten, beginnend bei 10.</li>
+<li>Der zweite Parameter ist deine UI-Wrapper-Klasse, die optional ein <code>modified</code> Signal definieren kann. Mit dem Signal kann Taverne darüber in Kenntnis gesetzt werden, dass sich etwas am Charakter verändert hat, um bei Bedarf das Warn-Popup zu öffnen, wenn der Charakter geschlossen wird oder um das EP-Widget zu aktualisieren. Zudem kann sie optional die Funktionen load und update implementieren. Beide werden von Taverne zu passenden Zeitpunkten aufgerufen und sollten genutzt werden, um die UI Widgets zu befüllen (load) oder den Charakter mit den UI Widget-Werten zu aktualisieren (update).</li>
 <li>Der dritte Parameter ist die vom QtCreator generierte UI Form.</li>
 <li>Der vierte Parameter ist der Titel des Tabs.</li>
 </ul>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">EventBus</span><span class="w"> </span><span class="kn">import</span> <span class="n">EventBus</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">MeinPlugin</span><span class="w"> </span><span class="kn">import</span> <span class="n">MeinTabWrapper</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">EventBus</span> <span class="kn">import</span> <span class="n">EventBus</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">MeinPlugin</span> <span class="kn">import</span> <span class="n">MeinTabWrapper</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">:</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">class</span> <span class="nc">Plugin</span><span class="p">:</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">meinTab</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">EventBus</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;charaktereditor_oeffnet&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">charakterEditorOeffnet</span><span class="p">)</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">charakterEditorOeffnet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="k">def</span> <span class="nf">charakterEditorOeffnet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinTab</span> <span class="o">=</span> <span class="n">MeinTabWrapper</span><span class="o">.</span><span class="n">MeinTabWrapper</span><span class="p">()</span>
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">createCharakterTabs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">def</span> <span class="nf">createCharakterTabs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="c1">#Füge einen Tab mit Titel &quot;Mein Tab&quot; an zweiter Stelle ein.</span>
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>        <span class="n">tab</span> <span class="o">=</span> <span class="n">Tab</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">meinTab</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">meinTab</span><span class="o">.</span><span class="n">form</span><span class="p">,</span> <span class="s2">&quot;Mein Tab&quot;</span><span class="p">)</span>
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>        <span class="k">return</span> <span class="p">[</span><span class="n">tab</span><span class="p">]</span>
 </span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
 </span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="c1">#Datei MeinTabWrapper.py im Plugin-Ordner</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PySide6</span><span class="w"> </span><span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="kn">from</span><span class="w"> </span><span class="nn">MeinPlugin</span><span class="w"> </span><span class="kn">import</span> <span class="n">MeinTab</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="kn">from</span> <span class="nn">MeinPlugin</span> <span class="kn">import</span> <span class="n">MeinTab</span>
 </span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="k">class</span><span class="w"> </span><span class="nc">MeinTabWrapper</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="p">):</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="k">class</span> <span class="nc">MeinTabWrapper</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="p">):</span>
 </span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="n">modified</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Signal</span><span class="p">()</span>
 </span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
-</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 </span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
 </span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span> <span class="o">=</span> <span class="n">MeinTab</span><span class="o">.</span><span class="n">Ui_Form</span><span class="p">()</span>
 </span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">form</span><span class="p">)</span>
 </span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">lineEditName</span><span class="o">.</span><span class="n">textChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">changed</span><span class="p">)</span>
 </span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
-</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">changed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>    <span class="k">def</span> <span class="nf">changed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">modified</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
 </span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>
-</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>        <span class="k">pass</span>
 </span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>
-</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>        <span class="k">pass</span>
 </span></code></pre></div>
 <h2 id="hauptfenster-oder-charaktereditor-button-hinzufugen">Hauptfenster oder Charaktereditor Button hinzufügen</h2>
 <p>Implementiere in deiner Plugin-Klasse eine Funktion mit dem Namen <code>createMainWindowButtons</code> oder <code>createCharakterButtons</code> und returne eine Liste von (Button) Widgets. Im <code>clicked</code> Event der widgets kannst du einen Handler registrieren, der dann beispielsweise ein neues Fenster zeigt.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PySide6</span><span class="w"> </span><span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">EventBus</span><span class="w"> </span><span class="kn">import</span> <span class="n">EventBus</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">MeinPlugin</span><span class="w"> </span><span class="kn">import</span> <span class="n">MeinFensterWrapper</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">EventBus</span> <span class="kn">import</span> <span class="n">EventBus</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span> <span class="nn">MeinPlugin</span> <span class="kn">import</span> <span class="n">MeinFensterWrapper</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">:</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">class</span> <span class="nc">Plugin</span><span class="p">:</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFensterButton</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFenster</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">createMainWindowButtons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="k">def</span> <span class="nf">createMainWindowButtons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFensterButton</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QPushButton</span><span class="p">()</span>
 </span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFensterButton</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="s2">&quot;icon&quot;</span><span class="p">)</span>
 </span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFensterButton</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\uf6f0</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1">#font awesome icon</span>
 </span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFensterButton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">createMeinFenster</span><span class="p">)</span>
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">meinFensterButton</span><span class="p">]</span>
 </span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">createMeinFenster</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="k">def</span> <span class="nf">createMeinFenster</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFenster</span> <span class="o">=</span> <span class="n">MeinFensterWrapper</span><span class="o">.</span><span class="n">MeinFensterWrapper</span><span class="p">()</span>
 </span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">meinFenster</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
 </span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="c1">#Datei MeinFensterWrapper.py im Plugin-Ordner</span>
-</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PySide6</span><span class="w"> </span><span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
-</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="kn">from</span><span class="w"> </span><span class="nn">MeinPlugin</span><span class="w"> </span><span class="kn">import</span> <span class="n">MeinFenster</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="kn">from</span> <span class="nn">MeinPlugin</span> <span class="kn">import</span> <span class="n">MeinFenster</span>
 </span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
-</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="k">class</span><span class="w"> </span><span class="nc">MeinFensterWrapper</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="p">):</span>   
-</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="k">class</span> <span class="nc">MeinFensterWrapper</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="p">):</span>   
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 </span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
 </span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span> <span class="o">=</span> <span class="n">MeinFenster</span><span class="o">.</span><span class="n">Ui_Form</span><span class="p">()</span> <span class="c1"># mit qt creator erstellte form</span>
@@ -1717,27 +1734,27 @@
 </span></code></pre></div>
 <h2 id="datenbankeditor-menueintrag-hinzufugen">Datenbankeditor Menueintrag hinzufügen</h2>
 <p>Für in deiner Plugin-Klasse einen handler für die Action <code>dbe_menuitems_erstellen</code> hinzu und hole den addMenuItemCB aus den parametern. Mit diesem Callback kannst du QActions in ein beliebiges Menu des Datenbankeditors einfügen.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PySide6</span><span class="w"> </span><span class="kn">import</span> <span class="n">QtGui</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">EventBus</span><span class="w"> </span><span class="kn">import</span> <span class="n">EventBus</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">:</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtGui</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">EventBus</span> <span class="kn">import</span> <span class="n">EventBus</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">class</span> <span class="nc">Plugin</span><span class="p">:</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="n">EventBus</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s2">&quot;dbe_menuitems_erstellen&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">menusErstellen</span><span class="p">)</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">menusErstellen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="k">def</span> <span class="nf">menusErstellen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="n">addMenuItemCB</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;addMenuItemCB&quot;</span><span class="p">]</span>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">exportDB</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QAction</span><span class="p">(</span><span class="s2">&quot;Mein Export&quot;</span><span class="p">)</span>
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">exportDB</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">export</span><span class="p">)</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="n">addMenuItemCB</span><span class="p">(</span><span class="s2">&quot;Export&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">export</span><span class="p">)</span>
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="k">def</span> <span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </span></code></pre></div>
-<h2 id="dem-plugin-in-den-sephrasto-einstellungen-einen-eigenen-einstellungsdialog-hinzufugen">Dem Plugin in den Sephrasto-Einstellungen einen eigenen Einstellungsdialog hinzufügen</h2>
-<p>Füge die Funktion showSettings ein und zeige ein beliebiges Fenster oder nutze Sephrastos SimpleSettingsDialog. Dieser kümmert sich automatisch um das Darstellen, Laden und Speichern der Einstellungen in der Sephrasto.ini über die <code>addSetting</code> Funktion.</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PySide6</span><span class="w"> </span><span class="kn">import</span> <span class="n">QtWidgets</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">QtUtils.SimpleSettingsDialog</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleSettingsDialog</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">:</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">showSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<h2 id="dem-plugin-in-den-taverne-einstellungen-einen-eigenen-einstellungsdialog-hinzufugen">Dem Plugin in den Taverne-Einstellungen einen eigenen Einstellungsdialog hinzufügen</h2>
+<p>Füge die Funktion showSettings ein und zeige ein beliebiges Fenster oder nutze Tavernes SimpleSettingsDialog. Dieser kümmert sich automatisch um das Darstellen, Laden und Speichern der Einstellungen in der Taverne.ini über die <code>addSetting</code> Funktion.</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">QtUtils.SimpleSettingsDialog</span> <span class="kn">import</span> <span class="n">SimpleSettingsDialog</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">class</span> <span class="nc">Plugin</span><span class="p">:</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">def</span> <span class="nf">showSettings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="n">dlg</span> <span class="o">=</span> <span class="n">SimpleSettingsDialog</span><span class="p">(</span><span class="s2">&quot;Mein Plugin Einstellungen&quot;</span><span class="p">)</span>
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        <span class="n">dlg</span><span class="o">.</span><span class="n">addSetting</span><span class="p">(</span><span class="s2">&quot;MeinPlugin_Checkbox&quot;</span><span class="p">,</span> <span class="s2">&quot;Checkboxoption&quot;</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QCheckBox</span><span class="p">())</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="n">dlg</span><span class="o">.</span><span class="n">addSetting</span><span class="p">(</span><span class="s2">&quot;MeinPlugin_Spinbox&quot;</span><span class="p">,</span> <span class="s2">&quot;Spinboxoption&quot;</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QSpinBox</span><span class="p">())</span>
@@ -1750,16 +1767,16 @@
 In der manifest.json solltest du außerdem "hasSettings" auf true setzen.</p>
 <h2 id="existierende-ui-anpassen">Existierende UI anpassen</h2>
 <p>Implementiere einen der "class_xx_wrapper" Filter, die UI-Wrapper-Klasse wird als Parameter gereicht. Du kannst diesen Parameter im Handler beerben und diese oder eine ganz neue Klasse returnen. Im folgenden Beispiel wird bei den freien Fertigkeiten die dritte Stufe entfernt.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PySide6</span><span class="w"> </span><span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">EventBus</span><span class="w"> </span><span class="kn">import</span> <span class="n">EventBus</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kn">from</span> <span class="nn">EventBus</span> <span class="kn">import</span> <span class="n">EventBus</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Plugin</span><span class="p">:</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">class</span> <span class="nc">Plugin</span><span class="p">:</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">EventBus</span><span class="o">.</span><span class="n">addFilter</span><span class="p">(</span><span class="s2">&quot;class_freiefertigkeiten_wrapper&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">provideFreieFertigkeitenWrapper</span><span class="p">)</span>
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">provideFreieFertigkeitenWrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        <span class="k">class</span><span class="w"> </span><span class="nc">MeinFreieFertigkeitenWrapper</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>            <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="k">def</span> <span class="nf">provideFreieFertigkeitenWrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        <span class="k">class</span> <span class="nc">MeinFreieFertigkeitenWrapper</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>                <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 </span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>                <span class="n">ffCount</span> <span class="o">=</span> <span class="mi">0</span>
 </span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">):</span>
@@ -1853,10 +1870,10 @@ In der manifest.json solltest du außerdem "hasSettings" auf true setzen.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.footer"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.footer"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="assets/javascripts/bundle.f13b1293.min.js"></script>
       
         <script src="assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       
