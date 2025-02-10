@@ -1,0 +1,9 @@
+<Charakter>
+  <Varianten pflichtwahl="1">
+    <Variante name="Mann" beschreibung="" geschlecht="männlich"/>
+	<Variante name="Frau" beschreibung="" geschlecht="weiblich">
+	  <Attribut name="IN" wert="1"/>
+	  <Vorteil name="Dunkelsicht II"/>
+	</Variante>
+  </Varianten>
+</Charakter>

@@ -1,0 +1,13 @@
+<Charakter>
+  <Varianten pflichtwahl="1">
+    <Variante name="Mann" beschreibung="" geschlecht="männlich">
+        <Eigenheit name="Jähzornig"/>
+    </Variante>
+	<Variante name="Frau" beschreibung="" geschlecht="weiblich"/>
+  </Varianten>
+  <Auswahl>
+    <Fertigkeit name="Hiebwaffen" wert="2"/>
+    <Fertigkeit name="Klingenwaffen" wert="2"/>
+    <Fertigkeit name="Stangenwaffen" wert="2"/>
+  </Auswahl>
+</Charakter>

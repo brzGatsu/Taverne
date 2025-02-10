@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE xsl:stylesheet [
+   <!ENTITY nbsp "&#160;">
+]>
+<Charakter>
+  <Version>
+    <CharakterVersion>8</CharakterVersion>
+    <Plugins>FertigkeitenPlus, Hexalogien, Ressourcen, RuestungenPlus, WaffenPlus</Plugins>
+    <Hausregeln>Keine</Hausregeln>
+  </Version>
+  <Beschreibung>
+    <Name></Name>
+    <Spezies></Spezies>
+    <Status>2</Status>
+    <Kurzbeschreibung></Kurzbeschreibung>
+    <Finanzen>2</Finanzen>
+    <Heimat>Firnelfen</Heimat>
+    <Eigenheiten>
+      <Eigenheit>Elfische Weltsicht</Eigenheit>
+      <Eigenheit>Hitzeempfindlich</Eigenheit>
+      <Eigenheit>Vorurteile gegen Nicht-Elfen</Eigenheit>
+      <Eigenheit>Weltfremd</Eigenheit>
+    </Eigenheiten>
+  </Beschreibung>
+  <Attribute>
+    <Attribut name="KO" wert="1"/>
+    <Attribut name="MU" wert="1"/>
+    <Attribut name="GE" wert="1"/>
+    <Attribut name="KK" wert="1"/>
+    <Attribut name="IN" wert="1"/>
+    <Attribut name="KL" wert="1"/>
+    <Attribut name="CH" wert="1"/>
+    <Attribut name="FF" wert="1"/>
+  </Attribute>
+  <Energien/>
+  <Vorteile>
+    <Vorteil name="Angepasst (Eiswüste)"/>
+  </Vorteile>
+  <Fertigkeiten>
+    <Fertigkeit name="Handgemenge" wert="2"/>
+    <Fertigkeit name="Hiebwaffen" wert="0"/>
+    <Fertigkeit name="Klingenwaffen" wert="0"/>
+    <Fertigkeit name="Stangenwaffen" wert="0"/>
+    <Fertigkeit name="Schusswaffen" wert="0"/>
+    <Fertigkeit name="Wurfwaffen" wert="0"/>
+    <Fertigkeit name="Athletik" wert="3"/>
+    <Fertigkeit name="Selbstbeherrschung" wert="3"/>
+    <Fertigkeit name="Autorität" wert="0"/>
+    <Fertigkeit name="Beeinflussung" wert="0"/>
+    <Fertigkeit name="Alchemie" wert="0"/>
+    <Fertigkeit name="Heilkunde" wert="3"/>
+    <Fertigkeit name="Verschlagenheit" wert="0"/>
+    <Fertigkeit name="Wahrnehmung" wert="2"/>
+    <Fertigkeit name="Feingefühl" wert="0"/>
+    <Fertigkeit name="Magiekunde" wert="3"/>
+    <Fertigkeit name="Mythenkunde" wert="3"/>
+    <Fertigkeit name="Darbietung" wert="2"/>
+    <Fertigkeit name="Feinhandwerk" wert="3"/>
+    <Fertigkeit name="Grobhandwerk" wert="0"/>
+    <Fertigkeit name="Diplomatie" wert="0"/>
+    <Fertigkeit name="Bildung" wert="2"/>
+    <Fertigkeit name="Seefahrt" wert="3"/>
+    <Fertigkeit name="Tierführung" wert="0"/>
+    <Fertigkeit name="Jagd" wert="3"/>
+    <Fertigkeit name="Naturkunde" wert="3"/>
+    <Fertigkeit name="Überleben" wert="3"/>
+    <Fertigkeit name="Straßenkunde" wert="0"/>
+  </Fertigkeiten>
+  <FreieFertigkeiten>
+    <FreieFertigkeit name="Sprache: Isdira" wert="3"/>
+    <FreieFertigkeit name="Kultur: Firnelfen" wert="3"/>
+  </FreieFertigkeiten>
+  <Talente/>
+  <Objekte>
+    <Zonensystem>0</Zonensystem>
+    <Rüstungen/>
+    <Waffen>
+      <Waffe name="Elfenbogen (alternativ Wurfspeere)" id="Elfenbogen" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Schuss, Zweihändig" härte="3" rw="64" beSlot="1" kampfstil="Kein Kampfstil" wm="0" lz="1" wmVt="0"/>
+      <Waffe name="Robbentöter (alternativ Jagdspieß)" id="Robbentöter" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Stich, Hieb" härte="10" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="Jagdmesser" id="Jagdmesser" würfel="1" würfelSeiten="6" plus="2" eigenschaften="Stich, Seitenwaffe" härte="9" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="-2"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+    </Waffen>
+    <Ausrüstung>
+      <Ausrüstungsstück>Köcher mit 12 Pfeilen (bei Bogen als Jagdwaffe)</Ausrüstungsstück>
+      <Ausrüstungsstück>Kleidung</Ausrüstungsstück>
+      <Ausrüstungsstück>Kleiner Rucksack mit Nahrung, Schnüren, etc.</Ausrüstungsstück>
+      <Ausrüstungsstück>Iama (meist eine Beinflöte)</Ausrüstungsstück>
+      <Ausrüstungsstück>Schwarzes
+Amulett</Ausrüstungsstück>
+    </Ausrüstung>
+    <Teilrüstungen1/>
+    <Teilrüstungen2/>
+    <Teilrüstungen3/>
+  </Objekte>
+  <ÜbernatürlicheFertigkeiten/>
+  <Erfahrung>
+    <Gesamt>0</Gesamt>
+    <Ausgegeben>331</Ausgegeben>
+  </Erfahrung>
+  <Notiz></Notiz>
+  <Einstellungen>
+    <VoraussetzungenPrüfen>1</VoraussetzungenPrüfen>
+    <Charakterbogen>Standard Charakterbogen</Charakterbogen>
+    <FinanzenAnzeigen>0</FinanzenAnzeigen>
+    <ÜbernatürlichesPDFSpalteAnzeigen>0</ÜbernatürlichesPDFSpalteAnzeigen>
+    <DetailsAnzeigen>0</DetailsAnzeigen>
+    <RegelnAnhängen>1</RegelnAnhängen>
+    <RegelnGrösse>10</RegelnGrösse>
+    <DeaktivierteRegelKategorien></DeaktivierteRegelKategorien>
+    <FormularEditierbarkeit>1</FormularEditierbarkeit>
+    <VorteilFavoriten></VorteilFavoriten>
+    <DeaktivierteKartenKategorien></DeaktivierteKartenKategorien>
+  </Einstellungen>
+  <BeschreibungDetails>
+    <Kultur></Kultur>
+    <Profession></Profession>
+    <Geschlecht></Geschlecht>
+    <Geburtsdatum></Geburtsdatum>
+    <Grösse></Grösse>
+    <Gewicht></Gewicht>
+    <Haarfarbe></Haarfarbe>
+    <Augenfarbe></Augenfarbe>
+    <Titel></Titel>
+    <Aussehen1></Aussehen1>
+    <Aussehen2></Aussehen2>
+    <Aussehen3></Aussehen3>
+    <Aussehen4></Aussehen4>
+    <Aussehen5></Aussehen5>
+    <Aussehen6></Aussehen6>
+    <Hintergrund0></Hintergrund0>
+    <Hintergrund1></Hintergrund1>
+    <Hintergrund2></Hintergrund2>
+    <Hintergrund3></Hintergrund3>
+    <Hintergrund4></Hintergrund4>
+    <Hintergrund5></Hintergrund5>
+    <Hintergrund6></Hintergrund6>
+    <Hintergrund7></Hintergrund7>
+    <Hintergrund8></Hintergrund8>
+  </BeschreibungDetails>
+  <Ressourcen>
+    <Ressource name="Ansehen" kommentar="unbekannt" wert="0"/>
+    <Ressource name="Einkommen" kommentar="elend, 1 D" wert="0"/>
+    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
+    <Ressource name="Gefolge" kommentar="kein Gefolge" wert="0"/>
+    <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
+    <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
+    <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
+  </Ressourcen>
+</Charakter>

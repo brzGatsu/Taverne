@@ -1,0 +1,34 @@
+<Charakter>
+  <Varianten pflichtwahl="1">
+    <Variante name="Mann" beschreibung="" geschlecht="männlich">
+	  <Fertigkeit name="Überleben" wert="1"/>
+	</Variante>
+	<Variante name="Frau" beschreibung="" geschlecht="weiblich">
+	  <Fertigkeit name="Autorität" wert="1"/>
+	  <Fertigkeit name="Feingefühl" wert="2"/>
+	</Variante>
+  </Varianten>
+  <Varianten>
+    <Variante name="Ebene">
+	  <Fertigkeit name="Tierführung" wert="2"/>
+	  <Freie-Fertigkeit name="Sprache: Garethi" wert="1"/>
+	</Variante>
+	<Variante name="Gebirge">
+	  <Fertigkeit name="Athletik" wert="2"/>
+	  <Vorteil name="Angepasst (Gebirge und Höhlen)"/>
+	</Variante>
+	<Variante name="Schneegoblins">
+	  <Fertigkeit name="Athletik" wert="2"/>
+	  <Vorteil name="Angepasst (Eiswüste)"/>
+	  <Eigenheit name="Hitzeempfindlich"/>
+	</Variante>
+  </Varianten>
+  <Auswahl>
+    <Fertigkeit name="Hiebwaffen" wert="1"/>
+    <Fertigkeit name="Stangenwaffen" wert="1"/>
+  </Auswahl>
+  <Auswahl varianten="0">
+    <Fertigkeit name="Schusswaffen" wert="1"/>
+    <Fertigkeit name="Wurfwaffen" wert="1"/>
+  </Auswahl>
+</Charakter>

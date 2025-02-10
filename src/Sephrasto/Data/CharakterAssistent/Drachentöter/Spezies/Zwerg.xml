@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE xsl:stylesheet [
+   <!ENTITY nbsp "&#160;">
+]>
+<Charakter>
+  <Version>
+    <CharakterVersion>8</CharakterVersion>
+    <Plugins>FertigkeitenPlus, Hexalogien, Ressourcen, RuestungenPlus, WaffenPlus</Plugins>
+    <Hausregeln>Keine</Hausregeln>
+  </Version>
+  <Beschreibung>
+    <Name></Name>
+    <Spezies>Zwerg</Spezies>
+    <Status>2</Status>
+    <Kurzbeschreibung></Kurzbeschreibung>
+    <Finanzen>2</Finanzen>
+    <Heimat>Mittelreich</Heimat>
+    <Eigenheiten/>
+  </Beschreibung>
+  <Attribute>
+    <Attribut name="KO" wert="4"/>
+    <Attribut name="MU" wert="2"/>
+    <Attribut name="GE" wert="1"/>
+    <Attribut name="KK" wert="3"/>
+    <Attribut name="IN" wert="2"/>
+    <Attribut name="KL" wert="2"/>
+    <Attribut name="CH" wert="2"/>
+    <Attribut name="FF" wert="3"/>
+  </Attribute>
+  <Energien/>
+  <Vorteile>
+    <Vorteil name="Magieabweisend"/>
+    <Vorteil name="Resistenz gegen Krankheiten"/>
+    <Vorteil name="Zwerg"/>
+    <Vorteil name="Dunkelsicht I"/>
+    <Vorteil name="Zäher Hund"/>
+  </Vorteile>
+  <Fertigkeiten>
+    <Fertigkeit name="Handgemenge" wert="1"/>
+    <Fertigkeit name="Hiebwaffen" wert="0"/>
+    <Fertigkeit name="Klingenwaffen" wert="0"/>
+    <Fertigkeit name="Stangenwaffen" wert="0"/>
+    <Fertigkeit name="Schusswaffen" wert="0"/>
+    <Fertigkeit name="Wurfwaffen" wert="0"/>
+    <Fertigkeit name="Athletik" wert="0"/>
+    <Fertigkeit name="Selbstbeherrschung" wert="0"/>
+    <Fertigkeit name="Autorität" wert="0"/>
+    <Fertigkeit name="Beeinflussung" wert="0"/>
+    <Fertigkeit name="Alchemie" wert="0"/>
+    <Fertigkeit name="Heilkunde" wert="0"/>
+    <Fertigkeit name="Verschlagenheit" wert="0"/>
+    <Fertigkeit name="Wahrnehmung" wert="0"/>
+    <Fertigkeit name="Magiekunde" wert="0"/>
+    <Fertigkeit name="Mythenkunde" wert="0"/>
+    <Fertigkeit name="Darbietung" wert="0"/>
+    <Fertigkeit name="Feinhandwerk" wert="0"/>
+    <Fertigkeit name="Grobhandwerk" wert="0"/>
+    <Fertigkeit name="Diplomatie" wert="0"/>
+    <Fertigkeit name="Bildung" wert="0"/>
+    <Fertigkeit name="Seefahrt" wert="0"/>
+    <Fertigkeit name="Tierführung" wert="0"/>
+    <Fertigkeit name="Jagd" wert="0"/>
+    <Fertigkeit name="Naturkunde" wert="1"/>
+    <Fertigkeit name="Überleben" wert="1"/>
+    <Fertigkeit name="Straßenkunde" wert="0"/>
+    <Fertigkeit name="Feingefühl" wert="0"/>
+  </Fertigkeiten>
+  <FreieFertigkeiten/>
+  <Talente>
+    <Talent name="Zähigkeit" unerfahren="0"/>
+  </Talente>
+  <Objekte>
+    <Zonensystem>0</Zonensystem>
+    <Rüstungen/>
+    <Waffen>
+      <Waffe name="Unbewaffnet" id="Unbewaffnet" würfel="1" würfelSeiten="6" plus="0" eigenschaften="Wucht, Parierwaffe, Verletzlich" härte="0" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+    </Waffen>
+    <Ausrüstung/>
+    <Teilrüstungen1/>
+    <Teilrüstungen2/>
+    <Teilrüstungen3/>
+  </Objekte>
+  <ÜbernatürlicheFertigkeiten/>
+  <Erfahrung>
+    <Gesamt>0</Gesamt>
+    <Ausgegeben>729</Ausgegeben>
+  </Erfahrung>
+  <Notiz></Notiz>
+  <Einstellungen>
+    <VoraussetzungenPrüfen>1</VoraussetzungenPrüfen>
+    <Charakterbogen>Standard Charakterbogen</Charakterbogen>
+    <FinanzenAnzeigen>0</FinanzenAnzeigen>
+    <ÜbernatürlichesPDFSpalteAnzeigen>0</ÜbernatürlichesPDFSpalteAnzeigen>
+    <DetailsAnzeigen>0</DetailsAnzeigen>
+    <RegelnAnhängen>1</RegelnAnhängen>
+    <RegelnGrösse>10</RegelnGrösse>
+    <DeaktivierteRegelKategorien></DeaktivierteRegelKategorien>
+    <FormularEditierbarkeit>1</FormularEditierbarkeit>
+    <VorteilFavoriten></VorteilFavoriten>
+    <DeaktivierteKartenKategorien></DeaktivierteKartenKategorien>
+  </Einstellungen>
+  <BeschreibungDetails>
+    <Kultur></Kultur>
+    <Profession></Profession>
+    <Geschlecht></Geschlecht>
+    <Geburtsdatum></Geburtsdatum>
+    <Grösse></Grösse>
+    <Gewicht></Gewicht>
+    <Haarfarbe></Haarfarbe>
+    <Augenfarbe></Augenfarbe>
+    <Titel></Titel>
+    <Aussehen1></Aussehen1>
+    <Aussehen2></Aussehen2>
+    <Aussehen3></Aussehen3>
+    <Aussehen4></Aussehen4>
+    <Aussehen5></Aussehen5>
+    <Aussehen6></Aussehen6>
+    <Hintergrund0></Hintergrund0>
+    <Hintergrund1></Hintergrund1>
+    <Hintergrund2></Hintergrund2>
+    <Hintergrund3></Hintergrund3>
+    <Hintergrund4></Hintergrund4>
+    <Hintergrund5></Hintergrund5>
+    <Hintergrund6></Hintergrund6>
+    <Hintergrund7></Hintergrund7>
+    <Hintergrund8></Hintergrund8>
+  </BeschreibungDetails>
+  <Ressourcen>
+    <Ressource name="Ansehen" kommentar="unbekannt" wert="0"/>
+    <Ressource name="Einkommen" kommentar="elend, 1 D" wert="0"/>
+    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
+    <Ressource name="Gefolge" kommentar="kein Gefolge" wert="0"/>
+    <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
+    <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
+    <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
+  </Ressourcen>
+</Charakter>

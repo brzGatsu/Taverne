@@ -661,7 +661,7 @@ class EinstellungenWrapper():
         #Init themes
         Wolke.Themes = EinstellungenWrapper.getThemes()     
         if Wolke.Settings['Theme'] not in Wolke.Themes.keys():
-            Wolke.Settings['Theme'] = "Ilaris"
+            Wolke.Settings['Theme'] = "Drachentöter"
 
 
     @staticmethod

@@ -97,9 +97,9 @@ class WizardWrapper(object):
         self.ui.cbRegeln.setCurrentText(Wolke.Settings['Datenbank'])
 
         rl = sorted(list(self.regelList.keys()))
-        if "Ilaris" in rl:
-            rl.remove("Ilaris")
-            rl.insert(0, "Ilaris")
+        if "Drachentöter" in rl:
+            rl.remove("Drachentöter")
+            rl.insert(0, "Drachentöter")
         self.ui.cbBaukasten.addItems(rl)
 
         if "CharakterAssistent_Regeln" in Wolke.Settings:
