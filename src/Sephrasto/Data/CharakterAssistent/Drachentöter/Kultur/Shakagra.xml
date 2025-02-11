@@ -14,9 +14,10 @@
     <Status>2</Status>
     <Kurzbeschreibung></Kurzbeschreibung>
     <Finanzen>2</Finanzen>
-    <Heimat>Maraskan</Heimat>
+    <Heimat>Shakagra</Heimat>
     <Eigenheiten>
-      <Eigenheit>Vorurteile gegen Mittelreicher</Eigenheit>
+      <Eigenheit>Hitzeempfindlich</Eigenheit>
+      <Eigenheit>Vorurteile gegen Nicht-Shakagra</Eigenheit>
     </Eigenheiten>
   </Beschreibung>
   <Attribute>
@@ -24,52 +25,64 @@
     <Attribut name="MU" wert="1"/>
     <Attribut name="GE" wert="1"/>
     <Attribut name="KK" wert="1"/>
-    <Attribut name="IN" wert="2"/>
+    <Attribut name="IN" wert="1"/>
     <Attribut name="KL" wert="1"/>
     <Attribut name="CH" wert="1"/>
     <Attribut name="FF" wert="1"/>
   </Attribute>
   <Energien/>
-  <Vorteile/>
+  <Vorteile>
+    <Vorteil name="Angepasst (Eiswüste)"/>
+    <Vorteil name="Resistenz gegen Kälte"/>
+  </Vorteile>
   <Fertigkeiten>
     <Fertigkeit name="Handgemenge" wert="2"/>
     <Fertigkeit name="Hiebwaffen" wert="0"/>
     <Fertigkeit name="Klingenwaffen" wert="0"/>
-    <Fertigkeit name="Stangenwaffen" wert="1"/>
+    <Fertigkeit name="Stangenwaffen" wert="0"/>
     <Fertigkeit name="Schusswaffen" wert="0"/>
-    <Fertigkeit name="Wurfwaffen" wert="2"/>
-    <Fertigkeit name="Athletik" wert="1"/>
-    <Fertigkeit name="Selbstbeherrschung" wert="2"/>
-    <Fertigkeit name="Autorität" wert="0"/>
+    <Fertigkeit name="Wurfwaffen" wert="0"/>
+    <Fertigkeit name="Athletik" wert="3"/>
+    <Fertigkeit name="Selbstbeherrschung" wert="3"/>
+    <Fertigkeit name="Autorität" wert="3"/>
     <Fertigkeit name="Beeinflussung" wert="2"/>
     <Fertigkeit name="Alchemie" wert="0"/>
-    <Fertigkeit name="Heilkunde" wert="2"/>
+    <Fertigkeit name="Heilkunde" wert="0"/>
     <Fertigkeit name="Verschlagenheit" wert="0"/>
-    <Fertigkeit name="Wahrnehmung" wert="0"/>
-    <Fertigkeit name="Feingefühl" wert="1"/>
-    <Fertigkeit name="Magiekunde" wert="0"/>
+    <Fertigkeit name="Wahrnehmung" wert="3"/>
+    <Fertigkeit name="Feingefühl" wert="2"/>
+    <Fertigkeit name="Magiekunde" wert="2"/>
     <Fertigkeit name="Mythenkunde" wert="2"/>
-    <Fertigkeit name="Darbietung" wert="0"/>
-    <Fertigkeit name="Feinhandwerk" wert="1"/>
-    <Fertigkeit name="Grobhandwerk" wert="1"/>
+    <Fertigkeit name="Darbietung" wert="2"/>
+    <Fertigkeit name="Feinhandwerk" wert="0"/>
+    <Fertigkeit name="Grobhandwerk" wert="2"/>
     <Fertigkeit name="Diplomatie" wert="0"/>
-    <Fertigkeit name="Bildung" wert="2"/>
+    <Fertigkeit name="Bildung" wert="0"/>
     <Fertigkeit name="Seefahrt" wert="0"/>
     <Fertigkeit name="Tierführung" wert="0"/>
-    <Fertigkeit name="Jagd" wert="0"/>
-    <Fertigkeit name="Naturkunde" wert="1"/>
-    <Fertigkeit name="Überleben" wert="0"/>
+    <Fertigkeit name="Jagd" wert="2"/>
+    <Fertigkeit name="Naturkunde" wert="2"/>
+    <Fertigkeit name="Überleben" wert="2"/>
     <Fertigkeit name="Straßenkunde" wert="0"/>
   </Fertigkeiten>
   <FreieFertigkeiten>
-    <FreieFertigkeit name="" wert="3"/>
-    <FreieFertigkeit name="Kultur: Maraskan" wert="3"/>
+    <FreieFertigkeit name="Sprache: Nachtalbisch" wert="3"/>
+    <FreieFertigkeit name="Kultur: Skahagra" wert="3"/>
   </FreieFertigkeiten>
   <Talente/>
   <Objekte>
     <Zonensystem>0</Zonensystem>
     <Rüstungen/>
-    <Waffen/>
+    <Waffen>
+      <Waffe name="Elfenbogen" id="Elfenbogen" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Schuss, Zweihändig" härte="3" rw="64" beSlot="1" kampfstil="Kein Kampfstil" wm="0" lz="1" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0" wmVt="0"/>
+    </Waffen>
     <Ausrüstung/>
     <Teilrüstungen1/>
     <Teilrüstungen2/>
@@ -78,7 +91,7 @@
   <ÜbernatürlicheFertigkeiten/>
   <Erfahrung>
     <Gesamt>0</Gesamt>
-    <Ausgegeben>273</Ausgegeben>
+    <Ausgegeben>338</Ausgegeben>
   </Erfahrung>
   <Notiz></Notiz>
   <Einstellungen>
