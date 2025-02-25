@@ -11,7 +11,7 @@ class Plugin:
     def __init__(self):
         EventBus.addAction("charaktereditor_geschlossen", self.charakterEditorGeschlossenHook)
         EventBus.addAction("charakter_epgesamt_geändert", self.charakterEpgesamtGeändertHook)
-        EventBus.addAction("basisdatenbank_geladen", self.basisDatenbankGeladenHook)
+        EventBus.addAction("datenbank_laden", self.datenbankLadenHook)
         EventBus.addAction("charakter_instanziiert", self.charakterInstanziiertHook)
         EventBus.addAction("pre_charakter_aktualisieren", self.preCharakterAktualisierenHook)
         EventBus.addAction("charakter_serialisiert", self.charakterSerialisiertHook)
@@ -35,7 +35,7 @@ class Plugin:
         if self.ressourcenTab is not None:
             self.ressourcenTab.updateInfoLabel()
 
-    def basisDatenbankGeladenHook(self, params):
+    def datenbankLadenHook(self, params):
         self.db = params["datenbank"]
 
         e = DatenbankEinstellung()

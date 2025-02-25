@@ -12,7 +12,7 @@ from Hilfsmethoden import Hilfsmethoden
 
 class Plugin:
     def __init__(self):
-        EventBus.addAction("basisdatenbank_geladen", self.basisDatenbankGeladenHandler)
+        EventBus.addAction("datenbank_laden", self.datenbankLadenHandler)
         EventBus.addFilter("pdf_export", self.pdfExportKulturkundeHook)
       
     @staticmethod
@@ -22,7 +22,7 @@ class Plugin:
     def changesCharacter(self):
         return False
 
-    def basisDatenbankGeladenHandler(self, params):
+    def datenbankLadenHandler(self, params):
         self.db = params["datenbank"]
 
         e = DatenbankEinstellung()
