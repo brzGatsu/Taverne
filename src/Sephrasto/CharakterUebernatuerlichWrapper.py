@@ -153,9 +153,11 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
                 text, tooltip = ProfaneFertigkeitenWrapper.getSteigerungskosten(fert)
                 self.labelRef[fert.name + "KO"].setText(text)
                 self.labelRef[fert.name + "KO"].setToolTip(tooltip)
-                self.labelRef[fert.name + "PW"].setText(str(fert.probenwertTalent))
+                self.labelRef[fert.name + "PW"].setText(str(fert.probenwert))
+                self.labelRef[fert.name + "PWT"].setText(str(fert.probenwertTalent))
                 if fert.basiswertMod != 0:
-                    self.labelRef[fert.name + "PW"].setText(str(fert.probenwertTalent + fert.basiswertMod) + "*")
+                    self.labelRef[fert.name + "PW"].setText(str(fert.probenwert + fert.basiswertMod) + "*")
+                    self.labelRef[fert.name + "PWT"].setText(str(fert.probenwertTalent + fert.basiswertMod) + "*")
                 self.labelRef[fert.name].setText(str(len(fert.gekaufteTalente)))
             self.updateInfo()
             self.updateTalents()    
@@ -185,7 +187,7 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
         self.ui.tableWidget.setItemDelegate(FertigkeitItemDelegate(rowIndicesWithLinePaint))
 
         self.ui.tableWidget.setRowCount(count)
-        self.ui.tableWidget.setColumnCount(6)
+        self.ui.tableWidget.setColumnCount(7)
         header = self.ui.tableWidget.horizontalHeader()
         header.setMinimumSectionSize(0)
         header.setSectionResizeMode(0, QHeaderView.Fixed)
@@ -194,11 +196,13 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
         header.setSectionResizeMode(3, QHeaderView.Fixed)
         header.setSectionResizeMode(4, QHeaderView.Fixed)
         header.setSectionResizeMode(5, QHeaderView.Fixed)
+        header.setSectionResizeMode(6, QHeaderView.Fixed)
         self.ui.tableWidget.setColumnWidth(0, Hilfsmethoden.emToPixels(5))
         self.ui.tableWidget.setColumnWidth(2, Hilfsmethoden.emToPixels(6))
         self.ui.tableWidget.setColumnWidth(3, Hilfsmethoden.emToPixels(8.9))
         self.ui.tableWidget.setColumnWidth(4, Hilfsmethoden.emToPixels(6))
-        self.ui.tableWidget.setColumnWidth(5, Hilfsmethoden.emToPixels(10))
+        self.ui.tableWidget.setColumnWidth(5, Hilfsmethoden.emToPixels(6))
+        self.ui.tableWidget.setColumnWidth(6, Hilfsmethoden.emToPixels(10))
 
         vheader = self.ui.tableWidget.verticalHeader()
         vheader.setSectionResizeMode(QHeaderView.Fixed)
@@ -229,8 +233,14 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
         self.ui.tableWidget.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
-        item.setText("Talente")
+        item.setText("PW(T)")
+        item.setToolTip("Probenwert mit Talent")
         self.ui.tableWidget.setHorizontalHeaderItem(5, item)
+
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
+        item.setText("Talente")
+        self.ui.tableWidget.setHorizontalHeaderItem(6, item)
     
         count = 0
             
@@ -296,11 +306,19 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
 
                 # Add PW
                 self.labelRef[el + "PW"] = QtWidgets.QLabel()
-                self.labelRef[el + "PW"].setText(str(fert.probenwertTalent))
+                self.labelRef[el + "PW"].setText(str(fert.probenwert))
                 if fert.basiswertMod != 0:
-                    self.labelRef[fert.name + "PW"].setText(str(fert.probenwertTalent + fert.basiswertMod) + "*")
+                    self.labelRef[fert.name + "PW"].setText(str(fert.probenwert + fert.basiswertMod) + "*")
                 self.labelRef[el + "PW"].setAlignment(QtCore.Qt.AlignCenter)
                 self.ui.tableWidget.setCellWidget(count,4,self.labelRef[el + "PW"])
+
+                # Add PW (T)
+                self.labelRef[el + "PWT"] = QtWidgets.QLabel()
+                self.labelRef[el + "PWT"].setText(str(fert.probenwertTalent))
+                if fert.basiswertMod != 0:
+                    self.labelRef[fert.name + "PWT"].setText(str(fert.probenwertTalent + fert.basiswertMod) + "*")
+                self.labelRef[el + "PWT"].setAlignment(QtCore.Qt.AlignCenter)
+                self.ui.tableWidget.setCellWidget(count,5,self.labelRef[el + "PWT"])
 
                 # Add Talents Count and Add Button
                 self.layoutRef[el] = QtWidgets.QHBoxLayout()
@@ -319,7 +337,7 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
                 self.layoutRef[el].addWidget(self.buttonRef[el])
                 self.widgetRef[el] = QtWidgets.QWidget()
                 self.widgetRef[el].setLayout(self.layoutRef[el])
-                self.ui.tableWidget.setCellWidget(count,5,self.widgetRef[el])
+                self.ui.tableWidget.setCellWidget(count,6,self.widgetRef[el])
 
                 self.rowRef.update({fert.name: count})
                 count += 1
@@ -346,7 +364,8 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
         fert = Wolke.Char.übernatürlicheFertigkeiten[self.currentFertName]
         fert.wert = val
         fert.aktualisieren()
-        self.ui.spinPW.setValue(fert.probenwertTalent + fert.basiswertMod)
+        self.ui.spinPW.setValue(fert.probenwert + fert.basiswertMod)
+        self.ui.spinPWT.setValue(fert.probenwertTalent + fert.basiswertMod)
         if flag:
             self.ui.spinFW.setValue(val)
         else:
@@ -355,9 +374,11 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
         text, tooltip = ProfaneFertigkeitenWrapper.getSteigerungskosten(fert)
         self.labelRef[fert.name + "KO"].setText(text)
         self.labelRef[fert.name + "KO"].setToolTip(tooltip)
-        self.labelRef[fert.name + "PW"].setText(str(fert.probenwertTalent))
+        self.labelRef[fert.name + "PW"].setText(str(fert.probenwert))
+        self.labelRef[fert.name + "PWT"].setText(str(fert.probenwertTalent))
         if fert.basiswertMod != 0:
-            self.labelRef[fert.name + "PW"].setText(str(fert.probenwertTalent + fert.basiswertMod) + "*")
+            self.labelRef[fert.name + "PW"].setText(str(fert.probenwert + fert.basiswertMod) + "*")
+            self.labelRef[fert.name + "PWT"].setText(str(fert.probenwertTalent + fert.basiswertMod) + "*")
 
         self.updateAddToPDF()
 
@@ -404,7 +425,8 @@ Das Warnsymbol verschwindet, sobald du ein Talent erwirbst, das nur mit dieser F
         self.ui.spinFW.setMaximum(fert.maxWert)
         self.spinRef[self.currentFertName].setMaximum(fert.maxWert)
         self.ui.spinFW.setValue(fert.wert)
-        self.ui.spinPW.setValue(fert.probenwertTalent + fert.basiswertMod)
+        self.ui.spinPW.setValue(fert.probenwert + fert.basiswertMod)
+        self.ui.spinPWT.setValue(fert.probenwertTalent + fert.basiswertMod)
         self.ui.plainText.setText(Hilfsmethoden.fixHtml(fert.text))
         self.ui.labelKategorie.setText(fert.kategorieName(Wolke.DB))
         self.updateTalents()
