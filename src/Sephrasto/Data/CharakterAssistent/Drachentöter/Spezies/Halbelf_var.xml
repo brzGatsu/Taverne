@@ -12,8 +12,4 @@
 	  <Attribut name="KK" wert="1"/>
 	</Variante>
   </Varianten>
-
-  <Auswahl keine-varianten="0">
-    <Eigenheit name="Gut Aussehend"/>
-  </Auswahl>
 </Charakter>

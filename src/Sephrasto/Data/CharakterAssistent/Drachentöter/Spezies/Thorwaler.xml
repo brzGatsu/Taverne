@@ -15,9 +15,7 @@
     <Kurzbeschreibung></Kurzbeschreibung>
     <Finanzen>2</Finanzen>
     <Heimat>Mittelreich</Heimat>
-    <Eigenheiten>
-      <Eigenheit>Jähzorn</Eigenheit>
-    </Eigenheiten>
+    <Eigenheiten/>
   </Beschreibung>
   <Attribute>
     <Attribut name="KO" wert="3"/>

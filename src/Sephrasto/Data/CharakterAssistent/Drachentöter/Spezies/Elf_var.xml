@@ -1,12 +1,10 @@
 <Charakter>
   <Varianten pflichtwahl="1">
     <Variante name="Auelf">
-	  <Eigenheit name="Gut Aussehend"/>
 	  <Fertigkeit name="Darbietung" wert="1"/>
 	</Variante>
 	<Variante name="Waldelf">
 	  <Attribut name="IN" wert="1"/>
-	  <Eigenheit name="Gut Aussehend"/>
 	  <Fertigkeit name="Athletik" wert="1"/>
 	  <Fertigkeit name="Darbietung" wert="1"/>
 	  <Fertigkeit name="Überleben" wert="2"/>
