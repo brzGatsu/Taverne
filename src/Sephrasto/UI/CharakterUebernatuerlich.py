@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'CharakterUebernatuerlich.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.1
+## Created by: Qt User Interface Compiler version 6.8.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -102,7 +102,7 @@ class Ui_Form(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 355, 529))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 377, 529))
         self.gridLayout_2 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.label_6 = QLabel(self.scrollAreaWidgetContents)
@@ -251,6 +251,21 @@ class Ui_Form(object):
 
         self.gridLayout_2.addWidget(self.label_7, 2, 3, 1, 1)
 
+        self.label_3 = QLabel(self.scrollAreaWidgetContents)
+        self.label_3.setObjectName(u"label_3")
+
+        self.gridLayout_2.addWidget(self.label_3, 4, 3, 1, 1)
+
+        self.spinPWT = QSpinBox(self.scrollAreaWidgetContents)
+        self.spinPWT.setObjectName(u"spinPWT")
+        self.spinPWT.setMinimumSize(QSize(60, 0))
+        self.spinPWT.setMaximumSize(QSize(60, 16777215))
+        self.spinPWT.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.spinPWT.setReadOnly(True)
+        self.spinPWT.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.NoButtons)
+
+        self.gridLayout_2.addWidget(self.spinPWT, 4, 4, 1, 1)
+
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.splitter.addWidget(self.scrollArea)
 
@@ -294,5 +309,6 @@ class Ui_Form(object):
         self.labelFertigkeit.setText(QCoreApplication.translate("Form", u"Fertigkeit", None))
         self.labelFertigkeit.setProperty(u"class", QCoreApplication.translate("Form", u"h4", None))
         self.label_7.setText(QCoreApplication.translate("Form", u"FW:", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"PW(T):", None))
     # retranslateUi
 
