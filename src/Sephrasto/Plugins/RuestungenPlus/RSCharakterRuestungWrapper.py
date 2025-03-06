@@ -32,12 +32,8 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
 
         self.currentlyLoading = False
 
-        self.ui.checkZonen.setChecked(Wolke.Char.zonenSystemNutzen)
-        self.ui.checkZonen.stateChanged.connect(self.checkZonenChanged)
-
         self.ruestungsKategorien = list(Wolke.DB.einstellungen["Rüstungen: Kategorien"].wert.keys())
         self.ruestungsEigenschaften = Wolke.DB.einstellungen["RüstungenPlus Plugin: Rüstungseigenschaften"].wert
-        self.gesamtZRS = [self.ui.spinGesamtBein, self.ui.spinGesamtLarm, self.ui.spinGesamtRarm, self.ui.spinGesamtBauch, self.ui.spinGesamtBrust, self.ui.spinGesamtKopf]
 
         self.ui.editGesamtName.editingFinished.connect(self.updateGesamtRuestung)
         self.ui.spinGesamtBE.valueChanged.connect(self.updateGesamtRuestung)
@@ -47,19 +43,17 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
 
             self.labelEigenschaften = QtWidgets.QLabel("Eigenschaften")
             self.labelEigenschaften.setProperty("class", "h4")
-            self.ui.Ruestungen.addWidget(self.labelEigenschaften, 0, 11, 1, 1)
+            self.ui.Ruestungen.addWidget(self.labelEigenschaften, 0, 5, 1, 1)
 
             self.editGesamtEigenschaften = QtWidgets.QLineEdit()
             self.editGesamtEigenschaften.editingFinished.connect(self.updateGesamtRuestung)
             self.editGesamtEigenschaften.editingFinished.connect(partial(self.updateEigenschaftenTooltip, edit=self.editGesamtEigenschaften))
-            self.ui.Ruestungen.addWidget(self.editGesamtEigenschaften, 1, 11, 1, 1)
+            self.ui.Ruestungen.addWidget(self.editGesamtEigenschaften, 1, 5, 1, 1)
             self.ui.editGesamtName.setMaximumSize(QtCore.QSize(200, 16777215))
 
         self.labels = []
         self.editRName = []
-        self.spinRS = []
-        self.spinZRS = []
-        self.spinPunkte = []
+        self.sbZRW = []
         self.buttons = []
         self.editEigenschaften = []
         self.eigenschaftenCompleter = []
@@ -75,41 +69,19 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
             editRName = QtWidgets.QLineEdit()
             editRName.editingFinished.connect(self.updateRuestungen)
             if self.ruestungsEigenschaften:
-                editRName.setMaximumSize(QtCore.QSize(200, 16777215))
+                editRName.setMaximumSize(QtCore.QSize(400, 16777215))
             self.editRName.append(editRName)
-            self.ui.Ruestungen.addWidget(editRName, row, col, 1, 2)
-            col += 2
+            self.ui.Ruestungen.addWidget(editRName, row, col, 1, 3)
+            col += 3
 
-            spinRS = QtWidgets.QSpinBox()
-            spinRS.valueChanged.connect(self.updateRuestungen)
-            self.spinRS.append(spinRS)
-            spinRS.setMinimum(0)
-            spinRS.setMaximum(99)
-            spinRS.setAlignment(QtCore.Qt.AlignCenter)
-            spinRS.setButtonSymbols(QtWidgets.QSpinBox.PlusMinus)
-            self.ui.Ruestungen.addWidget(spinRS, row, col, 1, 1)
-            col += 1
-
-            self.spinZRS.append([])
-            for i in range(6):
-                spinZRS = QtWidgets.QSpinBox()
-                spinZRS.valueChanged.connect(self.updateRuestungen)
-                self.spinZRS[index].append(spinZRS)
-                spinZRS.setMinimum(0)
-                spinZRS.setMaximum(99)
-                spinZRS.setAlignment(QtCore.Qt.AlignCenter)
-                spinZRS.setButtonSymbols(QtWidgets.QSpinBox.PlusMinus)
-                self.ui.Ruestungen.addWidget(spinZRS, row, col, 1, 1)
-                col += 1
-
-            spinPunkte = QtWidgets.QSpinBox()
-            self.spinPunkte.append(spinPunkte)
-            spinPunkte.setMinimum(0)
-            spinPunkte.setMaximum(999)
-            spinPunkte.setAlignment(QtCore.Qt.AlignCenter)
-            spinPunkte.setReadOnly(True)
-            spinPunkte.setButtonSymbols(QtWidgets.QSpinBox.NoButtons)
-            self.ui.Ruestungen.addWidget(spinPunkte, row, col, 1, 1)
+            spinZRW = QtWidgets.QSpinBox()
+            spinZRW.valueChanged.connect(self.updateRuestungen)
+            self.sbZRW.append(spinZRW)
+            spinZRW.setMinimum(0)
+            spinZRW.setMaximum(99)
+            spinZRW.setAlignment(QtCore.Qt.AlignCenter)
+            spinZRW.setButtonSymbols(QtWidgets.QSpinBox.PlusMinus)
+            self.ui.Ruestungen.addWidget(spinZRW, row, col, 1, 1)
             col += 1
 
             if self.ruestungsEigenschaften:
@@ -137,9 +109,7 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
 
         # Add summarized armor value widgets at the end so we can reuse some functions
         self.editRName.append(self.ui.editGesamtName)
-        self.spinRS.append(self.ui.spinGesamtRS)
-        self.spinPunkte.append(self.ui.spinGesamtPunkte)
-        self.spinZRS.append(self.gesamtZRS)
+        self.sbZRW.append(self.ui.spinGesamtRS)
         if self.ruestungsEigenschaften:
             self.editEigenschaften.append(self.editGesamtEigenschaften)
             eigenschaftenCompleter = TextTagCompleter(self.editGesamtEigenschaften, Wolke.DB.ruestungseigenschaften.keys())
@@ -157,37 +127,11 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
             R = self.charTeilrüstungen[index]
             if index < len(self.ruestungsKategorien):
                 self.loadArmorIntoFields(R, index)
-                
-        checkZonenChanged = self.ui.checkZonen.isChecked() != Wolke.Char.zonenSystemNutzen
-        self.ui.checkZonen.setChecked(Wolke.Char.zonenSystemNutzen)
         self.currentlyLoading = False
 
-        self.refreshZRSVisibility()
-        if checkZonenChanged:
+        if  Wolke.Char.zonenSystemNutzen:
+            Wolke.Char.zonenSystemNutzen = False
             self.updateRuestungen()
-
-    def checkZonenChanged(self):
-        if self.currentlyLoading:
-            return
-        #if Wolke.Char.zonenSystemNutzen == self.ui.checkZonen.isChecked():
-        #    return
-        infoBox = QtWidgets.QMessageBox()
-        infoBox.setIcon(QtWidgets.QMessageBox.Warning)
-        infoBox.setText("Wenn du zwischen einfachem und Zonensystem wechselst, gilt das für alle Rüstungen. Dabei werden eventuell einige deiner Slots gelöscht, speichere deinen Charakter zur Sicherheit vorher ab. Möchtest du fortfahren?")
-        infoBox.setWindowTitle("Wechsel des Rüstungssystems")
-        infoBox.setStandardButtons(QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.Cancel)
-        infoBox.setDefaultButton(QtWidgets.QMessageBox.Yes)
-        result = infoBox.exec()
-        if result == QtWidgets.QMessageBox.Cancel:
-            self.ui.checkZonen.blockSignals(True)
-            self.ui.checkZonen.setCheckState(QtCore.Qt.Unchecked if self.ui.checkZonen.isChecked() else QtCore.Qt.Checked)
-            self.ui.checkZonen.blockSignals(False)
-            return
-
-        Wolke.Char.zonenSystemNutzen = self.ui.checkZonen.isChecked()
-        self.modified.emit()
-        self.reloadRSTabs.emit()
-        self.updateRuestungen() # checkZonenChanged will be false
 
     def updateGesamtRuestung(self):
         if self.currentlyLoading:
@@ -206,10 +150,12 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
         if self.currentlyLoading:
             return
         ruestungNeu = []
+        zrwGesamt = 0
         for index in range(len(self.ruestungsKategorien)):
             R = self.createRuestung(index)
             ruestungNeu.append(R)
-            self.refreshDerivedArmorValues(R, index)
+
+            zrwGesamt += R.getRSGesamtInt()
 
             if R.name == "":
                 self.buttons[index].setText('\u002b')
@@ -226,13 +172,15 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
         definition = RuestungDefinition()
         definition.name = self.ui.editGesamtName.text()
         R = Ruestung(definition)
-        for kategorie in range(len(self.ruestungsKategorien)):
-            if self.ui.checkZonen.isChecked():
-                for i in range(6):
-                    R.rs[i] += self.spinZRS[kategorie][i].value()
-            else:
-                for i in range(6):
-                    R.rs[i] += self.spinRS[kategorie].value()
+
+        rsGesamt = int(zrwGesamt / 6)
+        #zrwGesamt = 0
+        #for kategorie in range(len(self.ruestungsKategorien)):
+        #    zrwGesamt += self.sbZRW[kategorie].value()
+
+        for i in range(6):
+            R.rs[i] = rsGesamt
+
         beDelta = self.ui.spinGesamtBE.value() - self.ui.spinGesamtRS.value()
         R.be = R.getRSGesamtInt() + beDelta
         if self.ruestungsEigenschaften:
@@ -248,35 +196,21 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
         self.modified.emit()
 
     def refreshDerivedArmorValues(self, R, index):
-        if self.ui.checkZonen.isChecked():
-            self.spinRS[index].blockSignals(True)
-            self.spinRS[index].setValue(R.getRSGesamtInt())
-            self.spinRS[index].blockSignals(False)
-        else:
-            for i in range(0, 6):
-               self.spinZRS[index][i].blockSignals(True)
-               self.spinZRS[index][i].setValue(R.getRSGesamtInt())
-               self.spinZRS[index][i].blockSignals(False)
-
-        spinPunkte = self.spinPunkte[index]
-        spinPunkte.setValue(sum(R.rs))
-
         if index == self.gesamtIndex:
-            punkte = sum(R.rs) + R.zrsMod
-            spinPunkte.setValue(punkte)
+            punkte = 0
+            for R in self.charTeilrüstungen:
+                punkte += R.getRSGesamtInt()
+
+            #punkte = sum(R.rs) + R.zrsMod
+            self.ui.spinGesamtPunkte.setValue(punkte)
             if punkte % 6 != 0:
-                self.ui.spinGesamtPunkte.setProperty("warning", True)
                 missingPoints = 6 - punkte % 6
                 if missingPoints == 1:
-                    self.ui.spinGesamtPunkte.setToolTip("Der Rüstung fehlt " + str(missingPoints) + " Punkt ZRS.")
+                    self.ui.spinGesamtPunkte.setToolTip("Der Rüstung fehlt " + str(missingPoints) + " Punkt ZRW für den nächsten Punkt RS.")
                 else:
-                    self.ui.spinGesamtPunkte.setToolTip("Der Rüstung fehlen " + str(missingPoints) + " Punkte ZRS.")
+                    self.ui.spinGesamtPunkte.setToolTip("Der Rüstung fehlen " + str(missingPoints) + " Punkte ZRW für den nächsten Punkt RS.")
             else:
-                self.ui.spinGesamtPunkte.setProperty("warning", False)
                 self.ui.spinGesamtPunkte.setToolTip("")
-            
-            self.ui.spinGesamtPunkte.style().unpolish(self.ui.spinGesamtPunkte)
-            self.ui.spinGesamtPunkte.style().polish(self.ui.spinGesamtPunkte)
 
     def createRuestung(self, index):
         name = self.editRName[index].text()
@@ -286,11 +220,7 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
             definition = RuestungDefinition()
             definition.name = name
             R = Ruestung(definition)
-        if self.ui.checkZonen.isChecked():
-            for i in range(0, 6):
-                R.rs[i] = self.spinZRS[index][i].value()
-        else:
-            R.rs = 6*[self.spinRS[index].value()]
+        R.rs = 6*[self.sbZRW[index].value()]
 
         if index == self.gesamtIndex:
             R.be = int(self.ui.spinGesamtBE.value())
@@ -322,16 +252,10 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
 
     def loadArmorIntoFields(self, R, index):
         self.editRName[index].setText(R.name)
-        for i in range(0, 6):
-            if self.ui.checkZonen.isChecked():
-                self.spinZRS[index][i].setValue(R.rs[i])
-            else:
-                self.spinZRS[index][i].setValue(R.getRSGesamtInt())
-
         if index == self.gesamtIndex:
             self.ui.spinGesamtBE.setValue(EventBus.applyFilter("ruestung_be", R.be, { "name" : R.name }))
 
-        self.spinRS[index].setValue(R.getRSGesamtInt())
+        self.sbZRW[index].setValue(R.getRSGesamtInt())
 
         if self.ruestungsEigenschaften:
             self.editEigenschaften[index].setText(", ".join(R.eigenschaften))
@@ -350,7 +274,7 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
             logging.debug("Starting RuestungPicker")
 
             pickerClass = EventBus.applyFilter("class_ruestungspicker_wrapper", RuestungPicker)
-            picker = pickerClass(self.editRName[index].text(), 2 if self.ui.checkZonen.isChecked() else 1, self.ruestungsKategorien[index])
+            picker = pickerClass(self.editRName[index].text(), 1, self.ruestungsKategorien[index])
             logging.debug("RuestungPicker created")
             if picker.ruestung is not None:
                 self.currentlyLoading = True
@@ -371,30 +295,3 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
                 continue
             return True
         return False
-
-    def refreshZRSVisibility(self):
-        if self.currentlyLoading:
-            return
-        self.currentlyLoading = True
-        zrsWidgets = [self.ui.labelBein, self.ui.labelBauch, self.ui.labelBrust, self.ui.labelLarm, self.ui.labelRarm, self.ui.labelKopf, self.ui.labelPunkte,
-                  self.ui.spinGesamtBein, self.ui.spinGesamtBauch, self.ui.spinGesamtBrust, self.ui.spinGesamtLarm, self.ui.spinGesamtRarm, self.ui.spinGesamtKopf, self.ui.spinGesamtPunkte]
-        for widget in zrsWidgets:
-            widget.setVisible(self.ui.checkZonen.isChecked())
-
-        for kategorie in range(len(self.ruestungsKategorien)):
-            showCategory = RSCharakterRuestungWrapper.shouldShowCategory(kategorie, 2 if self.ui.checkZonen.isChecked() else 1)
-            self.labels[kategorie].setVisible(showCategory)
-            self.editRName[kategorie].setVisible(showCategory)
-            self.spinRS[kategorie].setVisible(showCategory)
-            self.spinRS[kategorie].setEnabled(not self.ui.checkZonen.isChecked())
-            for j in range(6):
-                self.spinZRS[kategorie][j].setVisible(showCategory and self.ui.checkZonen.isChecked())
-            self.spinPunkte[kategorie].setVisible(showCategory and self.ui.checkZonen.isChecked())
-            if self.ruestungsEigenschaften:
-                self.editEigenschaften[kategorie].setVisible(showCategory)
-            self.buttons[kategorie].setVisible(showCategory)
-
-            if not showCategory:
-                self.loadArmorIntoFields(Ruestung(RuestungDefinition()), kategorie)
-
-        self.currentlyLoading = False

@@ -5,6 +5,7 @@ from Core.DatenbankEinstellung import DatenbankEinstellung
 from Core.Ruestung import Ruestung, RuestungDefinition
 from Hilfsmethoden import Hilfsmethoden, SortedCategoryToListDict
 from RuestungenPlus.RSCharakterRuestungWrapper import RSCharakterRuestungWrapper
+from RuestungenPlus.RSDatenbankEditRuestungWrapper import RSDatenbankEditRuestungWrapper
 from Wolke import Wolke
 import DatenbankEditor
 from RuestungenPlus import RSDatenbankEditRuestungseigenschaftWrapper, Ruestungseigenschaft
@@ -22,6 +23,11 @@ def deepequals(self, other):
 
 RuestungDefinition.deepequals = deepequals
 
+def details(self, db):
+    return f"ZRS {self.getRSGesamtInt()}, Eigenschaften: {self.text if self.text else '-'}"
+
+RuestungDefinition.details = details
+
 def ruestungGetEigenschaften(self):
     if not hasattr(self, "_eigenschaften"):
         self._eigenschaften = []
@@ -31,7 +37,6 @@ def ruestungGetEigenschaften(self):
 
 Ruestung.eigenschaften = property(ruestungGetEigenschaften).setter(lambda self, v: setattr(self, "_eigenschaften", v))
 Ruestung.kategorie = property(lambda self: self._kategorie if hasattr(self, "_kategorie") else -1).setter(lambda self, v: setattr(self, "_kategorie", v))
-Ruestung.zrsMod = property(lambda self: self._zrsMod if hasattr(self, "_zrsMod") else 0).setter(lambda self, v: setattr(self, "_zrsMod", v))
 
 class Plugin:
     def __init__(self):
@@ -50,6 +55,7 @@ class Plugin:
         EventBus.addFilter("class_ruestungspicker_wrapper", self.provideRuestungPickerWrapperHook)
         EventBus.addFilter("class_ausruestung_wrapper", self.provideAusruestungWrapperHook)
         EventBus.addFilter("class_inventar_wrapper", self.provideInventarWrapperHook)
+        EventBus.addFilter("dbe_class_ruestungdefinition_wrapper", self.provideDbeRuestungDefinitionWrapperHook)
         EventBus.addAction("charakter_instanziiert", self.charakterInstanziiertHandler)
         EventBus.addAction("charakter_deserialisiert", self.charakterDeserialisiertHandler)
         EventBus.addAction("charakter_serialisiert", self.charakterSerialisiertHandler, 100)
@@ -103,7 +109,6 @@ class Plugin:
         
         char.rüstungenScriptAPI = copy.copy(char.charakterScriptAPI)
         char.rüstungenScriptAPI['getEigenschaftParam'] = lambda paramNb: self.API_getEigenschaftParam(paramNb)
-        char.rüstungenScriptAPI['modifyZRSPunkte'] = lambda zrs: setattr(self.currentRuestung, 'zrsMod', self.currentRuestung.zrsMod + zrs)
 
     def scriptsAvailableHook(self, scripts, params):
         context = params["context"]
@@ -115,12 +120,6 @@ class Plugin:
             script = Script(f"Waffeneigenschaft Parameter (Text)", f"getEigenschaftParam", "Rüstungseigenschaften")
             script.parameter.append(ScriptParameter("Index", int))
             scripts.stringGetter[script.name] = script
-
-            script = Script("Rüstungseigenschaft ZRS-Punkte modifizieren", "modifyZRSPunkte", "Rüstungseigenschaften")
-            script.beschreibung = "Modifiert die ZRS-Punkte, die eine Rüstung anhand ihrer Zonenrüstungswerte hat. "\
-                "Damit kann das RS/BE-Verhältnis verbessert oder verschlechtert werden."
-            script.parameter.append(ScriptParameter("Modifikator", int))
-            scripts.setters[script.name] = script
 
         return scripts
     
@@ -231,7 +230,6 @@ class Plugin:
 
         for i in range(len(char.rüstung)):
             self.currentRuestung = char.rüstung[i]
-            self.currentRuestung.zrsMod = 0
             for eig in self.currentRuestung.eigenschaften:
                 self.currentEigenschaft = eig
                 try:
@@ -260,6 +258,7 @@ class Plugin:
                 
             def onSetupUi(self):
                 super().onSetupUi()
+                self.ui.label_5.setText("ZRW")
                 if Wolke.DB.einstellungen["RüstungenPlus Plugin: Preis anzeigen"].wert:
                     self.ui.labelPreis = QtWidgets.QLabel()
                     self.ui.labelPreis.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
@@ -364,6 +363,9 @@ class Plugin:
 
         return RSCharakterInventarWrapper
 
+    def provideDbeRuestungDefinitionWrapperHook(self, base, params):
+        return RSDatenbankEditRuestungWrapper
+
     ############################
     # Datenbankeditor
     ############################
@@ -437,11 +439,7 @@ class Plugin:
 
             strList.append("<table><tr>")
             strList.append("<th align='left'>Name</th>")
-            if Wolke.Char.zonenSystemNutzen:       
-                for header in ["Beine", "L.&nbsp;Arm", "R.&nbsp;Arm", "Bauch", "Brust", "Kopf"]:
-                    strList.append("<th>" + header + "</th>")
-            else:
-                strList.append("<th>RS</th>")
+            strList.append("<th>ZRW</th>")
             strList.append("</tr>")
 
             for r in teilrüstungen[i]:
@@ -449,11 +447,7 @@ class Plugin:
                     continue
                 strList.append("<tr>")
                 strList.append("<td>" + r.name + "</td>")
-                if Wolke.Char.zonenSystemNutzen:
-                    for cell in [str(r.rs[0]), str(r.rs[1]), str(r.rs[2]), str(r.rs[3]), str(r.rs[4]), str(r.rs[5])]:
-                        strList.append("<td align='center'>" + cell + "</td>")
-                else:
-                    strList.append("<td align='center'>" + str(r.getRSGesamtInt()) + "</td>")
+                strList.append("<td align='center'>" + str(r.getRSGesamtInt()) + "</td>")
                 strList.append("</tr>")
                 strList.append("<tr>")
                 strList.append("<td colspan='100' style='font-size: 6pt;'>&nbsp;&nbsp;&nbsp;&nbsp;" + Wolke.DB.einstellungen["Rüstungen: Kategorien"].wert.keyAtIndex(r.kategorie))

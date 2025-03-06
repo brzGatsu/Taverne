@@ -85,83 +85,24 @@
             <property name="sizeConstraint">
              <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
             </property>
-            <item row="0" column="6">
-             <widget class="QLabel" name="labelRarm">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>35</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <bold>true</bold>
-               </font>
-              </property>
+            <item row="1" column="5">
+             <widget class="QLabel" name="label_3">
               <property name="text">
-               <string>R. Arm</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="class" stdset="0">
-               <string>h4</string>
+               <string/>
               </property>
              </widget>
             </item>
-            <item row="1" column="7">
-             <widget class="QSpinBox" name="spinGesamtBauch">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
-              </property>
-              <property name="maximum">
-               <number>999</number>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Gesamte Rüstung</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="9">
-             <widget class="QSpinBox" name="spinGesamtKopf">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="editGesamtName">
               <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
-              </property>
-              <property name="maximum">
-               <number>999</number>
+               <string/>
               </property>
              </widget>
             </item>
@@ -173,60 +114,10 @@
                </font>
               </property>
               <property name="text">
-               <string>Slots</string>
+               <string>Zonen</string>
               </property>
               <property name="class" stdset="0">
                <string>h4</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="10">
-             <widget class="QLabel" name="labelPunkte">
-              <property name="font">
-               <font>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Punkte</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="class" stdset="0">
-               <string>h4</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label_2">
-              <property name="text">
-               <string>Gesamte Rüstung</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="5">
-             <widget class="QSpinBox" name="spinGesamtLarm">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
-              </property>
-              <property name="maximum">
-               <number>999</number>
               </property>
              </widget>
             </item>
@@ -251,21 +142,30 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="5">
-             <widget class="QLabel" name="labelLarm">
-              <property name="minimumSize">
-               <size>
-                <width>35</width>
-                <height>0</height>
-               </size>
-              </property>
+            <item row="0" column="1">
+             <widget class="QLabel" name="labelRName">
               <property name="font">
                <font>
                 <bold>true</bold>
                </font>
               </property>
               <property name="text">
-               <string>L. Arm</string>
+               <string>Name</string>
+              </property>
+              <property name="class" stdset="0">
+               <string>h4</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLabel" name="labelPunkte">
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>ZRW</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -275,16 +175,41 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="10">
-             <widget class="QSpinBox" name="spinGesamtPunkte">
+            <item row="1" column="2">
+             <widget class="QSpinBox" name="spinGesamtBE">
               <property name="minimumSize">
                <size>
                 <width>44</width>
                 <height>0</height>
                </size>
               </property>
-              <property name="frame">
+              <property name="toolTip">
+               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="readOnly">
                <bool>false</bool>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
+              </property>
+              <property name="maximum">
+               <number>999</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QSpinBox" name="spinGesamtRS">
+              <property name="minimumSize">
+               <size>
+                <width>44</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -297,30 +222,6 @@
               </property>
               <property name="maximum">
                <number>999</number>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="9">
-             <widget class="QLabel" name="labelKopf">
-              <property name="minimumSize">
-               <size>
-                <width>35</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Kopf</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="class" stdset="0">
-               <string>h4</string>
               </property>
              </widget>
             </item>
@@ -352,16 +253,7 @@
              </widget>
             </item>
             <item row="1" column="4">
-             <widget class="QSpinBox" name="spinGesamtBein">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
+             <widget class="QSpinBox" name="spinGesamtPunkte">
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
               </property>
@@ -372,237 +264,11 @@
                <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
               </property>
               <property name="maximum">
-               <number>999</number>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLineEdit" name="editGesamtName">
-              <property name="toolTip">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="3">
-             <widget class="QSpinBox" name="spinGesamtRS">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
-              </property>
-              <property name="maximum">
-               <number>999</number>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="8">
-             <widget class="QSpinBox" name="spinGesamtBrust">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
-              </property>
-              <property name="maximum">
-               <number>999</number>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="2">
-             <widget class="QSpinBox" name="spinGesamtBE">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>false</bool>
-              </property>
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
-              </property>
-              <property name="maximum">
-               <number>999</number>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="7">
-             <widget class="QLabel" name="labelBauch">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>35</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Bauch</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="class" stdset="0">
-               <string>h4</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="8">
-             <widget class="QLabel" name="labelBrust">
-              <property name="minimumSize">
-               <size>
-                <width>35</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Brust</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="class" stdset="0">
-               <string>h4</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="4">
-             <widget class="QLabel" name="labelBein">
-              <property name="minimumSize">
-               <size>
-                <width>35</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Bein</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="class" stdset="0">
-               <string>h4</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="11">
-             <widget class="QLabel" name="label_3">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="6">
-             <widget class="QSpinBox" name="spinGesamtRarm">
-              <property name="minimumSize">
-               <size>
-                <width>44</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Die Rüstungswerte werden automatisch aus allen Slots berechnet.</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignCenter</set>
-              </property>
-              <property name="readOnly">
-               <bool>true</bool>
-              </property>
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
-              </property>
-              <property name="maximum">
-               <number>999</number>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="labelRName">
-              <property name="font">
-               <font>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Name</string>
-              </property>
-              <property name="class" stdset="0">
-               <string>h4</string>
+               <number>9999</number>
               </property>
              </widget>
             </item>
            </layout>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="checkZonen">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>18</height>
-             </size>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::LayoutDirection::RightToLeft</enum>
-            </property>
-            <property name="text">
-             <string>Zonenrüstungssystem bei allen Rüstungen benutzen</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
           </item>
           <item>
            <widget class="QLabel" name="labelHinweis">
