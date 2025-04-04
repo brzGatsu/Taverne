@@ -146,11 +146,24 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
             self.modified.emit()
             self.refreshDerivedArmorValues(R, self.gesamtIndex)
 
+    def getSchwerParam(self, eigenschaft):
+        if "schwer" not in eigenschaft.lower():
+            return None
+
+        match = re.search(r"\((.+?)\)", eigenschaft, re.UNICODE)
+        if not match:
+            return None
+        parameters = list(map(str.strip, match.group(1).split(";")))
+        if not len(parameters) >= 1:
+            return None
+        return int(parameters[0])
+
     def updateRuestungen(self):
         if self.currentlyLoading:
             return
         ruestungNeu = []
         zrwGesamt = 0
+
         for index in range(len(self.ruestungsKategorien)):
             R = self.createRuestung(index)
             ruestungNeu.append(R)
@@ -168,12 +181,12 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
         self.charTeilrüstungen.clear()
         self.charTeilrüstungen += ruestungNeu
 
-
         definition = RuestungDefinition()
         definition.name = self.ui.editGesamtName.text()
         R = Ruestung(definition)
 
         rsGesamt = int(zrwGesamt / 6)
+
         #zrwGesamt = 0
         #for kategorie in range(len(self.ruestungsKategorien)):
         #    zrwGesamt += self.sbZRW[kategorie].value()
@@ -181,13 +194,29 @@ class RSCharakterRuestungWrapper(QtCore.QObject):
         for i in range(6):
             R.rs[i] = rsGesamt
 
+        schwerCount = 0
+        R.eigenschaften = []
+        if self.ruestungsEigenschaften:
+            for teilRüstung in self.charTeilrüstungen:
+                for eigenschaft in teilRüstung.eigenschaften:
+                    schwer = self.getSchwerParam(eigenschaft)
+                    if schwer is not None:
+                        schwerCount += schwer
+                        continue
+
+                    if eigenschaft not in R.eigenschaften:
+                        R.eigenschaften.append(eigenschaft)
+
+        if schwerCount > 0:
+            R.eigenschaften.append(f"Schwer ({schwerCount})")
+
         beDelta = self.ui.spinGesamtBE.value() - self.ui.spinGesamtRS.value()
         R.be = R.getRSGesamtInt() + beDelta
-        if self.ruestungsEigenschaften:
-            if self.editGesamtEigenschaften.text():
-                R.eigenschaften = list(map(str.strip, self.editGesamtEigenschaften.text().split(",")))
-            else:
-                R.eigenschaften = []
+        #if self.ruestungsEigenschaften:
+        #    if self.editGesamtEigenschaften.text():
+        #        R.eigenschaften = list(map(str.strip, self.editGesamtEigenschaften.text().split(",")))
+        #    else:
+        #        R.eigenschaften = []
 
         self.currentlyLoading = True
         self.loadArmorIntoFields(R, self.gesamtIndex)
