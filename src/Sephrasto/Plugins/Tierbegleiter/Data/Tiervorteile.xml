@@ -68,7 +68,7 @@ Voraussetzungen: Anzeige, Wache, Abrichter beherrscht Kulturkunde (Novadis) III<
   <Vorteil name="Treiben">Das Tier treibt fliehende Tiere zurück, bringt sie ohne Schaden zu Fall oder treibt die Herde in eine Richtung.</Vorteil>
   <Vorteil name="Trick">Das Tier führt auf Kommando einen bestimmten Trick aus. Mehrfach wählbar.</Vorteil>
   <Vorteil name="Wache (passiv)">Das Tier schlägt mit einer Probe auf Wachsamkeit an, wenn ein Fremder sich nähert.</Vorteil>
-  <Vorteil name="Weiches Gangwerk (passiv)">Erhöht den DH-Bonus für eine überwiegend berittene Fortbewegung am Ende eines Reiseabschnitts (S. 127) um +1.</Vorteil>
+  <Vorteil name="Weiches Gangwerk (passiv)">Du erhältst Vorteil auf Reiten-Proben am Ende von Ereignissen. Wenn du bereits Vorteil hast, erhältst du legendären Vorteil.</Vorteil>
   <Vorteil name="Zügelloses Reiten (passiv)">Das Reittier lässt sich nur durch Gewichtsverlagerung und Schenkeldruck lenken. Du erhältst keinen Nachteil für freihändiges Reiten.</Vorteil>
   <Vorteil name="Zusammenarbeit (passiv)">Das Tier hat gelernt, mit anderen Tieren seiner Art zusammenzuarbeiten (S. 9), falls diese auch über den Vorteil verfügen. So können z.B. Hütetiere gemeinsam eine Herde treiben, Jagdtiere gemeinsam auf die Jagd gehen, oder Pferde gemeinsam eine Kutsche ziehen. Wenn du dem Tier erfolgreich einen entsprechenden Befehl gibst, führen die anderen Tiere ihn ohne weitere Probe auch aus – du solltest den Befehl also dem Tier mit dem höchsten Tierbegleiter-Wert erteilen.</Vorteil>
 </Datenbank>
