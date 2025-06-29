@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'DatenbankEditWaffeneigenschaft.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.9.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -38,17 +38,17 @@ class Ui_dialog(object):
         self.labelName = QLabel(self.scrollAreaWidgetContents)
         self.labelName.setObjectName(u"labelName")
 
-        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.labelName)
+        self.formLayout.setWidget(0, QFormLayout.ItemRole.LabelRole, self.labelName)
 
         self.leName = QLineEdit(self.scrollAreaWidgetContents)
         self.leName.setObjectName(u"leName")
 
-        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.leName)
+        self.formLayout.setWidget(0, QFormLayout.ItemRole.FieldRole, self.leName)
 
         self.labelBeschreibung = QLabel(self.scrollAreaWidgetContents)
         self.labelBeschreibung.setObjectName(u"labelBeschreibung")
 
-        self.formLayout.setWidget(1, QFormLayout.LabelRole, self.labelBeschreibung)
+        self.formLayout.setWidget(1, QFormLayout.ItemRole.LabelRole, self.labelBeschreibung)
 
         self.tabWidget = QTabWidget(self.scrollAreaWidgetContents)
         self.tabWidget.setObjectName(u"tabWidget")
@@ -81,13 +81,13 @@ class Ui_dialog(object):
 
         self.tabWidget.addTab(self.tab_2, "")
 
-        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.tabWidget)
+        self.formLayout.setWidget(1, QFormLayout.ItemRole.FieldRole, self.tabWidget)
 
         self.labelScript = QLabel(self.scrollAreaWidgetContents)
         self.labelScript.setObjectName(u"labelScript")
         self.labelScript.setMinimumSize(QSize(110, 0))
 
-        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.labelScript)
+        self.formLayout.setWidget(2, QFormLayout.ItemRole.LabelRole, self.labelScript)
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -120,7 +120,7 @@ class Ui_dialog(object):
         self.horizontalLayout.addLayout(self.verticalLayout_3)
 
 
-        self.formLayout.setLayout(2, QFormLayout.FieldRole, self.horizontalLayout)
+        self.formLayout.setLayout(2, QFormLayout.ItemRole.FieldRole, self.horizontalLayout)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 

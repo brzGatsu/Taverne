@@ -7,7 +7,6 @@ Created on Fri Mar 10 17:33:11 2017
 from Wolke import Wolke
 from PySide6 import QtWidgets, QtCore, QtGui
 from CharakterProfaneFertigkeitenWrapper import ProfaneFertigkeitenWrapper
-from CharakterFreieFertWrapper import CharakterFreieFertWrapper
 from CharakterUebernatuerlichWrapper import UebernatuerlichWrapper
 import UI.CharakterTabWidget
 from EventBus import EventBus
@@ -27,12 +26,6 @@ class FertigkeitenWrapper(QtCore.QObject):
             self.profanWrapper.modified.connect(self.onModified)
             self.ui.tabs.addTab(self.profanWrapper.form, "Profane")
 
-        freieWrapper = EventBus.applyFilter("class_freiefertigkeiten_wrapper", CharakterFreieFertWrapper)
-        if freieWrapper:
-            self.freieWrapper = freieWrapper()
-            self.freieWrapper.modified.connect(self.onModified)
-            self.ui.tabs.addTab(self.freieWrapper.form, "Freie")
-
         ueberWrapper = EventBus.applyFilter("class_uebernatuerlichefertigkeiten_wrapper", UebernatuerlichWrapper)
         if ueberWrapper:
             self.ueberWrapper = ueberWrapper()
@@ -44,8 +37,6 @@ class FertigkeitenWrapper(QtCore.QObject):
     def load(self):
         if hasattr(self, "profanWrapper") and self.ui.tabs.currentWidget() == self.profanWrapper.form:
             self.profanWrapper.load()
-        elif hasattr(self, "freieWrapper") and self.ui.tabs.currentWidget() == self.freieWrapper.form:
-            self.freieWrapper.load()
         elif hasattr(self, "ueberWrapper") and self.ui.tabs.currentWidget() == self.ueberWrapper.form:
             self.ueberWrapper.load()
 

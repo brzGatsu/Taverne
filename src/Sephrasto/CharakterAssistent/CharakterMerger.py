@@ -5,7 +5,6 @@ from Core.Energie import Energie
 from Core.Ruestung import Ruestung, RuestungDefinition
 from Core.Waffe import Waffe
 from Core.Fertigkeit import Fertigkeit
-from Core.FreieFertigkeit import FreieFertigkeit, FreieFertigkeitDefinition
 import lxml.etree as etree
 import logging
 from Hilfsmethoden import Hilfsmethoden
@@ -19,33 +18,6 @@ class CharakterMerger:
     def __init__(self):
         pass
     
-    def addFreieFertigkeit(char, db, name, wert, overrideEmpty):
-        if name == "":
-            return
-
-        definition = None
-        if name in db.freieFertigkeiten:
-            definition = db.freieFertigkeiten[name]
-        else:
-            definition = FreieFertigkeitDefinition()
-            definition.name = name
-        fert = FreieFertigkeit(definition, char)            
-        fert.wert = wert
-
-        found = False
-        for ff in char.freieFertigkeiten:
-            if fert.name == ff.name:
-                ff.wert = min(ff.wert + fert.wert, 3)
-                found = True
-                break
-        if not found:
-            if len(char.freieFertigkeiten) == 28:
-                return
-            if overrideEmpty and fert.wert == 3 and len(char.freieFertigkeiten) > 0 and char.freieFertigkeiten[0].name == "":
-                char.freieFertigkeiten[0] = fert
-            else:
-                char.freieFertigkeiten.append(fert)
-
     def readChoices(db, path):
         root = etree.parse(path).getroot()
         errors = []
@@ -184,13 +156,6 @@ class CharakterMerger:
                     continue
                 choiceList.choices.append(choice)
 
-            for fer in child.findall('Freie-Fertigkeit'):
-                choice = Choice.Choice()
-                choice.name = fer.attrib['name']
-                choice.wert = int(fer.attrib['wert'])
-                choice.typ = "Freie-Fertigkeit"
-                choiceList.choices.append(choice)
-
             for fer in child.findall('Fertigkeit'):
                 choice = Choice.Choice()
                 choice.name = fer.attrib['name']
@@ -259,8 +224,6 @@ class CharakterMerger:
                 return
             char.attribute[choice.name].wert += int(choice.wert)
             char.attribute[choice.name].aktualisieren()
-        elif choice.typ == "Freie-Fertigkeit":
-            CharakterMerger.addFreieFertigkeit(char, db, choice.name, choice.wert, True)
         elif choice.typ == "Fertigkeit":
             if not choice.name in char.fertigkeiten:
                 return
@@ -422,9 +385,6 @@ class CharakterMerger:
             fert.wert += int(fer.attrib['wert'])
             fert.aktualisieren()
             char.fertigkeiten[fert.name] = fert
-
-        for fer in root.findall('FreieFertigkeiten/FreieFertigkeit'):
-            CharakterMerger.addFreieFertigkeit(char, db, fer.attrib['name'], int(fer.attrib['wert']), False)
 
         objekte = root.find('Objekte');
         for rüs in objekte.findall('Rüstungen/Rüstung'):

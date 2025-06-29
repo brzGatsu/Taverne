@@ -16,8 +16,6 @@ class Charakterbogen:
         self.maxKampfVorteileProFeld = 3
         self.maxÜberVorteile = 0
         self.maxÜberVorteileProFeld = 3
-        self.maxFreie = 0
-        self.maxFreieProFeld = 3
         self.maxFertigkeiten = 0
         self.maxÜberFertigkeiten = 0
         self.maxÜberTalente = 0
@@ -90,8 +88,6 @@ class Charakterbogen:
             self.maxKampfVorteile = yamlDict["MaxKampfVorteile"]
         if "MaxÜbernatürlicheVorteile" in yamlDict:
             self.maxÜberVorteile = yamlDict["MaxÜbernatürlicheVorteile"]
-        if "MaxFreieFertigkeiten" in yamlDict:
-            self.maxFreie = yamlDict["MaxFreieFertigkeiten"]
         if "MaxFertigkeiten" in yamlDict:
             self.maxFertigkeiten = yamlDict["MaxFertigkeiten"]
         if "MaxÜbernatürlicheFertigkeiten" in yamlDict:
@@ -110,8 +106,6 @@ class Charakterbogen:
             self.maxKampfVorteileProFeld = yamlDict["MaxKampfVorteileProFeld"]
         if "MaxÜberVorteileProFeld" in yamlDict:
             self.maxÜberVorteileProFeld = yamlDict["MaxÜberVorteileProFeld"]
-        if "MaxFreieProFeld" in yamlDict:
-            self.maxFreieProFeld = yamlDict["MaxFreieProFeld"]
         if "ExtraÜberSeiten" in yamlDict:
             self.extraÜberSeiten = yamlDict["ExtraÜberSeiten"]
         if "Bild" in yamlDict:

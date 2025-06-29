@@ -2,7 +2,6 @@ from Core.Attribut import Attribut
 from Core.AbgeleiteterWert import AbgeleiteterWert
 from Core.Energie import Energie
 from Core.Fertigkeit import Fertigkeit, KampffertigkeitTyp
-from Core.FreieFertigkeit import FreieFertigkeit, FreieFertigkeitDefinition
 from Core.Ruestung import Ruestung, RuestungDefinition
 from Core.Talent import Talent
 from Core.Vorteil import Vorteil
@@ -65,10 +64,8 @@ class Char():
         self.kampfstilMods = {}
         self.vorteilFavoriten = []
 
-        #Vierter Block: Fertigkeiten und Freie Fertigkeiten
+        #Vierter Block: Fertigkeiten
         self.fertigkeiten = {}
-        self.freieFertigkeiten = []
-        self.freieFertigkeitenNumKostenlos = Wolke.DB.einstellungen["FreieFertigkeiten: Anzahl Kostenlos"].wert
         self.talente = {}
         self.talentMods = {}  # for scripts, only used in export { talentnname1 : mod, talentname2 : mod, ... 
         self.talentInfos = {} # for scripts, only used in export { talentnname1 : ["Info1", "Info2"], talentname2 : ["Info3"], ... 
@@ -91,7 +88,6 @@ class Char():
         self.epVorteile = 0
         self.epFertigkeiten = 0
         self.epFertigkeitenTalente = 0
-        self.epFreieFertigkeiten = 0
         self.epÜbernatürlich = 0
         self.epÜbernatürlichTalente = 0
 
@@ -157,10 +153,6 @@ class Char():
             'getÜbernatürlicheFertigkeitProbenwert' : lambda name: self.übernatürlicheFertigkeiten[name].probenwert if name in self.übernatürlicheFertigkeiten else None, 
             'getÜbernatürlicheFertigkeitProbenwertTalent' : lambda name: self.übernatürlicheFertigkeiten[name].probenwertTalent if name in self.übernatürlicheFertigkeiten else None, 
             'modifyÜbernatürlicheFertigkeitBasiswert' : lambda name, mod: setattr(self.übernatürlicheFertigkeiten[name], 'basiswertMod', self.übernatürlicheFertigkeiten[name].basiswertMod + mod) if name in self.übernatürlicheFertigkeiten else None, 
-
-            'getFreieFertigkeit' : lambda index: self.freieFertigkeiten[index].name if index >= 0 and index < len(self.freieFertigkeiten) else None,
-            'getFreieFertigkeitWert' : lambda index: self.freieFertigkeiten[index].wert if index >= 0 and index < len(self.freieFertigkeiten) else None,
-            'freieFertigkeitenCount' : lambda: len(self.freieFertigkeiten),
             
             #Talente
             'hasTalent' : lambda name: name in self.talente,
@@ -637,26 +629,13 @@ class Char():
             spent += vorteil.kosten
         
         self.epVorteile = spent - self.epAttribute
-        #Vierter Block: Fertigkeiten und Freie Fertigkeiten
+        #Vierter Block: Fertigkeiten
         self.epFertigkeiten = 0
         self.epFertigkeitenTalente = 0
-        self.epFreieFertigkeiten = 0
         for fer in self.fertigkeiten.values():     
             val = fer.kosten()
             spent += val
             self.epFertigkeiten += val
-
-        numKostenlos = 0
-        for fer in self.freieFertigkeiten:
-            # Dont count Muttersprache
-            if fer.wert == 3 and numKostenlos < self.freieFertigkeitenNumKostenlos:
-                numKostenlos += 1
-                continue
-            if not fer.name:
-                continue
-            val = fer.kosten()
-            spent += val
-            self.epFreieFertigkeiten += val
 
         #Fünfter Block ist gratis
         #Sechster Block: Übernatürliches
@@ -887,13 +866,6 @@ class Char():
             ser.end() #fertigkeit
         ser.end() #fertigkeiten
 
-        ser.beginList('FreieFertigkeiten')
-        for fert in self.freieFertigkeiten:
-            ser.begin('FreieFertigkeit')
-            fert.serialize(ser)
-            ser.end() #freiefertigkeit
-        ser.end() #freiefertigkeiten
-
         ser.beginList('Talente')
         for talent in self.talente.values():
             ser.begin('Talent')
@@ -1112,14 +1084,6 @@ class Char():
                     continue
                 self.fertigkeiten[fert.name] = fert
             ser.end() #fertigkeiten
-
-        if ser.find('FreieFertigkeiten'):
-            for tag in ser.listTags():
-                fert = FreieFertigkeit.__new__(FreieFertigkeit)
-                if not fert.deserialize(ser, Wolke.DB.freieFertigkeiten, self):
-                    continue
-                self.freieFertigkeiten.append(fert)
-            ser.end() #freiefertigkeiten
 
         if ser.find('Objekte'):
             self.zonenSystemNutzen = ser.getNestedBool('Zonensystem')

@@ -427,30 +427,6 @@ class PdfExporter(object):
 
     def pdfVierterBlock(self, fields):
         logging.debug("PDF Block 4")
-        # Freie Fertigkeiten
-        freieFertsTmp = copy.copy(Wolke.Char.freieFertigkeiten)
-
-        # Usually we want to keep the same order as in Sephrasto, however,
-        # compact the entries if there are too many  for the character sheet
-        if len(freieFertsTmp) > self.CharakterBogen.maxFreie:
-            freieFertsTmp = [f for f in freieFertsTmp if f.name]
-
-        while len(freieFertsTmp) > self.CharakterBogen.maxFreie * self.CharakterBogen.maxFreieProFeld:
-            niedrigste = None
-            for el in freieFertsTmp:
-                if niedrigste == None or el.wert < niedrigste.wert:
-                    niedrigste = el
-            freieFertsTmp.remove(niedrigste)
-            logging.warning("Der Charakter hat zu viele Freie Fertigkeiten für den Charakterbogen. Ignoriere Fertigkeit mit niedrigstem Wert: " + niedrigste.name)
-
-        freieFerts = CharakterPrintUtility.getFreieFertigkeitenNames(freieFertsTmp)
-        cellIndex = PdfExporter.getCellIndex(len(freieFerts), self.CharakterBogen.maxFreie)
-        for i in range(0, len(freieFerts)):
-            field = 'Frei' + str(cellIndex[i]+1)
-            if not field in fields:
-                fields[field] = freieFerts[i]
-            else:
-                fields[field] += " | " + freieFerts[i]
 
         fertigkeiten = []
         fertigkeitenByKategorie = CharakterPrintUtility.getFertigkeiten(Wolke.Char)

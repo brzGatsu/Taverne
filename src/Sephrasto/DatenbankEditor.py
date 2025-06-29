@@ -11,7 +11,6 @@ from Core.Attribut import AttributDefinition
 from Core.AbgeleiteterWert import AbgeleiteterWertDefinition
 from Core.Energie import EnergieDefinition
 from Core.Fertigkeit import FertigkeitDefinition, UeberFertigkeitDefinition
-from Core.FreieFertigkeit import FreieFertigkeitDefinition
 from Core.Regel import Regel
 from Core.Ruestung import RuestungDefinition
 from Core.Talent import TalentDefinition
@@ -22,7 +21,6 @@ from Core.DatenbankEinstellung import DatenbankEinstellung
 from Datenbank import Datenbank
 import UI.DatenbankMain
 import DatenbankEditFertigkeitWrapper
-import DatenbankEditFreieFertigkeitWrapper
 import DatenbankEditTalentWrapper
 import DatenbankEditVorteilWrapper
 import DatenbankEditWaffeneigenschaftWrapper
@@ -302,7 +300,7 @@ class DatenbankEditor(object):
         self.databaseTypes[EnergieDefinition] = DatenbankTypWrapper(EnergieDefinition, DatenbankEditEnergieWrapper.DatenbankEditEnergieWrapper, True)
         self.databaseTypes[FertigkeitDefinition] = DatenbankTypWrapper(FertigkeitDefinition, DatenbankEditFertigkeitWrapper.DatenbankEditProfaneFertigkeitWrapper, True)
         self.databaseTypes[UeberFertigkeitDefinition] = DatenbankTypWrapper(UeberFertigkeitDefinition, DatenbankEditFertigkeitWrapper.DatenbankEditUebernatürlicheFertigkeitWrapper, True)
-        self.databaseTypes[FreieFertigkeitDefinition] = DatenbankTypWrapper(FreieFertigkeitDefinition, DatenbankEditFreieFertigkeitWrapper.DatenbankEditFreieFertigkeitWrapper, True)
+       
         self.databaseTypes[Regel] = DatenbankTypWrapper(Regel, DatenbankEditRegelWrapper.DatenbankEditRegelWrapper, True)
         self.databaseTypes[RuestungDefinition] = DatenbankTypWrapper(RuestungDefinition, DatenbankEditRuestungWrapper.DatenbankEditRuestungWrapper, True)
         self.databaseTypes[TalentDefinition] = DatenbankTypWrapper(TalentDefinition, DatenbankEditTalentWrapper.DatenbankEditTalentWrapper, True)

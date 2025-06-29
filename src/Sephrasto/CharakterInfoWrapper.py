@@ -140,7 +140,7 @@ class InfoWrapper(QtCore.QObject):
         self.ui.spinVorteileSpent.setValue(Wolke.Char.epVorteile)
         self.ui.spinVorteilePercent.setValue(round(Wolke.Char.epVorteile / totalVal * 100))
 
-        total = Wolke.Char.epFertigkeiten + Wolke.Char.epFertigkeitenTalente + Wolke.Char.epFreieFertigkeiten
+        total = Wolke.Char.epFertigkeiten + Wolke.Char.epFertigkeitenTalente
 
         self.ui.spinProfanSpent.setValue(total)
         self.ui.spinProfanPercent.setValue(round(total / totalVal * 100))
@@ -150,9 +150,6 @@ class InfoWrapper(QtCore.QObject):
 
         self.ui.spinTalenteSpent.setValue(Wolke.Char.epFertigkeitenTalente)
         self.ui.spinTalentePercent.setValue(round(Wolke.Char.epFertigkeitenTalente / max(total, 1) * 100))
-
-        self.ui.spinFreieSpent.setValue(Wolke.Char.epFreieFertigkeiten)
-        self.ui.spinFreiePercent.setValue(round(Wolke.Char.epFreieFertigkeiten / max(total, 1) * 100))
 
         if Wolke.Char.epÜbernatürlich + Wolke.Char.epÜbernatürlichTalente > 0:
             self.ui.spinUebernatuerlichSpent.show()

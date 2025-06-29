@@ -2,7 +2,6 @@ from Core.Attribut import AttributDefinition
 from Core.AbgeleiteterWert import AbgeleiteterWertDefinition
 from Core.Energie import EnergieDefinition
 from Core.Fertigkeit import FertigkeitDefinition, UeberFertigkeitDefinition
-from Core.FreieFertigkeit import FreieFertigkeitDefinition
 from Core.Regel import Regel
 from Core.Ruestung import RuestungDefinition
 from Core.Talent import TalentDefinition
@@ -140,7 +139,6 @@ class Datenbank():
         self.rüstungen = {}
         self.regeln = {}
         self.waffeneigenschaften = {}
-        self.freieFertigkeiten = {}
         self.einstellungen = {}
         self.tablesByType = {}
         self.referenceDB = {}
@@ -158,7 +156,6 @@ class Datenbank():
         self.insertTable(WaffeDefinition, self.waffen) 
         self.insertTable(RuestungDefinition, self.rüstungen) 
         self.insertTable(Regel, self.regeln) 
-        self.insertTable(FreieFertigkeitDefinition, self.freieFertigkeiten)  
         self.insertTable(VorteilDefinition, self.vorteile)
 
         EventBus.doAction("datenbank_laden", { "datenbank" : self, "isCharakterEditor" : isCharakterEditor })
@@ -265,7 +262,7 @@ class Datenbank():
         self.loadingErrors = [] 
 
         # Voraussetzungen
-        voraussetzungenKeys = [EnergieDefinition, VorteilDefinition, TalentDefinition, FertigkeitDefinition, UeberFertigkeitDefinition, Regel, FreieFertigkeitDefinition]
+        voraussetzungenKeys = [EnergieDefinition, VorteilDefinition, TalentDefinition, FertigkeitDefinition, UeberFertigkeitDefinition, Regel]
         for dbKey in self.tablesByType:
             if dbKey not in voraussetzungenKeys:
                 continue
@@ -353,13 +350,6 @@ class Datenbank():
                     self.loadingErrors.append([T, errorStr])
                     logging.warning(errorStr)
                 T.fertigkeiten.append(fert)
-
-        #Freie Fertigkeiten
-        for fert in self.freieFertigkeiten.values():
-            if fert.kategorie >= len(self.einstellungen['FreieFertigkeiten: Kategorien'].wert):
-                errorStr = f"Freie Fertigkeit {fert.name} hat eine unbekannte Kategorie."
-                self.loadingErrors.append([fert, errorStr])
-                logging.warning(errorStr)
 
         #Fertigkeiten     
         for fert in self.fertigkeiten.values():

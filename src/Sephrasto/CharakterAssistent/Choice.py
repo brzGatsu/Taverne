@@ -1,6 +1,5 @@
 from EventBus import EventBus
 from Core.Fertigkeit import KampffertigkeitTyp
-from Core.FreieFertigkeit import FreieFertigkeitDefinition
 import logging
 
 class Choice(object):
@@ -16,13 +15,7 @@ class Choice(object):
         # These cases may not always be true, i.e. if the choice is bundled with others inside a variant
         # So we're not displaying these errors because it might be more confusing if the displayed a wrong info
         # Usually the commented out parts mean anyways, that the creator of the template made an error
-        if self.typ == "Freie-Fertigkeit":
-            for ff in char.freieFertigkeiten:
-                if self.name == ff.name:
-                    if ff.wert == 3:
-                        return "bereits Maximum"
-                    break
-        elif self.typ == "Fertigkeit":
+        if self.typ == "Fertigkeit":
             if self.name in char.fertigkeiten:
                 if self.wert > 0 and char.fertigkeiten[self.name].wert == char.fertigkeiten[self.name].maxWert:
                     logging.warn(f"CharakterAssistent: {self.typ} {self.name} bereits Maximum")
@@ -84,31 +77,7 @@ class Choice(object):
     def toString(self, char, db, addEP = True):
         valueStr = ""
         prefix = ""
-        if self.typ == "Freie-Fertigkeit":
-            fert = None
-            for ff in char.freieFertigkeiten:
-                if self.name == ff.name:
-                    fert = ff
-                    break
-            if fert:
-                werte = ["-", "I", "II", "III"]
-                wert = min(self.wert, 3 - ff.wert)
-                if wert == 0:
-                    valueStr += " +0"
-                elif wert == 1:
-                    valueStr += " +I"
-                elif wert == 2:
-                    valueStr += " +II"
-                valueStr += " (aktuell " + werte[ff.wert] + ")"
-            else:
-                if self.wert == 1:
-                    valueStr = " I"
-                elif self.wert == 2:
-                    valueStr = " II"
-                elif self.wert == 3:
-                    valueStr = " III"
-
-        elif self.typ == "Fertigkeit":
+        if self.typ == "Fertigkeit":
             wert = self.wert
             if self.name in char.fertigkeiten:
                 wert = max(min(char.fertigkeiten[self.name].maxWert - char.fertigkeiten[self.name].wert, self.wert), -char.fertigkeiten[self.name].wert)
@@ -186,13 +155,7 @@ class Choice(object):
         return ep
 
     def countEP(self, char, db):
-        if self.typ == "Freie-Fertigkeit":
-            for fert in char.freieFertigkeiten:
-                if self.name == fert.name:
-                    return fert.steigerungskosten(self.wert)
-            return EventBus.applyFilter("freiefertigkeit_kosten", FreieFertigkeitDefinition.gesamtkosten[self.wert], { "name" : self.name, "wertVon" : 0, "wertAuf" : self.wert })
-
-        elif self.typ == "Fertigkeit":
+        if self.typ == "Fertigkeit":
             if not self.name in char.fertigkeiten:
                 return 0
             fert = char.fertigkeiten[self.name]

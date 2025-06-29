@@ -13,7 +13,6 @@ class ChoiceXmlVerifier(object):
         "Talent" : ["name", "wert", "kommentar"],
         "Fertigkeit" : ["name", "wert"],
         "Übernatürliche-Fertigkeit" : ["name", "wert"],
-        "Freie-Fertigkeit" : ["name", "wert"],
         "Attribut" : ["name", "wert"],
         "Eigenheit" : ["name"]
     }

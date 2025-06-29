@@ -47,24 +47,6 @@ class CharakterPrintUtility:
         return (vorteileAllgemein, vorteileKampf, vorteileUeber)
 
     @staticmethod
-    def getFreieFertigkeiten(char):
-        return CharakterPrintUtility.getFreieFertigkeitenNames(char.freieFertigkeiten)
-
-    @staticmethod
-    def getFreieFertigkeitenNames(freieFertigkeiten):
-        ferts = []
-        for el in freieFertigkeiten:
-            if el.wert < 1 or el.wert > 3:
-                continue
-            name = el.name
-            if name:
-                name = el.name + " "
-                for i in range(el.wert):
-                    name += "I"
-            ferts.append(name)
-        return ferts
-
-    @staticmethod
     def getFertigkeiten(char):
         fertigkeitenByKategorie = SortedCategoryToListDict(Wolke.DB.einstellungen["Fertigkeiten: Kategorien profan"].wert)
         for fert in char.fertigkeiten.values():

@@ -46,7 +46,6 @@ class Wolke:
         'WindowSize-Hilfe' : [1230, 970],
         'WindowSize-TalentProfan' : [650, 366],
         'WindowSize-TalentUeber' : _DefaultSettings.WindowSizeDefault2Col,
-        'WindowSize-FreieFert' : _DefaultSettings.WindowSizeDefault1Col,
         'WindowSize-Waffen' : _DefaultSettings.WindowSizeDefault2Col,
         'WindowSize-Ruestungen' : _DefaultSettings.WindowSizeDefault2Col,
         'WindowSize-Datenbank' : [1056, 738],

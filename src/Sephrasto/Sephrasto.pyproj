@@ -44,9 +44,6 @@
     <Compile Include="Core\Energie.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Core\FreieFertigkeit.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Core\Regel.py">
       <SubType>Code</SubType>
     </Compile>
@@ -99,10 +96,6 @@
     <Compile Include="CharakterInventarWrapper.py" />
     <Compile Include="UI\CharakterTabWidget.py" />
     <Compile Include="CharakterFertigkeitenWrapper.py" />
-    <Compile Include="UI\CharakterFreieFert.py" />
-    <Compile Include="CharakterFreieFertWrapper.py" />
-    <Compile Include="UI\CharakterFreieFertigkeitenPicker.py" />
-    <Compile Include="CharakterFreieFertigkeitenPickerWrapper.py" />
     <Compile Include="UI\CharakterInfo.py" />
     <Compile Include="UI\CharakterMain.py" />
     <Compile Include="UI\CharakterMinderpakt.py" />
@@ -127,7 +120,6 @@
     <Compile Include="UI\DatenbankEditFertigkeit.py" />
     <Compile Include="DatenbankEditFertigkeitWrapper.py" />
     <Compile Include="UI\DatenbankEditFreieFertigkeit.py" />
-    <Compile Include="DatenbankEditFreieFertigkeitWrapper.py" />
     <Compile Include="UI\DatenbankEditRegel.py" />
     <Compile Include="UI\DatenbankEditRuestung.py" />
     <Compile Include="DatenbankEditRuestungWrapper.py" />

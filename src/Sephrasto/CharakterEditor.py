@@ -15,7 +15,6 @@ import CharakterAttributeWrapper
 import CharakterEquipmentWrapper
 import CharakterFertigkeitenWrapper
 import CharakterUebernatuerlichWrapper
-import CharakterFreieFertWrapper
 import CharakterVorteileWrapper
 import CharakterInfoWrapper
 import Charakter
