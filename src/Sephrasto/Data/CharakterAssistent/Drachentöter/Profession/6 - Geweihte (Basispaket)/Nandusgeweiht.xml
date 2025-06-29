@@ -95,7 +95,6 @@
   <ÜbernatürlicheFertigkeiten>
     <ÜbernatürlicheFertigkeit name="Göttlicher Ritus" wert="0" exportieren="0"/>
     <ÜbernatürlicheFertigkeit name="Wissen" wert="0" exportieren="1"/>
-    <ÜbernatürlicheFertigkeit name="List" wert="0" exportieren="1"/>
     <ÜbernatürlicheFertigkeit name="Einsicht" wert="0" exportieren="0"/>
   </ÜbernatürlicheFertigkeiten>
   <Erfahrung>
