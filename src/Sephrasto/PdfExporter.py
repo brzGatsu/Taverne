@@ -259,9 +259,6 @@ class PdfExporter(object):
         statusse = Wolke.DB.einstellungen["Statusse"].wert
         if Wolke.Char.status < len(statusse):
             fields['Status'] = statusse[Wolke.Char.status]
-        finanzen = Wolke.DB.einstellungen["Finanzen"].wert
-        if Wolke.Char.finanzen < len(finanzen):
-            fields['Finanzen'] = finanzen[Wolke.Char.finanzen]
         fields['Kurzb'] = Wolke.Char.kurzbeschreibung
         # Erste Acht Eigenheiten
         for i in range(0, min(8, len(Wolke.Char.eigenheiten))):
@@ -277,9 +274,6 @@ class PdfExporter(object):
             fields[aw.name + "Basis"] = aw.basiswert
             fields[aw.name] = aw.wert
             fields[aw.name + "m"] = aw.finalwert
-
-        if not Wolke.Char.finanzenAnzeigen and 'SchiPm' in fields:
-            del fields['SchiPm']
 
         checked = 'Yes'
         for vort in Wolke.Char.vorteile:
