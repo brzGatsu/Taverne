@@ -158,7 +158,7 @@ class CharakterRessourcenWrapper(QtCore.QObject):
             self.modified.emit()
 
     def updateInfoLabel(self):
-        pointsAvailable = 2 + int(Wolke.Char.epGesamt / 400)
+        pointsTotal = 2 + int(Wolke.Char.epGesamt / 400)
         pointsSpent = 0
         for cbWert in self.cbWertList:
             pointsSpent += cbWert.currentIndex()
@@ -168,10 +168,17 @@ class CharakterRessourcenWrapper(QtCore.QObject):
             mod = getattr(Wolke.Char, ressource + "Mod", 0)
             if mod != 0:
                 mods.append(ressource + " " + ("+" if mod >= 0 else "") + str(mod))
-                pointsAvailable += mod
+                pointsTotal += mod
 
-        text = f"{pointsSpent} Punkte ausgegeben. Verfügbar: {pointsAvailable - pointsSpent} Punkte (gemäß Fausregel 2 + 1 je 400 EP)."
+        pointsAvailable = pointsTotal - pointsSpent
+        pointsAvailableColorized = f"{pointsAvailable} Punkte"
+        if pointsAvailable < 0:
+            pointsAvailableColorized = f"<span style='color: {Wolke.ErrorColor};'>{pointsAvailableColorized}</span>"
+
+        text = f"<b>Total:</b> {pointsTotal} Punkte (gemäß Fausregel 2 + 1 je 400 EP + Bonusse durch Vorteile).<br>"
+        text += f"<b>Ausgegeben:</b> {pointsSpent} Punkte.<br>"
+        text += f"<b>Verbleibend:</b> {pointsAvailableColorized}."
         if len(mods) > 0:
-            text += " Enthaltene Punkte durch Vorteile: " + ", ".join(mods) + "."
+            text += "<br><br>Einen Teil der Punkte hast du durch Vorteile erhalten, diese sind zweckgebunden: " + ", ".join(mods) + "."
 
         self.ui.labelInfo.setText(text)
