@@ -15,11 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractButton, QAbstractSpinBox, QApplication, QDialog,
-    QDialogButtonBox, QFrame, QGridLayout, QLabel,
-    QLineEdit, QListView, QScrollArea, QSizePolicy,
-    QSpacerItem, QSpinBox, QSplitter, QTextBrowser,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractButton, QAbstractItemView, QApplication, QDialog,
+    QDialogButtonBox, QFrame, QGridLayout, QHeaderView,
+    QLabel, QLineEdit, QScrollArea, QSizePolicy,
+    QSpacerItem, QSplitter, QTableWidget, QTableWidgetItem,
+    QTextBrowser, QVBoxLayout, QWidget)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -28,17 +28,34 @@ class Ui_Dialog(object):
         Dialog.resize(758, 522)
         self.gridLayout = QGridLayout(Dialog)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.labelTip = QLabel(Dialog)
+        self.labelTip.setObjectName(u"labelTip")
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.labelTip.sizePolicy().hasHeightForWidth())
+        self.labelTip.setSizePolicy(sizePolicy)
+
+        self.gridLayout.addWidget(self.labelTip, 0, 0, 1, 1)
+
         self.splitter = QSplitter(Dialog)
         self.splitter.setObjectName(u"splitter")
         self.splitter.setOrientation(Qt.Orientation.Horizontal)
-        self.listTalente = QListView(self.splitter)
+        self.listTalente = QTableWidget(self.splitter)
+        if (self.listTalente.columnCount() < 1):
+            self.listTalente.setColumnCount(1)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.listTalente.setHorizontalHeaderItem(0, __qtablewidgetitem)
         self.listTalente.setObjectName(u"listTalente")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.listTalente.sizePolicy().hasHeightForWidth())
-        self.listTalente.setSizePolicy(sizePolicy)
+        self.listTalente.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.listTalente.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.listTalente.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.listTalente.setShowGrid(False)
+        self.listTalente.setRowCount(0)
         self.splitter.addWidget(self.listTalente)
+        self.listTalente.horizontalHeader().setHighlightSections(False)
+        self.listTalente.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.listTalente.verticalHeader().setVisible(False)
         self.verticalLayoutWidget = QWidget(self.splitter)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
@@ -58,68 +75,41 @@ class Ui_Dialog(object):
         self.labelKommentar = QLabel(self.scrollAreaWidgetContents)
         self.labelKommentar.setObjectName(u"labelKommentar")
 
-        self.gridLayout_2.addWidget(self.labelKommentar, 8, 0, 1, 1)
-
-        self.labelName = QLabel(self.scrollAreaWidgetContents)
-        self.labelName.setObjectName(u"labelName")
-        self.labelName.setMinimumSize(QSize(0, 20))
-        font = QFont()
-        font.setBold(True)
-        self.labelName.setFont(font)
-
-        self.gridLayout_2.addWidget(self.labelName, 5, 0, 1, 2)
-
-        self.spinKosten = QSpinBox(self.scrollAreaWidgetContents)
-        self.spinKosten.setObjectName(u"spinKosten")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.spinKosten.sizePolicy().hasHeightForWidth())
-        self.spinKosten.setSizePolicy(sizePolicy1)
-        self.spinKosten.setMaximumSize(QSize(80, 16777215))
-        self.spinKosten.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.spinKosten.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
-        self.spinKosten.setReadOnly(True)
-        self.spinKosten.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.NoButtons)
-        self.spinKosten.setMinimum(0)
-        self.spinKosten.setMaximum(9999)
-        self.spinKosten.setSingleStep(20)
-
-        self.gridLayout_2.addWidget(self.spinKosten, 6, 2, 1, 1)
-
-        self.label_2 = QLabel(self.scrollAreaWidgetContents)
-        self.label_2.setObjectName(u"label_2")
-
-        self.gridLayout_2.addWidget(self.label_2, 6, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.labelKommentar, 7, 0, 1, 1)
 
         self.plainText = QTextBrowser(self.scrollAreaWidgetContents)
         self.plainText.setObjectName(u"plainText")
         self.plainText.setFrameShape(QFrame.Shape.StyledPanel)
 
-        self.gridLayout_2.addWidget(self.plainText, 9, 0, 1, 3)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_2.addItem(self.horizontalSpacer_2, 6, 1, 1, 1)
-
-        self.textKommentar = QLineEdit(self.scrollAreaWidgetContents)
-        self.textKommentar.setObjectName(u"textKommentar")
-
-        self.gridLayout_2.addWidget(self.textKommentar, 8, 1, 1, 2)
+        self.gridLayout_2.addWidget(self.plainText, 8, 0, 1, 3)
 
         self.labelInfo = QLabel(self.scrollAreaWidgetContents)
         self.labelInfo.setObjectName(u"labelInfo")
         self.labelInfo.setMinimumSize(QSize(0, 18))
-        font1 = QFont()
-        font1.setItalic(True)
-        self.labelInfo.setFont(font1)
+        font = QFont()
+        font.setItalic(True)
+        self.labelInfo.setFont(font)
         self.labelInfo.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.gridLayout_2.addWidget(self.labelInfo, 5, 2, 1, 1)
 
+        self.labelName = QLabel(self.scrollAreaWidgetContents)
+        self.labelName.setObjectName(u"labelName")
+        self.labelName.setMinimumSize(QSize(0, 20))
+        font1 = QFont()
+        font1.setBold(True)
+        self.labelName.setFont(font1)
+
+        self.gridLayout_2.addWidget(self.labelName, 5, 0, 1, 2)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.gridLayout_2.addItem(self.verticalSpacer, 10, 0, 1, 1)
+        self.gridLayout_2.addItem(self.verticalSpacer, 9, 0, 1, 1)
+
+        self.textKommentar = QLineEdit(self.scrollAreaWidgetContents)
+        self.textKommentar.setObjectName(u"textKommentar")
+
+        self.gridLayout_2.addWidget(self.textKommentar, 7, 1, 1, 2)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
@@ -138,17 +128,6 @@ class Ui_Dialog(object):
 
         self.gridLayout.addWidget(self.splitter, 1, 0, 1, 1)
 
-        self.labelTip = QLabel(Dialog)
-        self.labelTip.setObjectName(u"labelTip")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.labelTip.sizePolicy().hasHeightForWidth())
-        self.labelTip.setSizePolicy(sizePolicy2)
-
-        self.gridLayout.addWidget(self.labelTip, 0, 0, 1, 1)
-
-        QWidget.setTabOrder(self.listTalente, self.scrollArea)
         QWidget.setTabOrder(self.scrollArea, self.textKommentar)
         QWidget.setTabOrder(self.textKommentar, self.plainText)
 
@@ -161,13 +140,13 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Taverne - Talente w\u00e4hlen...", None))
+        self.labelTip.setText(QCoreApplication.translate("Dialog", u"Ein Talent lohnt sich ab...", None))
+        ___qtablewidgetitem = self.listTalente.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("Dialog", u"Talent", None));
         self.labelKommentar.setText(QCoreApplication.translate("Dialog", u"Kommentar:", None))
-        self.labelName.setText(QCoreApplication.translate("Dialog", u"Talentname", None))
-        self.labelName.setProperty(u"class", QCoreApplication.translate("Dialog", u"h4", None))
-        self.spinKosten.setSuffix(QCoreApplication.translate("Dialog", u" EP", None))
-        self.label_2.setText(QCoreApplication.translate("Dialog", u"Kosten:", None))
         self.labelInfo.setText(QCoreApplication.translate("Dialog", u"Spezialtalent", None))
         self.labelInfo.setProperty(u"class", QCoreApplication.translate("Dialog", u"italic", None))
-        self.labelTip.setText(QCoreApplication.translate("Dialog", u"Ein Talent lohnt sich ab...", None))
+        self.labelName.setText(QCoreApplication.translate("Dialog", u"Talentname", None))
+        self.labelName.setProperty(u"class", QCoreApplication.translate("Dialog", u"h4", None))
     # retranslateUi
 

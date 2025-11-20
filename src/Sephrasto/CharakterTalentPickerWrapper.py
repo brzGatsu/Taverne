@@ -12,6 +12,8 @@ from Hilfsmethoden import Hilfsmethoden
 from Core.Talent import Talent
 from QtUtils.AutoResizingTextBrowser import TextEditAutoResizer
 from EventBus import EventBus
+from QtUtils.Toggle import Toggle
+from PySide6.QtWidgets import QHeaderView
 
 class TalentPicker(object):
     def __init__(self,fert,ueber):
@@ -58,9 +60,8 @@ class TalentPicker(object):
         self.currentTalent = ""
         self.talentKosten = {}
         self.talentKommentare = {}
+        self.talentSpezialisiert = {}
 
-        self.model = QtGui.QStandardItemModel(self.ui.listTalente)
-        
         talente = []
         for el in Wolke.DB.talente:
             talent = Wolke.DB.talente[el]
@@ -84,32 +85,104 @@ class TalentPicker(object):
                 if talent.name in Wolke.Char.talente:
                     self.talentKosten[talent.name] = Wolke.Char.talente[talent.name].kosten
                     self.talentKommentare[talent.name] = Wolke.Char.talente[talent.name].kommentar
+                    self.talentSpezialisiert[talent.name] = Wolke.Char.talente[talent.name].spezialisiert
                 else:
                     self.talentKosten[talent.name] = EventBus.applyFilter("talent_kosten", talent.kosten, { "charakter" : Wolke.Char, "talent" : talent.name })
                     self.talentKommentare[talent.name] = ""
-        talente = sorted(talente, key=Hilfsmethoden.unicodeCaseInsensitive)
+                    self.talentSpezialisiert[talent.name] = talent.spezialisiertDefault
+        self.talente = sorted(talente, key=Hilfsmethoden.unicodeCaseInsensitive)
+
+
+        vheader = self.ui.listTalente.verticalHeader()
+        vheader.setSectionResizeMode(QtWidgets.QHeaderView.Fixed)
+        vheader.setDefaultSectionSize(Hilfsmethoden.emToPixels(3.4));
+        vheader.setMaximumSectionSize(Hilfsmethoden.emToPixels(3.4));
+
+        header = self.ui.listTalente.horizontalHeader()
+        header.setMinimumSectionSize(0)
+        header.setSectionResizeMode(0, QHeaderView.Stretch)
+
+        item = QtWidgets.QTableWidgetItem()
+        item.setText("Name")
+        item.setTextAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.ui.listTalente.setHorizontalHeaderItem(0, item)
+
+        if not ueber:
+            self.kostenIndex = 1
+            self.ui.listTalente.setColumnCount(2)
+        else:
+            self.kostenIndex = 2
+            self.ui.listTalente.setColumnCount(3)
+            header.setSectionResizeMode(1, QHeaderView.ResizeToContents)
+            item = QtWidgets.QTableWidgetItem()
+            item.setText("Spezialisiert")
+            item.setToolTip("Ohne Spezialisierung verfügst du nur über den PW, mit Spezialisierung über den PW(S).")
+            item.setTextAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+            self.ui.listTalente.setHorizontalHeaderItem(1, item)
+
+        header.setSectionResizeMode(self.kostenIndex, QHeaderView.ResizeToContents)
+        item = QtWidgets.QTableWidgetItem()
+        item.setText("Kosten")
+        item.setTextAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.ui.listTalente.setHorizontalHeaderItem(self.kostenIndex, item)
+        
+        self.spezialisierungParents = []
+        self.spezialisierungToggles = []
+        self.kostenLabels = []
+        self.ui.listTalente.setRowCount(len(talente))
 
         self.rowCount = 0
         for el in talente:
             talent = Wolke.DB.talente[el]
-            item = QtGui.QStandardItem(talent.anzeigename)
-            item.setData(el, QtCore.Qt.UserRole) # store talent name in user data
-            item.setEditable(False)
-            item.setCheckable(True)
+            item = QtWidgets.QTableWidgetItem(talent.anzeigename)
+            item.setData(QtCore.Qt.UserRole, el)
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+
             if talent.name in self.gekaufteTalente:
                 item.setCheckState(QtCore.Qt.Checked)
             else:
                 item.setCheckState(QtCore.Qt.Unchecked)
-            self.model.appendRow(item)
+            self.ui.listTalente.setItem(self.rowCount, 0, item)
+
+            if ueber:
+                p = QtWidgets.QWidget()
+                layout = QtWidgets.QHBoxLayout()
+                layout.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
+                layout.setContentsMargins(0,0,0,0)
+                p.setLayout(layout)
+                spezialisiertToggle = Toggle()
+                spezialisiertToggle.setFixedWidth(Hilfsmethoden.emToPixels(4))
+                spezialisiertToggle.setCheckedInstant(self.talentSpezialisiert[talent.name])
+                spezialisiertToggle.toggled.connect(self.spezialisiertChanged)
+                if not talent.spezialisierbar:
+                    spezialisiertToggle.setEnabled(False)
+
+                layout.addWidget(spezialisiertToggle)
+                self.spezialisierungParents.append(p)
+                self.spezialisierungToggles.append(spezialisiertToggle)
+
+                self.ui.listTalente.setCellWidget(self.rowCount,1,p)
+                if talent.name not in self.gekaufteTalente:
+                    spezialisiertToggle.hide()
+
+            kosten = talent.kosten
+            if talent.spezialisierbar and self.talentSpezialisiert[talent.name]:
+                kosten = kosten * 2
+            kostenLabel = QtWidgets.QLabel(str(kosten) + " EP")
+            self.kostenLabels.append(kostenLabel)
+            self.ui.listTalente.setCellWidget(self.rowCount,self.kostenIndex, kostenLabel)
+
             self.rowCount += 1
+
+        if ueber:
+            self.ui.listTalente.itemChanged.connect(self.on_item_changed)
+        self.ui.listTalente.currentItemChanged.connect(self.updateFields)
+        self.ui.listTalente.currentCellChanged.connect(self.updateFields)
+        self.ui.listTalente.cellClicked.connect(self.updateFields) 
+
         if self.rowCount > 0:
-            self.updateFields(self.model.item(0).data(QtCore.Qt.UserRole))
+            self.updateFields()
         self.ui.textKommentar.textChanged.connect(self.kommentarChanged)
-        self.ui.spinKosten.valueChanged.connect(self.spinChanged)
-        self.ui.listTalente.setModel(self.model)
-        self.ui.listTalente.selectionModel().currentChanged.connect(self.talChanged)
-        self.ui.listTalente.setFocus()
-        self.ui.listTalente.setCurrentIndex(self.model.index(0, 0))
 
         fwWarnung = Wolke.DB.einstellungen["Talente: FW Warnung"].wert
         if self.fert is None or ueber or self.refC[self.fert].wert >= fwWarnung:
@@ -129,14 +202,17 @@ class TalentPicker(object):
         if self.ret == QtWidgets.QDialog.Accepted:
             self.gekaufteTalente = []
             for i in range(self.rowCount):
-                el = self.model.item(i).data(QtCore.Qt.UserRole)
-                if self.model.item(i).checkState() == QtCore.Qt.Checked:  
+                item = self.ui.listTalente.item(i, 0)
+                el = item.data(QtCore.Qt.UserRole)
+                if item.checkState() == QtCore.Qt.Checked:  
                     self.gekaufteTalente.append(el)
                     talent = Wolke.Char.addTalent(el)
                     if talent.variableKosten:
                         talent.kosten = self.talentKosten[el]
                     if talent.kommentarErlauben:
                         talent.kommentar = self.talentKommentare[el]
+                    if ueber:
+                        talent.spezialisiert = self.spezialisierungToggles[i].isChecked()
                 else:
                     Wolke.Char.removeTalent(el)
         else:
@@ -145,41 +221,44 @@ class TalentPicker(object):
     def onSetupUi(self):
         pass # for usage in plugins
 
-    def talChanged(self, item, prev):
-        talent = item.data(QtCore.Qt.UserRole)
-        self.updateFields(talent)
+    def on_item_changed(self, item):
+        # Only react if the changed item is checkable
+        if item.flags() & QtCore.Qt.ItemIsUserCheckable:
+            state = item.checkState()
+            self.spezialisierungToggles[item.row()].setVisible(state == QtCore.Qt.Checked)
 
-    def spinChanged(self):
-        if not self.currentTalent:
+    def spezialisiertChanged(self, enabled):
+        row = self.ui.listTalente.currentRow()
+        if row < 0:
             return
-        self.talentKosten[self.currentTalent] = self.ui.spinKosten.value()
+        item = self.ui.listTalente.item(row, 0)
+        talent = Wolke.DB.talente[item.data(QtCore.Qt.UserRole)]
+
+        kosten = talent.kosten
+        if enabled:
+            kosten = kosten * 2
+        self.kostenLabels[row].setText(str(kosten) + " EP")
         
     def kommentarChanged(self, text):
         if not self.currentTalent:
             return
         self.talentKommentare[self.currentTalent] = text
 
-    def updateFields(self, tal):
-        if tal is None:
+    def updateFields(self):
+        row = self.ui.listTalente.currentRow()
+        if row < 0:
             return
-        talent = Wolke.DB.talente[tal]
+        item = self.ui.listTalente.item(row, 0)
+        talent = Wolke.DB.talente[item.data(QtCore.Qt.UserRole)]
 
         self.currentTalent = talent.name
         self.ui.labelName.setText(talent.anzeigename + (" (verbilligt)" if talent.verbilligt else ""))
         self.ui.labelInfo.hide()
-        self.ui.spinKosten.setReadOnly(True)
-        self.ui.spinKosten.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
 
         if talent.spezialTalent:
             self.ui.labelInfo.show()
             self.ui.labelInfo.setText(talent.kategorieName(Wolke.DB))
 
-        if talent.variableKosten:
-            self.ui.spinKosten.setReadOnly(False)
-            self.ui.spinKosten.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
-            self.ui.spinKosten.setSingleStep(talent.kosten)
-
-        self.ui.spinKosten.setValue(self.talentKosten[tal])
 
         if talent.kommentarErlauben:
             self.ui.textKommentar.show()

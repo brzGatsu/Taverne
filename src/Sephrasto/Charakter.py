@@ -650,6 +650,8 @@ class Char():
         #Talente
         for tal in self.talente:
             kosten = self.talente[tal].kosten
+            if self.talente[tal].spezialisierbar and self.talente[tal].spezialisiert and self.talente[tal].spezialTalent:
+                kosten = kosten * 2
             spent += kosten
             if self.talente[tal].spezialTalent:
                 self.epÜbernatürlichTalente += kosten

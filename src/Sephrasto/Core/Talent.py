@@ -46,6 +46,7 @@ class TalentDefinition:
         self.cheatsheetAuflisten = True
         self.referenzBuch = 0
         self.referenzSeite = 0
+        self.spezialisierbar = True
 
         # Derived properties after deserialization
         self.hauptfertigkeit = None
@@ -79,7 +80,8 @@ class TalentDefinition:
             self.kommentarErlauben == other.kommentarErlauben and \
             self.cheatsheetAuflisten == other.cheatsheetAuflisten and \
             self.referenzBuch == other.referenzBuch and \
-            self.referenzSeite == other.referenzSeite
+            self.referenzSeite == other.referenzSeite and \
+            self.spezialisierbar == other.spezialisierbar
 
     def finalize(self, db):
         kategorieData = db.einstellungen['Talente: Kategorien'].wert.valueAtIndex(self.kategorie)
@@ -166,6 +168,13 @@ class TalentDefinition:
     def spezialTalent(self):
         return self.fertigkeitszuordnung == TalentDefinition.Fertigkeitszuordnung.Übernatürlich
 
+    @property
+    def spezialisiertDefault(self):
+        if self.spezialTalent and self.spezialisierbar:
+            return False
+        return True
+
+
     def kategorieName(self, db):
         kategorie = min(self.kategorie, len(db.einstellungen['Talente: Kategorien'].wert) - 1)
         return db.einstellungen['Talente: Kategorien'].wert.keyAtIndex(kategorie)
@@ -189,6 +198,7 @@ class TalentDefinition:
         ser.set('kommentar', self.kommentarErlauben)
         ser.set('referenzbuch', self.referenzBuch)
         ser.set('referenzseite', self.referenzSeite)
+        ser.set('spezialisierbar', self.spezialisierbar)
         if not self.cheatsheetAuflisten:
             ser.set('csAuflisten', False)
         if self.info:
@@ -212,6 +222,7 @@ class TalentDefinition:
         self.referenzSeite = ser.getInt('referenzseite', self.referenzSeite)
         self.cheatsheetAuflisten = ser.getBool('csAuflisten', self.cheatsheetAuflisten)
         self.info = ser.get('info', self.info)
+        self.spezialisierbar = ser.getBool('spezialisierbar', self.spezialisierbar)
         EventBus.doAction("talentdefinition_deserialisiert", { "object" : self, "deserializer" : ser})
 
 class Talent:
@@ -225,6 +236,8 @@ class Talent:
         self._voraussetzungenOverride = None
         if not charakter.voraussetzungenPruefen:
             self._voraussetzungenOverride = VoraussetzungenListe().compile("")
+
+        self.spezialisiert = definition.spezialisiertDefault
 
         # Nonserialized
         self.anzeigenameExt = definition.anzeigename
@@ -272,6 +285,10 @@ class Talent:
     @property
     def verbilligt(self):
         return self.definition.verbilligt
+
+    @property
+    def spezialisierbar(self):
+        return self.definition.spezialisierbar
 
     @property
     def fertigkeiten(self):
@@ -403,6 +420,7 @@ class Talent:
             ser.set('kommentar', self.kommentar)
         if self.voraussetzungen != self.definition.voraussetzungen:
             ser.set('voraussetzungen', self.voraussetzungen.text)
+        ser.set('spezialisiert', self.spezialisiert)
         EventBus.doAction("talent_serialisiert", { "object" : self, "serializer" : ser})
 
     def deserialize(self, ser, db, char):
@@ -419,7 +437,8 @@ class Talent:
         voraussetzungenOverride = ser.get('voraussetzungen', None)
         if voraussetzungenOverride is not None:
             self.voraussetzungen = VoraussetzungenListe().compile(voraussetzungenOverride)
-            
+        self.spezialisiert = ser.getBool('spezialisiert', True)
+
         self.aktualisieren()
         EventBus.doAction("talent_deserialisiert", { "object" : self, "deserializer" : ser})
         return True

@@ -1,6 +1,0 @@
-{
-  "name": "Fertigkeiten Plus",
-  "description": "Dieses Plugin kann mit der Datenbank-Einstellung \"Fertigkeiten Plus Plugin: Talente Erfahrungsgrade aktivieren\" aktiviert werden. Damit wird bei übernatürlichen Talenten angeboten, das Talent nur als Grundwissen zu erwerben. Dies halbiert die EP-Kosten, dafür steht nur der PW zu verfügung, nicht der PW(T). Das Ziel dieser Hausregel ist es, Zauberern wieder wie in DSA 4 zu ermöglichen, eine größere Anzahl an Zaubern zu Spielbeginn zu erwerben.",
-  "author": "Gatsu",
-  "version": "5"
-}

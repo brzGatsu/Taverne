@@ -31,9 +31,9 @@ class DatenbankEditTalentWrapper(DatenbankElementEditorBase):
         self.registerInput(ui.comboKategorie, ui.labelKategorie)
         self.registerInput(ui.checkVerbilligt, ui.labelKategorie)
         self.registerInput(ui.spinKosten, ui.labelKategorie)
-        self.registerInput(ui.checkVariable, ui.labelVariable)
         self.registerInput(ui.checkKommentar, ui.labelKommentar)
         self.registerInput(ui.checkCheatsheet, ui.labelCheatsheet)
+        self.registerInput(ui.checkSpezialisierung, ui.labelSpezialisierung)
         self.registerInput(ui.leFertigkeiten, ui.labelFertigkeiten)
         self.registerInput(ui.teVoraussetzungen, ui.labelVoraussetzungen)
         self.registerInput(ui.teBeschreibung, ui.labelBeschreibung)
@@ -57,17 +57,14 @@ class DatenbankEditTalentWrapper(DatenbankElementEditorBase):
         self.ui.spinKosten.setValue(talent.kosten)
         self.ui.checkCheatsheet.setChecked(talent.cheatsheetAuflisten)
         self.ui.checkVerbilligt.setChecked(talent.verbilligt)
-        self.ui.checkVariable.setChecked(talent.variableKosten)
         self.ui.checkKommentar.setChecked(talent.kommentarErlauben)
+        self.ui.checkSpezialisierung.setChecked(talent.spezialisierbar)
 
         self.fertigkeitenCompleter = TextTagCompleter(self.ui.leFertigkeiten, [])
         self.ui.leFertigkeiten.setText(Hilfsmethoden.FertArray2Str(talent.fertigkeiten, None))
         self.ui.leFertigkeiten.textChanged.connect(self.fertigkeitenTextChanged)
         
         self.kostenChanged()
-
-        self.ui.checkVariable.clicked.connect(self.variableKostenCheckChanged)
-        self.variableKostenCheckChanged()
 
         bücher = self.datenbank.einstellungen["Referenzbücher"].wert
         if (len(bücher) > 0):
@@ -105,11 +102,11 @@ class DatenbankEditTalentWrapper(DatenbankElementEditorBase):
         talent.fertigkeitszuordnung = TalentDefinition.Fertigkeitszuordnung.fromString(kategorieData["fertigkeiten"])
 
         talent.kommentarErlauben = self.ui.checkKommentar.isChecked()
-        talent.variableKosten = self.ui.checkVariable.isChecked()
         talent.kosten = self.ui.spinKosten.value()
         talent.verbilligt = talent.kostenmodus == TalentDefinition.Kostenmodus.Steigerungsfaktor and self.ui.checkVerbilligt.isChecked()
         talent.fertigkeiten = Hilfsmethoden.FertStr2Array(self.ui.leFertigkeiten.text(),None)
         talent.cheatsheetAuflisten = self.ui.checkCheatsheet.isChecked()
+        talent.spezialisierbar = self.ui.checkSpezialisierung.isChecked()
         talent.referenzBuch = self.ui.comboSeite.currentIndex()
         talent.referenzSeite = self.ui.spinSeite.value()
 
@@ -133,11 +130,6 @@ class DatenbankEditTalentWrapper(DatenbankElementEditorBase):
         else:
             self.fertigkeitenCompleter.setTags([f for f in self.datenbank.fertigkeiten.keys()])
         self.fertigkeitenTextChanged()
-
-    def variableKostenCheckChanged(self):
-        if self.ui.checkVariable.isChecked():
-            self.ui.checkKommentar.setChecked(self.ui.checkVariable.isChecked())
-        self.ui.checkKommentar.setEnabled(not self.ui.checkVariable.isChecked())
 
     def nameChanged(self):
         super().nameChanged()
