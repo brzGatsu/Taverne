@@ -4,6 +4,7 @@ from Core.Energie import EnergieDefinition
 from Core.Fertigkeit import FertigkeitDefinition, UeberFertigkeitDefinition
 from Core.Regel import Regel
 from Core.Ruestung import RuestungDefinition
+from Core.Spezies import Spezies
 from Core.Talent import TalentDefinition
 from Core.Vorteil import VorteilDefinition, VorteilLinkKategorie
 from Core.Waffe import WaffeDefinition
@@ -140,6 +141,7 @@ class Datenbank():
         self.regeln = {}
         self.waffeneigenschaften = {}
         self.einstellungen = {}
+        self.spezies = {}
         self.tablesByType = {}
         self.referenceDB = {}
 
@@ -157,6 +159,7 @@ class Datenbank():
         self.insertTable(RuestungDefinition, self.rüstungen) 
         self.insertTable(Regel, self.regeln) 
         self.insertTable(VorteilDefinition, self.vorteile)
+        self.insertTable(Spezies, self.spezies)
 
         EventBus.doAction("datenbank_laden", { "datenbank" : self, "isCharakterEditor" : isCharakterEditor })
 

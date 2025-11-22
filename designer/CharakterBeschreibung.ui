@@ -37,9 +37,6 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="2">
-      <widget class="QLineEdit" name="editSpezies"/>
-     </item>
      <item row="1" column="2">
       <widget class="QLineEdit" name="editName"/>
      </item>
@@ -353,12 +350,14 @@
        </item>
       </layout>
      </item>
+     <item row="2" column="2">
+      <widget class="QComboBox" name="comboSpezies"/>
+     </item>
     </layout>
    </item>
   </layout>
  </widget>
  <tabstops>
-  <tabstop>editSpezies</tabstop>
   <tabstop>comboHeimat</tabstop>
   <tabstop>editKurzbeschreibung</tabstop>
   <tabstop>editEig1</tabstop>

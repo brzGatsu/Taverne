@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'CharakterBeschreibung.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.9.1
+## Created by: Qt User Interface Compiler version 6.10.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -37,11 +37,6 @@ class Ui_formBeschreibung(object):
         self.labelEigenheiten.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
 
         self.gridLayout.addWidget(self.labelEigenheiten, 5, 1, 1, 1)
-
-        self.editSpezies = QLineEdit(formBeschreibung)
-        self.editSpezies.setObjectName(u"editSpezies")
-
-        self.gridLayout.addWidget(self.editSpezies, 2, 2, 1, 1)
 
         self.editName = QLineEdit(formBeschreibung)
         self.editName.setObjectName(u"editName")
@@ -193,10 +188,14 @@ class Ui_formBeschreibung(object):
 
         self.gridLayout.addLayout(self.gridLayout_2, 5, 2, 1, 1)
 
+        self.comboSpezies = QComboBox(formBeschreibung)
+        self.comboSpezies.setObjectName(u"comboSpezies")
+
+        self.gridLayout.addWidget(self.comboSpezies, 2, 2, 1, 1)
+
 
         self.gridLayout_3.addLayout(self.gridLayout, 0, 0, 1, 1)
 
-        QWidget.setTabOrder(self.editSpezies, self.comboHeimat)
         QWidget.setTabOrder(self.comboHeimat, self.editKurzbeschreibung)
         QWidget.setTabOrder(self.editKurzbeschreibung, self.editEig1)
         QWidget.setTabOrder(self.editEig1, self.editEig3)
