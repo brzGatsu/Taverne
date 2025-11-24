@@ -366,7 +366,7 @@ class Char():
             self.talentInfos[talent] = []
         self.talentInfos[talent].append(info)
 
-    def API_addTalent(self, talent, kosten = -1, kommentar=""):
+    def API_addTalent(self, talent, kosten = -1, spezialisiert = True, kommentar=""):
         if not talent in Wolke.DB.talente:
             return
 
@@ -375,6 +375,7 @@ class Char():
             talent.voraussetzungen = talent.voraussetzungen.add("Vorteil " + self.currentVorteil, Wolke.DB)
         if kosten != -1:
             talent.kosten = kosten
+        talent.spezialisiert = spezialisiert
         if talent.kommentarErlauben and kommentar:
             talent.kommentar = kommentar
             
