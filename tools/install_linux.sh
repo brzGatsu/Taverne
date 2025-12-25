@@ -2,9 +2,22 @@
 
 # install dependencies
 echo "Bitte gib dein Passwort ein, um die für Sephrasto erforderlichen Pakete zu installieren:"
-echo "sudo apt install -y python3-pip python3-venv openjdk-11-jdk pdftk libxcb-cursor0 python3-lxml curl"
-sudo apt install -y python3-pip python3-venv openjdk-11-jdk pdftk libxcb-cursor0 python3-lxml curl
+#sudo apt install -y python3-pip python3-venv openjdk-11-jdk pdftk libxcb-cursor0 python3-lxml curl
 
+source /etc/os-release
+case "$ID" in
+	ubuntu)
+		echo "sudo apt install -y python3-pip python3-venv openjdk-11-jdk pdftk libxcb-cursor0 python3-lxml curl"
+		sudo apt install -y python3-pip python3-venv openjdk-11-jdk pdftk libxcb-cursor0 python3-lxml curl
+		;;
+	arch)
+		echo "sudo pacman -Sy python python-pip jdk11-openjdk pdftk xcb-util-cursor python-lxml curl"
+		sudo pacman -Sy python python-pip jdk11-openjdk pdftk xcb-util-cursor python-lxml curl
+		;;
+	*)
+		echo "unknown linux distro: to add a distro one can change the case statement in line 8"
+		;;
+esac
 # download code from latest sephrasto release
 # git clone https://github.com/Aeolitus/Sephrasto.git
 echo "Lade Sephrasto (latest release)..."
