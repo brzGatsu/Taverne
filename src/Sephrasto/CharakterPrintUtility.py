@@ -252,14 +252,13 @@ class CharakterPrintUtility:
         name = vorteil.anzeigenameExt
         if descriptionWillFollow and "$kommentar$" in vorteil.cheatsheetBeschreibung:
             name = vorteil.name
-        vorteilsnamenErsetzen = Wolke.DB.einstellungen["Regelanhang: Vorteilsnamen ersetzen"].wert
 
         for vorteil2 in char.vorteile.values():
             if CharakterPrintUtility.isLinkedTo(char, vorteil2, VorteilLinkKategorie.Vorteil, vorteil.name):
                 name2 = CharakterPrintUtility.getLinkedName(char, vorteil2, descriptionWillFollow)
 
                 #allgemeine vorteile, kampfstile and traditionen only keep the last name (except vorteil is variable with a comment)
-                if (not vorteil.variableKosten) and vorteil2.kategorie in vorteilsnamenErsetzen:
+                if (not vorteil.variableKosten):
                     name = name2
                     if vorteil.kommentarErlauben and vorteil.kommentar:
                         if name.endswith(")"):
@@ -294,7 +293,7 @@ class CharakterPrintUtility:
         beschreibungenErsetzen = Wolke.DB.einstellungen["Regelanhang: Vorteilsbeschreibungen ersetzen"].wert
         for vorteil2 in char.vorteile.values():
             if CharakterPrintUtility.isLinkedTo(char, vorteil2, VorteilLinkKategorie.Vorteil, vorteil.name):
-                if vorteil2.kategorie in beschreibungenErsetzen:
+                if vorteil2.name in beschreibungenErsetzen:
                     continue
                 bedingungen2 = CharakterPrintUtility.getLinkedBedingungen(char, vorteil2)
                 if bedingungen2:
@@ -316,7 +315,7 @@ class CharakterPrintUtility:
             if CharakterPrintUtility.isLinkedTo(char, vorteil2, VorteilLinkKategorie.Vorteil, vorteil.name):
                 beschreibung2 = CharakterPrintUtility.getLinkedDescription(char, vorteil2)
 
-                if vorteil2.kategorie in beschreibungenErsetzen:
+                if vorteil2.name in beschreibungenErsetzen:
                     #allgemeine vorteile replace the description of what they link to (except vorteil is variable with a comment)
                     if not vorteil.variableKosten or not (vorteil.kommentarErlauben and vorteil.kommentar):
                         beschreibung = beschreibung2

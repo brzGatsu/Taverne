@@ -166,7 +166,7 @@ class TalentPicker(object):
                     spezialisiertToggle.hide()
 
             kosten = talent.kosten
-            if talent.spezialisierbar and self.talentSpezialisiert[talent.name]:
+            if talent.spezialisierbar and self.talentSpezialisiert[talent.name] and talent.spezialTalent:
                 kosten = kosten * 2
             kostenLabel = QtWidgets.QLabel(str(kosten) + " EP")
             self.kostenLabels.append(kostenLabel)
