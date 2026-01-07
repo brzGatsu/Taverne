@@ -42,7 +42,7 @@ class KartenGenerator:
         bedingungen = vorteil.bedingungen
         if vorteil.linkKategorie == VorteilLinkKategorie.Vorteil: 
             beschreibungenErsetzen = self.db.einstellungen["Regelanhang: Vorteilsbeschreibungen ersetzen"].wert
-            if vorteil.kategorie not in beschreibungenErsetzen:
+            if vorteil.name not in beschreibungenErsetzen:
                 bedingungen2 = self.getVorteilBedingungen(self.db.vorteile[vorteil.linkElement])
                 if bedingungen2:
                     bedingungen = bedingungen2 + "\n" + bedingungen
