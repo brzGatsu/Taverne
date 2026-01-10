@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'TierbegleiterMain.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.9.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -134,13 +134,6 @@ class Ui_formMain(object):
 
         self.horizontalLayout.addWidget(self.sbRK4AT)
 
-        self.sbRK4VT = QSpinBox(self.hlRK4)
-        self.sbRK4VT.setObjectName(u"sbRK4VT")
-        self.sbRK4VT.setMinimumSize(QSize(44, 0))
-        self.sbRK4VT.setButtonSymbols(QAbstractSpinBox.ButtonSymbols.PlusMinus)
-
-        self.horizontalLayout.addWidget(self.sbRK4VT)
-
 
         self.horizontalLayout_2.addWidget(self.hlRK4)
 
@@ -233,7 +226,7 @@ class Ui_formMain(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 781, 670))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 916, 624))
         self.gridLayout_3 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.gridLayout_3.setContentsMargins(20, 20, 20, 20)
@@ -745,7 +738,7 @@ class Ui_formMain(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 781, 619))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 810, 573))
         self.gridLayout_8 = QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
         self.gridLayout_8.setContentsMargins(20, 20, 20, 20)
@@ -976,7 +969,7 @@ class Ui_formMain(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 200, 454))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 185, 425))
         self.verticalLayout_13 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.verticalLayout_13.setContentsMargins(0, 0, -1, 0)
@@ -1132,7 +1125,7 @@ class Ui_formMain(object):
         self.sbReiten.setToolTip(QCoreApplication.translate("formMain", u"Trage hier deinen Reiten-PW abz\u00fcglich BE ein. Nicht vergessen - mit Reiterkampf II sinkt die BE um 1!", None))
 #endif // QT_CONFIG(tooltip)
         self.lblRK.setText(QCoreApplication.translate("formMain", u"Reiterkampfstil-Stufe", None))
-        self.label_30.setText(QCoreApplication.translate("formMain", u"Stufe IV Bonus TP/AT/VT", None))
+        self.label_30.setText(QCoreApplication.translate("formMain", u"Stufe IV Bonus TP/AT", None))
         self.label_2.setText(QCoreApplication.translate("formMain", u"Name", None))
         self.label_2.setProperty(u"class", QCoreApplication.translate("formMain", u"h4", None))
         self.label_17.setText(QCoreApplication.translate("formMain", u"Aussehen", None))

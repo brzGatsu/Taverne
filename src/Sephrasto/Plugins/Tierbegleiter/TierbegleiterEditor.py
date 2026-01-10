@@ -99,7 +99,6 @@ class TierbegleiterEditor(object):
         self.ui.sbRK.valueChanged.connect(self.handleReiterkampfChanged)
         self.ui.sbRK.valueChanged.connect(self.update)
         self.ui.sbRK4AT.valueChanged.connect(self.update)
-        self.ui.sbRK4VT.valueChanged.connect(self.update)
         self.ui.sbRK4TP.valueChanged.connect(self.update)
 
         self.attribute = {}
@@ -240,7 +239,6 @@ class TierbegleiterEditor(object):
         self.ui.cbTier.setCurrentText(tb.definition.name)
         self.ui.sbRK.setValue(tb.reiterkampfStufe)
         self.ui.sbRK4AT.setValue(tb.reiterkampf4AT)
-        self.ui.sbRK4VT.setValue(tb.reiterkampf4VT)
         self.ui.sbRK4TP.setValue(tb.reiterkampf4TP)
         self.ui.sbReiten.setValue(tb.reitenPW)
         
@@ -320,7 +318,6 @@ class TierbegleiterEditor(object):
         self.tierbegleiter.reitenPW = self.ui.sbReiten.value()
         self.tierbegleiter.reiterkampfStufe = self.ui.sbRK.value()
         self.tierbegleiter.reiterkampf4AT = self.ui.sbRK4AT.value()
-        self.tierbegleiter.reiterkampf4VT = self.ui.sbRK4VT.value()
         self.tierbegleiter.reiterkampf4TP = self.ui.sbRK4TP.value()
 
         # Zusätzliche Attribute
