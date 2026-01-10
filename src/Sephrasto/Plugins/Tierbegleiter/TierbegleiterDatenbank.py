@@ -14,7 +14,7 @@ class TierbegleiterDatenbank(Datenbank.Datenbank):
 
         rootdir = os.path.dirname(os.path.abspath(__file__))
         tierbegleiterPath = os.path.join(rootdir, "Data", "Tierbegleiter.xml")
-        vorteilePath = os.path.join(rootdir, "Data", "Tiervorteile.xml")
+        vorteilePath = os.path.join(rootdir, "Data", "Begleitervorteile.xml")
         
         if os.path.isfile(vorteilePath):
             root = etree.parse(vorteilePath).getroot()

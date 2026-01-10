@@ -16,6 +16,7 @@ class Modifikator:
         self.mod = None
         self.reiterkampf = 0
         self.kosten = 0
+        self.linkElement = ''
 
     def deserialize(self, root):
         self.name = root.get('name')
@@ -28,6 +29,8 @@ class Modifikator:
             self.manöver = root.get('manöver') == "1"
         if root.get('kosten'):
             self.kosten = int(root.get('kosten'))
+        if root.get('linkElement'):
+            self.linkElement = root.get('linkElement')
 
     def serialize(self, root):
         root.attrib['name'] = self.name
@@ -132,7 +135,6 @@ class Tierbegleiter:
         self.reitenPW = 0
         self.reiterkampfStufe = 0
         self.reiterkampf4AT = 0
-        self.reiterkampf4VT = 0
         self.reiterkampf4TP = 0
 
         self.attributMods = {}
@@ -173,11 +175,49 @@ class Tierbegleiter:
         for mod in self.vorteilMods:
             if not mod.name.strip():
                 continue
-            scriptAPI.update({ "name" : mod.name, "kosten" : 0 })
+            scriptAPI.update({ "name" : mod.name, "kosten" : self.getVorteilKosten(datenbank, mod), "eigenerVorteil" : mod.name not in datenbank.tiervorteile })
             datenbank.einstellungen["Tierbegleiter Plugin: EP-Kosten Vorteile Script"].executeScript(scriptAPI)
             count += scriptAPI["kosten"]
 
         self.epAusgegeben = count
+
+    def getVorteilKosten(self, datenbank, vorteil):
+        if vorteil.name not in datenbank.tiervorteile:
+            return vorteil.kosten
+
+        v = datenbank.tiervorteile[vorteil.name]
+        while v.linkElement:
+            linked = next((x for x in self.vorteilMods if x.name == v.linkElement), None)
+            if linked is None:
+                linked = next((x for x in self.definition.modifikatoren if x.mod is None and x.name == v.linkElement), None)
+            if linked is not None:
+                return vorteil.kosten - linked.kosten
+            v = datenbank.tiervorteile[v.linkElement]
+
+        return vorteil.kosten
+
+
+    def getLinksTo(self, datenbank, vorteil):
+        links = []
+
+        for v in datenbank.tiervorteile.values():
+            if not v.linkElement:
+                continue
+            if v.linkElement == vorteil:
+                links.append(v.name)
+
+        for link in links:
+            links.extend(self.getLinksTo(datenbank, link))
+
+        return links
+
+
+    def isVorteilLinkedTo(self, datenbank, vorteil):
+        links = self.getLinksTo(datenbank, vorteil.name)
+        for v in self.vorteilMods:
+            if v.name in links:
+                return True
+        return False
 
     def aktualisieren(self, datenbank):
         # main purpose of this function is to merge modifiers with TierbegleiterDefinition stats
@@ -196,7 +236,8 @@ class Tierbegleiter:
         for mod in self.definition.modifikatoren:
             # case 1: mod is Vorteil
             if mod.mod is None:
-                self.vorteilModsMerged.append(copy.copy(mod))
+                if not self.isVorteilLinkedTo(datenbank, mod):
+                    self.vorteilModsMerged.append(copy.copy(mod))
                 continue
 
             # case 2: mod is Attribut
@@ -286,11 +327,10 @@ class Tierbegleiter:
                 reitenWaffe = copy.copy(waffe)
                 reitenWaffe.name = "Reiterkampf (" + reitenWaffe.name + ")"
                 reitenWaffe.at = self.reitenPW + reiterkampfMod + kampfstilAT + self.attributModsMerged["AT"] - self.attributModsMerged["BE"]
-                reitenWaffe.vt = self.reitenPW + reiterkampfMod + kampfstilVT + self.attributModsMerged["VT"] - self.attributModsMerged["BE"]
+                reitenWaffe.vt = None
                 reitenWaffe.plus += kampfstilTP
                 if self.reiterkampfStufe >= 4:
                     reitenWaffe.at += self.reiterkampf4AT
-                    reitenWaffe.vt += self.reiterkampf4VT
                     reitenWaffe.plus += self.reiterkampf4TP
 
                 extraWaffeneigengenschaften = datenbank.einstellungen["Tierbegleiter Plugin: Reiterkampf Waffeneigenschaften"].wert
@@ -339,7 +379,6 @@ class Tierbegleiter:
 
         etree.SubElement(root, 'Reiterkampf').text = str(self.reiterkampfStufe)
         etree.SubElement(root, 'Reiterkampf4AT').text = str(self.reiterkampf4AT)
-        etree.SubElement(root, 'Reiterkampf4VT').text = str(self.reiterkampf4VT)
         etree.SubElement(root, 'Reiterkampf4TP').text = str(self.reiterkampf4TP)
         etree.SubElement(root, 'ReitenPW').text = str(self.reitenPW)
 
@@ -390,7 +429,6 @@ class Tierbegleiter:
 
         self.reiterkampfStufe = int(root.find('Reiterkampf').text)
         self.reiterkampf4AT = int(root.find('Reiterkampf4AT').text)
-        self.reiterkampf4VT = int(root.find('Reiterkampf4VT').text)
         self.reiterkampf4TP = int(root.find('Reiterkampf4TP').text)
         self.reitenPW = int(root.find('ReitenPW').text)
 

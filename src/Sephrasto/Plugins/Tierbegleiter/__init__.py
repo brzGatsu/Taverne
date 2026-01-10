@@ -31,9 +31,13 @@ class Plugin:
         e = DatenbankEinstellung()
         e.name = "Tierbegleiter Plugin: EP-Kosten Werte Script"
         e.beschreibung = "Das script berechnet die EP-Kosten der verschiedenen Werte. Diese müssen der Variable 'kosten' zugewiesen werden. " +\
-        "Es wird einmal für jeden Wert aufgerufen, dessen Name in der Variable 'name' und dessen Wert in der Variable 'wert' steht. " +\
+        "Es wird einmal für jeden Wert aufgerufen. Dessen Name steht in der Variable 'name' und dessen Wert in der Variable 'wert'. " +\
         "Folgende Werte gibt es: 'KO', 'MU', 'GE', 'KK', 'IN', 'KL', 'CH', 'FF', 'WS', 'RS', 'BE', 'MR', 'GS', 'TP', 'INI', 'AT', 'VT'"
-        e.text = """if name in ["WS", "RS", "BE"]:
+        e.text = """if name in ["WS"]:
+    kosten = 4*wert
+elif name in ["MR", "TP", "GS", "INI", "AT", "VT"]:
+    kosten = 2*wert
+elif name in ["RS", "BE"]:
     kosten = 0
 else:
     kosten = wert"""
@@ -43,16 +47,18 @@ else:
         e = DatenbankEinstellung()
         e.name = "Tierbegleiter Plugin: EP-Kosten Talente Script"
         e.beschreibung = "Das script berechnet die EP-Kosten der Talente. Diese müssen der Variable 'kosten' zugewiesen werden. " +\
-        "Das Script wird einmal für jedes Talent aufgerufen, dessen Name in der Variable 'name' und dessen Wert in der Variable 'wert' steht."
-        e.text = "kosten = wert"
+        "Das Script wird einmal für jedes Talent aufgerufen. Dessen Name steht in der Variable 'name' und dessen Wert in der Variable 'wert'."
+        e.text = "kosten = roundUp(wert/2)"
         e.typ = "Exec"
         self.db.loadElement(e)
 
         e = DatenbankEinstellung()
         e.name = "Tierbegleiter Plugin: EP-Kosten Vorteile Script"
         e.beschreibung = "Das script berechnet die EP-Kosten der Vorteile. Diese müssen der Variable 'kosten' zugewiesen werden. " +\
-        "Das Script wird einmal für jeden Vorteil aufgerufen, dessen Name in der Variable 'name' steht."
-        e.text = "kosten = 1"
+        "Diese enthält bereits einen voreingestellten Wert entsprechend der Begleitervorteile-Datenbank. Falls der Vorteil nicht in der Datenbank vorhanden ist, stehen 'kosten' auf 0 und die Variable 'eigenerVorteil' auf 'True'." +\
+        "Das Script wird einmal für jeden Vorteil aufgerufen. Dessen Name steht in der Variable 'name'."
+        e.text = """if eigenerVorteil:
+    kosten = 1"""
         e.typ = "Exec"
         self.db.loadElement(e)
 
@@ -76,7 +82,7 @@ else:
         e = DatenbankEinstellung()
         e.name = "Tierbegleiter Plugin: Reiterkampf Waffeneigenschaften"
         e.beschreibung = "Zusätzliche Waffeneigenschaften, die jeder Reiterkampf-Waffe hinzugefügt werden sollen. Eine Eigenschaft pro Zeile."
-        e.text = "AT +4 gegen kleinere Gegner"
+        e.text = ""
         e.typ = "TextList"
         e.separator = "\n"
         self.db.loadElement(e)
@@ -84,14 +90,14 @@ else:
         e = DatenbankEinstellung()
         e.name = "Tierbegleiter Plugin: Fenstertitel"
         e.beschreibung = "Der Titel des Tierbegleiter-Fensters."
-        e.text = "Sephrasto"
+        e.text = "Taverne"
         e.typ = "Text"
         self.db.loadElement(e)
 
         e = DatenbankEinstellung()
         e.name = "Tierbegleiter Plugin: DH Script"
-        e.beschreibung = "Das Script berechnet das DH. Für die Berechnung zur Verfügung stehen KO und WS."
-        e.text = "round(KO/2)"
+        e.beschreibung = "Das Script berechnet das DH. Für die Berechnung zur Verfügung stehen KO, KK und WS."
+        e.text = "WS"
         e.typ = "Eval"
         self.db.loadElement(e)
         

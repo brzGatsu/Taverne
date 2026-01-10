@@ -194,7 +194,7 @@
                    <item>
                     <widget class="QLabel" name="label_30">
                      <property name="text">
-                      <string>Stufe IV Bonus TP/AT/VT</string>
+                      <string>Stufe IV Bonus TP/AT</string>
                      </property>
                     </widget>
                    </item>
@@ -213,19 +213,6 @@
                    </item>
                    <item>
                     <widget class="QSpinBox" name="sbRK4AT">
-                     <property name="minimumSize">
-                      <size>
-                       <width>44</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="buttonSymbols">
-                      <enum>QAbstractSpinBox::ButtonSymbols::PlusMinus</enum>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QSpinBox" name="sbRK4VT">
                      <property name="minimumSize">
                       <size>
                        <width>44</width>
@@ -441,8 +428,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>781</width>
-             <height>670</height>
+             <width>916</width>
+             <height>624</height>
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
@@ -1282,8 +1269,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>781</width>
-             <height>619</height>
+             <width>810</width>
+             <height>573</height>
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_8">
@@ -1646,8 +1633,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>200</width>
-         <height>454</height>
+         <width>185</width>
+         <height>425</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_13">
