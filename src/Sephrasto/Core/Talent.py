@@ -382,14 +382,23 @@ class Talent:
             if not fertName in fertigkeiten:
                 continue
             nextFert = fertigkeiten[fertName]
-            self.probenwert = max(self.probenwert, nextFert.probenwertTalent + nextFert.basiswertMod)
+            nextFertPW = self._calculatePW(nextFert)
+            self.probenwert = max(self.probenwert, nextFertPW)
             if self._hauptfertigkeitOverride is None or self._hauptfertigkeitOverride.name not in fertigkeiten:
                 self._hauptfertigkeitOverride = nextFert.definition
             elif not self._hauptfertigkeitOverride.talenteGruppieren and nextFert.talenteGruppieren:
                 self._hauptfertigkeitOverride = nextFert.definition
             elif self._hauptfertigkeitOverride.talenteGruppieren and nextFert.talenteGruppieren:
-                if fertigkeiten[self._hauptfertigkeitOverride.name].probenwertTalent <= nextFert.probenwertTalent:
+                hauptFertPW = self._calculatePW(fertigkeiten[self._hauptfertigkeitOverride.name])
+                if hauptFertPW <= nextFertPW:
                     self._hauptfertigkeitOverride = nextFert.definition
+
+    def _calculatePW(self, fertigkeit):
+        pw = fertigkeit.probenwert
+        if self.spezialisiert:
+            pw = fertigkeit.probenwertTalent
+        pw = pw + fertigkeit.basiswertMod
+        return pw
 
     def _updateAnzeigenameExt(self):
         self.anzeigenameExt = self.definition.anzeigename

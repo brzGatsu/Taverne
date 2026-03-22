@@ -561,6 +561,9 @@ class PdfExporter(object):
             fields[base + 'NA'] = talent.anzeigenameExt
             if talent.name in Wolke.Char.talentInfos:
                 fields[base + 'NA'] += "; " + "; ".join(Wolke.Char.talentInfos[talent.name])
+            if talent.spezialisiert:
+                fields[base + 'NA'] += " (spez.)"
+
             fields[base + 'SE'] = talent.referenz
             pw = talent.probenwert
             suffix = ""
