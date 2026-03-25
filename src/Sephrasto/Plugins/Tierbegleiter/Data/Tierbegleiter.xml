@@ -4,7 +4,6 @@
       <Modifikator name="Laufen" mod="12"/>
       <Modifikator name="Pirschen" mod="4"/>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="4"/>
       <Modifikator name="Standfest"/>
       <Modifikator name="Sturmangriff"/>
     </Modifikatoren>
@@ -17,7 +16,6 @@
       <Modifikator name="Laufen" mod="24"/>
       <Modifikator name="Pirschen" mod="12"/>
       <Modifikator name="Wachsamkeit" mod="18"/>
-      <Modifikator name="Zähigkeit" mod="4"/>
       <Modifikator name="Fährtensuchen" mod="8"/>
       <Modifikator name="Niederwerfen"/>
       <Modifikator name="Standfest"/>
@@ -33,7 +31,6 @@
       <Modifikator name="Laufen" mod="24"/>
       <Modifikator name="Pirschen" mod="12"/>
       <Modifikator name="Wachsamkeit" mod="18"/>
-      <Modifikator name="Zähigkeit" mod="4"/>
       <Modifikator name="Fährtensuchen" mod="8"/>
       <Modifikator name="Niederwerfen"/>
       <Modifikator name="Standfest"/>
@@ -49,7 +46,6 @@
       <Modifikator name="Laufen" mod="24"/>
       <Modifikator name="Pirschen" mod="12"/>
       <Modifikator name="Wachsamkeit" mod="18"/>
-      <Modifikator name="Zähigkeit" mod="4"/>
       <Modifikator name="Fährtensuchen" mod="8"/>
       <Modifikator name="Niederwerfen"/>
       <Modifikator name="Standfest"/>
@@ -65,7 +61,6 @@
       <Modifikator name="Laufen" mod="24"/>
       <Modifikator name="Pirschen" mod="12"/>
       <Modifikator name="Wachsamkeit" mod="18"/>
-      <Modifikator name="Zähigkeit" mod="4"/>
       <Modifikator name="Fährtensuchen" mod="8"/>
       <Modifikator name="Niederwerfen"/>
       <Modifikator name="Standfest"/>
@@ -79,7 +74,6 @@
   <Tierbegleiter name="Pferd" rassen="Elenviner Vollblut, Goldfelser, Langmähne, Nordmähne, Teshkaler, Tulamide, Shadif, Warunker, Yaquirtaler" preis="60" futter="6 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="13" rs="0" mr="5" gs="14" ini="1" ko="26" ge="10" kk="24" mu="8" groesse="4" kategorie="1" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="16"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
       <Modifikator name="Standfest"/>
@@ -92,7 +86,6 @@
   <Tierbegleiter name="Pferd (Kaltblut)" rassen="Arania-Pferd, Norburger Riese, Sveltaler Kaltblut, Tobimora-Falbe, Tralloper Riese" preis="60" futter="10 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="15" rs="0" mr="5" gs="12" ini="1" ko="30" ge="8" kk="28" mu="8" groesse="4" kategorie="1" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="16"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
       <Modifikator name="Standfest"/>
@@ -105,7 +98,6 @@
   <Tierbegleiter name="Kamel" rassen="Bidenhocker, Dromedar" preis="70" futter="10 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="15" rs="0" mr="5" gs="12" ini="1" ko="30" ge="8" kk="28" mu="8" groesse="4" kategorie="2" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="16"/>
       <Modifikator name="Orientierungssinn"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
@@ -124,7 +116,6 @@
   <Tierbegleiter name="Maultier/Maulesel" preis="40" futter="4 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="13" rs="0" mr="5" gs="12" ini="1" ko="26" ge="10" kk="26" mu="8" groesse="4" kategorie="1" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="16"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
       <Modifikator name="Standfest"/>
@@ -141,7 +132,6 @@
   <Tierbegleiter name="Maultier/Maulesel (Kaltblut)" preis="40" futter="8 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="15" rs="0" mr="5" gs="10" ini="1" ko="30" ge="8" kk="30" mu="8" groesse="4" kategorie="1" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="16"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
       <Modifikator name="Standfest"/>
@@ -158,7 +148,6 @@
   <Tierbegleiter name="Pony" rassen="Beilunker Zwergenpony, Ferkina-Pony, Firnpony, Maraskanerpony, Orklandpony, Orkpony, Paavipony" preis="40" futter="1 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="11" rs="0" mr="5" gs="12" ini="1" ko="22" ge="8" kk="18" mu="8" groesse="3" kategorie="1" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="12"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
       <Modifikator name="Standfest"/>
@@ -172,7 +161,6 @@
   <Tierbegleiter name="Esel" rassen="Schwarzer Thaluser, Qadan, Mherwati, Grautier" preis="25" futter="1 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="11" rs="0" mr="5" gs="8" ini="1" ko="22" ge="8" kk="18" mu="8" groesse="3">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="12"/>
       <Modifikator name="Orientierungssinn"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
@@ -191,7 +179,6 @@
   <Tierbegleiter name="Kamah (extrem unüblich)" preis="25" futter="1 Stein Kraftfutter pro Tag bei mittlerer Belastung" ws="11" rs="0" mr="5" gs="12" ini="1" ko="22" ge="8" kk="18" mu="8" groesse="3">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="10"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Laufen" mod="12"/>
       <Modifikator name="Orientierungssinn"/>
       <Modifikator name="Rüstungsgewöhnung I"/>
@@ -210,7 +197,6 @@
   <Tierbegleiter name="Elefant (sehr unüblich)" preis="200" ws="15" rs="1" mr="4" gs="11" ini="1" ko="140" kk="120" mu="10" groesse="5" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="14"/>
       <Modifikator name="Laufen" mod="14"/>
       <Modifikator name="Rüstungsgewöhnung II"/>
       <Modifikator name="Standfest"/>
@@ -228,7 +214,6 @@
   <Tierbegleiter name="Mammut (sehr unüblich)" ws="17" rs="2" mr="4" gs="11" ini="1" ko="200" kk="160" mu="10" groesse="5" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="14"/>
       <Modifikator name="Laufen" mod="14"/>
 	  <Modifikator name="Rüstungsgewöhnung II"/>
       <Modifikator name="Standfest"/>
@@ -247,7 +232,6 @@
   <Tierbegleiter name="Bär (extrem unüblich)" ws="11" rs="2" mr="6" gs="8" ini="2" ge="16" ko="42" kk="40" mu="16" groesse="4">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="16"/>
-      <Modifikator name="Zähigkeit" mod="14"/>
       <Modifikator name="Laufen" mod="16"/>
       <Modifikator name="Pirschen" mod="8"/>
       <Modifikator name="Standfest"/>
@@ -263,7 +247,6 @@
   <Tierbegleiter name="Kleinaffe" ws="2" rs="0" mr="1" gs="7" ini="3" ff="6" kl="-6" kk="-6" mu="-2" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="16"/>
     </Modifikatoren>
     <Waffen>
@@ -273,7 +256,6 @@
   <Tierbegleiter name="Katze" preis="4" ws="2" rs="0" mr="4" gs="8" ini="6" kl="-6" kk="-8" mu="0" ko="-4" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="20"/>
       <Modifikator name="Dunkelsicht II"/>
     </Modifikatoren>
@@ -284,7 +266,6 @@
   <Tierbegleiter name="Wiesel" preis="4" ws="1" rs="0" mr="4" gs="10" ini="6" kl="-6" kk="-8" mu="0" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="20"/>
       <Modifikator name="Dunkelsicht II"/>
     </Modifikatoren>
@@ -295,7 +276,6 @@
   <Tierbegleiter name="Iltis" preis="4" ws="1" rs="0" mr="4" gs="10" ini="6" kl="-6" kk="-8" mu="0" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="20"/>
       <Modifikator name="Dunkelsicht II"/>
     </Modifikatoren>
@@ -306,7 +286,6 @@
   <Tierbegleiter name="Wildkatze (nur Vertrautentier)" preis="4" ws="2" rs="0" mr="4" gs="8" ini="5" kl="-6" kk="-4" mu="0" ko="0" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="20"/>
       <Modifikator name="Dunkelsicht II"/>
     </Modifikatoren>
@@ -317,7 +296,6 @@
   <Tierbegleiter name="Eule" preis="30" ws="2" rs="0" mr="4" gs="3" gs2="12" ini="1" kl="-4" kk="-8" mu="4" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="16"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="16"/>
       <Modifikator name="Flieger"/>
       <Modifikator name="Dunkelsicht II"/>
@@ -329,7 +307,6 @@
   <Tierbegleiter name="Falke" preis="30" ws="2" rs="0" mr="3" gs="3" gs2="16" ini="6" kl="-4" kk="-8" mu="4" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="16"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="16"/>
       <Modifikator name="Flieger"/>
       <Modifikator name="Sturmangriff (max. +2 TP)"/>
@@ -341,7 +318,6 @@
   <Tierbegleiter name="Nachtwind" preis="30" ws="2" rs="0" mr="8" gs="3" gs2="14" ini="4" kl="-4" kk="-8" mu="4" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="16"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="16"/>
       <Modifikator name="Flieger"/>
       <Modifikator name="Dunkelsicht II"/>
@@ -356,7 +332,6 @@
   <Tierbegleiter name="Kröte (nur Vertrautentier)" ws="1" rs="0" mr="8" gs="3" ini="-1" kl="-4" kk="-16" mu="0" groesse="0">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="-8"/>
       <Modifikator name="Pirschen" mod="28"/>
       <Modifikator name="Sinnenschärfe" mod="12"/>
       <Modifikator name="Magiegespür"/>
@@ -368,7 +343,6 @@
   <Tierbegleiter name="Rabe" preis="1" ws="2" rs="0" mr="2" gs="3" gs2="11" ini="0" kl="-2" kk="-8" mu="-2" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="18"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="12"/>
       <Modifikator name="Flieger"/>
       <Modifikator name="rudimentäre Sprachfähigkeit"/>
@@ -380,7 +354,6 @@
   <Tierbegleiter name="Papagei" preis="1" ws="2" rs="0" mr="2" gs="3" gs2="10" ini="0" kl="-2" kk="-8" mu="-2" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="18"/>
-      <Modifikator name="Zähigkeit" mod="-8"/>
       <Modifikator name="Pirschen" mod="4"/>
       <Modifikator name="Flieger"/>
       <Modifikator name="exzellente Sprachfähigkeit"/>
@@ -392,7 +365,6 @@
   <Tierbegleiter name="Schlange (nur Vertrautentier)" ws="2" rs="0" mr="6" gs="4" ini="0" kl="-6" kk="-8" mu="-4" groesse="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="16"/>
-      <Modifikator name="Zähigkeit" mod="-4"/>
       <Modifikator name="Pirschen" mod="24"/>
       <Modifikator name="Sinnenschärfe" mod="10"/>
       <Modifikator name="Magiegespür"/>
@@ -416,7 +388,6 @@
   <Tierbegleiter name="Hornechse (nur Achaz)" ws="14" rs="2" mr="8" gs="9" ini="1" ge="6" ko="54" mu="12" kk="48" groesse="4" reittier="1">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="8"/>
-      <Modifikator name="Zähigkeit" mod="16"/>
       <Modifikator name="Angepasst (Sumpf)"/>
       <Modifikator name="Verwundbarkeit I (Eis)"/>
       <Modifikator name="Sturmangriff"/>
@@ -431,7 +402,6 @@
   <Tierbegleiter name="Schröter (sehr unüblich)" ws="4" rs="3" mr="13" gs="4" ini="0" ge="4" ko="14" kk="8" mu="4" groesse="3">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="10"/>
       <Modifikator name="Zusätzliche Attacke I"/>
       <Modifikator name="Standfest"/>
     </Modifikatoren>
@@ -443,7 +413,6 @@
   <Tierbegleiter name="Spinne (nur Vertrautentier)" preis="1" ws="1" rs="0" mr="8" gs="3" ini="0" kl="-6" kk="-16" mu="-6" groesse="0">
     <Modifikatoren>
       <Modifikator name="Wachsamkeit" mod="12"/>
-      <Modifikator name="Zähigkeit" mod="-8"/>
       <Modifikator name="Pirschen" mod="28"/>
     </Modifikatoren>
     <Waffen>
@@ -455,7 +424,6 @@
       <Modifikator name="Wachsamkeit" mod="18"/>
       <Modifikator name="Pirschen" mod="18"/>
       <Modifikator name="Laufen" mod="16"/>
-      <Modifikator name="Zähigkeit" mod="16"/>
       <Modifikator name="Dunkelsicht II"/>
       <Modifikator name="Klingentanz"/>
       <Modifikator name="Sturmangriff"/>
