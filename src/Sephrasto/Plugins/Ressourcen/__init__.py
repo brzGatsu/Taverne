@@ -60,11 +60,26 @@ class Plugin:
         char.ressourcen = []
         char.finanzenAnzeigen = False
 
-        for ressource in self.db.einstellungen["Ressourcen Plugin: Standardressourcen"].wert.keys():
+        standardRessourcen = Wolke.DB.einstellungen["Ressourcen Plugin: Standardressourcen"].wert
+
+        for key in standardRessourcen.keys():
+            ressource = Ressource()
+            ressource.name = key
+            ressource.kommentar = standardRessourcen[key][0]
+            char.ressourcen.append(ressource)
+
+        for ressource in standardRessourcen.keys():
             setattr(char, ressource + "Mod", 0)
+            char.charakterScriptAPI[f'get{ressource}'] = lambda ressource=ressource: self.getRessource(char, ressource).wert
             char.charakterScriptAPI[f'get{ressource}Mod'] = lambda ressource=ressource: getattr(char, ressource + "Mod")
             char.charakterScriptAPI[f'set{ressource}Mod'] = lambda mod, ressource=ressource: setattr(char, ressource + "Mod", mod)
             char.charakterScriptAPI[f'modify{ressource}'] = lambda mod, ressource=ressource: setattr(char, ressource + "Mod", getattr(char, ressource + "Mod") + mod)
+
+    def getRessource(self, char, name):
+        for ressource in char.ressourcen:
+            if ressource.name == name:
+                return ressource
+        return None
 
     def preCharakterAktualisierenHook(self, params):
         char = params["charakter"]
@@ -86,6 +101,7 @@ class Plugin:
         ser = params["deserializer"]
         char = params["charakter"]
 
+        char.ressourcen = []
         if ser.find('Ressourcen'):
             for tag in ser.listTags():
                 ressource = Ressource.__new__(Ressource)
@@ -93,6 +109,17 @@ class Plugin:
                     continue
                 char.ressourcen.append(ressource)
             ser.end() #ressourcen
+
+        standardRessourcen = Wolke.DB.einstellungen["Ressourcen Plugin: Standardressourcen"].wert
+        count = 0
+        for key in standardRessourcen.keys():
+            if len(char.ressourcen) <= count or char.ressourcen[count].name != key:
+                ressource = Ressource()
+                ressource.name = key
+                ressource.kommentar = standardRessourcen[key][0]
+                char.ressourcen.append(char.ressourcen[count])
+                char.ressourcen[count] = ressource
+            count += 1
 
         char.finanzenAnzeigen = False
 

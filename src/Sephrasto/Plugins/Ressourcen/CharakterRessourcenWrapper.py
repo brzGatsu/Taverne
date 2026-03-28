@@ -23,21 +23,6 @@ class CharakterRessourcenWrapper(QtCore.QObject):
 
         self.standardRessourcen = Wolke.DB.einstellungen["Ressourcen Plugin: Standardressourcen"].wert
 
-        count = 0
-        for key in self.standardRessourcen.keys():
-            if len(Wolke.Char.ressourcen) <= count or Wolke.Char.ressourcen[count].name != key:
-                ressource = Ressource()
-                ressource.name = key
-                ressource.kommentar = self.standardRessourcen[key][0]
-                Wolke.Char.ressourcen.insert(count, ressource)
-            count += 1
-
-        if len(Wolke.Char.ressourcen) == 0:
-            for key in self.standardRessourcen.keys():
-                ressource = Ressource()
-                ressource.name = key
-                Wolke.Char.ressourcen.append(ressource)
-
         self.ui.scrollAreaWidgetContents.layout().setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter | QtCore.Qt.AlignmentFlag.AlignVCenter)
 
         for row in range(0, max(len(self.standardRessourcen) + 3, len(Wolke.Char.ressourcen))):
