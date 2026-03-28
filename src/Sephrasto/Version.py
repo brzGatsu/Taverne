@@ -1,6 +1,6 @@
 _sephrasto_version_major = 5
 _sephrasto_version_minor = 4
-_sephrasto_version_build = 3
+_sephrasto_version_build = 4
 
 _sephrasto_version = [_sephrasto_version_major, _sephrasto_version_minor, _sephrasto_version_build, 0]
 
