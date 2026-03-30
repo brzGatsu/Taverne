@@ -11,8 +11,4 @@
   <Auswahl keine-varianten="0">
     <Eigenheit name="Neugier"/>
   </Auswahl>
-  <Auswahl varianten="0">
-    <Fertigkeit name="Stangenwaffen" wert="2"/>
-    <Fertigkeit name="Wurfwaffen" wert="2"/>
-  </Auswahl> 
 </Charakter>

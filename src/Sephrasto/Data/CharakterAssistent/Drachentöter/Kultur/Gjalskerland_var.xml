@@ -3,4 +3,9 @@
     <Fertigkeit name="Feinhandwerk" wert="1"/>
     <Fertigkeit name="Grobhandwerk" wert="2"/>
   </Auswahl>
+  <Auswahl>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
+	<Vorteil name="Sprachkenntnis (Ologhaijan)"/>
+  </Auswahl>
 </Charakter>

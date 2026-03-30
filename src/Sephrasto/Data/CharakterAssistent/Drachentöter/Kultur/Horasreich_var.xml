@@ -12,14 +12,10 @@
 	  <Fertigkeit name="Beeinflussung" wert="2"/>
 	  <Fertigkeit name="Naturkunde" wert="1"/>
 	  <Fertigkeit name="Mythenkunde" wert="1"/>
-	  <Freie-Fertigkeit name="Beliebige Verkehrssprache" wert="1"/>
 	</Variante>
 	<Variante name="Städtischer Adel">
 	  <Vorteil name="Privilegien (Adel)"/>
-	  <Fertigkeit name="Klingenwaffen" wert="1"/>
-	  <Fertigkeit name="Stangenwaffen" wert="-1"/>
 	  <Fertigkeit name="Diplomatie" wert="1"/>
-	  <Freie-Fertigkeit name="Schrift: Kusliker Zeichen" wert="1"/>
 	</Variante>
     <Variante name="Dörfer an der Küste oder an großen Flüssen">
 	  <Fertigkeit name="Athletik" wert="2"/>
@@ -33,14 +29,11 @@
 	  <Fertigkeit name="Naturkunde" wert="1"/>
 	  <Fertigkeit name="Mythenkunde" wert="1"/>
 	  <Fertigkeit name="Tierführung" wert="1"/>
-	  <Freie-Fertigkeit name="Beliebige Handelssprache" wert="1"/>
 	</Variante>
     <Variante name="Gebirge">
 	  <Fertigkeit name="Überleben" wert="1"/>
 	</Variante>
 	<Variante name="Fernab der Zivilisation (Chababien)">
-	  <Fertigkeit name="Handgemenge" wert="1"/>
-	  <Fertigkeit name="Klingenwaffen" wert="-1"/>
 	  <Fertigkeit name="Diplomatie" wert="-1"/>
 	  <Fertigkeit name="Straßenkunde" wert="-2"/>
 	  <Fertigkeit name="Jagd" wert="1"/>
@@ -49,11 +42,8 @@
 	</Variante>
     <Variante name="Landadel">
 	  <Vorteil name="Privilegien (Adel)"/>
-	  <Fertigkeit name="Klingenwaffen" wert="1"/>
-	  <Fertigkeit name="Stangenwaffen" wert="-1"/>
 	  <Fertigkeit name="Tierführung" wert="2"/>
 	  <Fertigkeit name="Diplomatie" wert="1"/>
-	  <Freie-Fertigkeit name="Schrift: Kusliker Zeichen" wert="1"/>
 	</Variante>
   </Varianten>
   <Auswahl>
@@ -61,11 +51,11 @@
     <Fertigkeit name="Grobhandwerk" wert="1"/>
   </Auswahl>
   <Auswahl keine-varianten="6">
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Rogolan" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Tulamidya)"/>
+    <Vorteil name="Sprachkenntnis (Rogolan)"/>
   </Auswahl>
   <Auswahl varianten="6">
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Mohisch" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Tulamidya)"/>
+    <Vorteil name="Sprachkenntnis (Mohisch)"/>
   </Auswahl>
 </Charakter>

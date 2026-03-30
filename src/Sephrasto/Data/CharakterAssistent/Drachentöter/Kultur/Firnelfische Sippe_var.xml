@@ -9,15 +9,10 @@
     <Fertigkeit name="Wurfwaffen" wert="3"/>
   </Auswahl>
   <Auswahl>
-    <Fertigkeit name="Hiebwaffen" wert="3"/>
-    <Fertigkeit name="Klingenwaffen" wert="3"/>
-    <Fertigkeit name="Stangenwaffen" wert="3"/>
-  </Auswahl>
-  <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Alaani" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Asdharia" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Nujuka" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Thorwalsch" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
+    <Vorteil name="Sprachkenntnis (Asdharia)"/>
+    <Vorteil name="Sprachkenntnis (Nujuka)"/>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
   </Auswahl>
   <Auswahl keine-varianten="0">
     <Vorteil name="Angepasst (Eiswüste)"/>

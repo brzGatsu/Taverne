@@ -6,9 +6,9 @@
     <Fertigkeit name="Grobhandwerk" wert="2"/>
   </Auswahl>  
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Alaani" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Angram" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Isdira" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Nujuka" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
+    <Vorteil name="Sprachkenntnis (Angram)"/>
+    <Vorteil name="Sprachkenntnis (Isdira)"/>
+    <Vorteil name="Sprachkenntnis (Nujuka)"/>
   </Auswahl>
 </Charakter>

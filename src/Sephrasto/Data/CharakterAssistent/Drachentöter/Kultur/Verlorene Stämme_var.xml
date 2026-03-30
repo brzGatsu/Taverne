@@ -21,8 +21,8 @@
     <Fertigkeit name="Wurfwaffen" wert="3"/>
   </Auswahl>
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Tulamidya)"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
   </Auswahl>
   <Auswahl keine-varianten="0">
 	<Vorteil name="Resistenz gegen Hitze"/>

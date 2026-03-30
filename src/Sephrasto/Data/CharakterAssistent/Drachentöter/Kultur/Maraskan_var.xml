@@ -20,19 +20,7 @@
 	</Variante>
   </Varianten>
   <Auswahl>
-    <Fertigkeit name="Hiebwaffen" wert="1"/>
-    <Fertigkeit name="Klingenwaffen" wert="1"/>
-  </Auswahl>
-  <Auswahl>
     <Fertigkeit name="Feinhandwerk" wert="1"/>
     <Fertigkeit name="Darbietung" wert="2"/>
-  </Auswahl>
-  <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="3"/>
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="3"/>
-  </Auswahl>
-  <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="2"/>
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="2"/>
   </Auswahl>
 </Charakter>

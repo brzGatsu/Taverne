@@ -1,7 +1,8 @@
 <Charakter>
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Nujuka" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Alaani" wert="1"/>
-	<Freie-Fertigkeit name="Sprache: Ologhaijan" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
+    <Vorteil name="Sprachkenntnis (Nujuka)"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
+	<Vorteil name="Sprachkenntnis (Ologhaijan)"/>
   </Auswahl>
 </Charakter>

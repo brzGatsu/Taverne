@@ -11,7 +11,6 @@
 	  <Fertigkeit name="Beeinflussung" wert="2"/>
 	  <Fertigkeit name="Naturkunde" wert="1"/>
 	  <Fertigkeit name="Mythenkunde" wert="1"/>
-	  <Freie-Fertigkeit name="Fremdsprache nach Wahl" wert="1"/>
 	</Variante>
     <Variante name="Siedlerstädte des Nordens (Uhdenberg, Donnerbach, Riva, Lowangen, Norburg)">
 	  <Fertigkeit name="Überleben" wert="1"/>
@@ -19,23 +18,21 @@
 	</Variante>
 	<Variante name="Städtischer Adel">
 	  <Vorteil name="Privilegien (Adel)"/>
-	  <Fertigkeit name="Klingenwaffen" wert="1"/>
-	  <Fertigkeit name="Stangenwaffen" wert="-1"/>
 	  <Fertigkeit name="Diplomatie" wert="2"/>
 	  <Fertigkeit name="Straßenkunde" wert="-1"/>
-	  <Freie-Fertigkeit name="Schrift: Kusliker Zeichen" wert="1"/>
+	  <Vorteil name="Schriftkenntnis (Kusliker Zeichen)"/>
 	</Variante>
 	<Variante name="Kannemünde / Mhanerhaven">
 	  <Fertigkeit name="Feingefühl" wert="1"/>
 	  <Fertigkeit name="Beeinflussung" wert="1"/>
 	  <Fertigkeit name="Naturkunde" wert="1"/>
 	  <Fertigkeit name="Bildung" wert="1"/>
-	  <Freie-Fertigkeit name="Kultur: Tulamidenlande" wert="1"/>
-	  <Freie-Fertigkeit name="Sprache: Tulamidya" wert="2"/>
+	  <Vorteil name="Kulturkunde (Tulamidenlande)"/>
+	  <Vorteil name="Sprachkenntnis (Tulamidya)"/>
 	</Variante>
     <Variante name="Flüchtlinge aus borbaradianisch besetzten Städten (z.B. Ysilia, Mendena, Ilsur, Warunk, Beilunk)">
 	  <Attribut name="MU" wert="-1"/>
-	  <Fertigkeit name="Selbstbeherrschung" wert="1"/>
+	  
 	  <Fertigkeit name="Wahrnehmung" wert="1"/>
 	  <Fertigkeit name="Feingefühl" wert="1"/>
 	  <Fertigkeit name="Magiekunde" wert="1"/>
@@ -55,20 +52,20 @@
 	<Fertigkeit name="Feinhandwerk" wert="1"/>
   </Auswahl>
   <Auswahl keine-varianten="2,4,5">
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Rogolan" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Thorwalsch" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Tulamidya)"/>
+    <Vorteil name="Sprachkenntnis (Rogolan)"/>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
   </Auswahl>
   <Auswahl varianten="2">
-    <Freie-Fertigkeit name="Sprache: Nujuka" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Alaani" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Oloarkh" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Nujuka)"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
+    <Vorteil name="Sprachkenntnis (Oloarkh)"/>
   </Auswahl>
   <Auswahl varianten="5">
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Rogolan" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Thorwalsch" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Zhayad" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Zhulchammaqra" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Tulamidya)"/>
+    <Vorteil name="Sprachkenntnis (Rogolan)"/>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
+    <Vorteil name="Sprachkenntnis (Zhayad)"/>
+    <Vorteil name="Sprachkenntnis (Zhulchammaqra)"/>
   </Auswahl>
 </Charakter>

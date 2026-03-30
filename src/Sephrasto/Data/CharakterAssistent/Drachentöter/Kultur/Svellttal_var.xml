@@ -33,12 +33,12 @@
     <Fertigkeit name="Tierführung" wert="1"/>
   </Auswahl>
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Alaani" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Nujuka" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Thorwalsch" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Oloarkh" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Ologhaijan" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Isdira" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
+    <Vorteil name="Sprachkenntnis (Nujuka)"/>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
+    <Vorteil name="Sprachkenntnis (Oloarkh)"/>
+    <Vorteil name="Sprachkenntnis (Ologhaijan)"/>
+    <Vorteil name="Sprachkenntnis (Isdira)"/>
   </Auswahl>
   <Auswahl keine-varianten="4">
     <Vorteil name="Angepasst (Sumpf)"/>
@@ -48,12 +48,12 @@
     <Fertigkeit name="Wurfwaffen" wert="1"/>
   </Auswahl>
   <Auswahl varianten="3">
-    <Freie-Fertigkeit name="Sprache: Alaani" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Nujuka" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Thorwalsch" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Oloarkh" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Ologhaijan" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Isdira" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Goblinisch" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
+    <Vorteil name="Sprachkenntnis (Nujuka)"/>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
+    <Vorteil name="Sprachkenntnis (Oloarkh)"/>
+    <Vorteil name="Sprachkenntnis (Ologhaijan)"/>
+    <Vorteil name="Sprachkenntnis (Isdira)"/>
+    <Vorteil name="Sprachkenntnis (Goblinisch)"/>
   </Auswahl>
 </Charakter>

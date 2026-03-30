@@ -21,25 +21,14 @@
 	</Variante>
     <Variante name="Adel">
 	  <Vorteil name="Privilegien (Adel)"/>
-	  <Fertigkeit name="Klingenwaffen" wert="1"/>
+      <Fertigkeit name="Nahkampf" wert="1"/>
+      <Fertigkeit name="Verteidigung" wert="1"/>
 	  <Fertigkeit name="Tierführung" wert="1"/>
 	  <Fertigkeit name="Diplomatie" wert="2"/>
 	</Variante>
   </Varianten>
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="3"/>
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="3"/>
-  </Auswahl>
-  <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="2"/>
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="2"/>
-  </Auswahl>
-  <Auswahl keine-varianten="4">
-    <Freie-Fertigkeit name="Schrift: Tulamidya-Zeichen" wert="1"/>
-    <Freie-Fertigkeit name="Schrift: Kusliker Zeichen" wert="1"/>
-  </Auswahl>
-  <Auswahl varianten="4">
-    <Freie-Fertigkeit name="Schrift: Tulamidya-Zeichen" wert="2"/>
-    <Freie-Fertigkeit name="Schrift: Kusliker Zeichen" wert="2"/>
+    <Vorteil name="Schriftkenntnis (Tulamidya-Zeichen)"/>
+    <Vorteil name="Schriftkenntnis (Kusliker Zeichen)"/>
   </Auswahl>
 </Charakter>

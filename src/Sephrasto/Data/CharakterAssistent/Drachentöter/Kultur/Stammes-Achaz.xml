@@ -5,7 +5,7 @@
 <Charakter>
   <Version>
     <CharakterVersion>8</CharakterVersion>
-    <Plugins>FertigkeitenPlus, Hexalogien, Ressourcen, RuestungenPlus, WaffenPlus</Plugins>
+    <Plugins>Hexalogien, Ressourcen, RuestungenPlus</Plugins>
     <Hausregeln>Keine</Hausregeln>
   </Version>
   <Beschreibung>
@@ -32,16 +32,14 @@
   <Energien/>
   <Vorteile>
     <Vorteil name="Angepasst (Sumpf)"/>
+    <Vorteil name="Kulturkunde (Stammes-Achaz)"/>
   </Vorteile>
   <Fertigkeiten>
-    <Fertigkeit name="Handgemenge" wert="2"/>
-    <Fertigkeit name="Hiebwaffen" wert="2"/>
-    <Fertigkeit name="Klingenwaffen" wert="0"/>
-    <Fertigkeit name="Stangenwaffen" wert="3"/>
+    <Fertigkeit name="Nahkampf" wert="3"/>
+    <Fertigkeit name="Verteidigung" wert="3"/>
     <Fertigkeit name="Schusswaffen" wert="0"/>
     <Fertigkeit name="Wurfwaffen" wert="0"/>
     <Fertigkeit name="Athletik" wert="2"/>
-    <Fertigkeit name="Selbstbeherrschung" wert="1"/>
     <Fertigkeit name="Autorität" wert="0"/>
     <Fertigkeit name="Beeinflussung" wert="0"/>
     <Fertigkeit name="Alchemie" wert="0"/>
@@ -63,23 +61,19 @@
     <Fertigkeit name="Überleben" wert="3"/>
     <Fertigkeit name="Straßenkunde" wert="0"/>
   </Fertigkeiten>
-  <FreieFertigkeiten>
-    <FreieFertigkeit name="Sprache: Rssahh" wert="3"/>
-    <FreieFertigkeit name="Kultur: Stammes-Achaz" wert="3"/>
-  </FreieFertigkeiten>
   <Talente/>
   <Objekte>
     <Zonensystem>0</Zonensystem>
     <Rüstungen/>
     <Waffen>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
     </Waffen>
     <Ausrüstung>
       <Ausrüstungsstück>Tragkraft 2, Last 0 -&gt; zusätzliche BE 0</Ausrüstungsstück>
@@ -91,7 +85,7 @@
   <ÜbernatürlicheFertigkeiten/>
   <Erfahrung>
     <Gesamt>0</Gesamt>
-    <Ausgegeben>276</Ausgegeben>
+    <Ausgegeben>302</Ausgegeben>
   </Erfahrung>
   <Notiz></Notiz>
   <Einstellungen>
@@ -136,10 +130,11 @@
   <Ressourcen>
     <Ressource name="Ansehen" kommentar="unbekannt" wert="0"/>
     <Ressource name="Einkommen" kommentar="elend, 1 D" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
+    <Ressource name="Willenskraft" kommentar="lethargisch, 3 WiP" wert="0"/>
     <Ressource name="Gefolge" kommentar="kein Gefolge" wert="0"/>
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
+    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>

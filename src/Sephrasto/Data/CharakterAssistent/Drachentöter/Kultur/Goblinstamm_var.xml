@@ -11,7 +11,7 @@
   <Varianten>
     <Variante name="Ebene">
 	  <Fertigkeit name="Tierführung" wert="2"/>
-	  <Freie-Fertigkeit name="Sprache: Garethi" wert="1"/>
+	  <Vorteil name="Sprachkenntnis (Garethi)"/>
 	</Variante>
 	<Variante name="Gebirge">
 	  <Fertigkeit name="Athletik" wert="2"/>
@@ -23,10 +23,6 @@
 	  <Eigenheit name="Hitzeempfindlich"/>
 	</Variante>
   </Varianten>
-  <Auswahl>
-    <Fertigkeit name="Hiebwaffen" wert="1"/>
-    <Fertigkeit name="Stangenwaffen" wert="1"/>
-  </Auswahl>
   <Auswahl varianten="0">
     <Fertigkeit name="Schusswaffen" wert="1"/>
     <Fertigkeit name="Wurfwaffen" wert="1"/>

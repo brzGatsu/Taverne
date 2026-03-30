@@ -10,18 +10,19 @@
 	  <Eigenheit name="Arroganz"/>
 	  <Eigenheit name="Neugier"/>
 	  <Fertigkeit name="Wurfwaffen" wert="2"/>
-	  <Fertigkeit name="Selbstbeherrschung" wert="1"/>
+	  
 	  <Fertigkeit name="Beeinflussung" wert="1"/>
 	  <Fertigkeit name="Heilkunde" wert="1"/>
 	</Variante>
     <Variante name="Kasimiten">
 	  <Eigenheit name="Vorurteile gegen Khôm-fremde"/>
-	  <Fertigkeit name="Handgemenge" wert="1"/>
+      <Fertigkeit name="Nahkampf" wert="1"/>
+      <Fertigkeit name="Verteidigung" wert="1"/>
 	  <Fertigkeit name="Mythenkunde" wert="1"/>
 	  <Fertigkeit name="Diplomatie" wert="2"/>
 	</Variante>
   </Varianten>
   <Auswahl keine-varianten="2">
-    <Freie-Fertigkeit name="Garethi" wert="2"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
   </Auswahl>
 </Charakter>

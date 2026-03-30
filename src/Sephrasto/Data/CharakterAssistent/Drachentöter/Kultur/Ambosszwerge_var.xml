@@ -1,6 +1,6 @@
 <Charakter>
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="2"/>
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="2"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
+    <Vorteil name="Sprachkenntnis (Tulamidya)"/>
   </Auswahl>
 </Charakter>

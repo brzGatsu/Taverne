@@ -19,21 +19,15 @@
     </Variante>
 	<Variante name="Khurkach (Krieger und Jäger)">
 	  <Attribut name="MU" wert="1"/>
-	  <Fertigkeit name="Handgemenge" wert="1"/>
+      <Fertigkeit name="Nahkampf" wert="1"/>
+      <Fertigkeit name="Verteidigung" wert="1"/>
     </Variante>
 	<Variante name="Okwach (Elite-Krieger, Priester, Schamanen)">
 	  <Attribut name="MU" wert="1"/>
 	  <Attribut name="KL" wert="1"/>
-	  <Fertigkeit name="Handgemenge" wert="1"/>
+      <Fertigkeit name="Nahkampf" wert="1"/>
+      <Fertigkeit name="Verteidigung" wert="1"/>
 	  <Fertigkeit name="Beeinflussung" wert="1"/>
     </Variante>
   </Varianten>
-  <Auswahl>
-    <Fertigkeit name="Hiebwaffen" wert="2"/>
-    <Fertigkeit name="Klingenwaffen" wert="2"/>
-  </Auswahl>
-  <Auswahl varianten="3,4">
-    <Fertigkeit name="Hiebwaffen" wert="1"/>
-    <Fertigkeit name="Klingenwaffen" wert="1"/>
-  </Auswahl>
 </Charakter>

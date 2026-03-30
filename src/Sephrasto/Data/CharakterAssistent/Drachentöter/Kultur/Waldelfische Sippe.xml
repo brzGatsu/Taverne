@@ -5,12 +5,12 @@
 <Charakter>
   <Version>
     <CharakterVersion>8</CharakterVersion>
-    <Plugins>FertigkeitenPlus, Hexalogien, Ressourcen, RuestungenPlus, WaffenPlus</Plugins>
+    <Plugins>Hexalogien, Ressourcen, RuestungenPlus</Plugins>
     <Hausregeln>Keine</Hausregeln>
   </Version>
   <Beschreibung>
     <Name></Name>
-    <Spezies></Spezies>
+    <Spezies>Achaz</Spezies>
     <Status>2</Status>
     <Kurzbeschreibung></Kurzbeschreibung>
     <Finanzen>2</Finanzen>
@@ -35,16 +35,15 @@
   <Energien/>
   <Vorteile>
     <Vorteil name="Angepasst (Wald)"/>
+    <Vorteil name="Kulturkunde (Waldelfen)"/>
+    <Vorteil name="Sprachkenntnis (Isdira)"/>
   </Vorteile>
   <Fertigkeiten>
-    <Fertigkeit name="Handgemenge" wert="2"/>
-    <Fertigkeit name="Hiebwaffen" wert="0"/>
-    <Fertigkeit name="Klingenwaffen" wert="0"/>
-    <Fertigkeit name="Stangenwaffen" wert="2"/>
+    <Fertigkeit name="Nahkampf" wert="2"/>
+    <Fertigkeit name="Verteidigung" wert="2"/>
     <Fertigkeit name="Schusswaffen" wert="0"/>
     <Fertigkeit name="Wurfwaffen" wert="0"/>
     <Fertigkeit name="Athletik" wert="3"/>
-    <Fertigkeit name="Selbstbeherrschung" wert="2"/>
     <Fertigkeit name="Autorität" wert="0"/>
     <Fertigkeit name="Beeinflussung" wert="0"/>
     <Fertigkeit name="Alchemie" wert="0"/>
@@ -66,31 +65,26 @@
     <Fertigkeit name="Überleben" wert="3"/>
     <Fertigkeit name="Straßenkunde" wert="0"/>
   </Fertigkeiten>
-  <FreieFertigkeiten>
-    <FreieFertigkeit name="Sprache: Isdira" wert="3"/>
-    <FreieFertigkeit name="Kultur: Waldelfen" wert="3"/>
-    <FreieFertigkeit name="Fremdsprache nach Wahl" wert="1"/>
-  </FreieFertigkeiten>
   <Talente>
-    <Talent name="Klettern" unerfahren="0"/>
-    <Talent name="Pflanzenkunde" unerfahren="0"/>
-    <Talent name="Tierkunde" unerfahren="0"/>
-    <Talent name="Singen und Musizieren" unerfahren="0"/>
-    <Talent name="Holzbearbeitung" unerfahren="0"/>
-    <Talent name="Stoff- und Lederbearbeitung" unerfahren="0"/>
+    <Talent name="Klettern" spezialisiert="1"/>
+    <Talent name="Pflanzenkunde" spezialisiert="1"/>
+    <Talent name="Tierkunde" spezialisiert="1"/>
+    <Talent name="Singen und Musizieren" spezialisiert="1"/>
+    <Talent name="Holzbearbeitung" spezialisiert="1"/>
+    <Talent name="Stoff- und Lederbearbeitung" spezialisiert="1"/>
   </Talente>
   <Objekte>
     <Zonensystem>0</Zonensystem>
     <Rüstungen/>
     <Waffen>
-      <Waffe name="Jagdmesser" id="Jagdmesser" würfel="1" würfelSeiten="6" plus="2" eigenschaften="Stich, Seitenwaffe" härte="9" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="-2"/>
-      <Waffe name="Elfenbogen" id="Elfenbogen" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Schuss, Zweihändig" härte="3" rw="64" beSlot="1" kampfstil="Kein Kampfstil" wm="0" lz="1" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0" wmVt="0"/>
+      <Waffe name="Jagdmesser" id="Jagdmesser" würfel="1" würfelSeiten="6" plus="2" eigenschaften="Stich, Nebenhand" härte="9" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="Elfenbogen" id="Elfenbogen" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Schuss, Zweihändig" härte="3" rw="64" beSlot="1" kampfstil="Kein Kampfstil" wm="0" lz="1"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
     </Waffen>
     <Ausrüstung>
       <Ausrüstungsstück>Köcher mit 12 Pfeilen (bei Bogen als Jagdwaffe)</Ausrüstungsstück>
@@ -105,7 +99,7 @@
   <ÜbernatürlicheFertigkeiten/>
   <Erfahrung>
     <Gesamt>0</Gesamt>
-    <Ausgegeben>486</Ausgegeben>
+    <Ausgegeben>531</Ausgegeben>
   </Erfahrung>
   <Notiz></Notiz>
   <Einstellungen>
@@ -118,7 +112,7 @@
     <RegelnGrösse>10</RegelnGrösse>
     <DeaktivierteRegelKategorien></DeaktivierteRegelKategorien>
     <FormularEditierbarkeit>1</FormularEditierbarkeit>
-    <VorteilFavoriten></VorteilFavoriten>
+    <VorteilFavoriten>Dunkelsicht I,Natürliche Rüstung</VorteilFavoriten>
     <DeaktivierteKartenKategorien></DeaktivierteKartenKategorien>
   </Einstellungen>
   <BeschreibungDetails>
@@ -150,10 +144,11 @@
   <Ressourcen>
     <Ressource name="Ansehen" kommentar="unbekannt" wert="0"/>
     <Ressource name="Einkommen" kommentar="elend, 1 D" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
+    <Ressource name="Willenskraft" kommentar="lethargisch, 3 WiP" wert="0"/>
     <Ressource name="Gefolge" kommentar="kein Gefolge" wert="0"/>
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
+    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>

@@ -3,16 +3,15 @@
     <Variante name="Mann" beschreibung="" geschlecht="männlich">
 	  <Attribut name="MU" wert="1"/>
 	  <Fertigkeit name="Schusswaffen" wert="1"/>
-	  <Fertigkeit name="Stangenwaffen" wert="1"/>
-	  <Fertigkeit name="Klingenwaffen" wert="1"/>
 	  <Fertigkeit name="Wurfwaffen" wert="1"/>
 	  <Fertigkeit name="Tierführung" wert="1"/>
 	  <Fertigkeit name="Grobhandwerk" wert="2"/>
 	</Variante>
 	<Variante name="Frau" beschreibung="" geschlecht="weiblich">
-	  <Fertigkeit name="Handgemenge" wert="1"/>
+      <Fertigkeit name="Nahkampf" wert="1"/>
+      <Fertigkeit name="Verteidigung" wert="1"/>
 	  <Fertigkeit name="Jagd" wert="1"/>
-	  <Fertigkeit name="Selbstbeherrschung" wert="1"/>
+	  
 	  <Fertigkeit name="Darbietung" wert="2"/>
 	  <Fertigkeit name="Beeinflussung" wert="1"/>
 	  <Fertigkeit name="Autorität" wert="1"/>

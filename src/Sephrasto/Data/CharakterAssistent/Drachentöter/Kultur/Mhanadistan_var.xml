@@ -2,7 +2,8 @@
   <Varianten>
     <Variante name="Kasimiten">
 	  <Eigenheit name="Vorurteile gegen Khôm-fremde"/>
-	  <Fertigkeit name="Handgemenge" wert="2"/>
+      <Fertigkeit name="Nahkampf" wert="3"/>
+      <Fertigkeit name="Verteidigung" wert="3"/>
 	  <Fertigkeit name="Diplomatie" wert="1"/>
 	  <Talent name="Geschichten und Legenden"/>
 	</Variante>
@@ -12,7 +13,7 @@
 	</Variante>
     <Variante name="Fern der Zivilisation">
 	  <Fertigkeit name="Athletik" wert="1"/>
-	  <Fertigkeit name="Selbstbeherrschung" wert="1"/>
+	  
 	  <Fertigkeit name="Beeinflussung" wert="-1"/>
 	  <Fertigkeit name="Überleben" wert="1"/>
 	</Variante>
@@ -29,25 +30,15 @@
 	  <Fertigkeit name="Überleben" wert="1"/>
 	</Variante>
   </Varianten>
-  <Auswahl>
-    <Fertigkeit name="Hiebwaffen" wert="1"/>
-    <Fertigkeit name="Klingenwaffen" wert="1"/>
-    <Fertigkeit name="Stangenwaffen" wert="1"/>
-  </Auswahl>
-  <Auswahl varianten="2">
-    <Fertigkeit name="Schusswaffen" wert="1"/>
-    <Fertigkeit name="Wurfwaffen" wert="1"/>
-    <Fertigkeit name="Hiebwaffen" wert="1"/>
-  </Auswahl>
   <Auswahl keine-varianten="2,4">
-    <Freie-Fertigkeit name="Garethi" wert="2"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
   </Auswahl>
   <Auswahl varianten="4">
     <Fertigkeit name="Schusswaffen" wert="1"/>
     <Fertigkeit name="Wurfwaffen" wert="1"/>
   </Auswahl>
   <Auswahl varianten="4">
-    <Freie-Fertigkeit name="Garethi" wert="2"/>
-    <Freie-Fertigkeit name="Ferkina" wert="2"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
+    <Vorteil name="Sprachkenntnis (Ferkina)"/>
   </Auswahl>
 </Charakter>

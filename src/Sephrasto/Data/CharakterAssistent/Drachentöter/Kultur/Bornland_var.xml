@@ -2,7 +2,6 @@
   <Varianten>
     <Variante name="Landstädte (Firunen, Norburg, Notmark, Ouvenmas, Rodebrannt etc.)">
 	  <Fertigkeit name="Schusswaffen" wert="1"/>
-	  <Fertigkeit name="Stangenwaffen" wert="1"/>
 	  <Fertigkeit name="Beeinflussung" wert="1"/>
 	  <Fertigkeit name="Naturkunde" wert="1"/>
     </Variante>
@@ -23,9 +22,5 @@
     <Vorteil name="Angepasst (Eiswüste)"/>
     <Vorteil name="Angepasst (Wald)"/>
     <Vorteil name="Angepasst (Sumpf)"/>
-  </Auswahl>
-  <Auswahl varianten="2">
-    <Fertigkeit name="Hiebwaffen" wert="1"/>
-    <Fertigkeit name="Klingenwaffen" wert="1"/>
   </Auswahl>
 </Charakter>

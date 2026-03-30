@@ -4,7 +4,7 @@
     <Fertigkeit name="Tierführung" wert="1"/>
   </Auswahl>  
   <Auswahl>
-    <Freie-Fertigkeit name="Schrift: Rogolan-Runen" wert="2"/>
-    <Freie-Fertigkeit name="Schrift: Kusliker Zeichen" wert="2"/>
+    <Vorteil name="Schriftkenntnis (Rogolan-Runen)"/>
+    <Vorteil name="Schriftkenntnis (Kusliker Zeichen)"/>
   </Auswahl>
 </Charakter>

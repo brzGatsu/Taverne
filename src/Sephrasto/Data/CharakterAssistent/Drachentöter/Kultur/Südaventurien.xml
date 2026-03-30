@@ -5,7 +5,7 @@
 <Charakter>
   <Version>
     <CharakterVersion>8</CharakterVersion>
-    <Plugins>FertigkeitenPlus, Hexalogien, Ressourcen, RuestungenPlus, WaffenPlus</Plugins>
+    <Plugins>Hexalogien, Ressourcen, RuestungenPlus</Plugins>
     <Hausregeln>Keine</Hausregeln>
   </Version>
   <Beschreibung>
@@ -33,16 +33,16 @@
     <Attribut name="FF" wert="1"/>
   </Attribute>
   <Energien/>
-  <Vorteile/>
+  <Vorteile>
+    <Vorteil name="Kulturkunde (Südaventurien)"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
+  </Vorteile>
   <Fertigkeiten>
-    <Fertigkeit name="Handgemenge" wert="2"/>
-    <Fertigkeit name="Hiebwaffen" wert="0"/>
-    <Fertigkeit name="Klingenwaffen" wert="1"/>
-    <Fertigkeit name="Stangenwaffen" wert="0"/>
+    <Fertigkeit name="Nahkampf" wert="2"/>
+    <Fertigkeit name="Verteidigung" wert="2"/>
     <Fertigkeit name="Schusswaffen" wert="1"/>
     <Fertigkeit name="Wurfwaffen" wert="0"/>
     <Fertigkeit name="Athletik" wert="1"/>
-    <Fertigkeit name="Selbstbeherrschung" wert="0"/>
     <Fertigkeit name="Autorität" wert="0"/>
     <Fertigkeit name="Beeinflussung" wert="1"/>
     <Fertigkeit name="Alchemie" wert="0"/>
@@ -64,10 +64,6 @@
     <Fertigkeit name="Überleben" wert="0"/>
     <Fertigkeit name="Straßenkunde" wert="1"/>
   </Fertigkeiten>
-  <FreieFertigkeiten>
-    <FreieFertigkeit name="" wert="3"/>
-    <FreieFertigkeit name="Kultur: Südaventurien" wert="3"/>
-  </FreieFertigkeiten>
   <Talente/>
   <Objekte>
     <Zonensystem>0</Zonensystem>
@@ -81,7 +77,7 @@
   <ÜbernatürlicheFertigkeiten/>
   <Erfahrung>
     <Gesamt>0</Gesamt>
-    <Ausgegeben>164</Ausgegeben>
+    <Ausgegeben>234</Ausgegeben>
   </Erfahrung>
   <Notiz></Notiz>
   <Einstellungen>
@@ -126,10 +122,11 @@
   <Ressourcen>
     <Ressource name="Ansehen" kommentar="unbekannt" wert="0"/>
     <Ressource name="Einkommen" kommentar="elend, 1 D" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
+    <Ressource name="Willenskraft" kommentar="lethargisch, 3 WiP" wert="0"/>
     <Ressource name="Gefolge" kommentar="kein Gefolge" wert="0"/>
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
+    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>

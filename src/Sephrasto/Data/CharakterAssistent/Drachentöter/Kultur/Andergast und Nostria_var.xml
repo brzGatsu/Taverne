@@ -9,10 +9,9 @@
     </Variante>
 	<Variante name="Landadel">
 	  <Vorteil name="Privilegien (Adel)"/>
-	  <Fertigkeit name="Stangenwaffen" wert="-1"/>
 	  <Fertigkeit name="Tierführung" wert="2"/>
 	  <Fertigkeit name="Diplomatie" wert="1"/>
-	  <Freie-Fertigkeit name="Schrift: Kusliker Zeichen" wert="1"/>
+	  <Vorteil name="Schriftkenntnis (Kusliker Zeichen)"/>
     </Variante>
     <Variante name="Gebirge">
 	  <Fertigkeit name="Athletik" wert="1"/>
@@ -29,13 +28,9 @@
     </Variante>
   </Varianten>
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Oloarkh" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Ologhaijan" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Thorwalsch" wert="1"/>
-  </Auswahl>
-  <Auswahl varianten="1">
-    <Fertigkeit name="Hiebwaffen" wert="1"/>
-    <Fertigkeit name="Klingenwaffen" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Oloarkh)"/>
+    <Vorteil name="Sprachkenntnis (Ologhaijan)"/>
+    <Vorteil name="Sprachkenntnis (Thorwalsch)"/>
   </Auswahl>
   <Auswahl keine-varianten="2,3">
     <Vorteil name="Angepasst (Wald)"/>

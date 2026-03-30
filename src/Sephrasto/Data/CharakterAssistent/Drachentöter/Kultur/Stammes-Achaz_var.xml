@@ -17,7 +17,7 @@
 	  <Talent name="Fischen"/>
 	</Variante>
 	<Variante name="Waldinseln/Südaventurien">
-      <Freie-Fertigkeit name="Sprache: Mohisch" wert="1"/>
+      <Vorteil name="Sprachkenntnis (Mohisch)"/>
 	</Variante>
   </Varianten>
   <Auswahl keine-varianten="1">
@@ -28,11 +28,11 @@
     <Vorteil name="Angepasst (Dschungel)"/>
   </Auswahl>
   <Auswahl keine-varianten="1,4">
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Tulamidya" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
+    <Vorteil name="Sprachkenntnis (Tulamidya)"/>
   </Auswahl>
   <Auswahl varianten="1">
-    <Freie-Fertigkeit name="Sprache: Ologhaijan" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Oloarkh" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Ologhaijan)"/>
+    <Vorteil name="Sprachkenntnis (Oloarkh)"/>
   </Auswahl>
 </Charakter>

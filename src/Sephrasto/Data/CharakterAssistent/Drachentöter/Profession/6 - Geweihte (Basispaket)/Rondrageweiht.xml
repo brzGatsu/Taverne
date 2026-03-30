@@ -38,14 +38,12 @@
     <Vorteil name="Privilegien (Krieger)"/>
   </Vorteile>
   <Fertigkeiten>
-    <Fertigkeit name="Handgemenge" wert="0"/>
-    <Fertigkeit name="Hiebwaffen" wert="0"/>
-    <Fertigkeit name="Klingenwaffen" wert="0"/>
-    <Fertigkeit name="Stangenwaffen" wert="0"/>
+    <Fertigkeit name="Nahkampf" wert="0"/>
+    <Fertigkeit name="Verteidigung" wert="0"/>
     <Fertigkeit name="Schusswaffen" wert="0"/>
     <Fertigkeit name="Wurfwaffen" wert="0"/>
     <Fertigkeit name="Athletik" wert="0"/>
-    <Fertigkeit name="Selbstbeherrschung" wert="0"/>
+    
     <Fertigkeit name="Wahrnehmung" wert="0"/>
     <Fertigkeit name="Autorität" wert="0"/>
     <Fertigkeit name="Beeinflussung" wert="0"/>

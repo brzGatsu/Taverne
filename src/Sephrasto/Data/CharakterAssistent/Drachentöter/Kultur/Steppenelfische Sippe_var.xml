@@ -1,7 +1,7 @@
 <Charakter>
   <Auswahl>
-    <Freie-Fertigkeit name="Sprache: Garethi" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Nujuka" wert="1"/>
-    <Freie-Fertigkeit name="Sprache: Alaani" wert="1"/>
+    <Vorteil name="Sprachkenntnis (Garethi)"/>
+    <Vorteil name="Sprachkenntnis (Nujuka)"/>
+    <Vorteil name="Sprachkenntnis (Alaani)"/>
   </Auswahl>
 </Charakter>
