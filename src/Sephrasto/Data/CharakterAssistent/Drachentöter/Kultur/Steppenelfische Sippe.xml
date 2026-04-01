@@ -75,11 +75,11 @@
       <Waffe name="Elfenbogen" id="Elfenbogen" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Schuss, Zweihändig" härte="3" rw="64" beSlot="1" kampfstil="Kein Kampfstil" wm="0" lz="1"/>
       <Waffe name="Jagdmesser" id="Jagdmesser" würfel="1" würfelSeiten="6" plus="2" eigenschaften="Stich, Nebenhand" härte="9" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
       <Waffe name="Wanderpony" id="Wanderpony" würfel="1" würfelSeiten="6" plus="2" eigenschaften="Wucht, Reittier, Niederwerfen, Standfest, GS (13), WS (11)" härte="12" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="-2"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
     </Waffen>
     <Ausrüstung>
       <Ausrüstungsstück>Hüftköcher mit 12 Pfeilen</Ausrüstungsstück>
@@ -145,6 +145,5 @@ mit Nahrung und einfachen Heilkräutern</Ausrüstungsstück>
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>

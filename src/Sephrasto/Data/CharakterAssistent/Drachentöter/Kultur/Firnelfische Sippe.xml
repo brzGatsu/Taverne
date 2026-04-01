@@ -72,11 +72,11 @@
       <Waffe name="Elfenbogen (alternativ Wurfspeere)" id="Elfenbogen" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Schuss, Zweihändig" härte="3" rw="64" beSlot="1" kampfstil="Kein Kampfstil" wm="0" lz="1"/>
       <Waffe name="Robbentöter (alternativ Jagdspieß)" id="Robbentöter" würfel="2" würfelSeiten="6" plus="3" eigenschaften="Stich, Hieb" härte="10" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
       <Waffe name="Jagdmesser" id="Jagdmesser" würfel="1" würfelSeiten="6" plus="2" eigenschaften="Stich, Nebenhand" härte="9" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
     </Waffen>
     <Ausrüstung>
       <Ausrüstungsstück>Köcher mit 12 Pfeilen (bei Bogen als Jagdwaffe)</Ausrüstungsstück>
@@ -143,6 +143,5 @@ Amulett</Ausrüstungsstück>
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>

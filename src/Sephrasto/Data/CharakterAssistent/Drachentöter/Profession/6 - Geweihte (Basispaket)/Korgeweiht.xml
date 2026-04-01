@@ -63,25 +63,25 @@
     <Fertigkeit name="Feingefühl" wert="0"/>
   </Fertigkeiten>
   <Talente>
-    <Talent name="Eidsegen" spezialisiert="1"/>
-    <Talent name="Grabsegen" spezialisiert="1"/>
-    <Talent name="Märtyrersegen" spezialisiert="1"/>
-    <Talent name="Schutzsegen" spezialisiert="1"/>
-    <Talent name="Speisesegen" spezialisiert="1"/>
-    <Talent name="Tranksegen" spezialisiert="1"/>
+    <Talent name="Eidsegen" spezialisiert="0"/>
+    <Talent name="Grabsegen" spezialisiert="0"/>
+    <Talent name="Märtyrersegen" spezialisiert="0"/>
+    <Talent name="Schutzsegen" spezialisiert="0"/>
+    <Talent name="Speisesegen" spezialisiert="0"/>
+    <Talent name="Tranksegen" spezialisiert="0"/>
   </Talente>
   <Objekte>
     <Zonensystem>0</Zonensystem>
     <Rüstungen/>
     <Waffen>
       <Waffe name="Korspieß" id="Korspieß" würfel="2" würfelSeiten="6" plus="4" eigenschaften="Stich, Hieb, Kopflastig, Schwer (4), Zweihändig, Rüstungsbrechend, Knebel" härte="8" rw="2" beSlot="1" kampfstil="Kein Kampfstil" wm="-2"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
     </Waffen>
     <Ausrüstung/>
     <Teilrüstungen1/>
@@ -145,6 +145,5 @@
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>

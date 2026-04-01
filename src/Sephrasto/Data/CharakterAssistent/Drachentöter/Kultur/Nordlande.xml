@@ -137,6 +137,5 @@
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>

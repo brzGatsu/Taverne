@@ -64,20 +64,20 @@
     <Fertigkeit name="Feingefühl" wert="0"/>
   </Fertigkeiten>
   <Talente>
-    <Talent name="Bindung des Dolches" spezialisiert="1"/>
+    <Talent name="Bindung des Dolches" spezialisiert="0"/>
   </Talente>
   <Objekte>
     <Zonensystem>0</Zonensystem>
     <Rüstungen/>
     <Waffen>
       <Waffe name="Vulkanglasdolch" id="Dolch" würfel="1" würfelSeiten="6" plus="1" eigenschaften="Stich, Nebenhand, Wurffähig (4), Unzerstörbar" härte="9" rw="1" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
-      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
+      <Waffe name="" id="" würfel="0" würfelSeiten="6" plus="0" eigenschaften="" härte="6" rw="0" beSlot="1" kampfstil="Kein Kampfstil" wm="0"/>
     </Waffen>
     <Ausrüstung/>
     <Teilrüstungen1/>
@@ -158,6 +158,5 @@
     <Ressource name="Stand" kommentar="Benachteiligte" wert="0"/>
     <Ressource name="Verbindungen" kommentar="kein Einfluss" wert="0"/>
     <Ressource name="Tierbegleiter" kommentar="kein Begleiter" wert="0"/>
-    <Ressource name="Entschlossenheit" kommentar="lethargisch, 3 EnP" wert="0"/>
   </Ressourcen>
 </Charakter>
