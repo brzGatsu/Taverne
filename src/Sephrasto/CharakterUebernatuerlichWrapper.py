@@ -109,7 +109,7 @@ class UebernatuerlichWrapper(QtCore.QObject):
             if totalTalentCost == 0:
                 result[el] = """Unter dieser Fertigkeit stehen dir keine Talente zur Verfügung. Du benötigst einen (anderen) Traditionsvorteil.
 Du kannst die Fertigkeit dennoch steigern, aber es wird nicht empfohlen."""
-            elif totalTalentCost < 120 or (totalTalentCost < 180 and uniqueTalentCost < 60):
+            elif totalTalentCost < 60 or (totalTalentCost < 90 and uniqueTalentCost < 30):
                 if uniqueTalentCost == 0:
                     result[el] = """Diese Fertigkeit bietet dir nur wenige Talente, von denen alle über andere Fertigkeiten gewirkt werden können.
 Du kannst die Fertigkeit dennoch steigern, aber es wird nicht empfohlen."""
