@@ -690,7 +690,7 @@ class EinstellungenWrapper():
         optionsList = ['Keine']            
         if os.path.isdir(path):
             for file in PathHelper.listdir(path):
-                if file.lower().endswith('.xml'):
+                if file.lower().endswith('.tdb'):
                     optionsList.append(file)
         return optionsList
 

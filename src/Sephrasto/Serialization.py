@@ -240,13 +240,22 @@ class XmlDeserializer(XmlSerializerBase):
             self._currentNode = element
             yield self._currentNode.tag
 
+
+class TdbSerializer(XmlSerializer):
+    fileExtension = ".tdb"
+
+class TdbDeserializer(XmlDeserializer):
+    fileExtension = ".tdb"
+
 class Serialization:
     _serializers = {
         XmlSerializer.fileExtension : XmlSerializer,
-        JsonSerializer.fileExtension : JsonSerializer
+        JsonSerializer.fileExtension : JsonSerializer,
+        TdbSerializer.fileExtension : TdbSerializer
     }
     _deserializers = {
-        XmlDeserializer.fileExtension : XmlDeserializer
+        XmlDeserializer.fileExtension : XmlDeserializer,
+        TdbDeserializer.fileExtension : TdbDeserializer
     }
 
     def registerSerializer(type):

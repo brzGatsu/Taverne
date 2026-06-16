@@ -770,12 +770,12 @@ class DatenbankEditor(object):
             startDir = Wolke.Settings['Pfad-Regeln']
         else:
             startDir = ""
-        spath, _ = QtWidgets.QFileDialog.getSaveFileName(None,"Hausregeln speichern...",startDir,"XML-Datei (*.xml)")
+        spath, _ = QtWidgets.QFileDialog.getSaveFileName(None,"Hausregeln speichern...",startDir,"Taverne Datenbank-Datei (*.tdb)")
         if spath == "":
             return
         spath = os.path.realpath(spath)
-        if not spath.endswith(".xml"):
-            spath = spath + ".xml"
+        if not spath.endswith(".tdb"):
+            spath = spath + ".tdb"
 
         isInRulesPath = os.path.dirname(spath) == Wolke.Settings['Pfad-Regeln']
         if not isInRulesPath:
@@ -793,12 +793,12 @@ class DatenbankEditor(object):
             elif infoBox.clickedButton() == cancelButton:
                 return
 
-        refDatabaseFile = os.getcwd() + os.path.normpath("/Data/datenbank.xml")
+        refDatabaseFile = os.getcwd() + os.path.normpath("/Data/datenbank.tdb")
         if spath == refDatabaseFile:
             infoBox = QtWidgets.QMessageBox()
             infoBox.setIcon(QtWidgets.QMessageBox.Information)
             infoBox.setText("Überschreiben der zentralen Datenbank verhindert!")
-            infoBox.setInformativeText("Bitte schreibe deine eigenen Regeln nicht mit in die zentrale datenbank.xml - \
+            infoBox.setInformativeText("Bitte schreibe deine eigenen Regeln nicht mit in die zentrale datenbank.tdb - \
 diese wird bei vielen Updates von Taverne verändert, wodurch du deine Regeln \
 verlieren würdest. Stattdessen kannst du sie als separate Datei abspeichern und in den Einstellungen selektieren. \
 Sie wird dann automatisch beim Programmstart mit geladen. Änderungen darin überschreiben \
@@ -841,12 +841,12 @@ die datenbank.xml, aber bleiben bei Updates erhalten!")
             self.ui.buttonQuicksave.setShortcut(prevShortcut)
             return
 
-        refDatabaseFile = os.getcwd() + os.path.normpath("/Data/datenbank.xml")
+        refDatabaseFile = os.getcwd() + os.path.normpath("/Data/datenbank.tdb")
         if self.savepath == refDatabaseFile:
             infoBox = QtWidgets.QMessageBox()
             infoBox.setIcon(QtWidgets.QMessageBox.Information)
             infoBox.setText("Überschreiben der zentralen Datenbank verhindert!")
-            infoBox.setInformativeText("Bitte schreibe deine eigenen Regeln nicht mit in die zentrale datenbank.xml - \
+            infoBox.setInformativeText("Bitte schreibe deine eigenen Regeln nicht mit in die zentrale datenbank.tdb - \
 diese wird bei vielen Updates von Taverne verändert, wodurch du deine Regeln \
 verlieren würdest. Stattdessen kannst du sie als separate Datei abspeichern und in den Einstellungen selektieren. \
 Sie wird dann automatisch beim Programmstart mit geladen. Änderungen darin überschreiben \
@@ -910,15 +910,15 @@ die datenbank.xml, aber bleiben bei Updates erhalten!")
             startDir = Wolke.Settings['Pfad-Regeln']
         else:
             startDir = ""
-        spath, _ = QtWidgets.QFileDialog.getOpenFileName(None,"Hausregeln laden...",startDir,"XML-Datei (*.xml)")
+        spath, _ = QtWidgets.QFileDialog.getOpenFileName(None,"Hausregeln laden...",startDir,"Taverne Datenbank-Datei (*.tdb)")
         if not spath:
             return
         spath = os.path.realpath(spath)
-        databaseFile = os.getcwd() + os.path.normpath("/Data/datenbank.xml")
+        databaseFile = os.getcwd() + os.path.normpath("/Data/datenbank.tdb")
         if spath == databaseFile:
             infoBox = QtWidgets.QMessageBox()
             infoBox.setIcon(QtWidgets.QMessageBox.Warning)
-            infoBox.setText("Diese Funktion dient dem Laden einer Hausregel-Datenbank. Die zentrale Datenbank 'database.xml' wird sowieso immer geladen!")
+            infoBox.setText("Diese Funktion dient dem Laden einer Hausregel-Datenbank. Die zentrale Datenbank 'datenbank.tdb' wird sowieso immer geladen!")
             infoBox.setWindowTitle("Ungültige Datei!")
             infoBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
             infoBox.setEscapeButton(QtWidgets.QMessageBox.Close)  

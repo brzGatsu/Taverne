@@ -453,17 +453,6 @@ class Editor(object):
         if ".xml" not in spath:
             spath = spath + ".xml"
             
-        if spath.endswith("datenbank.xml"):
-            infoBox = QtWidgets.QMessageBox()
-            infoBox.setIcon(QtWidgets.QMessageBox.Information)
-            infoBox.setText("Speichern des Charakters fehlgeschlagen!")
-            infoBox.setInformativeText("Ich empfehle, die Regelbasis nicht mit einem Charakter zu überschreiben. \
-Versuchs doch bitte nochmal mit einer anderen Zieldatei.")
-            infoBox.setWindowTitle("Charakter speichern fehlgeschlagen.")
-            infoBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
-            infoBox.setEscapeButton(QtWidgets.QMessageBox.Close)  
-            infoBox.exec()
-            return
         self.savepath = spath
         self.savePathUpdatedCallback()
         self.quicksaveButton()
