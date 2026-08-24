@@ -5,7 +5,7 @@ import re
 import base64
 from Hilfsmethoden import Hilfsmethoden
 
-Attribute = ["KO", "MU", "GE", "KK", "IN", "KL", "CH", "FF", "WS", "RS", "BE", "MR", "GS", "TP", "INI", "AT", "VT"]
+Attribute = ["KO", "MU", "GE", "KK", "IN", "KL", "CH", "FF", "WS", "RS", "BE", "SK", "GS", "TP", "INI", "AT", "VT"]
 AlleAttribute = copy.copy(Attribute) + ["GS2"]
 
 class Modifikator:
@@ -95,7 +95,7 @@ class TierbegleiterDefinition:
         self.kategorie = int(root.get('kategorie')) if root.get('kategorie') else 0
         self.reittier = int(root.get('reittier')) if root.get('reittier') else 0
 
-        for attribut in ["ws", "rs", "mr", "ini", "gs", "gs2", "ko", "ge", "kk", "mu", "in", "ch", "kl", "ff"]:
+        for attribut in ["ws", "rs", "sk", "ini", "gs", "gs2", "ko", "ge", "kk", "mu", "in", "ch", "kl", "ff"]:
             if root.get(attribut):
                 mod = Modifikator()
                 mod.name = str.upper(attribut)
@@ -356,7 +356,7 @@ class Tierbegleiter:
                 self.talentModsMerged.remove(mod)
 
         # sort final merged lists
-        order = ["KO", "MU", "GE", "KK", "IN", "KL", "CH", "FF", "WS", "WS*", "MR", "GS", "INI"]
+        order = ["KO", "MU", "GE", "KK", "IN", "KL", "CH", "FF", "WS", "WS*", "SK", "GS", "INI"]
         self.attributModsMerged = dict(sorted(self.attributModsMerged.items(), key = lambda x: order.index(x[0])))
         self.vorteilModsMerged.sort(key = lambda mod : mod.name)
         self.talentModsMerged.sort(key = lambda mod : mod.name)

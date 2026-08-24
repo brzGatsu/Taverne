@@ -31,8 +31,8 @@ class TierbegleiterPdfExporter:
             fields["WSStern"] = fields["WS*"]
 
             scriptAPI = Hilfsmethoden.createScriptAPI()
-            scriptAPI.update({ "WS" : tierbegleiter.attributModsMerged.get("WS", 0), "KO" : tierbegleiter.attributModsMerged.get("KO", 0), "KK" : tierbegleiter.attributModsMerged.get("KK", 0) })
-            fields["DH"] = datenbank.einstellungen["Tierbegleiter Plugin: DH Script"].evaluateScript(scriptAPI)
+            scriptAPI.update({ "WS" : tierbegleiter.attributModsMerged.get("WS", 0), "KO" : tierbegleiter.attributModsMerged.get("KO", 0), "KK" : tierbegleiter.attributModsMerged.get("KK", 0), "GE" : tierbegleiter.attributModsMerged.get("GE", 0) })
+            fields["DH"] = datenbank.einstellungen["Tierbegleiter Plugin: ES Script"].evaluateScript(scriptAPI)
 
             talentModifierList = sorted([mod for mod in tierbegleiter.talentModsMerged if mod.name.strip()], key = lambda mod: mod.name) 
             for i in range(0, charakterbogen.maxFertigkeiten):

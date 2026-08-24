@@ -32,10 +32,10 @@ class Plugin:
         e.name = "Tierbegleiter Plugin: EP-Kosten Werte Script"
         e.beschreibung = "Das script berechnet die EP-Kosten der verschiedenen Werte. Diese müssen der Variable 'kosten' zugewiesen werden. " +\
         "Es wird einmal für jeden Wert aufgerufen. Dessen Name steht in der Variable 'name' und dessen Wert in der Variable 'wert'. " +\
-        "Folgende Werte gibt es: 'KO', 'MU', 'GE', 'KK', 'IN', 'KL', 'CH', 'FF', 'WS', 'RS', 'BE', 'MR', 'GS', 'TP', 'INI', 'AT', 'VT'"
+        "Folgende Werte gibt es: 'KO', 'MU', 'GE', 'KK', 'IN', 'KL', 'CH', 'FF', 'WS', 'RS', 'BE', 'SK', 'GS', 'TP', 'INI', 'AT', 'VT'"
         e.text = """if name in ["WS"]:
     kosten = 4*wert
-elif name in ["MR", "TP", "GS", "INI", "AT", "VT"]:
+elif name in ["SK", "TP", "GS", "INI", "AT", "VT"]:
     kosten = 2*wert
 elif name in ["RS", "BE"]:
     kosten = 0
@@ -95,8 +95,8 @@ else:
         self.db.loadElement(e)
 
         e = DatenbankEinstellung()
-        e.name = "Tierbegleiter Plugin: DH Script"
-        e.beschreibung = "Das Script berechnet das DH. Für die Berechnung zur Verfügung stehen KO, KK und WS."
+        e.name = "Tierbegleiter Plugin: ES Script"
+        e.beschreibung = "Das Script berechnet die ES. Für die Berechnung zur Verfügung stehen KO, KK, GE und WS."
         e.text = "WS"
         e.typ = "Eval"
         self.db.loadElement(e)

@@ -336,7 +336,7 @@ class TierbegleiterEditor(object):
         attributMods["BE"] = self.ui.sbBE.value()
         attributMods["TP"] = self.ui.sbTP.value()
         attributMods["INI"] = self.ui.sbINI.value()
-        attributMods["MR"] = self.ui.sbMR.value()
+        attributMods["SK"] = self.ui.sbSK.value()
         attributMods["WS"] = self.ui.sbWS.value()
 
         # Zusätzliche Vorteile
